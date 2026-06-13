@@ -1,0 +1,220 @@
+import { setRequestLocale } from "next-intl/server";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
+import { CheckCircle2, X, ArrowRight, ChevronDown } from "lucide-react";
+import { makeMetadata, BASE_URL } from "@/lib/metadata";
+import { JsonLd } from "@/components/seo/json-ld";
+import type { LocalePageProps } from "@/types/page";
+
+export async function generateMetadata({ params }: LocalePageProps) {
+  const { locale } = await params;
+  return makeMetadata(locale, "metadata.pricing", "pricing");
+}
+
+const pricingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Taxly — US Tax Filing Software",
+  url: `${BASE_URL}/pricing`,
+  description:
+    "File your US federal and state taxes online. Honest flat pricing — no upsells at checkout.",
+  brand: { "@type": "Brand", name: "Taxly" },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Free",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `${BASE_URL}/pricing`,
+      description: "Federal return free. One state return free. W-2 income, standard deduction.",
+    },
+    {
+      "@type": "Offer",
+      name: "Deluxe",
+      price: "29",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `${BASE_URL}/pricing`,
+      description:
+        "Federal $29, state $14 each. Itemized deductions, mortgage interest, HSA, homeowners.",
+    },
+    {
+      "@type": "Offer",
+      name: "Premium",
+      price: "59",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: `${BASE_URL}/pricing`,
+      description:
+        "Federal $59, state $14 each. Investments, crypto, rental income, self-employed (Schedule C).",
+    },
+  ],
+};
+
+export default async function PricingPage({ params }: LocalePageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return (
+    <>
+      <JsonLd data={pricingSchema} />
+      <PricingClient />
+    </>
+  );
+}
+
+type RowValue = string | boolean;
+
+interface ComparisonRow {
+  label: string;
+  free: RowValue;
+  deluxe: RowValue;
+  premium: RowValue;
+}
+
+function Cell({ value, included, notIncluded }: { value: RowValue; included: string; notIncluded: string }) {
+  if (typeof value === "boolean") {
+    return value
+      ? <CheckCircle2 size={18} className="mx-auto text-green-500" aria-label={included} />
+      : <X size={18} className="mx-auto text-slate-300" aria-label={notIncluded} />;
+  }
+  return <span className="text-sm text-slate-700">{value}</span>;
+}
+
+function PricingClient() {
+  const t = useTranslations("pricing");
+  const locale = useLocale();
+
+  const plans = ["free", "deluxe", "premium"] as const;
+  const faqKeys = ["q1", "q2", "q3", "q4", "q5"] as const;
+
+  const rowKeys = [
+    "federalReturn", "stateReturn", "eFile", "importPdf",
+    "w2", "interest", "selfEmployed", "investments", "rental",
+    "standardDed", "itemized", "hsa", "mortgage", "childCredit", "eitc",
+    "emailSupport", "prioritySupport", "auditSupport",
+  ] as const;
+
+  const included = t("included");
+  const notIncluded = t("notIncluded");
+
+  const rows: ComparisonRow[] = rowKeys.map((key) => ({
+    label: t(`comparison.rows.${key}.label`),
+    free: t.raw(`comparison.rows.${key}.free`) as RowValue,
+    deluxe: t.raw(`comparison.rows.${key}.deluxe`) as RowValue,
+    premium: t.raw(`comparison.rows.${key}.premium`) as RowValue,
+  }));
+
+  return (
+    <div className="py-20">
+      {/* Header */}
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">{t("heading")}</h1>
+        <p className="text-lg text-slate-500">{t("subheading")}</p>
+      </div>
+
+      {/* Plan cards */}
+      <div className="mx-auto mt-16 max-w-6xl px-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          {plans.map((plan) => {
+            const isDeluxe = plan === "deluxe";
+            const features = t.raw(`${plan}.features`) as string[];
+            return (
+              <div
+                key={plan}
+                className={`relative rounded-2xl p-8 ${isDeluxe ? "text-white shadow-2xl" : "border border-slate-200 bg-white shadow-sm"}`}
+                style={isDeluxe ? { backgroundColor: "#0ea5e9" } : undefined}
+              >
+                {isDeluxe && (
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-amber-400 px-4 py-1 text-xs font-bold text-amber-900">
+                    {t(`${plan}.badge`)}
+                  </span>
+                )}
+                <p className={`mb-1 text-sm font-semibold uppercase tracking-wider ${isDeluxe ? "text-sky-100" : "text-slate-400"}`}>
+                  {t(`${plan}.name`)}
+                </p>
+                <div className="mb-1 flex items-end gap-1">
+                  <span className="text-4xl font-bold">{t(`${plan}.federalPrice`)}</span>
+                  <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-400"}`}> federal</span>
+                </div>
+                <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-500"}`}>{t(`${plan}.statePrice`)} state</p>
+                <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-500"}`}>{t(`${plan}.description`)}</p>
+                <ul className="mb-8 space-y-3">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm">
+                      <CheckCircle2 size={16} className={`mt-0.5 shrink-0 ${isDeluxe ? "text-sky-200" : "text-green-500"}`} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={`/${locale}/signup`}
+                  className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${isDeluxe ? "bg-white text-sky-600 hover:bg-sky-50" : "text-white"}`}
+                  style={!isDeluxe ? { backgroundColor: "#0ea5e9" } : undefined}
+                >
+                  {t(`${plan}.cta`)}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Comparison table */}
+      <div className="mx-auto mt-24 max-w-6xl px-6">
+        <h2 className="mb-10 text-center text-2xl font-bold text-slate-900">{t("comparison.heading")}</h2>
+        <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-slate-100">
+                <th className="px-6 py-4 text-left font-medium text-slate-400">Feature</th>
+                {plans.map((plan) => (
+                  <th key={plan} className={`px-6 py-4 text-center font-semibold ${plan === "deluxe" ? "text-sky-600" : "text-slate-700"}`}>
+                    {t(`${plan}.name`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, i) => (
+                <tr key={row.label} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                  <td className="px-6 py-3.5 text-slate-700">{row.label}</td>
+                  <td className="px-6 py-3.5 text-center"><Cell value={row.free} included={included} notIncluded={notIncluded} /></td>
+                  <td className="px-6 py-3.5 text-center"><Cell value={row.deluxe} included={included} notIncluded={notIncluded} /></td>
+                  <td className="px-6 py-3.5 text-center"><Cell value={row.premium} included={included} notIncluded={notIncluded} /></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Pricing FAQ */}
+      <div className="mx-auto mt-24 max-w-3xl px-6">
+        <h2 className="mb-10 text-center text-2xl font-bold text-slate-900">{t("faq.heading")}</h2>
+        <div className="space-y-4">
+          {faqKeys.map((key) => (
+            <details key={key} className="group rounded-xl border border-slate-200 bg-white px-6 py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-medium text-slate-900">
+                {t(`faq.${key}.question`)}
+                <ChevronDown size={18} className="shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-slate-500">{t(`faq.${key}.answer`)}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mx-auto mt-20 max-w-xl px-6 text-center">
+        <Link
+          href={`/${locale}/signup`}
+          className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white shadow-lg transition"
+          style={{ backgroundColor: "#0ea5e9" }}
+        >
+          Start for free <ArrowRight size={18} />
+        </Link>
+      </div>
+    </div>
+  );
+}

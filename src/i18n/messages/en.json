@@ -1,0 +1,470 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "howItWorks": "How it works",
+    "blog": "Blog",
+    "help": "Help",
+    "signIn": "Sign in",
+    "startForFree": "Start for free"
+  },
+  "hero": {
+    "badge": "Free federal filing for simple returns",
+    "heading": "File your taxes in minutes — not hours",
+    "subheading": "Taxly guides you step by step through your federal and state return in plain English. No jargon. No surprise fees. Maximum refund.",
+    "cta": "Start for free",
+    "ctaSecondary": "See how it works",
+    "noCard": "No credit card required · Free federal return"
+  },
+  "trust": {
+    "item1": "256-bit encryption",
+    "item2": "IRS e-file ready",
+    "item3": "Maximum Refund Guarantee",
+    "item4": "4.8 ★ rated"
+  },
+  "howItWorks": {
+    "heading": "Three steps. You stay in control.",
+    "subheading": "We do the math. You make the decisions.",
+    "step1": {
+      "title": "Import your docs",
+      "description": "Upload your W-2, 1099s, or connect directly to your employer. Taxly pulls in your numbers automatically."
+    },
+    "step2": {
+      "title": "Answer plain questions",
+      "description": "No tax forms, no jargon. We ask simple questions and put your answers in the right boxes behind the scenes."
+    },
+    "step3": {
+      "title": "Review & e-file",
+      "description": "See your refund or balance due before you file. E-file in one click — the IRS typically processes in 21 days."
+    },
+    "whatYouNeed": {
+      "heading": "What you'll need",
+      "items": [
+        "W-2 from your employer (or 1099 if self-employed)",
+        "Social Security numbers for you, your spouse, and dependents",
+        "Last year's tax return (optional — speeds things up)",
+        "Bank account details for direct deposit",
+        "1099-INT or 1099-DIV if you have investment income",
+        "Receipts for deductions you plan to claim"
+      ]
+    },
+    "imports": {
+      "heading": "Import from anywhere",
+      "description": "Connect your employer, brokerage, or bank. Or upload a PDF from TurboTax, H&R Block, or last year's Taxly return."
+    }
+  },
+  "situations": {
+    "heading": "It covers your situation",
+    "subheading": "Whether you're a W-2 employee or running a side hustle, Taxly has you covered.",
+    "employee": {
+      "title": "W-2 Employee",
+      "description": "Simple filing for salaried or hourly workers. File federal free.",
+      "forms": ["W-2", "Standard or itemized deductions", "Child Tax Credit", "Education credits"]
+    },
+    "freelancer": {
+      "title": "Freelancer & Gig Worker",
+      "description": "1099-NEC, Schedule C, self-employment tax, quarterly estimates — all handled.",
+      "forms": ["1099-NEC / 1099-MISC", "Schedule C", "Self-employment tax", "Quarterly estimates"]
+    },
+    "investor": {
+      "title": "Investor",
+      "description": "Stocks, crypto, dividends, capital gains. Import from your brokerage automatically.",
+      "forms": ["1099-B (brokerage)", "Schedule D", "Crypto gains/losses", "1099-DIV / 1099-INT"]
+    },
+    "homeowner": {
+      "title": "Homeowner",
+      "description": "Mortgage interest, property tax, home-office deduction — we find every dollar.",
+      "forms": ["1098 Mortgage interest", "Property tax deduction", "Home-office deduction", "Energy credits"]
+    },
+    "family": {
+      "title": "Family & Dependents",
+      "description": "Child Tax Credit, Child & Dependent Care, education credits, and more.",
+      "forms": ["Child Tax Credit", "Child & Dependent Care Credit", "1098-T (education)", "Earned Income Credit"]
+    },
+    "retirement": {
+      "title": "Retirement Income",
+      "description": "Social Security, 401(k), IRA distributions, pension income — filed correctly.",
+      "forms": ["SSA-1099 (Social Security)", "1099-R (retirement)", "IRA deductions", "RMD calculations"]
+    }
+  },
+  "security": {
+    "heading": "Your tax data is safe with us",
+    "subheading": "We handle your most sensitive financial information. Here's exactly how we protect it.",
+    "encryption": {
+      "title": "AES-256 Encryption at Rest",
+      "description": "Every piece of data you enter — your SSN, income, deductions — is encrypted with AES-256 before it ever touches our database. The same standard used by banks and the US government."
+    },
+    "transit": {
+      "title": "TLS 1.3 in Transit",
+      "description": "All data moving between your browser and our servers is protected by TLS 1.3. Your information is never sent in plain text, ever."
+    },
+    "mfa": {
+      "title": "Multi-Factor Authentication",
+      "description": "Protect your account with a second factor — authenticator app or SMS. We recommend enabling MFA before you start filing."
+    },
+    "noSell": {
+      "title": "We Never Sell Your Data",
+      "description": "Your tax information is yours. We don't sell it, share it with advertisers, or use it to build profiles. We use it for one thing: filing your taxes."
+    },
+    "retention": {
+      "title": "Data Retention & Deletion",
+      "description": "We retain your filed returns for 7 years so you can access them anytime. You can request full deletion of your account and data at any time."
+    },
+    "access": {
+      "title": "Strict Access Controls",
+      "description": "Taxly employees cannot access your tax data without your explicit permission. All internal access is logged and audited."
+    },
+    "certBadge": "SOC 2 Type II (in progress)",
+    "certNote": "We are actively pursuing SOC 2 Type II certification. Our infrastructure follows its controls today."
+  },
+  "guaranteesPage": {
+    "heading": "Three promises we actually keep",
+    "subheading": "No fine print. No asterisks. Here's exactly what each guarantee means and what you get.",
+    "maxRefund": {
+      "title": "Maximum Refund Guarantee",
+      "badge": "Refund covered",
+      "what": "What it means",
+      "whatText": "If you file the same return with another major tax software (TurboTax, H&R Block, FreeTaxUSA) and they produce a larger federal refund using identical data, we'll refund your Taxly filing fee in full.",
+      "how": "How to claim it",
+      "howText": "File with Taxly first. Then file with the other software. If their refund is higher, email us at hello@gettaxly.com within 60 days of your Taxly e-file date with both return summaries. We'll verify and refund within 5 business days.",
+      "limits": "This guarantee covers federal returns only and requires that the same deductions and income are entered in both returns."
+    },
+    "accuracy": {
+      "title": "100% Accuracy Guarantee",
+      "badge": "Penalty paid",
+      "what": "What it means",
+      "whatText": "If the IRS or a state tax authority assesses a penalty or interest charge that results directly from a Taxly calculation error — not from information you entered incorrectly — we'll pay that penalty and interest.",
+      "how": "How to claim it",
+      "howText": "Contact us at hello@gettaxly.com with your IRS notice. We'll review whether the error originated in Taxly's calculations. If it did, we cover the penalty and interest charges. No arguments, no delays.",
+      "limits": "This does not cover penalties from incorrect information you entered, late filing, or situations where you chose to override Taxly's recommendations."
+    },
+    "audit": {
+      "title": "Audit Support",
+      "badge": "We guide you",
+      "what": "What it means",
+      "whatText": "If the IRS or a state tax authority contacts you about a return you filed with Taxly, we'll provide guidance at every step of your response — what the notice means, what documents to gather, and what to say.",
+      "how": "How to get support",
+      "howText": "Forward the IRS or state notice to support@gettaxly.com. A tax specialist will review it and get back to you within one business day with a plain-English explanation and next steps.",
+      "limits": "Audit support means guidance and assistance, not legal representation. For full representation before the IRS, consult a licensed CPA or tax attorney."
+    }
+  },
+  "guarantees": {
+    "heading": "Three promises we actually keep",
+    "maxRefund": {
+      "title": "Maximum Refund Guarantee",
+      "description": "If another tax software gets you a larger refund using the same data, we'll refund your filing fee."
+    },
+    "accuracy": {
+      "title": "100% Accuracy Guarantee",
+      "description": "If Taxly makes a calculation error that costs you a penalty, we pay the penalty plus interest."
+    },
+    "audit": {
+      "title": "Audit Support",
+      "description": "If the IRS contacts you about a return filed with Taxly, we'll walk you through every step of the response."
+    }
+  },
+  "pricing": {
+    "heading": "One honest price. No surprises at checkout.",
+    "subheading": "The number you see is the number you pay.",
+    "perState": "Per state return",
+    "included": "Included",
+    "notIncluded": "Not included",
+    "free": {
+      "name": "Free",
+      "federalPrice": "$0",
+      "statePrice": "$0",
+      "period": "federal + 1 state",
+      "description": "Simple W-2 returns. No income limits.",
+      "cta": "File free",
+      "features": [
+        "Federal return — free",
+        "1 state return — free",
+        "W-2 income",
+        "Standard deduction",
+        "Child Tax Credit",
+        "IRS e-file"
+      ]
+    },
+    "deluxe": {
+      "name": "Deluxe",
+      "federalPrice": "$29",
+      "statePrice": "+ $14 / state",
+      "period": "federal",
+      "description": "Deductions, homeowners, HSA, and more.",
+      "cta": "Start Deluxe",
+      "badge": "Most popular",
+      "features": [
+        "Everything in Free",
+        "Itemized deductions",
+        "Mortgage interest & property tax",
+        "HSA contributions",
+        "Student loan interest",
+        "Charitable donations"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "federalPrice": "$59",
+      "statePrice": "+ $14 / state",
+      "period": "federal",
+      "description": "Investments, crypto, rentals, self-employment.",
+      "cta": "Start Premium",
+      "features": [
+        "Everything in Deluxe",
+        "Schedule C (self-employed)",
+        "Stocks, crypto & capital gains",
+        "Rental income (Schedule E)",
+        "1099-NEC / 1099-MISC",
+        "Quarterly estimate calculator"
+      ]
+    },
+    "comparison": {
+      "heading": "Full plan comparison",
+      "sections": {
+        "filing": "Filing",
+        "income": "Income types",
+        "deductions": "Deductions & credits",
+        "support": "Support"
+      },
+      "rows": {
+        "federalReturn": { "label": "Federal return", "free": "Free", "deluxe": "$29", "premium": "$59" },
+        "stateReturn": { "label": "State return", "free": "Free (1 state)", "deluxe": "$14 / state", "premium": "$14 / state" },
+        "eFile": { "label": "IRS e-file", "free": true, "deluxe": true, "premium": true },
+        "importPdf": { "label": "Import prior-year PDF", "free": true, "deluxe": true, "premium": true },
+        "w2": { "label": "W-2 income", "free": true, "deluxe": true, "premium": true },
+        "interest": { "label": "Interest & dividends (1099-INT/DIV)", "free": true, "deluxe": true, "premium": true },
+        "selfEmployed": { "label": "Self-employed / 1099-NEC (Schedule C)", "free": false, "deluxe": false, "premium": true },
+        "investments": { "label": "Stocks & crypto (Schedule D)", "free": false, "deluxe": false, "premium": true },
+        "rental": { "label": "Rental income (Schedule E)", "free": false, "deluxe": false, "premium": true },
+        "standardDed": { "label": "Standard deduction", "free": true, "deluxe": true, "premium": true },
+        "itemized": { "label": "Itemized deductions (Schedule A)", "free": false, "deluxe": true, "premium": true },
+        "hsa": { "label": "HSA contributions", "free": false, "deluxe": true, "premium": true },
+        "mortgage": { "label": "Mortgage interest & property tax", "free": false, "deluxe": true, "premium": true },
+        "childCredit": { "label": "Child Tax Credit", "free": true, "deluxe": true, "premium": true },
+        "eitc": { "label": "Earned Income Credit", "free": true, "deluxe": true, "premium": true },
+        "emailSupport": { "label": "Email support", "free": true, "deluxe": true, "premium": true },
+        "prioritySupport": { "label": "Priority support", "free": false, "deluxe": false, "premium": true },
+        "auditSupport": { "label": "Audit support", "free": true, "deluxe": true, "premium": true }
+      }
+    },
+    "faq": {
+      "heading": "Pricing questions",
+      "q1": { "question": "Is the Free tier really free — no hidden fees?", "answer": "Yes. Free means $0 for federal and $0 for one state return. We don't ask for your credit card until you upgrade to Deluxe or Premium. The price you see when you start is the price you pay." },
+      "q2": { "question": "What does 'per state' mean?", "answer": "Each state return costs $14, regardless of which plan you're on (Deluxe or Premium). So two states = $28, three states = $42. There are no state fees on the Free plan for your first state." },
+      "q3": { "question": "Can I upgrade after I start?", "answer": "Yes. Start on Free and upgrade to Deluxe or Premium any time before you file. Your data carries over and you only pay when you e-file." },
+      "q4": { "question": "Do prices change next year?", "answer": "We lock your price for the tax year you file. If you start a 2025 return at $29, that's what you pay — even if we raise prices in 2026." },
+      "q5": { "question": "Is there a refund policy?", "answer": "If you paid and have not yet e-filed, contact us within 30 days and we'll refund you. Once a return is e-filed and accepted by the IRS, we cannot refund the filing fee." }
+    }
+  },
+  "featuresPage": {
+    "heading": "Every situation, covered",
+    "subheading": "Taxly supports the tax situations that matter most for US individuals and families.",
+    "formsHeading": "Supported forms",
+    "importsHeading": "Where we import from",
+    "imports": [
+      "Employer (W-2 import)",
+      "Brokerages — Fidelity, Schwab, Vanguard, Robinhood",
+      "Crypto exchanges — Coinbase, Kraken",
+      "Banks (1099-INT)",
+      "Prior-year PDF (TurboTax, H&R Block, Taxly)"
+    ],
+    "allForms": [
+      "W-2", "1099-NEC", "1099-MISC", "1099-INT", "1099-DIV", "1099-B", "1099-R",
+      "SSA-1099", "1098 (Mortgage)", "1098-T (Education)", "1098-E (Student Loan)",
+      "Schedule A", "Schedule B", "Schedule C", "Schedule D", "Schedule E",
+      "Form 2441 (Child Care)", "Form 8863 (Education Credits)", "Form 8949 (Capital Assets)",
+      "Form 4562 (Depreciation)", "FBAR (FinCEN 114)"
+    ]
+  },
+  "help": {
+    "heading": "Help Centre",
+    "subheading": "Quick answers to the most common questions.",
+    "contactPrompt": "Can't find what you need?",
+    "contactLink": "Contact us",
+    "sections": {
+      "gettingStarted": "Getting started",
+      "pricing": "Pricing",
+      "security": "Security",
+      "filing": "Filing & refunds"
+    },
+    "gettingStarted": {
+      "q1": { "question": "Do I need to create an account to start?", "answer": "Yes, a free account is required to save your progress and file your return. It takes under a minute to sign up — just an email and password." },
+      "q2": { "question": "Which tax year can I file with Taxly?", "answer": "You can file the current tax year return (due April 15) and amend returns from the prior two years." },
+      "q3": { "question": "Can I import my return from another software?", "answer": "Yes. Upload a PDF of your prior-year TurboTax, H&R Block, or Taxly return and we'll pre-fill your basic info and prior-year figures." },
+      "q4": { "question": "Can I use Taxly on mobile?", "answer": "Yes. Taxly is fully responsive and works on any smartphone or tablet browser. A dedicated mobile app is planned." }
+    },
+    "pricing": {
+      "q1": { "question": "When do I pay?", "answer": "You only pay when you e-file your return. You can prepare your return and see your refund estimate completely free before deciding." },
+      "q2": { "question": "What payment methods do you accept?", "answer": "We accept all major credit and debit cards (Visa, Mastercard, Amex, Discover) and Apple Pay / Google Pay." },
+      "q3": { "question": "Can I get a refund?", "answer": "If you've paid but not yet e-filed, contact us within 30 days for a full refund. After e-filing, the fee is non-refundable." }
+    },
+    "security": {
+      "q1": { "question": "Is my Social Security number safe?", "answer": "Yes. Your SSN is encrypted with AES-256 before storage and is never transmitted in plain text. It's only sent to the IRS during e-filing, over an encrypted connection." },
+      "q2": { "question": "Does Taxly sell my data?", "answer": "Never. We use your data solely to prepare and file your taxes. We do not sell it, share it with advertisers, or use it to build advertising profiles." },
+      "q3": { "question": "How do I enable two-factor authentication?", "answer": "Go to Account Settings → Security → Enable 2FA. We support authenticator apps (Google Authenticator, Authy) and SMS." }
+    },
+    "filing": {
+      "q1": { "question": "How long does IRS processing take?", "answer": "The IRS typically accepts e-filed returns within 24–48 hours and issues refunds within 21 days of acceptance. You can check status at IRS.gov/refunds." },
+      "q2": { "question": "What if I make a mistake after filing?", "answer": "You can amend your return using Form 1040-X. Taxly will guide you through the amendment process. There's no additional filing fee for amendments." },
+      "q3": { "question": "How do I file an extension?", "answer": "File Form 4868 by April 15 to get a 6-month extension to October 15. Taxly handles this automatically. Note: an extension to file is not an extension to pay — any tax owed is still due April 15." },
+      "q4": { "question": "Can I file jointly with my spouse?", "answer": "Yes. Choose 'Married Filing Jointly' when you start. Taxly will ask for your spouse's information and compare MFJ vs MFS to find the better outcome." }
+    }
+  },
+  "about": {
+    "heading": "Built by people who believe taxes shouldn't be this hard",
+    "subheading": "Taxly is made by the team behind Finovo — accounting software for European small businesses. We saw how broken the US tax filing experience was and decided to fix it.",
+    "mission": {
+      "heading": "Our mission",
+      "text": "The average American spends 13 hours filing their taxes. That's a full workday lost to paperwork, jargon, and anxiety — every year. We think that's wrong.\n\nTaxly exists to give those hours back. Guided questions instead of confusing forms. Flat prices instead of bait-and-switch fees. Plain English instead of IRS jargon.\n\nWe're not trying to replace your accountant. We're trying to make sure you don't need one for a simple return."
+    },
+    "team": {
+      "heading": "Who builds Taxly",
+      "text": "We're AppsLab — a small, compliance-first software company. Finovo, our European accounting product, is used by thousands of freelancers and small businesses in the UK, France, and Germany.\n\nTaxly brings the same engineering rigour and obsessive attention to accuracy to the US market."
+    },
+    "finovoLink": "Learn about Finovo →"
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "subheading": "Questions, feedback, or press enquiries — we read everything.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "subject": "Subject",
+      "subjects": ["General question", "Support", "Press / Media", "Partnership"],
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent. We'll get back to you within one business day.",
+      "error": "Something went wrong. Please try again or email us directly."
+    },
+    "directEmail": "Or email us directly at"
+  },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "lastUpdated": "Last updated: January 1, 2025",
+    "intro": "Taxly Inc. ("Taxly", "we", "us", "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights.",
+    "sections": {
+      "collect": {
+        "heading": "Information we collect",
+        "text": "We collect information you provide directly: your name, email address, Social Security number, income information, and other tax-related data necessary to prepare your return. We also collect usage data (pages visited, features used) to improve the product."
+      },
+      "use": {
+        "heading": "How we use your information",
+        "text": "We use your information solely to prepare, review, and e-file your tax return; to send you account and filing status notifications; and to improve Taxly's accuracy and user experience. We do not use your tax data for advertising."
+      },
+      "share": {
+        "heading": "Information sharing",
+        "text": "We share your tax information with the IRS and relevant state tax authorities solely for the purpose of filing your return, as authorized by you. We do not sell your information to third parties. We may share aggregate, non-identifiable usage data with service providers who help us operate Taxly."
+      },
+      "security": {
+        "heading": "Security",
+        "text": "We protect your data with AES-256 encryption at rest, TLS 1.3 in transit, and strict access controls. See our Security page for full details."
+      },
+      "retention": {
+        "heading": "Data retention",
+        "text": "We retain your filed returns and associated data for 7 years to comply with IRS record-keeping guidance and to allow you to access prior returns. You can request deletion of your account at any time; we will delete your data within 30 days, except where retention is required by law."
+      },
+      "rights": {
+        "heading": "Your rights",
+        "text": "You may access, correct, or delete your personal information at any time through Account Settings. To request full data deletion, email privacy@gettaxly.com. We do not discriminate against users who exercise these rights."
+      },
+      "contact": {
+        "heading": "Contact",
+        "text": "For privacy questions, contact privacy@gettaxly.com."
+      }
+    }
+  },
+  "terms": {
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: January 1, 2025",
+    "intro": "These Terms of Service govern your use of Taxly. By using Taxly you agree to these terms.",
+    "sections": {
+      "service": {
+        "heading": "The service",
+        "text": "Taxly provides tax preparation software that helps you prepare and e-file US federal and state income tax returns. Taxly is not a CPA firm, law firm, or licensed tax preparer. We provide software tools, not professional tax advice."
+      },
+      "accuracy": {
+        "heading": "Your responsibility for accuracy",
+        "text": "You are responsible for the accuracy and completeness of all information you enter into Taxly. Taxly calculates your return based on the information you provide. Errors or omissions in your input are not covered by our Accuracy Guarantee."
+      },
+      "efile": {
+        "heading": "Electronic filing consent",
+        "text": "By submitting your return for e-filing, you authorize Taxly to transmit your return to the IRS and applicable state tax authorities on your behalf. You confirm that the return is true, correct, and complete to the best of your knowledge, as required by IRS Publication 1345."
+      },
+      "payment": {
+        "heading": "Fees and payment",
+        "text": "Fees are charged at the time of e-filing. Prices are displayed before you pay. We do not charge hidden fees. Refunds are available if you have paid but not yet e-filed, within 30 days of payment."
+      },
+      "prohibited": {
+        "heading": "Prohibited uses",
+        "text": "You may not use Taxly to file returns on behalf of others without their explicit authorization, to file fraudulent or knowingly inaccurate returns, or to attempt to access other users' accounts or data."
+      },
+      "liability": {
+        "heading": "Limitation of liability",
+        "text": "To the maximum extent permitted by law, Taxly's liability for any claim arising from your use of the service is limited to the amount you paid for the filing in question. We are not liable for IRS decisions, state tax authority decisions, or penalties arising from information you entered incorrectly."
+      },
+      "changes": {
+        "heading": "Changes to these terms",
+        "text": "We may update these terms. We'll notify you by email and post the updated terms at gettaxly.com/terms at least 14 days before changes take effect."
+      },
+      "contact": {
+        "heading": "Contact",
+        "text": "Questions about these terms: legal@gettaxly.com."
+      }
+    }
+  },
+  "faq": {
+    "heading": "Common questions",
+    "q1": { "question": "Is Taxly really free for simple returns?", "answer": "Yes. Federal filing is free for W-2 income with the standard deduction, no income limit. One state return is also free." },
+    "q2": { "question": "When is the tax deadline?", "answer": "The federal deadline is April 15 for most filers. If you need more time, you can file a free extension to October 15 — Taxly handles that too." },
+    "q3": { "question": "Is my data secure?", "answer": "All data is encrypted with AES-256 at rest and TLS 1.3 in transit. We never sell your data or use it for advertising." },
+    "q4": { "question": "Can I import from last year's return?", "answer": "Yes. Import a PDF from TurboTax, H&R Block, or any prior Taxly return and we'll pre-fill your name, address, and prior-year figures." },
+    "q5": { "question": "What if I have both W-2 and freelance income?", "answer": "Start with Premium. It handles W-2 plus Schedule C (self-employment) in the same return, including self-employment tax calculation." },
+    "q6": { "question": "How fast is my refund?", "answer": "The IRS typically deposits refunds within 21 days of acceptance for e-filed returns. State refunds vary by state." }
+  },
+  "blog": {
+    "heading": "The Taxly Blog",
+    "subtext": "Plain-English guides to US taxes — deadlines, deductions, and everything in between.",
+    "readMore": "Read more",
+    "backToBlog": "Back to Blog",
+    "by": "By",
+    "publishedOn": "Published"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "howItWorks": "How it works",
+    "changelog": "Changelog",
+    "company": "Company",
+    "about": "About",
+    "blog": "Blog",
+    "press": "Press",
+    "careers": "Careers",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "support": "Support",
+    "help": "Help Centre",
+    "contact": "Contact us",
+    "status": "System status",
+    "copyright": "© {year} Taxly Inc. All rights reserved.",
+    "tagline": "US taxes, plain and simple.",
+    "disclaimer": "Taxly is not a law firm or CPA firm. This is not tax advice."
+  },
+  "metadata": {
+    "home": { "title": "Taxly — File Your US Taxes in Minutes", "description": "Guided federal and state tax filing for individuals, freelancers, and families. Free for simple W-2 returns. No surprise fees." },
+    "pricing": { "title": "Pricing — Taxly", "description": "Transparent flat pricing with no upsells at checkout. Free federal for simple returns. Deluxe and Premium for every situation." },
+    "howItWorks": { "title": "How It Works — Taxly", "description": "File your federal and state taxes in three simple steps. Import your documents, answer plain questions, and e-file in minutes." },
+    "features": { "title": "Features — Taxly", "description": "Covers W-2, 1099, investments, homeowners, self-employed, and more. See every situation Taxly supports." },
+    "security": { "title": "Security — Taxly", "description": "AES-256 encryption, TLS 1.3, multi-factor authentication. Your tax data is always protected." },
+    "guarantees": { "title": "Guarantees — Taxly", "description": "Maximum Refund Guarantee, 100% Accuracy Guarantee, and Audit Support — with no fine print." },
+    "help": { "title": "Help Centre — Taxly", "description": "Answers to common questions about filing, pricing, security, and refunds." },
+    "about": { "title": "About — Taxly", "description": "Taxly is built by AppsLab, the team behind Finovo. Our mission: make US tax filing honest, plain, and fast." },
+    "contact": { "title": "Contact — Taxly", "description": "Get in touch with the Taxly team for support, press, or general questions." },
+    "privacy": { "title": "Privacy Policy — Taxly", "description": "How Taxly collects, uses, and protects your personal and tax information." },
+    "terms": { "title": "Terms of Service — Taxly", "description": "Terms governing your use of Taxly's tax preparation software." },
+    "blog": { "title": "Blog — Taxly", "description": "Plain-English guides to US taxes — deadlines, deductions, self-employment, and more." }
+  }
+}

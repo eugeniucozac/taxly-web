@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.gettaxly.com" }],
+      "destination": "https://gettaxly.com/$1",
+      "permanent": true
+    }
+  ]
+}
