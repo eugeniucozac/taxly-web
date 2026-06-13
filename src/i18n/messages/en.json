@@ -5,6 +5,7 @@
     "howItWorks": "How it works",
     "blog": "Blog",
     "help": "Help",
+    "estimator": "Refund Estimator",
     "signIn": "Sign in",
     "startForFree": "Start for free"
   },
@@ -465,6 +466,48 @@
     "contact": { "title": "Contact — Taxly", "description": "Get in touch with the Taxly team for support, press, or general questions." },
     "privacy": { "title": "Privacy Policy — Taxly", "description": "How Taxly collects, uses, and protects your personal and tax information." },
     "terms": { "title": "Terms of Service — Taxly", "description": "Terms governing your use of Taxly's tax preparation software." },
-    "blog": { "title": "Blog — Taxly", "description": "Plain-English guides to US taxes — deadlines, deductions, self-employment, and more." }
+    "blog": { "title": "Blog — Taxly", "description": "Plain-English guides to US taxes — deadlines, deductions, self-employment, and more." },
+    "refundEstimator": { "title": "Free Tax Refund Estimator 2026 — Taxly", "description": "Estimate your federal tax refund or amount owed in seconds. Enter your income, withholding, and filing status — no account needed." }
+  },
+  "refundEstimator": {
+    "badge": "Free estimator — TY2026",
+    "heading": "Estimate your federal tax refund",
+    "subheading": "Answer 5 questions. See your estimate instantly. No account needed.",
+    "filingStatus": {
+      "label": "Filing status",
+      "single": "Single",
+      "mfj": "Married filing jointly",
+      "hoh": "Head of household"
+    },
+    "wages": "W-2 wages (annual)",
+    "withholdingHint": "From Box 2 of your W-2",
+    "withholding": "Federal tax withheld",
+    "freelance": "Freelance / 1099 income (optional)",
+    "freelanceHint": "Self-employment tax is calculated automatically",
+    "children": "Children under 17",
+    "result": {
+      "enterIncome": "Enter your income to see your estimate",
+      "estimatedRefund": "Estimated federal refund",
+      "estimatedOwed": "Estimated amount owed",
+      "estimate": "Estimate only — based on projected TY2026 figures",
+      "breakdown": "How we got there",
+      "grossIncome": "Gross income",
+      "seTaxDeduction": "Self-employment tax deduction (½ SE tax)",
+      "agi": "Adjusted gross income",
+      "standardDeduction": "Standard deduction",
+      "taxableIncome": "Taxable income",
+      "federalTax": "Federal tax (incl. SE tax)",
+      "childTaxCredit": "Child Tax Credit",
+      "taxAfterCredits": "Tax after credits",
+      "withheld": "Tax withheld",
+      "refund": "Refund",
+      "owed": "Amount owed"
+    },
+    "cta": {
+      "heading": "Ready to file your actual return?",
+      "sub": "Taxly walks you through the same questions — and does the filing too.",
+      "button": "Start free with Taxly"
+    },
+    "disclaimer": "This tool provides estimates only and does not constitute tax advice. Based on projected TY2026 tax law. Actual results may differ. Consult a tax professional for your specific situation."
   }
 }

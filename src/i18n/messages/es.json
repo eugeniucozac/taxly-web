@@ -5,6 +5,7 @@
     "howItWorks": "Cómo funciona",
     "blog": "Blog",
     "help": "Ayuda",
+    "estimator": "Calculadora",
     "signIn": "Iniciar sesión",
     "startForFree": "Comenzar gratis"
   },
@@ -399,6 +400,48 @@
     "contact": { "title": "Contacto — Taxly", "description": "Ponte en contacto con el equipo de Taxly para soporte, prensa o preguntas generales." },
     "privacy": { "title": "Política de Privacidad — Taxly", "description": "Cómo Taxly recopila, usa y protege tu información personal y fiscal." },
     "terms": { "title": "Términos de Servicio — Taxly", "description": "Términos que rigen el uso del software de preparación de impuestos de Taxly." },
-    "blog": { "title": "Blog — Taxly", "description": "Guías en español claro sobre impuestos en EE. UU. — plazos, deducciones, trabajo independiente y más." }
+    "blog": { "title": "Blog — Taxly", "description": "Guías en español claro sobre impuestos en EE. UU. — plazos, deducciones, trabajo independiente y más." },
+    "refundEstimator": { "title": "Calculadora de Reembolso de Impuestos 2026 — Taxly", "description": "Estima tu reembolso federal o cantidad adeudada en segundos. Ingresa tus ingresos, retenciones y estado civil — sin necesidad de cuenta." }
+  },
+  "refundEstimator": {
+    "badge": "Calculadora gratis — AÑO FISCAL 2026",
+    "heading": "Estima tu reembolso federal de impuestos",
+    "subheading": "Responde 5 preguntas. Ve tu estimado al instante. Sin necesidad de cuenta.",
+    "filingStatus": {
+      "label": "Estado civil para efectos fiscales",
+      "single": "Soltero/a",
+      "mfj": "Casado/a declarando conjuntamente",
+      "hoh": "Cabeza de familia"
+    },
+    "wages": "Salario W-2 (anual)",
+    "withholdingHint": "Del Casillero 2 de tu W-2",
+    "withholding": "Impuesto federal retenido",
+    "freelance": "Ingresos freelance / 1099 (opcional)",
+    "freelanceHint": "El impuesto de trabajo independiente se calcula automáticamente",
+    "children": "Hijos menores de 17 años",
+    "result": {
+      "enterIncome": "Ingresa tus ingresos para ver tu estimado",
+      "estimatedRefund": "Reembolso federal estimado",
+      "estimatedOwed": "Cantidad estimada adeudada",
+      "estimate": "Solo un estimado — basado en cifras proyectadas del AÑO FISCAL 2026",
+      "breakdown": "Cómo llegamos a este resultado",
+      "grossIncome": "Ingreso bruto",
+      "seTaxDeduction": "Deducción del impuesto de trabajo independiente (½ del impuesto SE)",
+      "agi": "Ingreso bruto ajustado",
+      "standardDeduction": "Deducción estándar",
+      "taxableIncome": "Ingreso gravable",
+      "federalTax": "Impuesto federal (incl. impuesto SE)",
+      "childTaxCredit": "Crédito tributario por hijos",
+      "taxAfterCredits": "Impuesto después de créditos",
+      "withheld": "Impuesto retenido",
+      "refund": "Reembolso",
+      "owed": "Cantidad adeudada"
+    },
+    "cta": {
+      "heading": "¿Listo/a para presentar tu declaración real?",
+      "sub": "Taxly te guía con las mismas preguntas — y también hace la presentación.",
+      "button": "Comenzar gratis con Taxly"
+    },
+    "disclaimer": "Esta herramienta proporciona estimados únicamente y no constituye asesoramiento fiscal. Basada en la ley fiscal proyectada para el AÑO FISCAL 2026. Los resultados reales pueden diferir. Consulta a un profesional fiscal para tu situación específica."
   }
 }

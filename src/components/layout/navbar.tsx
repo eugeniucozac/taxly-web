@@ -45,6 +45,7 @@ export function Navbar() {
     { label: t("features"), href: `/${locale}/#features` },
     { label: t("howItWorks"), href: `/${locale}/how-it-works` },
     { label: t("pricing"), href: `/${locale}/pricing` },
+    { label: t("estimator"), href: `/${locale}/refund-estimator` },
     { label: t("blog"), href: `/${locale}/blog` },
   ];
 
