@@ -29,7 +29,6 @@ In the appslab repo (`src/features/products/data/products.ts`):
 
 - [ ] Final tier prices sign-off (product/finance) — currently Free / Deluxe $29 / Premium $59 + $14/state
 - [ ] "Live"/expert-assisted tier — at TY2026 launch or later?
-- [ ] Interactive refund-estimator — build pre-launch, or post-launch?
 
 ---
 
