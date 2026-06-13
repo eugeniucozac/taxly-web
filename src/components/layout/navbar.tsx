@@ -1,10 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname, useRouter } from "@/i18n/navigation";
+
+function LocaleSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
+
+  const other = locale === "en" ? "es" : "en";
+
+  function switchLocale() {
+    startTransition(() => {
+      router.replace(pathname, { locale: other });
+    });
+  }
+
+  return (
+    <button
+      onClick={switchLocale}
+      disabled={isPending}
+      aria-label={`Switch to ${other.toUpperCase()}`}
+      className={cn(
+        "rounded-md border border-slate-200 px-2.5 py-1 text-xs font-semibold tracking-wide text-slate-500 transition hover:border-slate-400 hover:text-slate-700",
+        isPending && "opacity-50",
+      )}
+    >
+      {other.toUpperCase()}
+    </button>
+  );
+}
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -41,6 +71,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 md:flex">
+          <LocaleSwitcher />
           <Link
             href={`/${locale}/login`}
             className="text-sm font-medium text-slate-600 hover:text-slate-900"
@@ -86,6 +117,10 @@ export function Navbar() {
             </li>
           ))}
           <li className="mt-3 flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-medium text-slate-400">Language</span>
+              <LocaleSwitcher />
+            </div>
             <Link
               href={`/${locale}/login`}
               className="rounded-lg border border-slate-200 py-2 text-center text-sm font-medium text-slate-700"

@@ -1,5 +1,40 @@
+"use client";
+
+import { useTransition } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+
+function FooterLocaleSwitcher() {
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isPending, startTransition] = useTransition();
+
+  const locales = [
+    { code: "en", label: "English" },
+    { code: "es", label: "Español" },
+  ] as const;
+
+  return (
+    <div className="flex items-center gap-1 rounded-full border border-slate-200 p-1">
+      {locales.map(({ code, label }) => (
+        <button
+          key={code}
+          disabled={isPending || locale === code}
+          onClick={() => startTransition(() => router.replace(pathname, { locale: code }))}
+          className={
+            locale === code
+              ? "rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold text-white"
+              : "rounded-full px-4 py-1 text-xs font-medium text-slate-500 transition hover:text-slate-900"
+          }
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -76,10 +111,13 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-slate-200 pt-8">
-          <p className="text-center text-sm text-slate-400">
-            {t("copyright", { year })}
-          </p>
-          <p className="mt-2 text-center text-xs text-slate-300">{t("disclaimer")}</p>
+          <div className="flex flex-col items-center gap-3">
+            <FooterLocaleSwitcher />
+            <p className="text-center text-sm text-slate-400">
+              {t("copyright", { year })}
+            </p>
+            <p className="text-center text-xs text-slate-300">{t("disclaimer")}</p>
+          </div>
         </div>
       </div>
     </footer>
