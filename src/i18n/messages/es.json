@@ -391,6 +391,31 @@
         "question": "¿Hay política de reembolso?",
         "answer": "Si pagaste y aún no has enviado por e-file, contáctanos dentro de 30 días y te reembolsaremos. Una vez que una declaración se envía y el IRS la acepta, no podemos reembolsar la tarifa."
       }
+    },
+    "honestMaths": {
+      "heading": "Las cuentas honestas: tres formas de declarar",
+      "intro": "Incluidas las dos que no implican pagarnos. Si una de estas te sirve, úsala — mandarte a un software que no necesitas es exactamente el comportamiento que este producto existe para rechazar.",
+      "directFile": {
+        "title": "IRS Direct File",
+        "price": "$0",
+        "text": "Gratis y oficial. Si todo tu ingreso es W-2, tomas la deducción estándar y tu estado participa — es simplemente la opción correcta.",
+        "href": "/vs/irs-direct-file",
+        "linkLabel": "Cuándo es lo correcto para ti →"
+      },
+      "freetaxusa": {
+        "title": "FreeTaxUSA",
+        "price": "$0 + ~$15/estado",
+        "text": "La opción económica honesta — genuinamente. Si conoces tu situación fiscal y una interfaz tipo formulario no te frena, es la forma creíble más barata de declarar.",
+        "href": "/vs/freetaxusa",
+        "linkLabel": "La comparación honesta →"
+      },
+      "taxly": {
+        "title": "Taxly Premium",
+        "price": "$69 + $29/estado",
+        "text": "Lo que compra el precio: una entrevista guiada en lenguaje claro que encuentra deducciones que quien presenta un 1099 por primera vez no sabe que existen — a un precio que no puede cambiar al pagar.",
+        "href": "/how-it-works",
+        "linkLabel": "Cómo funciona →"
+      }
     }
   },
   "featuresPage": {
@@ -751,6 +776,18 @@
     "subProcessors": {
       "title": "Subencargados — Taxly",
       "description": "Los servicios de terceros que procesan datos para gettaxly.com hoy, y los proveedores planeados para el producto de declaración, con compromiso de notificación de cambios."
+    },
+    "tools": {
+      "title": "Herramientas fiscales gratis — sin registro — Taxly",
+      "description": "Una calculadora de reembolso, una de multas del IRS y una de pagos trimestrales estimados. Gratis, sin pedir correo, con supuestos declarados y fuentes del IRS enlazadas."
+    },
+    "penaltyEstimator": {
+      "title": "Calculadora de multas del IRS por presentar tarde — Taxly",
+      "description": "Estima las multas por no presentar y no pagar más intereses si se te pasó la fecha límite — y aprende los tres pasos que detienen el daño."
+    },
+    "quarterlyTax": {
+      "title": "Calculadora de pagos trimestrales (1040-ES) — Taxly",
+      "description": "Calcula los pagos trimestrales de puerto seguro desde el impuesto del año pasado, anticipa el 15.3% de impuesto de trabajo por cuenta propia y evita la multa."
     }
   },
   "refundEstimator": {
@@ -948,5 +985,79 @@
       }
     ],
     "changeNotice": "Si añadimos o reemplazamos un subencargado, actualizaremos esta página antes de que el cambio entre en vigor y lo indicaremos en la fecha de última actualización. Cuando el producto esté activo, los titulares de cuentas serán notificados por correo de los cambios que afecten datos de declaraciones."
+  },
+  "tools": {
+    "hub": {
+      "eyebrow": "Herramientas gratis",
+      "heading": "Herramientas fiscales gratis — sin registro, sin trampa",
+      "intro": "Tres calculadoras que responden las preguntas que la gente realmente busca. Cada resultado es una estimación ilustrativa con los supuestos declarados, y cada tasa enlaza a la fuente del IRS para que la verifiques.",
+      "open": "Abrir la herramienta",
+      "refund": {
+        "title": "Calculadora de reembolso",
+        "text": "Una estimación aproximada de tu reembolso federal o saldo a pagar del año fiscal 2026 según tu ingreso, retenciones y hogar."
+      },
+      "penalty": {
+        "title": "Calculadora de multas",
+        "text": "¿Se te pasó la fecha límite de abril? Estima las multas por no presentar y no pagar más intereses — y qué hacer ahora mismo."
+      },
+      "quarterly": {
+        "title": "Calculadora de pagos trimestrales",
+        "text": "¿Ingresos freelance o gig? Calcula tus pagos trimestrales de puerto seguro y ve el impuesto de trabajo por cuenta propia antes de que te sorprenda."
+      },
+      "note": "Estas herramientas nunca piden tu nombre, correo o SSN. Corren en tu navegador y existen porque las buenas respuestas a preguntas que asustan son el marketing más honesto que conocemos."
+    },
+    "penalty": {
+      "eyebrow": "Herramienta gratis",
+      "heading": "Calculadora de multas del IRS",
+      "intro": "¿Se te pasó la fecha límite debiendo impuestos? Obtén una estimación honesta de la multa por no presentar, la multa por no pagar y los intereses — y los pasos que detienen el daño.",
+      "fileFirstNote": "El dato más importante: la multa por no PRESENTAR es diez veces la multa por no PAGAR. Si no has presentado, presenta ahora — aunque todavía no puedas pagar ni un dólar.",
+      "taxLabel": "Impuesto que aún debes",
+      "taxHint": "El saldo sin pagar de tu declaración (no tu impuesto total).",
+      "monthsLabel": "Meses después de la fecha límite",
+      "monthsHint": "Una parte de un mes cuenta como mes completo — es la regla del IRS, no la nuestra.",
+      "filedLabel": "Presenté mi declaración (o una prórroga) a tiempo",
+      "filedHint": "Presentar a tiempo elimina la gran multa del 5% mensual; solo quedan el pago tardío y los intereses.",
+      "errorBlank": "Ingresa ambas cantidades — un campo vacío no es cero.",
+      "calculate": "Estimar mi multa",
+      "resultHeading": "Estimación ilustrativa",
+      "ftf": "Multa por no presentar",
+      "ftp": "Multa por no pagar",
+      "interest": "Intereses (~{rate}%/año, se fija trimestralmente)",
+      "total": "Total estimado además de tu impuesto",
+      "minimumNote": "Tu declaración tiene más de 60 días de retraso, así que aplicó la multa mínima por no presentar — el menor entre el piso fijo o el 100% del impuesto no pagado.",
+      "advice": {
+        "heading": "Qué hacer ahora mismo",
+        "file": "1. Presenta la declaración hoy si no lo has hecho — eso detiene la multa del 5% mensual de inmediato.",
+        "plan": "2. ¿No puedes pagar todo? El IRS ofrece planes de pago; estar en uno reduce a la mitad la tasa por no pagar.",
+        "abatement": "3. ¿Primera vez que te pasa? Pregunta al IRS por la reducción de multa por primera vez — muchos califican y nunca la piden.",
+        "cta": "Taxly abre para el año fiscal 2026 — únete a la lista"
+      },
+      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las tasas y el piso de multa mínima cambian; verifica las cifras actuales en irs.gov/payments/penalties antes de actuar."
+    },
+    "quarterly": {
+      "eyebrow": "Herramienta gratis",
+      "heading": "Calculadora de pagos trimestrales estimados",
+      "intro": "Ningún empleador retiene por el ingreso freelance. Esto calcula los pagos de puerto seguro que mantienen lejos la multa del IRS — desde el número que ya conoces: el impuesto del año pasado.",
+      "priorLabel": "Impuesto total del año pasado",
+      "priorHint": "La línea “impuesto total” de tu Formulario 1040 del año pasado — no tu reembolso ni tu pago.",
+      "withholdingLabel": "Retención W-2 esperada este año",
+      "withholdingHint": "Si también tienes empleo, su retención cuenta hacia la meta. ¿Sin empleo? Déjalo en 0.",
+      "highAgiLabel": "El AGI del año pasado superó ${threshold}",
+      "highAgiHint": "Los ingresos altos deben alcanzar el 110% del impuesto del año pasado en vez del 100%.",
+      "profitLabel": "Ganancia esperada de trabajo independiente (opcional)",
+      "profitHint": "Ingresos menos gastos. Agregarla muestra el impuesto de trabajo por cuenta propia que la mayoría no ve venir en su primer año.",
+      "errorBlank": "Ingresa el impuesto del año pasado y tu retención — un campo vacío no es cero.",
+      "calculate": "Calcular mi pago trimestral",
+      "resultHeading": "Pago de puerto seguro, cada trimestre",
+      "resultNote": "Apunta al {pct} del impuesto del año pasado ({target}). Paga esto durante el año y no habrá multa por pago insuficiente, sea cual sea la factura final de este año.",
+      "dueDates": "Vencen aproximadamente el 15 de abril, 15 de junio, 15 de septiembre y 15 de enero — verifica las fechas exactas de cada año en irs.gov.",
+      "seHeading": "Atención: impuesto de trabajo por cuenta propia sobre esa ganancia",
+      "seNote": "15.3% de Seguro Social y Medicare sobre el 92.35% de la ganancia — además del impuesto sobre la renta, porque ningún empleador paga la mitad por ti. (Aproximación: la porción de Seguro Social tiene tope en la base salarial anual para ganancias altas.)",
+      "cta": {
+        "text": "El nivel Premium de Taxly está construido exactamente para esta declaración — ingreso 1099, deducciones encontradas, recordatorios trimestrales.",
+        "button": "Unirme a la lista del año fiscal 2026"
+      },
+      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las reglas de puerto seguro y las fechas vienen del Formulario 1040-ES del IRS — verifica las cifras del año actual en irs.gov."
+    }
   }
 }

@@ -391,6 +391,31 @@
         "question": "Is there a refund policy?",
         "answer": "If you paid and have not yet e-filed, contact us within 30 days and we'll refund you. Once a return is e-filed and accepted by the IRS, we cannot refund the filing fee."
       }
+    },
+    "honestMaths": {
+      "heading": "The honest maths: three ways to file",
+      "intro": "Including the two that don't involve paying us. If one of these fits, use it — sending you to software you don't need is the exact behaviour this product exists to reject.",
+      "directFile": {
+        "title": "IRS Direct File",
+        "price": "$0",
+        "text": "Free and official. If your income is all W-2, you take the standard deduction, and your state participates — this is simply the right choice.",
+        "href": "/vs/irs-direct-file",
+        "linkLabel": "When it's right for you →"
+      },
+      "freetaxusa": {
+        "title": "FreeTaxUSA",
+        "price": "$0 + ~$15/state",
+        "text": "The honest budget option — genuinely. If you know your tax situation and a form-like interface doesn't slow you down, it's the cheapest credible way to file.",
+        "href": "/vs/freetaxusa",
+        "linkLabel": "The honest comparison →"
+      },
+      "taxly": {
+        "title": "Taxly Premium",
+        "price": "$69 + $29/state",
+        "text": "What the premium buys: a plain-English guided interview that finds deductions a first-time 1099 filer doesn't know exist — at a price that can't change at checkout.",
+        "href": "/how-it-works",
+        "linkLabel": "How it works →"
+      }
     }
   },
   "featuresPage": {
@@ -751,6 +776,18 @@
     "subProcessors": {
       "title": "Sub-processors — Taxly",
       "description": "The named third-party services that process data for gettaxly.com today, and the vendors planned for the filing product, with a change-notification commitment."
+    },
+    "tools": {
+      "title": "Free tax tools — no signup — Taxly",
+      "description": "A refund estimator, an IRS penalty estimator, and a quarterly estimated-tax calculator. Free, no email asked, assumptions stated, IRS sources linked."
+    },
+    "penaltyEstimator": {
+      "title": "IRS late filing penalty calculator — Taxly",
+      "description": "Estimate failure-to-file and failure-to-pay penalties plus interest if you missed the tax deadline — and learn the three moves that stop the bleeding."
+    },
+    "quarterlyTax": {
+      "title": "Quarterly estimated tax calculator (1040-ES) — Taxly",
+      "description": "Work out safe-harbor quarterly payments from last year's tax, see the 15.3% self-employment tax coming, and dodge the underpayment penalty."
     }
   },
   "refundEstimator": {
@@ -948,5 +985,79 @@
       }
     ],
     "changeNotice": "If we add or replace a sub-processor, we will update this page before the change takes effect and note it in the page's last-updated date. When the filing product is live, account holders will be notified by email of changes affecting return data."
+  },
+  "tools": {
+    "hub": {
+      "eyebrow": "Free tools",
+      "heading": "Free tax tools — no signup, no catch",
+      "intro": "Three calculators that answer the questions people actually search for. Every result is an illustrative estimate with the assumptions stated, and every rate links to the IRS source so you can verify it.",
+      "open": "Open the tool",
+      "refund": {
+        "title": "Refund estimator",
+        "text": "A rough TY2026 federal refund or balance-due estimate from your income, withholding, and household."
+      },
+      "penalty": {
+        "title": "Penalty estimator",
+        "text": "Missed the April deadline? Estimate failure-to-file and failure-to-pay penalties plus interest — and what to do right now."
+      },
+      "quarterly": {
+        "title": "Quarterly tax calculator",
+        "text": "Freelance or gig income? Work out your safe-harbor quarterly payments and see the self-employment tax before it surprises you."
+      },
+      "note": "These tools never ask for your name, email, or SSN. They run in your browser and exist because good answers to scary questions are the most honest marketing we know."
+    },
+    "penalty": {
+      "eyebrow": "Free tool",
+      "heading": "IRS penalty estimator",
+      "intro": "Missed the deadline with tax owed? Get an honest estimate of the failure-to-file penalty, the failure-to-pay penalty, and interest — and the moves that stop the bleeding.",
+      "fileFirstNote": "The single most important fact: the penalty for not FILING is ten times the penalty for not PAYING. If you haven't filed, file now — even if you can't pay a dollar of it yet.",
+      "taxLabel": "Tax you still owe",
+      "taxHint": "The unpaid balance from your return (not your total tax).",
+      "monthsLabel": "Months past the deadline",
+      "monthsHint": "Part of a month counts as a full month — that's the IRS rule, not ours.",
+      "filedLabel": "I filed my return (or an extension) on time",
+      "filedHint": "Filing on time removes the big 5%/month penalty; only late payment and interest remain.",
+      "errorBlank": "Enter both amounts — a blank field isn't zero.",
+      "calculate": "Estimate my penalty",
+      "resultHeading": "Illustrative estimate",
+      "ftf": "Failure-to-file penalty",
+      "ftp": "Failure-to-pay penalty",
+      "interest": "Interest (~{rate}%/yr, set quarterly)",
+      "total": "Estimated total on top of your tax",
+      "minimumNote": "Your return is over 60 days late, so the minimum failure-to-file penalty applied — the lesser of the fixed floor or 100% of the unpaid tax.",
+      "advice": {
+        "heading": "What to do right now",
+        "file": "1. File the return today if you haven't — that stops the 5%/month penalty immediately.",
+        "plan": "2. Can't pay in full? The IRS offers payment plans; being on one cuts the failure-to-pay rate in half.",
+        "abatement": "3. First time this happened? Ask the IRS about first-time penalty abatement — many filers qualify and never ask.",
+        "cta": "Taxly opens for TY2026 — join the waitlist"
+      },
+      "disclaimer": "Illustrative estimate, not tax advice. Rates and the minimum-penalty floor change; verify current figures at irs.gov/payments/penalties before acting."
+    },
+    "quarterly": {
+      "eyebrow": "Free tool",
+      "heading": "Quarterly estimated tax calculator",
+      "intro": "No employer withholds for freelance income. This works out the safe-harbor payments that keep the IRS penalty away — from the one number you already know: last year's tax.",
+      "priorLabel": "Last year's total tax",
+      "priorHint": "The “total tax” line on last year's Form 1040 — not your refund or payment.",
+      "withholdingLabel": "Expected W-2 withholding this year",
+      "withholdingHint": "If you also have a day job, its withholding counts toward the target. No job? Leave it at 0.",
+      "highAgiLabel": "Last year's AGI was over ${threshold}",
+      "highAgiHint": "High earners must hit 110% of last year's tax instead of 100%.",
+      "profitLabel": "Expected self-employment profit (optional)",
+      "profitHint": "Income minus expenses. Adding it shows the self-employment tax most first-year freelancers don't see coming.",
+      "errorBlank": "Enter last year's tax and your withholding — a blank field isn't zero.",
+      "calculate": "Calculate my quarterly payment",
+      "resultHeading": "Safe-harbor payment, each quarter",
+      "resultNote": "Targets {pct} of last year's tax ({target}). Pay this through the year and there's no underpayment penalty, whatever this year's final bill turns out to be.",
+      "dueDates": "Due roughly April 15, June 15, September 15, and January 15 — verify each year's exact dates at irs.gov.",
+      "seHeading": "Heads up: self-employment tax on that profit",
+      "seNote": "15.3% Social Security and Medicare on 92.35% of profit — on top of income tax, because no employer is paying half of it for you. (Approximation: the Social Security portion caps at the annual wage base for high profits.)",
+      "cta": {
+        "text": "Taxly's Premium tier is built around exactly this return — 1099 income, deductions found, quarterly reminders.",
+        "button": "Join the TY2026 waitlist"
+      },
+      "disclaimer": "Illustrative estimate, not tax advice. Safe-harbor rules and dates come from IRS Form 1040-ES — verify the current year's figures at irs.gov."
+    }
   }
 }

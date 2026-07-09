@@ -190,6 +190,42 @@ function PricingClient() {
         </div>
       </div>
 
+      {/* The honest maths — three ways to file, including not paying us */}
+      <div className="mx-auto mt-24 max-w-5xl px-6">
+        <h2 className="mb-3 text-center text-2xl font-bold text-foreground">
+          {t("honestMaths.heading")}
+        </h2>
+        <p className="mx-auto mb-10 max-w-2xl text-center text-sm text-muted-foreground">
+          {t("honestMaths.intro")}
+        </p>
+        <div className="grid gap-6 md:grid-cols-3">
+          {(["directFile", "freetaxusa", "taxly"] as const).map((key) => (
+            <div
+              key={key}
+              className={
+                key === "taxly"
+                  ? "rounded-2xl border border-sky-200 bg-sky-50 p-6 dark:border-sky-500/30 dark:bg-sky-500/10"
+                  : "rounded-2xl border bg-card p-6 shadow-sm"
+              }
+            >
+              <h3 className="font-semibold">{t(`honestMaths.${key}.title`)}</h3>
+              <p className="mt-1 text-2xl font-bold text-primary">
+                {t(`honestMaths.${key}.price`)}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {t(`honestMaths.${key}.text`)}
+              </p>
+              <Link
+                href={`/${locale}${t(`honestMaths.${key}.href`)}`}
+                className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+              >
+                {t(`honestMaths.${key}.linkLabel`)}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Pricing FAQ */}
       <div className="mx-auto mt-24 max-w-3xl px-6">
         <h2 className="mb-10 text-center text-2xl font-bold text-foreground">{t("faq.heading")}</h2>
