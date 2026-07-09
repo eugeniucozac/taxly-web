@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { makeMetadata } from "@/lib/metadata";
+import { LegalDraftBanner } from "@/components/shared/legal-draft-banner";
 import type { LocalePageProps } from "@/types/page";
 
 export async function generateMetadata({ params }: LocalePageProps) {
@@ -11,7 +12,14 @@ export async function generateMetadata({ params }: LocalePageProps) {
 export default async function PrivacyPage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <PrivacyClient />;
+  return (
+    <>
+      <div className="mx-auto max-w-3xl px-6 pt-12">
+        <LegalDraftBanner locale={locale} />
+      </div>
+      <PrivacyClient />
+    </>
+  );
 }
 
 function PrivacyClient() {

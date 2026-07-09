@@ -735,6 +735,22 @@
     "refundEstimator": {
       "title": "Calculadora de Reembolso de Impuestos 2026 — Taxly",
       "description": "Estima tu reembolso federal o cantidad adeudada en segundos. Ingresa tus ingresos, retenciones y estado civil — sin necesidad de cuenta."
+    },
+    "glossary": {
+      "title": "Glosario fiscal de EE. UU. en lenguaje claro — Taxly",
+      "description": "Treinta términos fiscales de EE. UU. — AGI, 1099-NEC, impuesto de trabajo por cuenta propia, puerto seguro y más — explicados en dos frases honestas con enlaces a herramientas gratis."
+    },
+    "vs": {
+      "title": "Taxly vs TurboTax, FreeTaxUSA e IRS Direct File",
+      "description": "Comparaciones honestas que nombran lo que cada alternativa hace genuinamente mejor — incluso cuándo la opción gratuita del gobierno es simplemente la correcta."
+    },
+    "cookies": {
+      "title": "Política de cookies — Taxly",
+      "description": "Cada cookie que usa gettaxly.com, listada por nombre con proveedor, propósito y duración. La analítica se carga solo después de aceptar el banner de consentimiento."
+    },
+    "subProcessors": {
+      "title": "Subencargados — Taxly",
+      "description": "Los servicios de terceros que procesan datos para gettaxly.com hoy, y los proveedores planeados para el producto de declaración, con compromiso de notificación de cambios."
     }
   },
   "refundEstimator": {
@@ -790,5 +806,147 @@
     "text": "Esa página no existe — puede que se haya movido o que el enlace esté mal escrito. Las herramientas y guías gratuitas son el camino de vuelta más rápido.",
     "home": "Volver al inicio",
     "tools": "Ver herramientas gratis"
+  },
+  "legal": {
+    "draftBanner": "Borrador — este documento aún no ha sido revisado por un abogado. Describe nuestras prácticas reales, pero la redacción puede cambiar antes del lanzamiento."
+  },
+  "glossary": {
+    "eyebrow": "Glosario en lenguaje claro",
+    "heading": "Términos fiscales de EE. UU., explicados con honestidad",
+    "intro": "Treinta términos que encontrarás al declarar, cada uno en dos frases honestas — sin jerga definida con más jerga. Los montos exactos cambian cada año; verifica siempre la cifra del año actual en irs.gov.",
+    "cta": {
+      "heading": "Mira los números de tu propia situación",
+      "text": "Las herramientas gratuitas aplican estas ideas a tu ingreso real — estimación de reembolso, cálculo de multas y pagos trimestrales. Sin registrarte.",
+      "button": "Probar las herramientas gratis"
+    }
+  },
+  "vsHub": {
+    "eyebrow": "Comparaciones honestas",
+    "heading": "Taxly vs las alternativas",
+    "intro": "Cada comparación aquí nombra lo que la alternativa genuinamente hace mejor y quién debería quedarse con ella. Si un rival es la opción correcta para ti, lo decimos — ese es el punto de la marca.",
+    "preLaunchNote": "Estado honesto: Taxly abre para declaraciones del año fiscal 2026 en enero de 2027 y actualmente está en lista de espera. El lado de Taxly en estas comparaciones refleja precios y funciones planeados para el lanzamiento; los precios de los rivales cambian a mitad de temporada, así que verifícalos en sus propios sitios.",
+    "readComparison": "Leer la comparación",
+    "tableFeature": "Característica",
+    "theyWin": "Dónde gana {rival}",
+    "stayWith": "Quédate con {rival} si…",
+    "taxlyFits": "Taxly encaja si…",
+    "faqHeading": "Preguntas frecuentes",
+    "cta": {
+      "heading": "¿Quieres que el precio que ves sea el precio que pagas?",
+      "text": "Únete a la lista de espera para el año fiscal 2026. Declaraciones simples gratis, Deluxe $39, Premium $69 — fijo, revelado desde el inicio, bloqueado al empezar.",
+      "button": "Unirme a la lista",
+      "pricing": "Ver precios"
+    }
+  },
+  "cookiesPage": {
+    "lastUpdated": "Última actualización: 9 de julio de 2026",
+    "heading": "Política de cookies",
+    "intro": "Esta página lista cada cookie y tecnología similar que usa gettaxly.com, qué hace y cuánto dura. Las cookies de analítica se cargan solo después de que las aceptes en el banner de consentimiento — rechazarlas mantiene el sitio totalmente funcional.",
+    "consentNote": "Tu elección de consentimiento se guarda en el localStorage de tu navegador (no es una cookie) bajo la clave gf_cookie_consent, para recordar tu decisión sin rastrearte.",
+    "cols": {
+      "name": "Nombre",
+      "provider": "Proveedor",
+      "purpose": "Propósito",
+      "duration": "Duración",
+      "category": "Categoría"
+    },
+    "rows": [
+      {
+        "name": "gf_cookie_consent",
+        "provider": "Taxly (localStorage)",
+        "purpose": "Recuerda si aceptaste o rechazaste la analítica",
+        "duration": "Hasta que se borre",
+        "category": "Estrictamente necesaria"
+      },
+      {
+        "name": "_ga / _ga_*",
+        "provider": "Google Analytics 4",
+        "purpose": "Distingue visitantes y sesiones para estadísticas de uso agregadas",
+        "duration": "Hasta 2 años",
+        "category": "Analítica (con consentimiento)"
+      },
+      {
+        "name": "_clck / _clsk",
+        "provider": "Microsoft Clarity",
+        "purpose": "Repetición de sesiones y mapas de calor para mejorar el sitio",
+        "duration": "Hasta 1 año",
+        "category": "Analítica (con consentimiento)"
+      },
+      {
+        "name": "Vercel Analytics",
+        "provider": "Vercel",
+        "purpose": "Conteo de páginas agregado y sin cookies (no guarda identificadores en tu dispositivo)",
+        "duration": "—",
+        "category": "Analítica (sin cookies)"
+      }
+    ],
+    "managing": "Puedes retirar tu consentimiento en cualquier momento borrando los datos de este sitio en tu navegador — el banner volverá a preguntar en tu próxima visita. Bloquear todas las cookies en tu navegador también funciona; nada en este sitio se rompe sin ellas."
+  },
+  "subProcessorsPage": {
+    "lastUpdated": "Última actualización: 9 de julio de 2026",
+    "heading": "Subencargados",
+    "intro": "Estos son los servicios de terceros que procesan datos en nuestro nombre cuando usas gettaxly.com. Los listamos por nombre porque no puedes juzgar nuestras promesas de privacidad sin saber con quién compartimos datos.",
+    "currentHeading": "Actuales — el sitio y la lista de espera",
+    "cols": {
+      "name": "Servicio",
+      "purpose": "Propósito",
+      "data": "Datos procesados",
+      "location": "Ubicación"
+    },
+    "rows": [
+      {
+        "name": "Vercel",
+        "purpose": "Alojamiento del sitio y analítica de páginas sin cookies",
+        "data": "Metadatos de la solicitud (IP, agente de usuario)",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Resend",
+        "purpose": "Envío de correos de lista de espera y contacto",
+        "data": "Dirección de correo, contenido del mensaje",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Google Analytics 4",
+        "purpose": "Estadísticas de uso agregadas (se carga solo tras el consentimiento)",
+        "data": "Datos de uso seudónimos",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Microsoft Clarity",
+        "purpose": "Repetición de sesiones y mapas de calor (se carga solo tras el consentimiento)",
+        "data": "Datos de interacción seudónimos",
+        "location": "Estados Unidos"
+      }
+    ],
+    "plannedHeading": "Planeados — cuando lance el producto de declaración",
+    "plannedIntro": "El producto de declaración (año fiscal 2026, abre en enero de 2027) añadirá proveedores que manejan datos de declaraciones. Los publicamos por adelantado porque son parte de la decisión de confiar en nosotros; cada uno estará bajo un acuerdo de procesamiento de datos y revisión de seguridad antes de que fluya cualquier dato de contribuyentes.",
+    "plannedRows": [
+      {
+        "name": "Clerk",
+        "purpose": "Autenticación de cuentas con MFA obligatorio",
+        "data": "Identidad, correo",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Supabase",
+        "purpose": "Base de datos cifrada (campos de SSN y banco con cifrado por columna)",
+        "data": "Datos de la declaración",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Stripe",
+        "purpose": "Pagos al presentar",
+        "data": "Detalles de pago (los datos de tarjeta se quedan en Stripe)",
+        "location": "Estados Unidos"
+      },
+      {
+        "name": "Transmisor e-file autorizado por el IRS",
+        "purpose": "Transmisión de declaraciones al IRS (se nombrará aquí al contratarse)",
+        "data": "La declaración completa",
+        "location": "Estados Unidos"
+      }
+    ],
+    "changeNotice": "Si añadimos o reemplazamos un subencargado, actualizaremos esta página antes de que el cambio entre en vigor y lo indicaremos en la fecha de última actualización. Cuando el producto esté activo, los titulares de cuentas serán notificados por correo de los cambios que afecten datos de declaraciones."
   }
 }

@@ -735,6 +735,22 @@
     "refundEstimator": {
       "title": "Free Tax Refund Estimator 2026 — Taxly",
       "description": "Estimate your federal tax refund or amount owed in seconds. Enter your income, withholding, and filing status — no account needed."
+    },
+    "glossary": {
+      "title": "US tax glossary in plain English — Taxly",
+      "description": "Thirty US tax terms — AGI, 1099-NEC, self-employment tax, safe harbor and more — each explained in two honest sentences with links to free tools."
+    },
+    "vs": {
+      "title": "Taxly vs TurboTax, FreeTaxUSA and IRS Direct File",
+      "description": "Honest comparisons that name what each alternative genuinely does better — including when the free government option is simply the right choice."
+    },
+    "cookies": {
+      "title": "Cookie Policy — Taxly",
+      "description": "Every cookie gettaxly.com uses, listed by name with provider, purpose and duration. Analytics load only after you accept the consent banner."
+    },
+    "subProcessors": {
+      "title": "Sub-processors — Taxly",
+      "description": "The named third-party services that process data for gettaxly.com today, and the vendors planned for the filing product, with a change-notification commitment."
     }
   },
   "refundEstimator": {
@@ -790,5 +806,147 @@
     "text": "That page doesn't exist — it may have moved, or the link was mistyped. The free tools and guides below are the fastest way back.",
     "home": "Back to home",
     "tools": "Explore free tools"
+  },
+  "legal": {
+    "draftBanner": "Draft — this document has not yet been reviewed by counsel. It describes our real practices, but wording may change before launch."
+  },
+  "glossary": {
+    "eyebrow": "Plain-English glossary",
+    "heading": "US tax terms, explained honestly",
+    "intro": "Thirty terms you'll meet while filing, each in two honest sentences — no jargon defined with more jargon. Exact dollar amounts change every year; always check the current-year figure on irs.gov.",
+    "cta": {
+      "heading": "See the numbers for your own situation",
+      "text": "The free tools apply these ideas to your actual income — refund estimate, penalty maths, and quarterly payments. No signup.",
+      "button": "Try the free tools"
+    }
+  },
+  "vsHub": {
+    "eyebrow": "Honest comparisons",
+    "heading": "Taxly vs the alternatives",
+    "intro": "Every comparison here names what the alternative genuinely does better and who should stay with it. If a rival is the right choice for you, we say so — that's the point of the brand.",
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027 and is currently in waitlist. Taxly's side of these comparisons reflects planned launch pricing and features; rivals' prices change mid-season, so verify them on their own sites.",
+    "readComparison": "Read the comparison",
+    "tableFeature": "Feature",
+    "theyWin": "Where {rival} wins",
+    "stayWith": "Stay with {rival} if…",
+    "taxlyFits": "Taxly fits if…",
+    "faqHeading": "Frequently asked questions",
+    "cta": {
+      "heading": "Want the price you see to be the price you pay?",
+      "text": "Join the waitlist for TY2026 filing. Simple returns free, Deluxe $39, Premium $69 — flat, disclosed up front, locked when you start.",
+      "button": "Join the waitlist",
+      "pricing": "See pricing"
+    }
+  },
+  "cookiesPage": {
+    "lastUpdated": "Last updated: July 9, 2026",
+    "heading": "Cookie Policy",
+    "intro": "This page lists every cookie and similar technology gettaxly.com uses, what it does, and how long it lasts. Analytics cookies load only after you accept them in the consent banner — declining keeps the site fully functional.",
+    "consentNote": "Your consent choice itself is stored in your browser's localStorage (not a cookie) under the key gf_cookie_consent, so we can remember your decision without tracking you.",
+    "cols": {
+      "name": "Name",
+      "provider": "Provider",
+      "purpose": "Purpose",
+      "duration": "Duration",
+      "category": "Category"
+    },
+    "rows": [
+      {
+        "name": "gf_cookie_consent",
+        "provider": "Taxly (localStorage)",
+        "purpose": "Remembers whether you accepted or declined analytics",
+        "duration": "Until cleared",
+        "category": "Strictly necessary"
+      },
+      {
+        "name": "_ga / _ga_*",
+        "provider": "Google Analytics 4",
+        "purpose": "Distinguishes visitors and sessions for aggregate usage statistics",
+        "duration": "Up to 2 years",
+        "category": "Analytics (consent-gated)"
+      },
+      {
+        "name": "_clck / _clsk",
+        "provider": "Microsoft Clarity",
+        "purpose": "Session replay and heatmaps to improve the site",
+        "duration": "Up to 1 year",
+        "category": "Analytics (consent-gated)"
+      },
+      {
+        "name": "Vercel Analytics",
+        "provider": "Vercel",
+        "purpose": "Cookieless, aggregated page-view counts (no identifier stored on your device)",
+        "duration": "—",
+        "category": "Analytics (cookieless)"
+      }
+    ],
+    "managing": "You can withdraw consent at any time by clearing your browser data for this site — the banner will ask again on your next visit. Blocking all cookies in your browser also works; nothing on this site breaks without them."
+  },
+  "subProcessorsPage": {
+    "lastUpdated": "Last updated: July 9, 2026",
+    "heading": "Sub-processors",
+    "intro": "These are the third-party services that process data on our behalf when you use gettaxly.com. We list them by name because you can't judge our privacy promises without knowing who we share data with.",
+    "currentHeading": "Current — the marketing site and waitlist",
+    "cols": {
+      "name": "Service",
+      "purpose": "Purpose",
+      "data": "Data processed",
+      "location": "Location"
+    },
+    "rows": [
+      {
+        "name": "Vercel",
+        "purpose": "Website hosting and cookieless page analytics",
+        "data": "Request metadata (IP, user agent)",
+        "location": "United States"
+      },
+      {
+        "name": "Resend",
+        "purpose": "Waitlist and contact email delivery",
+        "data": "Email address, message content",
+        "location": "United States"
+      },
+      {
+        "name": "Google Analytics 4",
+        "purpose": "Aggregate usage statistics (loads only after consent)",
+        "data": "Pseudonymous usage data",
+        "location": "United States"
+      },
+      {
+        "name": "Microsoft Clarity",
+        "purpose": "Session replay and heatmaps (loads only after consent)",
+        "data": "Pseudonymous interaction data",
+        "location": "United States"
+      }
+    ],
+    "plannedHeading": "Planned — when the filing product launches",
+    "plannedIntro": "The filing product (TY2026, opening January 2027) will add vendors that handle return data. We publish them here ahead of time because they are part of the decision to trust us; each will be under a data-processing agreement and security review before any taxpayer data flows.",
+    "plannedRows": [
+      {
+        "name": "Clerk",
+        "purpose": "Account authentication with mandatory MFA",
+        "data": "Identity, email",
+        "location": "United States"
+      },
+      {
+        "name": "Supabase",
+        "purpose": "Encrypted database (SSN and bank fields column-encrypted)",
+        "data": "Return data",
+        "location": "United States"
+      },
+      {
+        "name": "Stripe",
+        "purpose": "Pay-at-file payments",
+        "data": "Payment details (card data stays with Stripe)",
+        "location": "United States"
+      },
+      {
+        "name": "IRS-authorized e-file transmitter",
+        "purpose": "Transmission of returns to the IRS (named here once contracted)",
+        "data": "The completed return",
+        "location": "United States"
+      }
+    ],
+    "changeNotice": "If we add or replace a sub-processor, we will update this page before the change takes effect and note it in the page's last-updated date. When the filing product is live, account holders will be notified by email of changes affecting return data."
   }
 }
