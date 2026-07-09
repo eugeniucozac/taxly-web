@@ -11,7 +11,7 @@ import { Footer } from "@/components/layout/footer";
 import { ConsentProvider } from "@/components/layout/consent-provider";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { JsonLd } from "@/components/seo/json-ld";
-import { BASE_URL } from "@/lib/metadata";
+import { BASE_URL, getAlternates } from "@/lib/metadata";
 import type { LocaleKey, LocaleLayoutProps } from "@/types/page";
 import "../globals.css";
 
@@ -20,6 +20,12 @@ const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+// Unknown locales must never render this layout: paths that bypass the
+// middleware matcher (anything with a dot, e.g. /favicon.ico) would otherwise
+// match [locale] and crash next-intl's requestLocale (headers() in a static
+// render → 500). With this, they fall through to the static branded 404.
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -31,6 +37,10 @@ export async function generateMetadata({
   return {
     title: { default: t("title"), template: "%s — Taxly" },
     description: t("description"),
+    // Pages without their own generateMetadata (e.g. the home page) inherit
+    // these — without them the home HTML ships no canonical/hreflang and no
+    // RSS autodiscovery link.
+    alternates: getAlternates(locale),
   };
 }
 
