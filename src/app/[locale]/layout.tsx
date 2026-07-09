@@ -10,6 +10,8 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ConsentProvider } from "@/components/layout/consent-provider";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+import { JsonLd } from "@/components/seo/json-ld";
+import { BASE_URL } from "@/lib/metadata";
 import type { LocaleKey, LocaleLayoutProps } from "@/types/page";
 import "../globals.css";
 
@@ -32,6 +34,45 @@ export async function generateMetadata({
   };
 }
 
+// Site graph: Organization + WebSite + SoftwareApplication (pre-launch: no
+// ratings, no invented review counts — AggregateRating only behind real data).
+const siteGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#org`,
+      name: "Taxly",
+      url: BASE_URL,
+      logo: `${BASE_URL}/icon`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      name: "Taxly",
+      url: BASE_URL,
+      publisher: { "@id": `${BASE_URL}/#org` },
+      inLanguage: ["en-US", "es-US"],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${BASE_URL}/#app`,
+      name: "Taxly",
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Web",
+      description:
+        "Guided, plain-English US tax filing with flat, price-locked tiers. Pre-launch: opens for TY2026 returns in January 2027.",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        description: "Free tier for simple W-2 returns; Deluxe $39, Premium $69, states $29.",
+      },
+      publisher: { "@id": `${BASE_URL}/#org` },
+    },
+  ],
+};
+
 export const viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
@@ -53,6 +94,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${geist.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <JsonLd data={siteGraph} />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             <Navbar />

@@ -13,6 +13,9 @@ export function getAlternates(locale: string, path: string = "") {
   const slug = path && !path.startsWith("/") ? `/${path}` : path;
   return {
     canonical: `${BASE_URL}/${locale}${slug}`,
+    // RSS autodiscovery must live here: page-level alternates override the
+    // layout metadata wholesale, so a layout-only types entry never renders.
+    types: { "application/rss+xml": `${BASE_URL}/feed.xml` },
     languages: {
       "en-US": `${BASE_URL}/en${slug}`,
       "es-US": `${BASE_URL}/es${slug}`,

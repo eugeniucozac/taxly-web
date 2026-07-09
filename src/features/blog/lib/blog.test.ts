@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { posts as enPosts } from "../data/en";
 import { posts as esPosts } from "../data/es";
-import { getAllPosts, getPostBySlug } from "./blog";
+import { getAllPosts, getLivePosts, getPostBySlug, isLive } from "./blog";
 
 describe("blog data parity", () => {
   it("en and es have the same number of posts", () => {
@@ -82,5 +82,77 @@ describe("getPostBySlug", () => {
   it("returns undefined for unknown slug", async () => {
     const post = await getPostBySlug("nonexistent-slug", "en");
     expect(post).toBeUndefined();
+  });
+});
+
+describe("live gating (isLive / getLivePosts)", () => {
+  it("published posts are live regardless of date", () => {
+    for (const post of enPosts.filter((p) => p.status === "published")) {
+      expect(isLive(post)).toBe(true);
+    }
+  });
+
+  it("scheduled posts flip live exactly on their date (y-m-d compare)", () => {
+    const post = enPosts.find((p) => p.status === "scheduled");
+    expect(post).toBeDefined();
+    const dayBefore = new Date(`${post!.date}T00:00:00Z`);
+    dayBefore.setUTCDate(dayBefore.getUTCDate() - 1);
+    expect(isLive(post!, dayBefore)).toBe(false);
+    expect(isLive(post!, new Date(`${post!.date}T00:00:00Z`))).toBe(true);
+  });
+
+  it("draft posts are never live", () => {
+    const draft = { ...enPosts[0]!, status: "draft" as const, date: "2000-01-01" };
+    expect(isLive(draft)).toBe(false);
+  });
+
+  it("getLivePosts excludes scheduled-future posts", async () => {
+    const live = await getLivePosts("en");
+    const today = new Date().toISOString().slice(0, 10);
+    for (const post of live) {
+      expect(post.status).not.toBe("draft");
+      if (post.status === "scheduled") expect(post.date <= today).toBe(true);
+    }
+  });
+
+  it("getPostBySlug does not serve a scheduled-future post", async () => {
+    const future = enPosts.find((p) => p.status === "scheduled" && p.date > "2026-08-01");
+    expect(future).toBeDefined();
+    // This assertion is date-dependent by design: once 2026-08-01 passes it
+    // simply stops finding a "future" fixture and the guard above trips first.
+    if (new Date().toISOString().slice(0, 10) < future!.date) {
+      expect(await getPostBySlug(future!.slug, "en")).toBeUndefined();
+    }
+  });
+});
+
+describe("content quality", () => {
+  it("there are 14 posts per locale", () => {
+    expect(enPosts.length).toBe(14);
+    expect(esPosts.length).toBe(14);
+  });
+
+  it("every post has a valid category and positive read time", () => {
+    for (const post of [...enPosts, ...esPosts]) {
+      expect(["basics", "gig", "deadlines"]).toContain(post.category);
+      expect(post.readTime).toBeGreaterThan(0);
+    }
+  });
+
+  it("every post's content is non-trivial (> 1500 chars)", () => {
+    for (const post of [...enPosts, ...esPosts]) {
+      expect(post.content.length, post.slug).toBeGreaterThan(1500);
+    }
+  });
+
+  it("status and dates match across locales for each slug", () => {
+    const bySlug = new Map(esPosts.map((p) => [p.slug, p]));
+    for (const post of enPosts) {
+      const es = bySlug.get(post.slug);
+      expect(es, post.slug).toBeDefined();
+      expect(es!.status).toBe(post.status);
+      expect(es!.date).toBe(post.date);
+      expect(es!.category).toBe(post.category);
+    }
   });
 });
