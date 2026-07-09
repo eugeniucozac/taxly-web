@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
-import { getAllPosts, getPostBySlug } from "@/features/blog/lib/blog";
+import { getLivePosts, getPostBySlug } from "@/features/blog/lib/blog";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/utils";
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
   const localeParams = generateLocaleStaticParams();
   const results: { locale: string; slug: string }[] = [];
   for (const { locale } of localeParams) {
-    const posts = await getAllPosts(locale);
+    const posts = await getLivePosts(locale);
     for (const post of posts) {
       results.push({ locale, slug: post.slug });
     }

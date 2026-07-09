@@ -1,5 +1,5 @@
 import { env } from "@/lib/env";
-import { posts } from "@/features/blog/data/en";
+import { getLivePosts } from "@/features/blog/lib/blog";
 
 const BASE_URL = env.NEXT_PUBLIC_SITE_URL;
 
@@ -9,10 +9,9 @@ function escapeXml(s: string): string {
   );
 }
 
-export function GET() {
-  const sorted = [...posts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+export async function GET() {
+  // Live posts only — scheduled-future posts must not leak into the feed.
+  const sorted = await getLivePosts("en");
 
   const items = sorted
     .map((post) => {

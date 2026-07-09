@@ -671,7 +671,13 @@
     "readMore": "Read more",
     "backToBlog": "Back to Blog",
     "by": "By",
-    "publishedOn": "Published"
+    "publishedOn": "Published",
+    "categories": {
+      "basics": "Tax basics",
+      "gig": "Gig & 1099",
+      "deadlines": "Deadlines & penalties"
+    },
+    "readTime": "{minutes} min read"
   },
   "footer": {
     "product": "Product",

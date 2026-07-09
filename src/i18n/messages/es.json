@@ -671,7 +671,13 @@
     "readMore": "Leer más",
     "backToBlog": "Volver al Blog",
     "by": "Por",
-    "publishedOn": "Publicado"
+    "publishedOn": "Publicado",
+    "categories": {
+      "basics": "Fundamentos",
+      "gig": "Gig y 1099",
+      "deadlines": "Fechas y multas"
+    },
+    "readTime": "{minutes} min de lectura"
   },
   "footer": {
     "product": "Producto",

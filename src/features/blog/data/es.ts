@@ -1,16 +1,13 @@
-export interface BlogPost {
-  slug: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  date: string;
-  author: string;
-  tags: string[];
-}
+import type { BlogPost } from "./en";
+
+export type { BlogPost };
 
 export const posts: BlogPost[] = [
   {
     slug: "tax-filing-deadlines-2026",
+    category: "deadlines",
+    status: "published",
+    readTime: 5,
     title: "Fechas límite para declarar impuestos en 2026 — Todo lo que necesitas saber",
     excerpt:
       "Perder una fecha límite fiscal te cuesta dinero en multas e intereses. Aquí están todas las fechas federales y estatales clave para el año fiscal 2025, declarado en 2026.",
@@ -75,6 +72,9 @@ Taxly te envía notificaciones de recordatorio antes de cada fecha límite que a
   },
   {
     slug: "w2-vs-1099-difference",
+    category: "gig",
+    status: "published",
+    readTime: 5,
     title: "W-2 vs 1099: ¿Cuál es la diferencia y por qué importa al declarar impuestos?",
     excerpt:
       "Si recibes un W-2 o un 1099 cambia cuántos impuestos debes y cómo declaras. Aquí hay un resumen en español claro de ambos formularios.",
@@ -137,6 +137,9 @@ Cuando inicias tu declaración en Taxly, te preguntamos sobre tus fuentes de ing
   },
   {
     slug: "how-to-file-self-employment-taxes",
+    category: "gig",
+    status: "published",
+    readTime: 6,
     title: "Cómo declarar impuestos como trabajador independiente (sin volverte loco)",
     excerpt:
       "¿Eres trabajador independiente? Pagas impuestos de manera diferente a los empleados — y tienes deducciones que los empleados no tienen. Aquí se explica exactamente cómo funciona.",
@@ -203,6 +206,9 @@ Si no puedes presentar antes del 15 de abril, presenta el Formulario 4868 para u
   },
   {
     slug: "standard-vs-itemized-deduction",
+    category: "basics",
+    status: "published",
+    readTime: 5,
     title: "Deducción estándar vs. deducción detallada: ¿Cuál debes tomar?",
     excerpt:
       "La mayoría de los estadounidenses toman la deducción estándar. Pero si tienes casa propia, hiciste grandes donaciones caritativas o tuviste altos gastos médicos, detallar podría ahorrarte más.",
@@ -248,6 +254,9 @@ Taxly compara automáticamente ambas opciones y selecciona la que te da una fact
   },
   {
     slug: "what-you-need-to-file-taxes-checklist",
+    category: "basics",
+    status: "published",
+    readTime: 6,
     title: "Qué necesitas para declarar tus impuestos: La lista de verificación completa",
     excerpt:
       "Reúne estos documentos antes de sentarte a declarar y terminarás en menos de una hora. Aquí hay una lista completa por tipo de ingreso.",
@@ -314,6 +323,9 @@ Taxly puede importar tu W-2 directamente de muchos empleadores, obtener datos de
   },
   {
     slug: "how-to-file-a-tax-extension",
+    category: "deadlines",
+    status: "published",
+    readTime: 5,
     title: "Cómo solicitar una prórroga fiscal (y qué realmente te da)",
     excerpt:
       "Una prórroga te da más tiempo para presentar — no más tiempo para pagar. Aquí te explicamos cómo presentar el Formulario 4868, quién debería hacerlo y cuáles son los conceptos erróneos comunes.",
@@ -364,6 +376,9 @@ Taxly maneja la presentación de prórroga automáticamente — solo dinos que q
   },
   {
     slug: "crypto-and-your-taxes",
+    category: "gig",
+    status: "published",
+    readTime: 6,
     title: "Criptomonedas y tus impuestos: Qué debes reportar (y qué pasa si no lo haces)",
     excerpt:
       "El IRS trata las criptomonedas como propiedad, no como moneda. Cada venta, intercambio o uso de criptomonedas es un evento gravable. Aquí está lo que necesitas saber.",
@@ -416,6 +431,9 @@ El IRS recibe datos de los exchanges de cripto con sede en EE.UU. y los cruza co
   },
   {
     slug: "first-time-filing-start-here",
+    category: "basics",
+    status: "published",
+    readTime: 6,
     title: "¿Declarando impuestos por primera vez? Empieza aquí.",
     excerpt:
       "Declarar impuestos por primera vez puede parecer abrumador. No tiene por qué serlo. Aquí hay una guía paso a paso en español claro de todo lo que necesitas saber.",
@@ -481,5 +499,273 @@ Si presentas electrónicamente, el IRS generalmente acepta tu declaración dentr
 
 Descarga y guarda tu declaración (Taxly también la almacena para ti). Necesitarás tu Ingreso Bruto Ajustado (AGI) del año anterior cuando declares el próximo año — es la forma del IRS de verificar tu identidad para la presentación electrónica.
     `.trim(),
+  },
+  {
+    slug: "quarterly-taxes-first-year-freelancer",
+    category: "gig",
+    status: "scheduled",
+    readTime: 6,
+    title: "Pagos trimestrales para freelancers de primer año — La guía que nadie te da",
+    excerpt: "Nadie retiene impuestos del ingreso freelance, y el IRS quiere su parte cuatro veces al año. Aquí está la regla de puerto seguro que hace simples los pagos trimestrales.",
+    date: "2026-07-13",
+    author: "Equipo Taxly",
+    tags: ["self-employment","quarterly-taxes"],
+    content: `
+El primer año como freelancer trae una sorpresa fiscal de la que nadie te avisa: nadie está reteniendo nada. Cada dólar que un cliente te paga llega bruto, y el IRS espera que tú mismo envíes tu impuesto — no una vez al año, sino cuatro.
+
+## Por qué existen los pagos trimestrales
+
+Los empleados W-2 pagan impuestos en cada cheque mediante la retención. El IRS quiere el mismo trato de pago continuo de los trabajadores independientes, así que exige pagos estimados aproximadamente cada trimestre: 15 de abril, 15 de junio, 15 de septiembre y 15 de enero. Si los omites, debes una multa por pago insuficiente — aunque pagues todo lo que debes antes de la fecha límite de abril.
+
+## La regla de puerto seguro (la única que realmente necesitas)
+
+Calcular por adelantado tu impuesto exacto del año actual es difícil. El IRS te da una meta más fácil llamada puerto seguro: paga al menos el **100% del impuesto total del año pasado** (110% si el AGI del año pasado superó $150,000), repartido durante el año, y no aplica ninguna multa — sea cual sea la factura final de este año.
+
+El impuesto total del año pasado es un número que ya conoces: es la línea "impuesto total" de tu Formulario 1040. Divide la meta entre cuatro, y ese es cada pago.
+
+- Busca el impuesto total del año pasado en tu 1040
+- Multiplica por 1.0 (o 1.1 si el AGI superó $150k)
+- Resta cualquier retención W-2 que aún tengas este año
+- Divide el resto entre cuatro
+
+Nuestra calculadora gratuita de pagos trimestrales hace exactamente esta aritmética y muestra las fechas de vencimiento.
+
+## No olvides el impuesto de trabajo por cuenta propia
+
+El otro golpe del primer año: el **impuesto de trabajo por cuenta propia**. Es el 15.3% para Seguro Social y Medicare sobre el 92.35% de tu ganancia neta — además del impuesto sobre la renta. Un empleado comparte ese 15.3% con su empleador; tú pagas ambas mitades. Sobre $50,000 de ganancia son aproximadamente $7,000 antes de que empiece el impuesto sobre la renta.
+
+El consuelo parcial: deduces la mitad del empleador, y los gastos legítimos del negocio reducen ambos impuestos a la vez. Registra cada gasto desde el primer día.
+
+## Cómo pagar en la práctica
+
+El IRS acepta pagos estimados mediante tu cuenta en línea del IRS, IRS Direct Pay, o enviando los comprobantes del Formulario 1040-ES. Paga desde una cuenta del negocio si la tienes, y guarda las confirmaciones — reportarás el total pagado al declarar.
+
+## ¿Y si tu primer año va mal?
+
+Si el impuesto del año pasado fue cero (un año de estudiante, por ejemplo), el puerto seguro del año anterior puede ser literalmente cero — quizás no debas nada hasta abril. Y si el ingreso varía de trimestre a trimestre, el método de ingreso anualizado te permite pagar menos en los trimestres flojos, aunque exige más contabilidad.
+
+**El resumen honesto:** los pagos trimestrales son molestos pero mecánicos. Un número conocido, dividido entre cuatro, pagado en cuatro fechas. Los que salen quemados no son los que calcularon mal — son los que no sabían que el sistema existía.
+`,
+  },
+  {
+    slug: "missed-tax-deadline-what-now",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "¿Se te pasó la fecha límite de impuestos? Esto es exactamente qué hacer (y cuánto cuesta)",
+    excerpt: "La multa por no presentar es diez veces la multa por no pagar. Si se te pasó el 15 de abril, el orden de los pasos importa — aquí está, paso a paso.",
+    date: "2026-07-20",
+    author: "Equipo Taxly",
+    tags: ["deadlines","penalties"],
+    content: `
+Que se te pase la fecha límite de impuestos se siente catastrófico. Normalmente no lo es — pero el reloj corre, y lo que hagas primero importa más de lo que la mayoría cree.
+
+## El dato que lo cambia todo
+
+El IRS cobra dos multas separadas, y son de tamaños completamente distintos:
+
+- **Por no presentar:** 5% del impuesto no pagado por mes, hasta el 25%
+- **Por no pagar:** 0.5% del impuesto no pagado por mes, hasta el 25%
+
+Presentar tarde es **diez veces** más caro por mes que pagar tarde. Eso te da la estrategia completa: presenta de inmediato, aunque no puedas pagar ni un dólar de lo que debes.
+
+## Paso 1: presenta ahora, diga lo que diga tu cuenta bancaria
+
+Cada mes que pasa antes de presentar suma un 5% (una parte de un mes cuenta como mes completo). Presentar hoy detiene ese reloj de inmediato, dejando solo la multa por pago tardío, mucho menor, y los intereses. Si tu declaración tiene más de 60 días de retraso, también aplica una multa mínima — el menor entre un piso ajustado por inflación (alrededor de $500) o el 100% del impuesto adeudado — que golpea más fuerte a los saldos pequeños.
+
+Nuestra calculadora gratuita de multas muestra lo que cuesta tu retraso específico.
+
+## Paso 2: paga lo que puedas y consigue un plan
+
+Los intereses y la multa mensual del 0.5% aplican sobre el saldo *no pagado*, así que cualquier pago parcial los reduce. Para el resto, el IRS ofrece planes de pago que puedes configurar en línea en minutos — y mientras estás en uno, la tasa por no pagar se reduce a la mitad.
+
+## Paso 3: pregunta por la reducción de multa por primera vez
+
+Si es tu primer tropiezo tras años de declarar sin problemas, la **reducción de multa por primera vez** del IRS puede eliminar las multas por completo (no los intereses). Es una llamada o una carta. Una cantidad notable de personas elegibles nunca la pide.
+
+## ¿Y si te deben un reembolso?
+
+Entonces no hay multa alguna — las multas son porcentajes del impuesto no pagado, y el tuyo es cero. Pero no te duermas: tienes tres años desde la fecha límite original para presentar y reclamar el reembolso. Después, ese dinero pasa a ser del gobierno, permanentemente.
+
+## El próximo año, en una frase
+
+Si abril se ve imposible, presenta el **Formulario 4868** antes de la fecha límite — es una prórroga automática de seis meses para presentar que cualquiera puede obtener gratis. No extiende la fecha de pago, pero combinarla con un pago estimado convierte un problema del 5% mensual en un error de redondeo.
+
+**El resumen honesto:** el sistema fiscal castiga el silencio mucho más que la pobreza. Presenta, paga lo que puedas, pide la reducción — en ese orden, empezando hoy.
+`,
+  },
+  {
+    slug: "turbotax-alternatives-honest-guide",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "Alternativas a TurboTax en 2026 — Una guía honesta (de un competidor)",
+    excerpt: "Sí, somos competidores. Por eso esta guía nombra primero la opción gratuita del gobierno, da crédito al rival económico que lo merece, y te dice quién debería quedarse con TurboTax.",
+    date: "2026-07-27",
+    author: "Equipo Taxly",
+    tags: ["comparisons","basics"],
+    content: `
+Que una empresa de impuestos escriba sobre alternativas a TurboTax tiene un conflicto de interés evidente. Así que manejémoslo de la única forma honesta: nombrando primero las opciones que no nos dejan un centavo, y diciéndote claramente cuándo la respuesta es "quédate donde estás".
+
+## Empieza aquí: IRS Direct File (gratis, oficial)
+
+Si todo tu ingreso es W-2, tomas la deducción estándar y tu estado participa, **IRS Direct File** es simplemente la opción correcta. Es gratis, lo opera el propio IRS, y tus datos no van a ningún otro lado. Sus límites son de alcance, no de calidad: sin ingreso de trabajo independiente, sin deducciones detalladas, y una lista de estados que cambia cada temporada — revisa la actual en irs.gov.
+
+## La opción económica honesta: FreeTaxUSA
+
+**FreeTaxUSA** cobra $0 por declaraciones federales — incluido el trabajo independiente — y unos $15 por estado. Lleva años presentando millones de declaraciones sin hacer ruido, y sus precios son genuinamente libres de emboscadas. El sacrificio es la interfaz: es tipo formulario y asume que sabes en general qué va dónde. Si ya has declarado antes y conoces tu situación, es la opción creíble más barata, y lo decimos en serio.
+
+## El otro grande: H&R Block
+
+El software de Block es pulido y su comportamiento al cobrar es más suave que el de TurboTax, con un diferenciador real: miles de oficinas físicas si quieres entregarle todo a un humano a mitad del camino. Pagas precios de marca, pero si el respaldo presencial importa, esa es la razón para elegir Block.
+
+## Cash App Taxes
+
+Completamente gratis, federal y estatal — financiado por el resto del ecosistema de Cash App. La cobertura tiene lagunas genuinas (declaraciones multiestatales, algunas situaciones) y el soporte es escaso. Vale la pena para declaraciones simples o moderadas si ya te mueves cómodo en Cash App.
+
+## Cuándo deberías quedarte honestamente con TurboTax
+
+- Tu declaración es genuinamente compleja — K-1, ingreso extranjero, negocio multiestatal
+- Quieres la revisión de un CPA en vivo antes de presentar, este año, sin fricción
+- Años de tu historial se importan sin problema y el precio al pagar no te duele
+
+El problema de TurboTax nunca fue la calidad. El fallo de la FTC en 2024 fue por publicidad engañosa de "gratis" y la emboscada de ventas — el precio encontrándote al pagar. Si eso no te molesta, el software en sí es excelente.
+
+## Dónde encaja Taxly
+
+Taxly abre para declaraciones del año fiscal 2026 en enero de 2027, construido para el trabajador gig y 1099 al que TurboTax dirige a su nivel más caro: una entrevista guiada en lenguaje claro, $69 federal + $29 estatal para declaraciones de trabajo independiente, y una garantía de precio fijo — el número que ves al empezar es el número que pagas al final. Nuestras comparaciones detalladas contra TurboTax, FreeTaxUSA y Direct File explican exactamente dónde gana cada rival.
+
+**El resumen honesto:** declaración simple en un estado cubierto → Direct File. Conoces tus impuestos y quieres barato → FreeTaxUSA. Declaración compleja o necesitas un humano → TurboTax o Block. Primer año con 1099 y quieres orientación sin emboscada → para eso estamos construyendo.
+`,
+  },
+  {
+    slug: "irs-direct-file-who-qualifies",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "IRS Direct File: quién califica, qué cubre y dónde se queda corto",
+    excerpt: "La herramienta gratuita del propio IRS es genuinamente buena — si cabes dentro de sus líneas. Aquí está exactamente quién califica, más las tres razones más comunes por las que se le queda corta a la gente.",
+    date: "2026-08-03",
+    author: "Equipo Taxly",
+    tags: ["basics","comparisons"],
+    content: `
+IRS Direct File es lo más raro de la industria fiscal: una opción genuinamente gratuita sin trampa. Lo opera el propio IRS, no hay nivel de pago, y nadie está minando tu declaración para venderte algo. Si cabes dentro de sus líneas, úsalo. La pregunta es si cabes.
+
+## Quién califica
+
+Direct File está construido alrededor del extremo simple del espectro. En términos generales, entras si:
+
+- Tu ingreso viene de **salarios W-2** (más intereses limitados, Seguro Social y desempleo)
+- Tomas la **deducción estándar** en vez de detallar
+- Reclamas los créditos principales que soporta — el EITC y el Crédito por Hijos entre ellos
+- Vives en un **estado participante**
+
+La lista de estados es la parte móvil. Ha crecido, se ha encogido y ha cambiado con la política desde que el programa se lanzó — nunca asumas la lista de la temporada pasada, revisa la actual en irs.gov antes de planear alrededor de ella.
+
+## Cómo se siente usarlo
+
+Respuesta honesta: competente y limpio. Preguntas en lenguaje claro, soporte móvil decente, y un chat en vivo que responde dudas de procedimiento. Presenta tu declaración federal; los estados participantes luego te pasan a su propia herramienta vinculada para la parte estatal, cuya calidad varía según el estado.
+
+## Las tres formas más comunes de quedársele corto
+
+**1. Llega un 1099.** Cualquier ingreso de trabajo independiente o gig — un 1099-NEC por trabajo freelance, actividad seria de 1099-K — te pone completamente fuera del alcance de Direct File. Esta es la salida más común.
+
+**2. Detallar empieza a ganar.** Compra una casa, y el interés hipotecario más los impuestos estatales y locales pueden superar tu deducción estándar. Direct File solo soporta la deducción estándar.
+
+**3. Tu estado no está en la lista.** Sin estado participante no hay declaración estatal mediante el programa, y para la mayoría eso es descalificante por sí solo.
+
+## ¿Existirá la próxima temporada?
+
+El financiamiento y el alcance del programa han sido balones políticos. No es razón para evitarlo — mientras esté activo y califiques, es la opción correcta — pero verifica su estado cada enero en vez de asumirlo.
+
+## La conclusión
+
+Lo decimos como empresa que vende software de impuestos: si Direct File te cubre, declara con él. Software que no necesitas es exactamente lo que esta industria sobrevendió durante dos décadas. Cuando aparezca un 1099 o tu estado quede fuera de las líneas — ese es el momento en que productos como el nuestro se ganan su precio, y nuestra página de comparación explica exactamente dónde está esa línea.
+`,
+  },
+  {
+    slug: "1099-k-what-it-means",
+    category: "gig",
+    status: "scheduled",
+    readTime: 5,
+    title: "¿Te llegó un 1099-K? Qué significa realmente para tus impuestos",
+    excerpt: "Las apps de pago y los marketplaces ahora reportan mucha más actividad al IRS. Un 1099-K no es una factura de impuestos — pero ignorarlo es como los vendedores pequeños reciben cartas sorpresa.",
+    date: "2026-08-10",
+    author: "Equipo Taxly",
+    tags: ["self-employment","forms"],
+    content: `
+Un formulario 1099-K en tu buzón causa más pánico innecesario que casi cualquier otro documento fiscal. Aquí está qué es, qué no es, y qué hacer realmente con él.
+
+## Qué es un 1099-K
+
+Es un reporte informativo de una **plataforma de pagos** — Stripe, PayPal, Venmo (negocios), Etsy, eBay, apps de transporte y entregas — que muestra los pagos brutos que procesaron para ti durante el año. Una copia va para ti; otra va al IRS.
+
+El umbral de reporte ha rebotado durante años mientras el Congreso lo revisaba, así que no te sorprendas si te llega uno por una cantidad bastante modesta — revisa el umbral actual en irs.gov en vez de confiar en un número viejo.
+
+## Qué no es
+
+- **No es una factura de impuestos.** Reporta volumen bruto, no ganancia, y no impuesto adeudado.
+- **No convierte ventas de hobby en ingreso de negocio gravable por sí solo.** Vender tu sofá viejo por menos de lo que pagaste no es ganancia gravable.
+- **No es el único ingreso que reportas.** Tu ingreso real es lo que ganaste, lo reporte un formulario o no.
+
+## El número es bruto — tus impuestos son sobre el neto
+
+El 1099-K muestra todo lo procesado: reembolsos que diste, comisiones que cobró la plataforma, envíos que pagó el comprador. Si tienes un negocio real, tu ganancia gravable es esa cifra bruta menos reembolsos, comisiones, costo de mercancía y gastos — reportada en el Anexo C. Llevar tus propios registros es lo que convierte un número bruto que asusta en un neto preciso.
+
+## La trampa: contar doble
+
+A veces un freelancer recibe un 1099-NEC del cliente *y* un 1099-K de la plataforma que procesó el mismo pago. Reporta el ingreso una vez — desde tus propios registros — y guarda ambos formularios para poder explicar cualquier discrepancia. Un software que pregunta por cada formulario por separado sin conciliarlos infla tu ingreso; esto es exactamente lo que un flujo guiado debe detectar.
+
+## Pagos personales entre amigos
+
+Dividir la renta o una cena en una app de pagos no es ingreso, y las cuentas personales en general no deberían generar 1099-K. Si de todos modos llega uno por transferencias personales, no lo ignores — el IRS tiene copia. Hay una forma designada de anotar el monto erróneo en tu declaración; manéjalo ahí en vez de fingir que el formulario no existe.
+
+## Qué hacer en la práctica
+
+- Compara la cifra bruta contra tus propios registros
+- Registra reembolsos, comisiones y gastos — reducen la ganancia gravable
+- Reporta el ingreso una sola vez, aunque dos formularios cubran los mismos dólares
+- Nunca ignores el formulario: el IRS cruza las declaraciones contra él automáticamente
+
+**El resumen honesto:** un 1099-K es un espejo, no una factura. Si tus registros son buenos, no cambia nada. Si no tienes registros, es la razón para empezar — la copia del IRS llega estés organizado o no.
+`,
+  },
+  {
+    slug: "no-income-tax-states-federal-only",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "¿Vives en un estado sin impuesto sobre la renta? Tu declaración es más simple (no gratis)",
+    excerpt: "Nueve estados no gravan los salarios — lo que significa que la mayoría de sus residentes no presentan declaración estatal. Qué te ahorra realmente, qué no, y la letra pequeña en dos estados.",
+    date: "2026-08-17",
+    author: "Equipo Taxly",
+    tags: ["states","basics"],
+    content: `
+Si vives en Texas, Florida, Washington, Nevada, Tennessee, Dakota del Sur, Wyoming, Alaska — o, para ingreso salarial, New Hampshire — estás en uno de los estados sin impuesto personal sobre los salarios. Para la temporada de declaraciones, eso cambia exactamente una cosa, y es buena.
+
+## Qué significa al declarar
+
+**La mayoría de los residentes presenta solo la declaración federal.** Sin declaración estatal que preparar, sin cuota estatal de software, sin segunda fecha límite. Uses la herramienta que uses, el paso entero de "y ahora tu estado" — a menudo de $15 a $60 en cuotas de software, más el tiempo — simplemente desaparece.
+
+Eso también amplía tus opciones gratuitas: la mayor limitación de IRS Direct File para muchos es la cobertura estatal, que es irrelevante cuando no hay declaración estatal que presentar.
+
+## Qué no significa
+
+- **No es una vida libre de impuestos.** Estos estados se financian con impuestos a las ventas y a la propiedad — a menudo por encima del promedio. Cambias dónde golpea el impuesto, no si existe.
+- **No es cero complejidad federal.** Impuesto de trabajo por cuenta propia, pagos trimestrales, 1099 — todo completamente federal, todo sigue siendo tuyo.
+- **No es automático si tienes ingreso de otro estado.** ¿Trabajaste remoto parte del año desde un estado con impuesto, o tienes renta de un inmueble en uno? Puede que debas una declaración de *no residente* allí aunque tu estado no quiera nada.
+
+## Los dos asteriscos
+
+**Washington** no grava salarios pero sí cobra un impuesto a las ganancias de capital grandes por encima de un umbral considerable — quienes venden mucha acción deberían revisarlo. **New Hampshire** gravó intereses y dividendos durante años; ese impuesto se eliminó gradualmente, pero verifica la regla actual si tienes ingreso de inversiones significativo.
+
+## El año de la mudanza
+
+Si te mudas entre un estado con impuesto y uno sin él a mitad de año, normalmente presentarás una declaración de año parcial para el estado con impuesto cubriendo los meses que viviste allí. El ahorro empieza el día que cambia la residencia — una razón por la que las mudanzas a Texas y Florida se acumulan en diciembre.
+
+## El resumen honesto
+
+Los estados sin impuesto sobre la renta son el único lugar donde declarar es genuinamente tan simple como suena: una declaración federal y listo, para la mayoría. Por eso son los estados de lanzamiento de Taxly — los residentes de TX, FL y WA reciben la experiencia federal guiada completa sin declaración estatal que cobrar. El nivel gratis más un estado sin impuesto es lo más barato que puede ser declarar legítimamente.
+`,
   },
 ];

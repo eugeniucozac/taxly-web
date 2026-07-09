@@ -1,16 +1,29 @@
+export type BlogCategory = "basics" | "gig" | "deadlines";
+
+export type BlogStatus = "draft" | "scheduled" | "published";
+
 export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
   content: string;
+  /** ISO y-m-d. For scheduled posts this is the go-live date. */
   date: string;
   author: string;
   tags: string[];
+  category: BlogCategory;
+  /** Publication gating — see lib/blog.ts isLive(). */
+  status: BlogStatus;
+  /** Estimated minutes to read. */
+  readTime: number;
 }
 
 export const posts: BlogPost[] = [
   {
     slug: "tax-filing-deadlines-2026",
+    category: "deadlines",
+    status: "published",
+    readTime: 5,
     title: "Tax Filing Deadlines for 2026 — Every Date You Need to Know",
     excerpt:
       "Missing a tax deadline costs you money in penalties and interest. Here are every federal and key state deadline for the 2025 tax year, filed in 2026.",
@@ -75,6 +88,9 @@ Taxly sends you reminder notifications before every deadline that applies to you
   },
   {
     slug: "w2-vs-1099-difference",
+    category: "gig",
+    status: "published",
+    readTime: 5,
     title: "W-2 vs 1099: What's the Difference and Why It Matters at Tax Time",
     excerpt:
       "Whether you get a W-2 or a 1099 changes how much tax you owe and how you file. Here's a plain-English breakdown of both forms.",
@@ -137,6 +153,9 @@ When you start your Taxly return, we ask about your income sources. Upload your 
   },
   {
     slug: "how-to-file-self-employment-taxes",
+    category: "gig",
+    status: "published",
+    readTime: 6,
     title: "How to File Self-Employment Taxes (Without Losing Your Mind)",
     excerpt:
       "Self-employed? You pay taxes differently than employees — and you have deductions employees don't. Here's exactly how it works.",
@@ -205,6 +224,9 @@ If you can't file by April 15, file Form 4868 for an automatic extension to Octo
   },
   {
     slug: "standard-vs-itemized-deduction",
+    category: "basics",
+    status: "published",
+    readTime: 5,
     title: "Standard vs. Itemized Deduction: Which One Should You Take?",
     excerpt:
       "Most Americans take the standard deduction. But if you own a home, made large charitable gifts, or had high medical expenses, itemizing might save you more. Here's how to decide.",
@@ -274,6 +296,9 @@ If you rent, have little mortgage interest, and don't make large charitable gift
   },
   {
     slug: "what-you-need-to-file-taxes-checklist",
+    category: "basics",
+    status: "published",
+    readTime: 6,
     title: "What You Need to File Your Taxes: The Complete Checklist",
     excerpt:
       "Gather these documents before you sit down to file and you'll be done in under an hour. Here's a complete list by income type.",
@@ -347,6 +372,9 @@ Taxly can import your W-2 directly from many employers, pull 1099-B data from ma
   },
   {
     slug: "how-to-file-a-tax-extension",
+    category: "deadlines",
+    status: "published",
+    readTime: 5,
     title: "How to File a Tax Extension (And What It Actually Gets You)",
     excerpt:
       "An extension gives you more time to file — not more time to pay. Here's how to file Form 4868, who should do it, and what the common misconceptions are.",
@@ -417,6 +445,9 @@ If April 15 is approaching and you're not ready, file Form 4868. It takes 5 minu
   },
   {
     slug: "crypto-and-your-taxes",
+    category: "gig",
+    status: "published",
+    readTime: 6,
     title: "Crypto and Your Taxes: What You Must Report (and What Happens If You Don't)",
     excerpt:
       "The IRS treats cryptocurrency as property, not currency. Every sale, trade, or use of crypto is a taxable event. Here's what you need to know.",
@@ -490,6 +521,9 @@ Taxly imports your transaction history directly from major exchanges. We calcula
   },
   {
     slug: "first-time-filing-start-here",
+    category: "basics",
+    status: "published",
+    readTime: 6,
     title: "First Time Filing Taxes? Start Here.",
     excerpt:
       "Filing taxes for the first time feels overwhelming. It doesn't have to be. Here's a plain-English walkthrough of everything you need to know.",
@@ -571,5 +605,273 @@ Download and save your return (Taxly stores it for you too). You'll need your pr
 
 Your first return is almost certainly simpler than you think. If you made under $100,000, have one or two W-2s, and didn't sell investments, you can file free with Taxly in under 30 minutes. Start now, and you'll have it done before the April 15 deadline.
     `.trim(),
+  },
+  {
+    slug: "quarterly-taxes-first-year-freelancer",
+    category: "gig",
+    status: "scheduled",
+    readTime: 6,
+    title: "Quarterly Taxes for First-Year Freelancers — The Guide Nobody Gives You",
+    excerpt: "Nobody withholds taxes from freelance income, and the IRS wants its share four times a year. Here's the safe-harbor rule that makes quarterly payments simple.",
+    date: "2026-07-13",
+    author: "Taxly Team",
+    tags: ["self-employment","quarterly-taxes"],
+    content: `
+The first year of freelancing comes with a tax surprise nobody warns you about: no one is withholding anything. Every dollar a client pays you arrives gross, and the IRS expects you to send in your own tax — not once a year, but four times.
+
+## Why quarterly payments exist
+
+W-2 employees pay tax every paycheck through withholding. The IRS wants the same pay-as-you-go treatment from the self-employed, so it requires estimated payments roughly every quarter: April 15, June 15, September 15, and January 15. Miss them and you owe an underpayment penalty — even if you pay everything you owe by the April filing deadline.
+
+## The safe-harbor rule (the only rule you really need)
+
+Working out your exact current-year tax in advance is hard. The IRS gives you an easier target called the safe harbor: pay at least **100% of last year's total tax** (110% if last year's AGI was over $150,000), spread across the year, and no underpayment penalty applies — no matter what this year's final bill turns out to be.
+
+Last year's total tax is a number you already know: it's the "total tax" line on your Form 1040. Divide the target by four, and that's each payment.
+
+- Find last year's total tax on your 1040
+- Multiply by 1.0 (or 1.1 if AGI was over $150k)
+- Subtract any W-2 withholding you'll still have this year
+- Divide the rest by four
+
+Our free quarterly tax calculator does exactly this arithmetic and shows the due dates.
+
+## Don't forget self-employment tax
+
+The other first-year shock: **self-employment tax**. It's 15.3% for Social Security and Medicare on 92.35% of your net profit — on top of income tax. An employee splits that 15.3% with their employer; you pay both halves. On $50,000 of profit that's roughly $7,000 before income tax even starts.
+
+The partial consolation: you deduct the employer half, and legitimate business expenses reduce both taxes at once. Track every expense from day one.
+
+## How to actually pay
+
+The IRS accepts estimated payments through your IRS Online Account, IRS Direct Pay, or by mailing Form 1040-ES vouchers. Pay from a business account if you have one, and keep the confirmations — you'll report the total paid when you file.
+
+## What if your first year is going badly?
+
+If last year's tax was zero (a student year, say), the prior-year safe harbor can literally be zero — you may owe nothing until April. And if income swings quarter to quarter, the annualized-income method lets you pay less in lean quarters, though it takes more bookkeeping.
+
+**The honest summary:** quarterly taxes are annoying but mechanical. One known number, divided by four, paid on four dates. The people who get burned aren't the ones who calculated wrong — they're the ones who didn't know the system existed.
+`,
+  },
+  {
+    slug: "missed-tax-deadline-what-now",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "Missed the Tax Deadline? Here's Exactly What to Do (and What It Costs)",
+    excerpt: "The penalty for not filing is ten times the penalty for not paying. If you missed April 15, the order of operations matters — here it is, step by step.",
+    date: "2026-07-20",
+    author: "Taxly Team",
+    tags: ["deadlines","penalties"],
+    content: `
+Missing the tax deadline feels catastrophic. It usually isn't — but the clock is running, and what you do first matters more than most people realize.
+
+## The one fact that changes everything
+
+The IRS charges two separate penalties, and they are wildly different sizes:
+
+- **Failure-to-file:** 5% of the unpaid tax per month, up to 25%
+- **Failure-to-pay:** 0.5% of the unpaid tax per month, up to 25%
+
+Filing late is **ten times** more expensive per month than paying late. That gives you the entire strategy: file immediately, even if you can't pay a single dollar of what you owe.
+
+## Step 1: file now, whatever your bank balance says
+
+Every month that passes before you file adds 5% (a part month counts as a full month). Filing today stops that clock immediately, leaving only the much smaller late-payment penalty and interest. If your return is more than 60 days late, a minimum penalty also kicks in — the lesser of an inflation-adjusted floor (around $500) or 100% of the tax owed — which hits small balances hardest.
+
+Our free penalty estimator shows what your specific delay costs.
+
+## Step 2: pay what you can, then get a plan
+
+Interest and the 0.5% monthly penalty apply to the *unpaid* balance, so any partial payment shrinks them. For the rest, the IRS offers payment plans you can set up online in minutes — and while you're on one, the failure-to-pay rate is cut in half.
+
+## Step 3: ask about first-time abatement
+
+If this is your first slip after years of filing cleanly, the IRS's **first-time penalty abatement** can remove the penalties entirely (not the interest). It's one phone call or letter. A remarkable number of eligible people never ask.
+
+## What if you're owed a refund?
+
+Then there is no penalty at all — penalties are percentages of unpaid tax, and yours is zero. But don't drift: you have three years from the original deadline to file and claim the refund. After that the money becomes the government's, permanently.
+
+## Next year, in one sentence
+
+If April is looking impossible, file **Form 4868** by the deadline — it's an automatic six-month filing extension that anyone can have for free. It doesn't extend the payment date, but pairing it with a best-guess payment turns a 5%-per-month problem into a rounding error.
+
+**The honest summary:** the tax system punishes silence far more than poverty. File, pay what you can, ask for the abatement — in that order, starting today.
+`,
+  },
+  {
+    slug: "turbotax-alternatives-honest-guide",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "TurboTax Alternatives in 2026 — An Honest Guide (From a Competitor)",
+    excerpt: "Yes, we're a competitor. So this guide names the free government option first, credits the budget rival that deserves it, and tells you who should just stay with TurboTax.",
+    date: "2026-07-27",
+    author: "Taxly Team",
+    tags: ["comparisons","basics"],
+    content: `
+A tax company writing about TurboTax alternatives has an obvious conflict of interest. So let's handle it the only honest way: by naming the options that don't make us a cent first, and by telling you plainly when the answer is "stay where you are."
+
+## Start here: IRS Direct File (free, official)
+
+If your income is all W-2, you take the standard deduction, and your state participates, **IRS Direct File** is simply the right choice. It's free, it's run by the IRS itself, and your data goes nowhere else. Its limits are scope, not quality: no self-employment income, no itemizing, and a state list that changes each season — check the current one on irs.gov.
+
+## The honest budget pick: FreeTaxUSA
+
+**FreeTaxUSA** charges $0 for federal returns — including self-employment — and about $15 per state. It has quietly filed millions of returns for years, and its pricing is genuinely upsell-free. The trade-off is the interface: it's form-like and assumes you broadly know what goes where. If you've filed before and know your situation, it is the cheapest credible option, and we mean that.
+
+## The other big name: H&R Block
+
+Block's software is polished and its checkout behaviour is milder than TurboTax's, with one real differentiator: thousands of physical offices if you want to hand the whole thing to a human mid-way. You pay brand-name prices, but if in-person backup matters, it's the reason to pick Block.
+
+## Cash App Taxes
+
+Completely free, federal and state — funded by the rest of the Cash App ecosystem. Coverage has genuine gaps (multi-state returns, some situations), and support is thin. Worth a look for simple-to-moderate returns if you're already comfortable in Cash App.
+
+## When you should honestly stay with TurboTax
+
+- Your return is genuinely complex — K-1s, foreign income, multi-state business
+- You want a live CPA review before you file, this year, with no friction
+- Years of your history imports cleanly and the checkout price doesn't sting
+
+TurboTax's problem was never quality. The FTC's 2024 ruling was about deceptive "free" advertising and the upsell ambush — the price finding you at checkout. If those don't bother you, the software itself is excellent.
+
+## Where Taxly fits
+
+Taxly opens for TY2026 returns in January 2027, built for the gig and 1099 filer TurboTax routes to its most expensive tier: a guided plain-English interview, $69 federal + $29 state for self-employment returns, and a price-lock guarantee — the number you see at the start is the number you pay at the end. Our detailed comparisons against TurboTax, FreeTaxUSA, and Direct File spell out exactly where each rival wins.
+
+**The honest summary:** simple return in a covered state → Direct File. Know your taxes, want cheap → FreeTaxUSA. Complex return or need a human → TurboTax or Block. First-year 1099 filer who wants guidance without the ambush → that's who we're building for.
+`,
+  },
+  {
+    slug: "irs-direct-file-who-qualifies",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "IRS Direct File: Who Qualifies, What It Covers, and Where It Runs Out",
+    excerpt: "The IRS's own free filing tool is genuinely good — if you fit inside its lines. Here's exactly who qualifies, plus the three most common reasons filers outgrow it.",
+    date: "2026-08-03",
+    author: "Taxly Team",
+    tags: ["basics","comparisons"],
+    content: `
+IRS Direct File is the rarest thing in the tax industry: a genuinely free option with no catch. It's run by the IRS itself, there is no paid tier, and no one is mining your return to sell you something. If you fit inside its lines, use it. The question is whether you fit.
+
+## Who qualifies
+
+Direct File is built around the simple end of the return spectrum. Broadly, you're in if:
+
+- Your income comes from **W-2 wages** (plus limited interest, Social Security, and unemployment)
+- You take the **standard deduction** rather than itemizing
+- You claim the mainstream credits it supports — EITC and the Child Tax Credit among them
+- You live in a **participating state**
+
+The state list is the moving part. It has grown, shrunk, and shifted with politics since the program launched — never assume last season's list, check the current one on irs.gov before you plan around it.
+
+## What it's like to use
+
+Honest answer: competent and clean. Plain-language questions, decent mobile support, and a live chat that answers procedural questions. It files your federal return; participating states then hand you to their own linked tool for the state side, which varies in quality by state.
+
+## The three most common ways filers outgrow it
+
+**1. A 1099 arrives.** Any self-employment or gig income — a 1099-NEC from freelance work, serious 1099-K activity — puts you outside Direct File's scope entirely. This is the single most common exit.
+
+**2. Itemizing starts to win.** Buy a house, and mortgage interest plus state and local taxes may beat your standard deduction. Direct File only supports the standard deduction.
+
+**3. Your state isn't on the list.** No participating state means no state return through the program, and for most people that's a dealbreaker on its own.
+
+## Will it exist next season?
+
+The program's funding and scope have been political footballs. That's not a reason to avoid it — while it's live and you qualify, it's the right choice — but verify its status each January rather than assuming.
+
+## The bottom line
+
+We say this as a company that sells tax software: if Direct File covers you, file with it. Software you don't need is exactly what this industry oversold for two decades. When a 1099 shows up or your state falls outside the lines — that's the moment products like ours earn their fee, and our comparison page spells out exactly where that line sits.
+`,
+  },
+  {
+    slug: "1099-k-what-it-means",
+    category: "gig",
+    status: "scheduled",
+    readTime: 5,
+    title: "Got a 1099-K? What It Actually Means for Your Taxes",
+    excerpt: "Payment apps and marketplaces now report far more activity to the IRS. A 1099-K isn't a tax bill — but ignoring it is how small sellers get surprise letters.",
+    date: "2026-08-10",
+    author: "Taxly Team",
+    tags: ["self-employment","forms"],
+    content: `
+A form 1099-K in your mailbox causes more unnecessary panic than almost any other tax document. Here's what it is, what it isn't, and what to actually do with it.
+
+## What a 1099-K is
+
+It's an information report from a **payment platform** — Stripe, PayPal, Venmo (business), Etsy, eBay, rideshare and delivery apps — showing the gross payments they processed for you during the year. One copy goes to you; one goes to the IRS.
+
+The reporting threshold has bounced around for years as Congress revised it, so don't be surprised if you get one for a fairly modest amount — check the current threshold on irs.gov rather than relying on an old number.
+
+## What it is not
+
+- **It is not a tax bill.** It reports gross volume, not profit, and not tax owed.
+- **It doesn't make hobby sales taxable business income by itself.** Selling your old couch below what you paid isn't taxable profit.
+- **It isn't the only income you report.** Your actual income is what you earned, whether or not a form reported it.
+
+## The number on it is gross — your taxes are on net
+
+The 1099-K shows everything processed: refunds you gave, fees the platform took, shipping the buyer paid. If you're running a real side business, your taxable profit is that gross figure minus refunds, fees, cost of goods, and expenses — reported on Schedule C. Keeping your own records is what turns a scary gross number into an accurate net one.
+
+## The trap: double counting
+
+Freelancers sometimes get a 1099-NEC from a client *and* a 1099-K from the platform that processed the same payment. Report the income once — from your own records — and keep both forms so you can explain any mismatch. Software that asks about each form separately without reconciling them inflates your income; this is exactly the kind of thing a guided flow should catch.
+
+## Personal payments between friends
+
+Splitting rent or dinner on a payment app isn't income, and personal accounts generally shouldn't generate 1099-Ks. If one arrives for personal transfers anyway, don't ignore it — the IRS has a copy. There's a designated way to note the erroneous amount on your return; handle it there rather than pretending the form doesn't exist.
+
+## What to actually do
+
+- Check the gross figure against your own records
+- Track refunds, fees, and expenses — they reduce taxable profit
+- Report income once, even when two forms cover the same dollars
+- Never ignore the form: the IRS matches returns against it automatically
+
+**The honest summary:** a 1099-K is a mirror, not a bill. If your records are good, it changes nothing. If you don't have records, it's the reason to start — the IRS's copy arrives whether you're organized or not.
+`,
+  },
+  {
+    slug: "no-income-tax-states-federal-only",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "Living in a No-Income-Tax State? Your Filing Is Simpler (Not Free)",
+    excerpt: "Nine states charge no tax on wages — which means no state return for most residents. What that actually saves you, what it doesn't, and the fine print in two states.",
+    date: "2026-08-17",
+    author: "Taxly Team",
+    tags: ["states","basics"],
+    content: `
+If you live in Texas, Florida, Washington, Nevada, Tennessee, South Dakota, Wyoming, Alaska — or, for wage income, New Hampshire — you're in one of the states with no personal income tax on wages. For tax-filing season, that changes exactly one thing, and it's a good one.
+
+## What it means at filing time
+
+**Most residents file a federal return only.** No state return to prepare, no state software fee, no second deadline. Whatever tool you use, the entire "and now your state" step — often $15 to $60 in software fees, plus the time — simply disappears.
+
+That also widens your free options: IRS Direct File's biggest limitation for many filers is state coverage, which is irrelevant when there's no state return to file.
+
+## What it does not mean
+
+- **Not a tax-free life.** These states fund themselves through sales and property taxes instead — often above-average ones. You're trading where the tax hits, not whether it exists.
+- **Not zero federal complexity.** Self-employment tax, quarterly estimates, 1099s — all fully federal, all still yours.
+- **Not automatic if you have out-of-state income.** Worked remotely for part of the year from a taxing state, or earned rental income in one? You may owe a *nonresident* return there even though your home state wants nothing.
+
+## The two asterisks
+
+**Washington** has no wage income tax but does levy a capital-gains tax on large gains above a substantial threshold — high earners with big stock sales should check it. **New Hampshire** taxed interest and dividends for years; that tax has been phased out, but verify the current rule if you have significant investment income.
+
+## The moving-state year
+
+Move between a taxing state and a no-tax state mid-year, and you'll typically file a part-year return for the taxing state covering the months you lived there. The savings start the day residency changes — one reason relocations to Texas and Florida cluster in December.
+
+## The honest summary
+
+No-income-tax states are the one place tax filing genuinely is as simple as it sounds: one federal return and done, for most people. That's why they're Taxly's launch states — TX, FL, and WA residents get the full guided federal experience with no state return to charge for. The free tier plus a no-tax state is about as cheap as legitimate filing gets.
+`,
   },
 ];
