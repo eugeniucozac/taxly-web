@@ -77,23 +77,23 @@ function HelpClient() {
     <div className="py-20">
       {/* Header */}
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">{t("heading")}</h1>
-        <p className="text-lg text-slate-500">{t("subheading")}</p>
+        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
+        <p className="text-lg text-muted-foreground">{t("subheading")}</p>
       </div>
 
       {/* Sections */}
       <div className="mx-auto mt-20 max-w-3xl space-y-16 px-6">
         {sections.map(({ key, questions }) => (
           <div key={key}>
-            <h2 className="mb-6 text-xl font-bold text-slate-900">{t(`sections.${key}`)}</h2>
+            <h2 className="mb-6 text-xl font-bold text-foreground">{t(`sections.${key}`)}</h2>
             <div className="space-y-3">
               {questions.map((q) => (
-                <details key={q} className="group rounded-xl border border-slate-200 bg-white px-6 py-4">
-                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium text-slate-900">
+                <details key={q} className="group rounded-xl border bg-card px-6 py-4">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium text-foreground">
                     {t(`${key}.${q}.question`)}
-                    <ChevronDown size={18} className="shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+                    <ChevronDown size={18} className="shrink-0 text-muted-foreground/80 transition-transform group-open:rotate-180" />
                   </summary>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-500">{t(`${key}.${q}.answer`)}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(`${key}.${q}.answer`)}</p>
                 </details>
               ))}
             </div>
@@ -103,9 +103,9 @@ function HelpClient() {
 
       {/* Contact prompt */}
       <div className="mx-auto mt-20 max-w-xl px-6 text-center">
-        <p className="text-slate-500">
+        <p className="text-muted-foreground">
           {t("contactPrompt")}{" "}
-          <Link href={`/${locale}/contact`} className="font-semibold text-sky-600 hover:underline">
+          <Link href={`/${locale}/contact`} className="font-semibold text-primary hover:underline">
             {t("contactLink")}
           </Link>
         </p>

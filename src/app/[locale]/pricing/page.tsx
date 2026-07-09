@@ -78,10 +78,10 @@ interface ComparisonRow {
 function Cell({ value, included, notIncluded }: { value: RowValue; included: string; notIncluded: string }) {
   if (typeof value === "boolean") {
     return value
-      ? <CheckCircle2 size={18} className="mx-auto text-green-500" aria-label={included} />
-      : <X size={18} className="mx-auto text-slate-300" aria-label={notIncluded} />;
+      ? <CheckCircle2 size={18} className="mx-auto text-green-500 dark:text-emerald-400" aria-label={included} />
+      : <X size={18} className="mx-auto text-muted-foreground/60" aria-label={notIncluded} />;
   }
-  return <span className="text-sm text-slate-700">{value}</span>;
+  return <span className="text-sm text-muted-foreground">{value}</span>;
 }
 
 function PricingClient() {
@@ -112,8 +112,8 @@ function PricingClient() {
     <div className="py-20">
       {/* Header */}
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">{t("heading")}</h1>
-        <p className="text-lg text-slate-500">{t("subheading")}</p>
+        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
+        <p className="text-lg text-muted-foreground">{t("subheading")}</p>
       </div>
 
       {/* Plan cards */}
@@ -125,35 +125,33 @@ function PricingClient() {
             return (
               <div
                 key={plan}
-                className={`relative rounded-2xl p-8 ${isDeluxe ? "text-white shadow-2xl" : "border border-slate-200 bg-white shadow-sm"}`}
-                style={isDeluxe ? { backgroundColor: "#0ea5e9" } : undefined}
-              >
+ className={`relative rounded-2xl p-8 ${isDeluxe ? "bg-sky-600 text-white shadow-2xl" : "border bg-card shadow-sm"}`}
+                              >
                 {isDeluxe && (
                   <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-amber-400 px-4 py-1 text-xs font-bold text-amber-900">
                     {t(`${plan}.badge`)}
                   </span>
                 )}
-                <p className={`mb-1 text-sm font-semibold uppercase tracking-wider ${isDeluxe ? "text-sky-100" : "text-slate-400"}`}>
+                <p className={`mb-1 text-sm font-semibold uppercase tracking-wider ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}>
                   {t(`${plan}.name`)}
                 </p>
                 <div className="mb-1 flex items-end gap-1">
                   <span className="text-4xl font-bold">{t(`${plan}.federalPrice`)}</span>
-                  <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-400"}`}> federal</span>
+                  <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}> federal</span>
                 </div>
-                <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-500"}`}>{t(`${plan}.statePrice`)} state</p>
-                <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-slate-500"}`}>{t(`${plan}.description`)}</p>
+                <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.statePrice`)} state</p>
+                <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.description`)}</p>
                 <ul className="mb-8 space-y-3">
                   {features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <CheckCircle2 size={16} className={`mt-0.5 shrink-0 ${isDeluxe ? "text-sky-200" : "text-green-500"}`} />
+                      <CheckCircle2 size={16} className={`mt-0.5 shrink-0 ${isDeluxe ? "text-sky-200" : "text-green-500 dark:text-emerald-400"}`} />
                       {f}
                     </li>
                   ))}
                 </ul>
                 <Link
                   href="#waitlist"
-                  className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${isDeluxe ? "bg-white text-sky-600 hover:bg-sky-50" : "text-white"}`}
-                  style={!isDeluxe ? { backgroundColor: "#0ea5e9" } : undefined}
+ className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${isDeluxe ? "bg-white text-sky-700 hover:bg-sky-50" : "bg-sky-600 text-white hover:bg-sky-500"}`}
                 >
                   {t(`${plan}.cta`)}
                 </Link>
@@ -165,14 +163,14 @@ function PricingClient() {
 
       {/* Comparison table */}
       <div className="mx-auto mt-24 max-w-6xl px-6">
-        <h2 className="mb-10 text-center text-2xl font-bold text-slate-900">{t("comparison.heading")}</h2>
-        <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <h2 className="mb-10 text-center text-2xl font-bold text-foreground">{t("comparison.heading")}</h2>
+        <div className="overflow-x-auto rounded-2xl border bg-card shadow-sm">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-slate-100">
-                <th className="px-6 py-4 text-left font-medium text-slate-400">Feature</th>
+              <tr className="border-b border-border">
+                <th className="px-6 py-4 text-left font-medium text-muted-foreground/80">Feature</th>
                 {plans.map((plan) => (
-                  <th key={plan} className={`px-6 py-4 text-center font-semibold ${plan === "deluxe" ? "text-sky-600" : "text-slate-700"}`}>
+                  <th key={plan} className={`px-6 py-4 text-center font-semibold ${plan === "deluxe" ? "text-primary" : "text-muted-foreground"}`}>
                     {t(`${plan}.name`)}
                   </th>
                 ))}
@@ -180,8 +178,8 @@ function PricingClient() {
             </thead>
             <tbody>
               {rows.map((row, i) => (
-                <tr key={row.label} className={i % 2 === 0 ? "bg-white" : "bg-slate-50"}>
-                  <td className="px-6 py-3.5 text-slate-700">{row.label}</td>
+                <tr key={row.label} className={i % 2 === 0 ? "bg-card" : "bg-secondary"}>
+                  <td className="px-6 py-3.5 text-muted-foreground">{row.label}</td>
                   <td className="px-6 py-3.5 text-center"><Cell value={row.free} included={included} notIncluded={notIncluded} /></td>
                   <td className="px-6 py-3.5 text-center"><Cell value={row.deluxe} included={included} notIncluded={notIncluded} /></td>
                   <td className="px-6 py-3.5 text-center"><Cell value={row.premium} included={included} notIncluded={notIncluded} /></td>
@@ -194,15 +192,15 @@ function PricingClient() {
 
       {/* Pricing FAQ */}
       <div className="mx-auto mt-24 max-w-3xl px-6">
-        <h2 className="mb-10 text-center text-2xl font-bold text-slate-900">{t("faq.heading")}</h2>
+        <h2 className="mb-10 text-center text-2xl font-bold text-foreground">{t("faq.heading")}</h2>
         <div className="space-y-4">
           {faqKeys.map((key) => (
-            <details key={key} className="group rounded-xl border border-slate-200 bg-white px-6 py-4">
-              <summary className="flex cursor-pointer list-none items-center justify-between font-medium text-slate-900">
+            <details key={key} className="group rounded-xl border bg-card px-6 py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-medium text-foreground">
                 {t(`faq.${key}.question`)}
-                <ChevronDown size={18} className="shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+                <ChevronDown size={18} className="shrink-0 text-muted-foreground/80 transition-transform group-open:rotate-180" />
               </summary>
-              <p className="mt-3 text-sm leading-relaxed text-slate-500">{t(`faq.${key}.answer`)}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(`faq.${key}.answer`)}</p>
             </details>
           ))}
         </div>
@@ -215,7 +213,7 @@ function PricingClient() {
           ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
           successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
           errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
-          className="justify-center"
+ className="justify-center"
         />
       </div>
     </div>

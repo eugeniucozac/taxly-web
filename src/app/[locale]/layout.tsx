@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ConsentProvider } from "@/components/layout/consent-provider";
+import { ThemeProvider } from "@/components/layout/theme-provider";
 import type { LocaleKey, LocaleLayoutProps } from "@/types/page";
 import "../globals.css";
 
@@ -31,6 +32,13 @@ export async function generateMetadata({
   };
 }
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+};
+
 export default async function LocaleLayout({
   children,
   params,
@@ -43,17 +51,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${geist.variable} scroll-smooth`}>
-      <body
-        suppressHydrationWarning
-        className="min-h-screen bg-white text-slate-900 antialiased"
-      >
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <ConsentProvider />
-        </NextIntlClientProvider>
+    <html lang={locale} className={`${geist.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <ConsentProvider />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

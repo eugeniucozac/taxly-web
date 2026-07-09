@@ -21,13 +21,13 @@ function AboutClient() {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-3xl px-6">
-        <h1 className="mb-6 text-4xl font-bold text-slate-900 md:text-5xl">{t("heading")}</h1>
-        <p className="mb-16 text-lg text-slate-500">{t("subheading")}</p>
+        <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
+        <p className="mb-16 text-lg text-muted-foreground">{t("subheading")}</p>
 
         <div className="space-y-14">
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">{t("mission.heading")}</h2>
-            <div className="space-y-4 text-slate-600">
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("mission.heading")}</h2>
+            <div className="space-y-4 text-muted-foreground">
               {t("mission.text").split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -35,8 +35,8 @@ function AboutClient() {
           </section>
 
           <section>
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">{t("team.heading")}</h2>
-            <div className="space-y-4 text-slate-600">
+            <h2 className="mb-4 text-2xl font-bold text-foreground">{t("team.heading")}</h2>
+            <div className="space-y-4 text-muted-foreground">
               {t("team.text").split("\n\n").map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -45,7 +45,7 @@ function AboutClient() {
               href="https://getfinovo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block font-semibold text-sky-600 hover:underline"
+ className="mt-4 inline-block font-semibold text-primary hover:underline"
             >
               {t("finovoLink")}
             </Link>

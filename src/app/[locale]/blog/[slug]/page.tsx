@@ -9,6 +9,9 @@ import { BASE_URL, getAlternates } from "@/lib/metadata";
 import { generateLocaleStaticParams } from "@/lib/metadata";
 import type { LocaleSlugPageProps } from "@/types/page";
 
+// Closed set: unknown or not-yet-live slugs must 404, not attempt a dynamic render.
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const localeParams = generateLocaleStaticParams();
   const results: { locale: string; slug: string }[] = [];
@@ -59,7 +62,7 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
     <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <Link
         href="/blog"
-        className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:underline dark:text-sky-400"
+ className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"
       >
         ← {t("backToBlog")}
       </Link>
@@ -70,30 +73,30 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-sky-50 px-2.5 py-0.5 text-xs font-medium text-sky-700 dark:bg-sky-900/30 dark:text-sky-400"
+ className="rounded-full bg-sky-50 dark:bg-sky-500/10 px-2.5 py-0.5 text-xs font-medium text-sky-700 dark:bg-sky-900/30 dark:text-sky-400"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <h1 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+          <h1 className="mb-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl dark:text-white">
             {post.title}
           </h1>
 
-          <p className="text-sm text-gray-500 dark:text-gray-400">
+          <p className="text-sm text-muted-foreground">
             {t("by")} {post.author} · {t("publishedOn")} {formatDate(post.date, locale)}
           </p>
         </header>
 
-        <div className="prose prose-gray max-w-none dark:prose-invert prose-headings:font-semibold prose-a:text-sky-600 dark:prose-a:text-sky-400">
+        <div className="prose prose-gray max-w-none dark:prose-invert prose-headings:font-semibold prose-a:text-primary dark:prose-a:text-sky-400">
           {paragraphs.map((block, i) => {
             const trimmed = block.trim();
             if (!trimmed) return null;
 
             if (trimmed.startsWith("## ")) {
               return (
-                <h2 key={i} className="mb-3 mt-8 text-xl font-semibold text-gray-900 dark:text-white">
+                <h2 key={i} className="mb-3 mt-8 text-xl font-semibold text-foreground">
                   {trimmed.slice(3)}
                 </h2>
               );
@@ -101,7 +104,7 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
 
             if (trimmed.startsWith("**") && trimmed.endsWith("**") && !trimmed.slice(2, -2).includes("**")) {
               return (
-                <p key={i} className="mb-4 font-semibold text-gray-900 dark:text-white">
+                <p key={i} className="mb-4 font-semibold text-foreground">
                   {trimmed.slice(2, -2)}
                 </p>
               );
@@ -110,7 +113,7 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
             if (trimmed.startsWith("- ")) {
               const items = trimmed.split("\n").filter((l) => l.startsWith("- "));
               return (
-                <ul key={i} className="mb-4 list-disc space-y-1 pl-6 text-gray-700 dark:text-gray-300">
+                <ul key={i} className="mb-4 list-disc space-y-1 pl-6 text-muted-foreground">
                   {items.map((item, j) => (
                     <li key={j}>{renderInline(item.slice(2))}</li>
                   ))}
@@ -119,7 +122,7 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
             }
 
             return (
-              <p key={i} className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">
+              <p key={i} className="mb-4 leading-relaxed text-muted-foreground">
                 {renderInline(trimmed)}
               </p>
             );
@@ -127,17 +130,17 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
         </div>
       </article>
 
-      <footer className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-800">
+      <footer className="mt-12 border-t pt-8">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:underline dark:text-sky-400"
+ className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"
         >
           ← {t("backToBlog")}
         </Link>
 
         {/* Waitlist (pre-launch conversion) */}
         <div id="waitlist" className="mt-10 scroll-mt-24 rounded-2xl bg-sky-50 p-8 text-center dark:bg-sky-900/20">
-          <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
+          <p className="mb-4 text-sm text-muted-foreground">
             {locale === "es"
               ? "Presenta tus impuestos de forma honesta y sencilla. Únete a la lista de espera."
               : "File your taxes the honest, simple way. Join the waitlist."}
@@ -147,7 +150,7 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
             ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
             successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
             errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
-            className="mx-auto max-w-md justify-center"
+ className="mx-auto max-w-md justify-center"
           />
         </div>
       </footer>

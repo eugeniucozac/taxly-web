@@ -13,7 +13,7 @@ interface WaitlistFormProps {
   ctaLabel?: string;
   successMessage?: string;
   errorMessage?: string;
-  className?: string;
+ className?: string;
 }
 
 export function WaitlistForm({
@@ -21,7 +21,7 @@ export function WaitlistForm({
   ctaLabel = "Join the waitlist",
   successMessage = "You're on the list! Check your inbox.",
   errorMessage = "Something went wrong. Please try again.",
-  className,
+ className,
 }: WaitlistFormProps) {
   const locale = useLocale();
   const [email, setEmail] = useState("");
@@ -47,7 +47,7 @@ export function WaitlistForm({
 
   if (state === "success") {
     return (
-      <div className={cn("flex items-center gap-2 text-green-600", className)}>
+      <div className={cn("flex items-center gap-2 text-green-600 dark:text-emerald-400", className)}>
         <CheckCircle2 size={20} />
         <span className="text-sm font-medium">{successMessage}</span>
       </div>
@@ -62,7 +62,7 @@ export function WaitlistForm({
         name="website"
         tabIndex={-1}
         aria-hidden="true"
-        className="hidden"
+ className="hidden"
         autoComplete="off"
       />
       <input
@@ -72,13 +72,12 @@ export function WaitlistForm({
         onChange={(e) => setEmail(e.target.value)}
         placeholder={placeholder}
         disabled={state === "loading"}
-        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-100 disabled:opacity-60 sm:min-w-72"
+ className="w-full rounded-xl border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/80 focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20 disabled:opacity-60 sm:min-w-72"
       />
       <button
         type="submit"
         disabled={state === "loading"}
-        className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white transition disabled:opacity-60"
-        style={{ backgroundColor: "#0ea5e9" }}
+ className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white transition disabled:opacity-60 bg-sky-600 hover:bg-sky-500"
       >
         {state === "loading" ? (
           <Loader2 size={16} className="animate-spin" />
@@ -90,7 +89,7 @@ export function WaitlistForm({
         )}
       </button>
       {state === "error" && (
-        <p className="text-xs text-red-500 sm:col-span-2">{errorMessage}</p>
+        <p className="text-xs text-red-500 dark:text-red-400 sm:col-span-2">{errorMessage}</p>
       )}
     </form>
   );

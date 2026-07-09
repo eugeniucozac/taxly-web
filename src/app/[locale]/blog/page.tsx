@@ -24,10 +24,10 @@ export default async function BlogPage({ params }: LocalePageProps) {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground">
           {t("heading")}
         </h1>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+        <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
           {t("subtext")}
         </p>
       </div>

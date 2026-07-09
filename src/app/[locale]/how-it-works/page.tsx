@@ -33,8 +33,8 @@ function HowItWorksClient() {
     <div className="py-20">
       {/* Header */}
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <h1 className="mb-4 text-4xl font-bold text-slate-900 md:text-5xl">{t("heading")}</h1>
-        <p className="text-lg text-slate-500">{t("subheading")}</p>
+        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
+        <p className="text-lg text-muted-foreground">{t("subheading")}</p>
       </div>
 
       {/* Steps */}
@@ -44,19 +44,18 @@ function HowItWorksClient() {
             <div key={key} className="flex gap-8">
               <div className="flex flex-col items-center">
                 <div
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-lg font-bold text-white"
-                  style={{ backgroundColor: "#0ea5e9" }}
+ className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-600 text-lg font-bold text-white"
                 >
                   {i + 1}
                 </div>
-                {i < steps.length - 1 && <div className="mt-2 h-full w-0.5 bg-slate-100" />}
+                {i < steps.length - 1 && <div className="mt-2 h-full w-0.5 bg-muted" />}
               </div>
-              <div className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm flex-1">
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50">
-                  <Icon size={20} className="text-sky-500" />
+              <div className="rounded-2xl border bg-card p-8 shadow-sm flex-1">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                  <Icon size={20} className="text-primary" />
                 </div>
-                <h2 className="mb-3 text-xl font-semibold text-slate-900">{t(`${key}.title`)}</h2>
-                <p className="text-slate-500">{t(`${key}.description`)}</p>
+                <h2 className="mb-3 text-xl font-semibold text-foreground">{t(`${key}.title`)}</h2>
+                <p className="text-muted-foreground">{t(`${key}.description`)}</p>
               </div>
             </div>
           ))}
@@ -65,12 +64,12 @@ function HowItWorksClient() {
 
       {/* What you'll need */}
       <div className="mx-auto mt-24 max-w-4xl px-6">
-        <div className="rounded-2xl border border-slate-100 bg-white p-10 shadow-sm">
-          <h2 className="mb-8 text-2xl font-bold text-slate-900">{t("whatYouNeed.heading")}</h2>
+        <div className="rounded-2xl border bg-card p-10 shadow-sm">
+          <h2 className="mb-8 text-2xl font-bold text-foreground">{t("whatYouNeed.heading")}</h2>
           <ul className="grid gap-3 md:grid-cols-2">
             {items.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-slate-600">
-                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-green-500" />
+              <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-green-500 dark:text-emerald-400" />
                 {item}
               </li>
             ))}
@@ -80,9 +79,9 @@ function HowItWorksClient() {
 
       {/* Imports */}
       <div className="mx-auto mt-12 max-w-4xl px-6">
-        <div className="rounded-2xl bg-sky-50 p-10">
-          <h2 className="mb-3 text-xl font-bold text-slate-900">{imports.heading}</h2>
-          <p className="text-slate-600">{imports.description}</p>
+        <div className="rounded-2xl bg-sky-50 p-10 dark:bg-sky-500/10">
+          <h2 className="mb-3 text-xl font-bold text-foreground">{imports.heading}</h2>
+          <p className="text-muted-foreground">{imports.description}</p>
         </div>
       </div>
 
@@ -90,8 +89,7 @@ function HowItWorksClient() {
       <div className="mx-auto mt-20 max-w-xl px-6 text-center">
         <Link
           href={`/${locale}#waitlist`}
-          className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white shadow-lg transition"
-          style={{ backgroundColor: "#0ea5e9" }}
+ className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white shadow-lg transition bg-sky-600 hover:bg-sky-500"
         >
           Start for free <ArrowRight size={18} />
         </Link>

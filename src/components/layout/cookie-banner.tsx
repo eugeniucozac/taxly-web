@@ -16,12 +16,12 @@ export function CookieBanner({
     <div
       role="dialog"
       aria-label={t("title")}
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 p-4 shadow-lg backdrop-blur"
+ className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-4 shadow-lg backdrop-blur"
     >
       <div className="mx-auto flex max-w-5xl flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-muted-foreground">
           {t("message")}{" "}
-          <Link href="/privacy-policy" className="underline underline-offset-2 hover:text-slate-900">
+          <Link href="/privacy-policy" className="underline underline-offset-2 hover:text-foreground">
             {t("learnMore")}
           </Link>
         </p>
@@ -29,15 +29,14 @@ export function CookieBanner({
           <button
             type="button"
             onClick={onDecline}
-            className="rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+ className="rounded-lg border px-4 py-2 text-sm font-medium text-muted-foreground hover:bg-secondary"
           >
             {t("decline")}
           </button>
           <button
             type="button"
             onClick={onAccept}
-            className="rounded-lg px-4 py-2 text-sm font-semibold text-white"
-            style={{ backgroundColor: "#0ea5e9" }}
+ className="rounded-lg px-4 py-2 bg-sky-600 text-sm font-semibold text-white hover:bg-sky-500"
           >
             {t("accept")}
           </button>

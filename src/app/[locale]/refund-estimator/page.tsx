@@ -21,13 +21,13 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
-        <span className="mb-4 inline-block rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-700 dark:bg-sky-900/30 dark:text-sky-400">
+        <span className="mb-4 inline-block rounded-full bg-sky-50 dark:bg-sky-500/10 px-3 py-1 text-xs font-semibold text-sky-700 dark:bg-sky-900/30 dark:text-sky-400">
           {t("badge")}
         </span>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground">
           {t("heading")}
         </h1>
-        <p className="mx-auto max-w-xl text-lg text-gray-600 dark:text-gray-400">
+        <p className="mx-auto max-w-xl text-lg text-muted-foreground">
           {t("subheading")}
         </p>
       </div>
@@ -36,7 +36,7 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
 
       {/* Waitlist (pre-launch conversion) */}
       <div id="waitlist" className="mx-auto mt-16 max-w-lg scroll-mt-24 text-center">
-        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mb-4 text-sm text-muted-foreground">
           {locale === "es"
             ? "Cuando abramos, presenta tu declaración con confianza. Únete a la lista."
             : "File it for real when we launch. Join the waitlist."}
@@ -46,7 +46,7 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
           ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
           successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
           errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
-          className="justify-center"
+ className="justify-center"
         />
       </div>
     </main>
