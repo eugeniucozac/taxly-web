@@ -1,4 +1,4 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Lock, Wifi, Shield, EyeOff, Archive, Users } from "lucide-react";
 import { makeMetadata } from "@/lib/metadata";

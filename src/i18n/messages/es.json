@@ -60,32 +60,62 @@
     "employee": {
       "title": "Empleado con W-2",
       "description": "Declaración simple para trabajadores asalariados o por hora. Presentación federal gratuita.",
-      "forms": ["W-2", "Deducción estándar o detallada", "Crédito tributario por hijos", "Créditos educativos"]
+      "forms": [
+        "W-2",
+        "Deducción estándar o detallada",
+        "Crédito tributario por hijos",
+        "Créditos educativos"
+      ]
     },
     "freelancer": {
       "title": "Freelancer y trabajador por cuenta propia",
       "description": "1099-NEC, Schedule C, impuesto sobre el trabajo independiente, estimados trimestrales — todo incluido.",
-      "forms": ["1099-NEC / 1099-MISC", "Schedule C", "Impuesto sobre trabajo independiente", "Estimados trimestrales"]
+      "forms": [
+        "1099-NEC / 1099-MISC",
+        "Schedule C",
+        "Impuesto sobre trabajo independiente",
+        "Estimados trimestrales"
+      ]
     },
     "investor": {
       "title": "Inversionista",
       "description": "Acciones, criptomonedas, dividendos, ganancias de capital. Importa desde tu corredora automáticamente.",
-      "forms": ["1099-B (corredora)", "Schedule D", "Ganancias/pérdidas de cripto", "1099-DIV / 1099-INT"]
+      "forms": [
+        "1099-B (corredora)",
+        "Schedule D",
+        "Ganancias/pérdidas de cripto",
+        "1099-DIV / 1099-INT"
+      ]
     },
     "homeowner": {
       "title": "Propietario de vivienda",
       "description": "Intereses hipotecarios, impuesto predial, deducción de oficina en casa — encontramos cada dólar.",
-      "forms": ["1098 Intereses hipotecarios", "Deducción de impuesto predial", "Deducción de oficina en casa", "Créditos de energía"]
+      "forms": [
+        "1098 Intereses hipotecarios",
+        "Deducción de impuesto predial",
+        "Deducción de oficina en casa",
+        "Créditos de energía"
+      ]
     },
     "family": {
       "title": "Familia y dependientes",
       "description": "Crédito tributario por hijos, cuidado de dependientes, créditos educativos y más.",
-      "forms": ["Crédito tributario por hijos", "Crédito por cuidado de dependientes", "1098-T (educación)", "Crédito por ingreso del trabajo"]
+      "forms": [
+        "Crédito tributario por hijos",
+        "Crédito por cuidado de dependientes",
+        "1098-T (educación)",
+        "Crédito por ingreso del trabajo"
+      ]
     },
     "retirement": {
       "title": "Ingresos de jubilación",
       "description": "Seguro Social, 401(k), distribuciones de IRA, ingresos de pensión — declarados correctamente.",
-      "forms": ["SSA-1099 (Seguro Social)", "1099-R (jubilación)", "Deducciones IRA", "Cálculos RMD"]
+      "forms": [
+        "SSA-1099 (Seguro Social)",
+        "1099-R (jubilación)",
+        "Deducciones IRA",
+        "Cálculos RMD"
+      ]
     }
   },
   "security": {
@@ -177,26 +207,47 @@
       "period": "federal + 1 estado",
       "description": "Declaraciones simples con W-2. Sin límite de ingresos.",
       "cta": "Presentar gratis",
-      "features": ["Declaración federal — gratis", "1 declaración estatal — gratis", "Ingresos W-2", "Deducción estándar", "Crédito tributario por hijos", "E-file del IRS"]
+      "features": [
+        "Declaración federal — gratis",
+        "1 declaración estatal — gratis",
+        "Ingresos W-2",
+        "Deducción estándar",
+        "Crédito tributario por hijos",
+        "E-file del IRS"
+      ]
     },
     "deluxe": {
       "name": "Deluxe",
-      "federalPrice": "$29",
-      "statePrice": "+ $14 / estado",
+      "federalPrice": "$39",
+      "statePrice": "+ $29 / estado",
       "period": "federal",
       "description": "Deducciones, propietarios de vivienda, HSA y más.",
       "cta": "Comenzar Deluxe",
       "badge": "Más popular",
-      "features": ["Todo lo incluido en Gratis", "Deducciones detalladas", "Intereses hipotecarios e impuesto predial", "Contribuciones a HSA", "Intereses de préstamos estudiantiles", "Donaciones caritativas"]
+      "features": [
+        "Todo lo incluido en Gratis",
+        "Deducciones detalladas",
+        "Intereses hipotecarios e impuesto predial",
+        "Contribuciones a HSA",
+        "Intereses de préstamos estudiantiles",
+        "Donaciones caritativas"
+      ]
     },
     "premium": {
       "name": "Premium",
-      "federalPrice": "$59",
-      "statePrice": "+ $14 / estado",
+      "federalPrice": "$69",
+      "statePrice": "+ $29 / estado",
       "period": "federal",
       "description": "Inversiones, cripto, alquileres, trabajo independiente.",
       "cta": "Comenzar Premium",
-      "features": ["Todo lo incluido en Deluxe", "Schedule C (trabajo independiente)", "Acciones, cripto y ganancias de capital", "Ingresos de alquiler (Schedule E)", "1099-NEC / 1099-MISC", "Calculadora de estimados trimestrales"]
+      "features": [
+        "Todo lo incluido en Deluxe",
+        "Schedule C (trabajo independiente)",
+        "Acciones, cripto y ganancias de capital",
+        "Ingresos de alquiler (Schedule E)",
+        "1099-NEC / 1099-MISC",
+        "Calculadora de estimados trimestrales"
+      ]
     },
     "comparison": {
       "heading": "Comparación completa de planes",
@@ -207,33 +258,138 @@
         "support": "Soporte"
       },
       "rows": {
-        "federalReturn": { "label": "Declaración federal", "free": "Gratis", "deluxe": "$29", "premium": "$59" },
-        "stateReturn": { "label": "Declaración estatal", "free": "Gratis (1 estado)", "deluxe": "$14 / estado", "premium": "$14 / estado" },
-        "eFile": { "label": "E-file del IRS", "free": true, "deluxe": true, "premium": true },
-        "importPdf": { "label": "Importar PDF del año anterior", "free": true, "deluxe": true, "premium": true },
-        "w2": { "label": "Ingresos W-2", "free": true, "deluxe": true, "premium": true },
-        "interest": { "label": "Intereses y dividendos (1099-INT/DIV)", "free": true, "deluxe": true, "premium": true },
-        "selfEmployed": { "label": "Trabajo independiente / 1099-NEC (Schedule C)", "free": false, "deluxe": false, "premium": true },
-        "investments": { "label": "Acciones y cripto (Schedule D)", "free": false, "deluxe": false, "premium": true },
-        "rental": { "label": "Ingresos de alquiler (Schedule E)", "free": false, "deluxe": false, "premium": true },
-        "standardDed": { "label": "Deducción estándar", "free": true, "deluxe": true, "premium": true },
-        "itemized": { "label": "Deducciones detalladas (Schedule A)", "free": false, "deluxe": true, "premium": true },
-        "hsa": { "label": "Contribuciones HSA", "free": false, "deluxe": true, "premium": true },
-        "mortgage": { "label": "Intereses hipotecarios e impuesto predial", "free": false, "deluxe": true, "premium": true },
-        "childCredit": { "label": "Crédito tributario por hijos", "free": true, "deluxe": true, "premium": true },
-        "eitc": { "label": "Crédito por ingreso del trabajo", "free": true, "deluxe": true, "premium": true },
-        "emailSupport": { "label": "Soporte por correo", "free": true, "deluxe": true, "premium": true },
-        "prioritySupport": { "label": "Soporte prioritario", "free": false, "deluxe": false, "premium": true },
-        "auditSupport": { "label": "Apoyo en auditorías", "free": true, "deluxe": true, "premium": true }
+        "federalReturn": {
+          "label": "Declaración federal",
+          "free": "Gratis",
+          "deluxe": "$39",
+          "premium": "$69"
+        },
+        "stateReturn": {
+          "label": "Declaración estatal",
+          "free": "Gratis (1 estado)",
+          "deluxe": "$29 / estado",
+          "premium": "$29 / estado"
+        },
+        "eFile": {
+          "label": "E-file del IRS",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "importPdf": {
+          "label": "Importar PDF del año anterior",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "w2": {
+          "label": "Ingresos W-2",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "interest": {
+          "label": "Intereses y dividendos (1099-INT/DIV)",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "selfEmployed": {
+          "label": "Trabajo independiente / 1099-NEC (Schedule C)",
+          "free": false,
+          "deluxe": false,
+          "premium": true
+        },
+        "investments": {
+          "label": "Acciones y cripto (Schedule D)",
+          "free": false,
+          "deluxe": false,
+          "premium": true
+        },
+        "rental": {
+          "label": "Ingresos de alquiler (Schedule E)",
+          "free": false,
+          "deluxe": false,
+          "premium": true
+        },
+        "standardDed": {
+          "label": "Deducción estándar",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "itemized": {
+          "label": "Deducciones detalladas (Schedule A)",
+          "free": false,
+          "deluxe": true,
+          "premium": true
+        },
+        "hsa": {
+          "label": "Contribuciones HSA",
+          "free": false,
+          "deluxe": true,
+          "premium": true
+        },
+        "mortgage": {
+          "label": "Intereses hipotecarios e impuesto predial",
+          "free": false,
+          "deluxe": true,
+          "premium": true
+        },
+        "childCredit": {
+          "label": "Crédito tributario por hijos",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "eitc": {
+          "label": "Crédito por ingreso del trabajo",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "emailSupport": {
+          "label": "Soporte por correo",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        },
+        "prioritySupport": {
+          "label": "Soporte prioritario",
+          "free": false,
+          "deluxe": false,
+          "premium": true
+        },
+        "auditSupport": {
+          "label": "Apoyo en auditorías",
+          "free": true,
+          "deluxe": true,
+          "premium": true
+        }
       }
     },
     "faq": {
       "heading": "Preguntas sobre precios",
-      "q1": { "question": "¿El plan Gratis es realmente gratis — sin cargos ocultos?", "answer": "Sí. Gratis significa $0 para la declaración federal y $0 para una declaración estatal. No te pedimos tarjeta de crédito hasta que actualices a Deluxe o Premium." },
-      "q2": { "question": "¿Qué significa 'por estado'?", "answer": "Cada declaración estatal cuesta $14, independientemente del plan (Deluxe o Premium). Dos estados = $28, tres estados = $42. No hay cargos estatales en el plan Gratis para tu primer estado." },
-      "q3": { "question": "¿Puedo actualizar después de comenzar?", "answer": "Sí. Comienza con Gratis y actualiza a Deluxe o Premium en cualquier momento antes de presentar. Tus datos se transfieren y solo pagas cuando envías por e-file." },
-      "q4": { "question": "¿Cambian los precios el próximo año?", "answer": "Bloqueamos tu precio para el año fiscal que presentas. Si comienzas una declaración 2025 a $29, eso es lo que pagas — aunque subamos precios en 2026." },
-      "q5": { "question": "¿Hay política de reembolso?", "answer": "Si pagaste y aún no has enviado por e-file, contáctanos dentro de 30 días y te reembolsaremos. Una vez que una declaración se envía y el IRS la acepta, no podemos reembolsar la tarifa." }
+      "q1": {
+        "question": "¿El plan Gratis es realmente gratis — sin cargos ocultos?",
+        "answer": "Sí. Gratis significa $0 para la declaración federal y $0 para una declaración estatal. No te pedimos tarjeta de crédito hasta que actualices a Deluxe o Premium."
+      },
+      "q2": {
+        "question": "¿Qué significa 'por estado'?",
+        "answer": "Cada declaración estatal cuesta $29, independientemente del plan (Deluxe o Premium). Dos estados = $58, tres estados = $87. No hay cargos estatales en el plan Gratis para tu primer estado."
+      },
+      "q3": {
+        "question": "¿Puedo actualizar después de comenzar?",
+        "answer": "Sí. Comienza con Gratis y actualiza a Deluxe o Premium en cualquier momento antes de presentar. Tus datos se transfieren y solo pagas cuando envías por e-file."
+      },
+      "q4": {
+        "question": "¿Cambian los precios el próximo año?",
+        "answer": "Bloqueamos tu precio para el año fiscal que presentas. Si comienzas una declaración 2025 a $39, eso es lo que pagas — aunque subamos precios en 2026."
+      },
+      "q5": {
+        "question": "¿Hay política de reembolso?",
+        "answer": "Si pagaste y aún no has enviado por e-file, contáctanos dentro de 30 días y te reembolsaremos. Una vez que una declaración se envía y el IRS la acepta, no podemos reembolsar la tarifa."
+      }
     }
   },
   "featuresPage": {
@@ -249,11 +405,27 @@
       "PDF del año anterior (TurboTax, H&R Block, Taxly)"
     ],
     "allForms": [
-      "W-2", "1099-NEC", "1099-MISC", "1099-INT", "1099-DIV", "1099-B", "1099-R",
-      "SSA-1099", "1098 (Hipoteca)", "1098-T (Educación)", "1098-E (Préstamo estudiantil)",
-      "Schedule A", "Schedule B", "Schedule C", "Schedule D", "Schedule E",
-      "Formulario 2441 (Cuidado de hijos)", "Formulario 8863 (Créditos educativos)", "Formulario 8949 (Activos de capital)",
-      "Formulario 4562 (Depreciación)", "FBAR (FinCEN 114)"
+      "W-2",
+      "1099-NEC",
+      "1099-MISC",
+      "1099-INT",
+      "1099-DIV",
+      "1099-B",
+      "1099-R",
+      "SSA-1099",
+      "1098 (Hipoteca)",
+      "1098-T (Educación)",
+      "1098-E (Préstamo estudiantil)",
+      "Schedule A",
+      "Schedule B",
+      "Schedule C",
+      "Schedule D",
+      "Schedule E",
+      "Formulario 2441 (Cuidado de hijos)",
+      "Formulario 8863 (Créditos educativos)",
+      "Formulario 8949 (Activos de capital)",
+      "Formulario 4562 (Depreciación)",
+      "FBAR (FinCEN 114)"
     ]
   },
   "help": {
@@ -268,26 +440,68 @@
       "filing": "Declaración y reembolsos"
     },
     "gettingStarted": {
-      "q1": { "question": "¿Necesito crear una cuenta para comenzar?", "answer": "Sí, se requiere una cuenta gratuita para guardar tu progreso y presentar tu declaración. Crear una cuenta toma menos de un minuto — solo correo y contraseña." },
-      "q2": { "question": "¿Para qué año fiscal puedo usar Taxly?", "answer": "Puedes presentar la declaración del año fiscal actual (con fecha límite el 15 de abril) y enmendar declaraciones de los dos años anteriores." },
-      "q3": { "question": "¿Puedo importar mi declaración de otro software?", "answer": "Sí. Sube un PDF de tu declaración anterior de TurboTax, H&R Block o Taxly y prellenaremos tu información básica y cifras del año anterior." },
-      "q4": { "question": "¿Puedo usar Taxly en móvil?", "answer": "Sí. Taxly es completamente responsivo y funciona en cualquier smartphone o tablet. Una app móvil dedicada está en planes." }
+      "q1": {
+        "question": "¿Necesito crear una cuenta para comenzar?",
+        "answer": "Sí, se requiere una cuenta gratuita para guardar tu progreso y presentar tu declaración. Crear una cuenta toma menos de un minuto — solo correo y contraseña."
+      },
+      "q2": {
+        "question": "¿Para qué año fiscal puedo usar Taxly?",
+        "answer": "Puedes presentar la declaración del año fiscal actual (con fecha límite el 15 de abril) y enmendar declaraciones de los dos años anteriores."
+      },
+      "q3": {
+        "question": "¿Puedo importar mi declaración de otro software?",
+        "answer": "Sí. Sube un PDF de tu declaración anterior de TurboTax, H&R Block o Taxly y prellenaremos tu información básica y cifras del año anterior."
+      },
+      "q4": {
+        "question": "¿Puedo usar Taxly en móvil?",
+        "answer": "Sí. Taxly es completamente responsivo y funciona en cualquier smartphone o tablet. Una app móvil dedicada está en planes."
+      }
     },
     "pricing": {
-      "q1": { "question": "¿Cuándo pago?", "answer": "Solo pagas cuando envías tu declaración por e-file. Puedes preparar tu declaración y ver tu estimado de reembolso completamente gratis antes de decidir." },
-      "q2": { "question": "¿Qué métodos de pago aceptan?", "answer": "Aceptamos todas las principales tarjetas de crédito y débito (Visa, Mastercard, Amex, Discover) y Apple Pay / Google Pay." },
-      "q3": { "question": "¿Puedo obtener un reembolso?", "answer": "Si pagaste pero aún no has enviado por e-file, contáctanos dentro de 30 días para un reembolso completo. Después del e-file, la tarifa no es reembolsable." }
+      "q1": {
+        "question": "¿Cuándo pago?",
+        "answer": "Solo pagas cuando envías tu declaración por e-file. Puedes preparar tu declaración y ver tu estimado de reembolso completamente gratis antes de decidir."
+      },
+      "q2": {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos todas las principales tarjetas de crédito y débito (Visa, Mastercard, Amex, Discover) y Apple Pay / Google Pay."
+      },
+      "q3": {
+        "question": "¿Puedo obtener un reembolso?",
+        "answer": "Si pagaste pero aún no has enviado por e-file, contáctanos dentro de 30 días para un reembolso completo. Después del e-file, la tarifa no es reembolsable."
+      }
     },
     "security": {
-      "q1": { "question": "¿Está seguro mi Número de Seguro Social?", "answer": "Sí. Tu SSN se cifra con AES-256 antes de almacenarse y nunca se transmite en texto plano. Solo se envía al IRS durante el e-file, a través de una conexión cifrada." },
-      "q2": { "question": "¿Taxly vende mis datos?", "answer": "Nunca. Usamos tus datos únicamente para preparar y presentar tus impuestos. No los vendemos, no los compartimos con anunciantes ni los usamos para crear perfiles publicitarios." },
-      "q3": { "question": "¿Cómo activo la autenticación de dos factores?", "answer": "Ve a Configuración de cuenta → Seguridad → Activar 2FA. Admitimos apps de autenticación (Google Authenticator, Authy) y SMS." }
+      "q1": {
+        "question": "¿Está seguro mi Número de Seguro Social?",
+        "answer": "Sí. Tu SSN se cifra con AES-256 antes de almacenarse y nunca se transmite en texto plano. Solo se envía al IRS durante el e-file, a través de una conexión cifrada."
+      },
+      "q2": {
+        "question": "¿Taxly vende mis datos?",
+        "answer": "Nunca. Usamos tus datos únicamente para preparar y presentar tus impuestos. No los vendemos, no los compartimos con anunciantes ni los usamos para crear perfiles publicitarios."
+      },
+      "q3": {
+        "question": "¿Cómo activo la autenticación de dos factores?",
+        "answer": "Ve a Configuración de cuenta → Seguridad → Activar 2FA. Admitimos apps de autenticación (Google Authenticator, Authy) y SMS."
+      }
     },
     "filing": {
-      "q1": { "question": "¿Cuánto tarda el IRS en procesar?", "answer": "El IRS generalmente acepta declaraciones enviadas por e-file en 24–48 horas y emite reembolsos en 21 días tras la aceptación. Puedes verificar el estado en IRS.gov/refunds." },
-      "q2": { "question": "¿Qué pasa si cometí un error después de presentar?", "answer": "Puedes enmendar tu declaración usando el Formulario 1040-X. Taxly te guiará en el proceso de enmienda. No hay cargo adicional por enmiendas." },
-      "q3": { "question": "¿Cómo solicito una extensión?", "answer": "Presenta el Formulario 4868 antes del 15 de abril para obtener una extensión de 6 meses hasta el 15 de octubre. Taxly lo gestiona automáticamente. Nota: una extensión para presentar no es una extensión para pagar — los impuestos adeudados siguen venciendo el 15 de abril." },
-      "q4": { "question": "¿Puedo presentar conjuntamente con mi cónyuge?", "answer": "Sí. Elige 'Casado presentando conjuntamente' al comenzar. Taxly pedirá la información de tu cónyuge y comparará MFJ vs MFS para encontrar la mejor opción." }
+      "q1": {
+        "question": "¿Cuánto tarda el IRS en procesar?",
+        "answer": "El IRS generalmente acepta declaraciones enviadas por e-file en 24–48 horas y emite reembolsos en 21 días tras la aceptación. Puedes verificar el estado en IRS.gov/refunds."
+      },
+      "q2": {
+        "question": "¿Qué pasa si cometí un error después de presentar?",
+        "answer": "Puedes enmendar tu declaración usando el Formulario 1040-X. Taxly te guiará en el proceso de enmienda. No hay cargo adicional por enmiendas."
+      },
+      "q3": {
+        "question": "¿Cómo solicito una extensión?",
+        "answer": "Presenta el Formulario 4868 antes del 15 de abril para obtener una extensión de 6 meses hasta el 15 de octubre. Taxly lo gestiona automáticamente. Nota: una extensión para presentar no es una extensión para pagar — los impuestos adeudados siguen venciendo el 15 de abril."
+      },
+      "q4": {
+        "question": "¿Puedo presentar conjuntamente con mi cónyuge?",
+        "answer": "Sí. Elige 'Casado presentando conjuntamente' al comenzar. Taxly pedirá la información de tu cónyuge y comparará MFJ vs MFS para encontrar la mejor opción."
+      }
     }
   },
   "about": {
@@ -310,7 +524,12 @@
       "name": "Tu nombre",
       "email": "Correo electrónico",
       "subject": "Asunto",
-      "subjects": ["Pregunta general", "Soporte", "Prensa / Medios", "Asociación"],
+      "subjects": [
+        "Pregunta general",
+        "Soporte",
+        "Prensa / Medios",
+        "Asociación"
+      ],
       "message": "Mensaje",
       "send": "Enviar mensaje",
       "sending": "Enviando…",
@@ -324,13 +543,34 @@
     "lastUpdated": "Última actualización: 1 de enero de 2025",
     "intro": "Taxly Inc. (\"Taxly\", \"nosotros\", \"nuestro\") se compromete a proteger tu privacidad. Esta política explica qué información recopilamos, cómo la usamos y tus derechos.",
     "sections": {
-      "collect": { "heading": "Información que recopilamos", "text": "Recopilamos información que proporcionas directamente: tu nombre, correo electrónico, Número de Seguro Social, información de ingresos y otros datos fiscales necesarios para preparar tu declaración. También recopilamos datos de uso para mejorar el producto." },
-      "use": { "heading": "Cómo usamos tu información", "text": "Usamos tu información únicamente para preparar, revisar y enviar tu declaración fiscal; para enviarte notificaciones de cuenta y estado de presentación; y para mejorar la precisión y experiencia de Taxly. No usamos tus datos fiscales para publicidad." },
-      "share": { "heading": "Compartir información", "text": "Compartimos tu información fiscal con el IRS y las autoridades fiscales estatales correspondientes únicamente con el propósito de presentar tu declaración, según tu autorización. No vendemos tu información a terceros." },
-      "security": { "heading": "Seguridad", "text": "Protegemos tus datos con cifrado AES-256 en reposo, TLS 1.3 en tránsito y controles de acceso estrictos. Consulta nuestra página de Seguridad para más detalles." },
-      "retention": { "heading": "Retención de datos", "text": "Conservamos tus declaraciones presentadas y datos asociados durante 7 años. Puedes solicitar la eliminación de tu cuenta en cualquier momento; eliminaremos tus datos en 30 días, salvo cuando la ley requiera conservación." },
-      "rights": { "heading": "Tus derechos", "text": "Puedes acceder, corregir o eliminar tu información personal en cualquier momento desde Configuración de cuenta. Para solicitar eliminación completa de datos, escribe a privacy@gettaxly.com." },
-      "contact": { "heading": "Contacto", "text": "Para preguntas de privacidad, contacta a privacy@gettaxly.com." }
+      "collect": {
+        "heading": "Información que recopilamos",
+        "text": "Recopilamos información que proporcionas directamente: tu nombre, correo electrónico, Número de Seguro Social, información de ingresos y otros datos fiscales necesarios para preparar tu declaración. También recopilamos datos de uso para mejorar el producto."
+      },
+      "use": {
+        "heading": "Cómo usamos tu información",
+        "text": "Usamos tu información únicamente para preparar, revisar y enviar tu declaración fiscal; para enviarte notificaciones de cuenta y estado de presentación; y para mejorar la precisión y experiencia de Taxly. No usamos tus datos fiscales para publicidad."
+      },
+      "share": {
+        "heading": "Compartir información",
+        "text": "Compartimos tu información fiscal con el IRS y las autoridades fiscales estatales correspondientes únicamente con el propósito de presentar tu declaración, según tu autorización. No vendemos tu información a terceros."
+      },
+      "security": {
+        "heading": "Seguridad",
+        "text": "Protegemos tus datos con cifrado AES-256 en reposo, TLS 1.3 en tránsito y controles de acceso estrictos. Consulta nuestra página de Seguridad para más detalles."
+      },
+      "retention": {
+        "heading": "Retención de datos",
+        "text": "Conservamos tus declaraciones presentadas y datos asociados durante 7 años. Puedes solicitar la eliminación de tu cuenta en cualquier momento; eliminaremos tus datos en 30 días, salvo cuando la ley requiera conservación."
+      },
+      "rights": {
+        "heading": "Tus derechos",
+        "text": "Puedes acceder, corregir o eliminar tu información personal en cualquier momento desde Configuración de cuenta. Para solicitar eliminación completa de datos, escribe a privacy@gettaxly.com."
+      },
+      "contact": {
+        "heading": "Contacto",
+        "text": "Para preguntas de privacidad, contacta a privacy@gettaxly.com."
+      }
     }
   },
   "terms": {
@@ -338,24 +578,66 @@
     "lastUpdated": "Última actualización: 1 de enero de 2025",
     "intro": "Estos Términos de Servicio rigen tu uso de Taxly. Al usar Taxly aceptas estos términos.",
     "sections": {
-      "service": { "heading": "El servicio", "text": "Taxly proporciona software de preparación de impuestos que te ayuda a preparar y enviar declaraciones de impuestos federales y estatales de EE. UU. Taxly no es una firma de CPA, bufete de abogados ni preparador de impuestos con licencia. Ofrecemos herramientas de software, no asesoramiento fiscal profesional." },
-      "accuracy": { "heading": "Tu responsabilidad por la exactitud", "text": "Eres responsable de la exactitud e integridad de toda la información que ingresas en Taxly. Taxly calcula tu declaración en base a la información que proporcionas. Los errores u omisiones en tu entrada no están cubiertos por nuestra Garantía de Exactitud." },
-      "efile": { "heading": "Consentimiento de presentación electrónica", "text": "Al enviar tu declaración por e-file, autorizas a Taxly a transmitirla al IRS y a las autoridades fiscales estatales aplicables en tu nombre, conforme a la Publicación 1345 del IRS." },
-      "payment": { "heading": "Tarifas y pago", "text": "Las tarifas se cobran al momento del e-file. Los precios se muestran antes de pagar. No cobramos tarifas ocultas. Los reembolsos están disponibles si pagaste pero aún no has enviado, dentro de 30 días del pago." },
-      "prohibited": { "heading": "Usos prohibidos", "text": "No puedes usar Taxly para presentar declaraciones en nombre de otros sin su autorización explícita, para presentar declaraciones fraudulentas o incorrectas a sabiendas, ni para intentar acceder a las cuentas o datos de otros usuarios." },
-      "liability": { "heading": "Limitación de responsabilidad", "text": "En la máxima medida permitida por la ley, la responsabilidad de Taxly por cualquier reclamo derivado de tu uso del servicio se limita al monto que pagaste por la presentación en cuestión." },
-      "changes": { "heading": "Cambios a estos términos", "text": "Podemos actualizar estos términos. Te notificaremos por correo y publicaremos los términos actualizados en gettaxly.com/terms al menos 14 días antes de que los cambios entren en vigor." },
-      "contact": { "heading": "Contacto", "text": "Preguntas sobre estos términos: legal@gettaxly.com." }
+      "service": {
+        "heading": "El servicio",
+        "text": "Taxly proporciona software de preparación de impuestos que te ayuda a preparar y enviar declaraciones de impuestos federales y estatales de EE. UU. Taxly no es una firma de CPA, bufete de abogados ni preparador de impuestos con licencia. Ofrecemos herramientas de software, no asesoramiento fiscal profesional."
+      },
+      "accuracy": {
+        "heading": "Tu responsabilidad por la exactitud",
+        "text": "Eres responsable de la exactitud e integridad de toda la información que ingresas en Taxly. Taxly calcula tu declaración en base a la información que proporcionas. Los errores u omisiones en tu entrada no están cubiertos por nuestra Garantía de Exactitud."
+      },
+      "efile": {
+        "heading": "Consentimiento de presentación electrónica",
+        "text": "Al enviar tu declaración por e-file, autorizas a Taxly a transmitirla al IRS y a las autoridades fiscales estatales aplicables en tu nombre, conforme a la Publicación 1345 del IRS."
+      },
+      "payment": {
+        "heading": "Tarifas y pago",
+        "text": "Las tarifas se cobran al momento del e-file. Los precios se muestran antes de pagar. No cobramos tarifas ocultas. Los reembolsos están disponibles si pagaste pero aún no has enviado, dentro de 30 días del pago."
+      },
+      "prohibited": {
+        "heading": "Usos prohibidos",
+        "text": "No puedes usar Taxly para presentar declaraciones en nombre de otros sin su autorización explícita, para presentar declaraciones fraudulentas o incorrectas a sabiendas, ni para intentar acceder a las cuentas o datos de otros usuarios."
+      },
+      "liability": {
+        "heading": "Limitación de responsabilidad",
+        "text": "En la máxima medida permitida por la ley, la responsabilidad de Taxly por cualquier reclamo derivado de tu uso del servicio se limita al monto que pagaste por la presentación en cuestión."
+      },
+      "changes": {
+        "heading": "Cambios a estos términos",
+        "text": "Podemos actualizar estos términos. Te notificaremos por correo y publicaremos los términos actualizados en gettaxly.com/terms al menos 14 días antes de que los cambios entren en vigor."
+      },
+      "contact": {
+        "heading": "Contacto",
+        "text": "Preguntas sobre estos términos: legal@gettaxly.com."
+      }
     }
   },
   "faq": {
     "heading": "Preguntas frecuentes",
-    "q1": { "question": "¿Taxly es realmente gratis para declaraciones simples?", "answer": "Sí. La presentación federal es gratuita para ingresos W-2 con la deducción estándar, sin límite de ingresos. Una declaración estatal también es gratuita." },
-    "q2": { "question": "¿Cuándo es la fecha límite para declarar impuestos?", "answer": "La fecha límite federal es el 15 de abril para la mayoría de los contribuyentes. Si necesitas más tiempo, puedes solicitar una extensión gratuita hasta el 15 de octubre — Taxly también lo gestiona." },
-    "q3": { "question": "¿Están seguros mis datos?", "answer": "Todos los datos están cifrados con AES-256 en reposo y TLS 1.3 en tránsito. Nunca vendemos tus datos ni los usamos para publicidad." },
-    "q4": { "question": "¿Puedo importar la declaración del año pasado?", "answer": "Sí. Importa un PDF de TurboTax, H&R Block o cualquier declaración anterior de Taxly y prellenaremos tu nombre, dirección y cifras del año anterior." },
-    "q5": { "question": "¿Qué hago si tengo ingresos W-2 y también soy freelancer?", "answer": "Elige Premium. Incluye W-2 más Schedule C (trabajo independiente) en la misma declaración, incluyendo el cálculo del impuesto sobre el trabajo independiente." },
-    "q6": { "question": "¿Qué tan rápido recibo mi reembolso?", "answer": "El IRS generalmente deposita los reembolsos dentro de 21 días de la aceptación de declaraciones presentadas por e-file. Los reembolsos estatales varían según el estado." }
+    "q1": {
+      "question": "¿Taxly es realmente gratis para declaraciones simples?",
+      "answer": "Sí. La presentación federal es gratuita para ingresos W-2 con la deducción estándar, sin límite de ingresos. Una declaración estatal también es gratuita."
+    },
+    "q2": {
+      "question": "¿Cuándo es la fecha límite para declarar impuestos?",
+      "answer": "La fecha límite federal es el 15 de abril para la mayoría de los contribuyentes. Si necesitas más tiempo, puedes solicitar una extensión gratuita hasta el 15 de octubre — Taxly también lo gestiona."
+    },
+    "q3": {
+      "question": "¿Están seguros mis datos?",
+      "answer": "Todos los datos están cifrados con AES-256 en reposo y TLS 1.3 en tránsito. Nunca vendemos tus datos ni los usamos para publicidad."
+    },
+    "q4": {
+      "question": "¿Puedo importar la declaración del año pasado?",
+      "answer": "Sí. Importa un PDF de TurboTax, H&R Block o cualquier declaración anterior de Taxly y prellenaremos tu nombre, dirección y cifras del año anterior."
+    },
+    "q5": {
+      "question": "¿Qué hago si tengo ingresos W-2 y también soy freelancer?",
+      "answer": "Elige Premium. Incluye W-2 más Schedule C (trabajo independiente) en la misma declaración, incluyendo el cálculo del impuesto sobre el trabajo independiente."
+    },
+    "q6": {
+      "question": "¿Qué tan rápido recibo mi reembolso?",
+      "answer": "El IRS generalmente deposita los reembolsos dentro de 21 días de la aceptación de declaraciones presentadas por e-file. Los reembolsos estatales varían según el estado."
+    }
   },
   "blog": {
     "heading": "El Blog de Taxly",
@@ -389,19 +671,58 @@
     "disclaimer": "Taxly no es un bufete de abogados ni una firma de CPA. Esto no es asesoramiento fiscal."
   },
   "metadata": {
-    "home": { "title": "Taxly — Presenta tus Impuestos en Minutos", "description": "Declaración guiada de impuestos federales y estatales para individuos, freelancers y familias. Gratis para declaraciones simples con W-2." },
-    "pricing": { "title": "Precios — Taxly", "description": "Precios transparentes sin cargos sorpresa. Federal gratis para declaraciones simples. Deluxe y Premium para cada situación." },
-    "howItWorks": { "title": "Cómo Funciona — Taxly", "description": "Presenta tus impuestos federales y estatales en tres pasos simples. Importa documentos, responde preguntas y envía por e-file en minutos." },
-    "features": { "title": "Funciones — Taxly", "description": "Compatible con W-2, 1099, inversiones, propietarios, trabajadores independientes y más." },
-    "security": { "title": "Seguridad — Taxly", "description": "Cifrado AES-256, TLS 1.3, autenticación multifactor. Tus datos fiscales siempre protegidos." },
-    "guarantees": { "title": "Garantías — Taxly", "description": "Garantía de reembolso máximo, garantía de exactitud al 100% y apoyo en auditorías — sin letra pequeña." },
-    "help": { "title": "Centro de Ayuda — Taxly", "description": "Respuestas a preguntas frecuentes sobre presentación, precios, seguridad y reembolsos." },
-    "about": { "title": "Acerca de — Taxly", "description": "Taxly es construido por AppsLab, el equipo detrás de Finovo. Nuestra misión: hacer la declaración de impuestos en EE. UU. honesta, clara y rápida." },
-    "contact": { "title": "Contacto — Taxly", "description": "Ponte en contacto con el equipo de Taxly para soporte, prensa o preguntas generales." },
-    "privacy": { "title": "Política de Privacidad — Taxly", "description": "Cómo Taxly recopila, usa y protege tu información personal y fiscal." },
-    "terms": { "title": "Términos de Servicio — Taxly", "description": "Términos que rigen el uso del software de preparación de impuestos de Taxly." },
-    "blog": { "title": "Blog — Taxly", "description": "Guías en español claro sobre impuestos en EE. UU. — plazos, deducciones, trabajo independiente y más." },
-    "refundEstimator": { "title": "Calculadora de Reembolso de Impuestos 2026 — Taxly", "description": "Estima tu reembolso federal o cantidad adeudada en segundos. Ingresa tus ingresos, retenciones y estado civil — sin necesidad de cuenta." }
+    "home": {
+      "title": "Taxly — Presenta tus Impuestos en Minutos",
+      "description": "Declaración guiada de impuestos federales y estatales para individuos, freelancers y familias. Gratis para declaraciones simples con W-2."
+    },
+    "pricing": {
+      "title": "Precios — Taxly",
+      "description": "Precios transparentes sin cargos sorpresa. Federal gratis para declaraciones simples. Deluxe y Premium para cada situación."
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona — Taxly",
+      "description": "Presenta tus impuestos federales y estatales en tres pasos simples. Importa documentos, responde preguntas y envía por e-file en minutos."
+    },
+    "features": {
+      "title": "Funciones — Taxly",
+      "description": "Compatible con W-2, 1099, inversiones, propietarios, trabajadores independientes y más."
+    },
+    "security": {
+      "title": "Seguridad — Taxly",
+      "description": "Cifrado AES-256, TLS 1.3, autenticación multifactor. Tus datos fiscales siempre protegidos."
+    },
+    "guarantees": {
+      "title": "Garantías — Taxly",
+      "description": "Garantía de reembolso máximo, garantía de exactitud al 100% y apoyo en auditorías — sin letra pequeña."
+    },
+    "help": {
+      "title": "Centro de Ayuda — Taxly",
+      "description": "Respuestas a preguntas frecuentes sobre presentación, precios, seguridad y reembolsos."
+    },
+    "about": {
+      "title": "Acerca de — Taxly",
+      "description": "Taxly es construido por AppsLab, el equipo detrás de Finovo. Nuestra misión: hacer la declaración de impuestos en EE. UU. honesta, clara y rápida."
+    },
+    "contact": {
+      "title": "Contacto — Taxly",
+      "description": "Ponte en contacto con el equipo de Taxly para soporte, prensa o preguntas generales."
+    },
+    "privacy": {
+      "title": "Política de Privacidad — Taxly",
+      "description": "Cómo Taxly recopila, usa y protege tu información personal y fiscal."
+    },
+    "terms": {
+      "title": "Términos de Servicio — Taxly",
+      "description": "Términos que rigen el uso del software de preparación de impuestos de Taxly."
+    },
+    "blog": {
+      "title": "Blog — Taxly",
+      "description": "Guías en español claro sobre impuestos en EE. UU. — plazos, deducciones, trabajo independiente y más."
+    },
+    "refundEstimator": {
+      "title": "Calculadora de Reembolso de Impuestos 2026 — Taxly",
+      "description": "Estima tu reembolso federal o cantidad adeudada en segundos. Ingresa tus ingresos, retenciones y estado civil — sin necesidad de cuenta."
+    }
   },
   "refundEstimator": {
     "badge": "Calculadora gratis — AÑO FISCAL 2026",
@@ -443,5 +764,12 @@
       "button": "Comenzar gratis con Taxly"
     },
     "disclaimer": "Esta herramienta proporciona estimados únicamente y no constituye asesoramiento fiscal. Basada en la ley fiscal proyectada para el AÑO FISCAL 2026. Los resultados reales pueden diferir. Consulta a un profesional fiscal para tu situación específica."
+  },
+  "cookieBanner": {
+    "title": "Cookies",
+    "message": "Usamos cookies para entender cómo se usa Taxly y mejorar el sitio.",
+    "learnMore": "Más información",
+    "accept": "Aceptar",
+    "decline": "Rechazar"
   }
 }

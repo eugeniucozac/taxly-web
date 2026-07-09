@@ -1,9 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { CheckCircle2, X, ArrowRight, ChevronDown } from "lucide-react";
+import { CheckCircle2, X, ChevronDown } from "lucide-react";
 import { makeMetadata, BASE_URL } from "@/lib/metadata";
 import { JsonLd } from "@/components/seo/json-ld";
+import { WaitlistForm } from "@/components/shared/waitlist-form";
+import { TrackView } from "@/components/analytics/track-view";
 import type { LocalePageProps } from "@/types/page";
 
 export async function generateMetadata({ params }: LocalePageProps) {
@@ -32,22 +34,22 @@ const pricingSchema = {
     {
       "@type": "Offer",
       name: "Deluxe",
-      price: "29",
+      price: "39",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `${BASE_URL}/pricing`,
       description:
-        "Federal $29, state $14 each. Itemized deductions, mortgage interest, HSA, homeowners.",
+        "Federal $39, state $29 each. Itemized deductions, mortgage interest, HSA, homeowners.",
     },
     {
       "@type": "Offer",
       name: "Premium",
-      price: "59",
+      price: "69",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       url: `${BASE_URL}/pricing`,
       description:
-        "Federal $59, state $14 each. Investments, crypto, rental income, self-employed (Schedule C).",
+        "Federal $69, state $29 each. Investments, crypto, rental income, self-employed (Schedule C).",
     },
   ],
 };
@@ -58,6 +60,7 @@ export default async function PricingPage({ params }: LocalePageProps) {
   return (
     <>
       <JsonLd data={pricingSchema} />
+      <TrackView event="view_pricing" />
       <PricingClient />
     </>
   );
@@ -148,7 +151,7 @@ function PricingClient() {
                   ))}
                 </ul>
                 <Link
-                  href={`/${locale}/signup`}
+                  href="#waitlist"
                   className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${isDeluxe ? "bg-white text-sky-600 hover:bg-sky-50" : "text-white"}`}
                   style={!isDeluxe ? { backgroundColor: "#0ea5e9" } : undefined}
                 >
@@ -205,15 +208,15 @@ function PricingClient() {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="mx-auto mt-20 max-w-xl px-6 text-center">
-        <Link
-          href={`/${locale}/signup`}
-          className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white shadow-lg transition"
-          style={{ backgroundColor: "#0ea5e9" }}
-        >
-          Start for free <ArrowRight size={18} />
-        </Link>
+      {/* CTA — waitlist (pre-launch) */}
+      <div id="waitlist" className="mx-auto mt-20 max-w-xl scroll-mt-24 px-6 text-center">
+        <WaitlistForm
+          placeholder="your@email.com"
+          ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
+          successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
+          errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
+          className="justify-center"
+        />
       </div>
     </div>
   );

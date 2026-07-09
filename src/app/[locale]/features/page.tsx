@@ -89,7 +89,7 @@ function FeaturesClient() {
       {/* CTA */}
       <div className="mx-auto mt-20 max-w-xl px-6 text-center">
         <Link
-          href={`/${locale}/signup`}
+          href={`/${locale}#waitlist`}
           className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-white shadow-lg transition"
           style={{ backgroundColor: "#0ea5e9" }}
         >

@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# taxly-web
 
-## Getting Started
+Marketing site for **Taxly** — honest, plain-English US tax filing (`gettaxly.com`).
+Currently **pre-launch**: the site runs a waitlist while the filing app
+([`../taxly-app`](../taxly-app)) is built. Product strategy lives in the docs one
+level up (`../TAXLY.md`, `../GTM_TAXLY.md`, `../PRICING_PLANS.md`, …).
 
-First, run the development server:
+> ⚠️ This is **not** the Next.js you may know — this version has breaking changes.
+> Read `AGENTS.md` and the guides in `node_modules/next/dist/docs/` before writing code.
+
+## Stack
+
+- **Next.js 16** App Router + TypeScript (strict). Every page lives under `src/app/[locale]/`.
+- **next-intl 4** — bilingual **EN + ES** (Spanish for the US Hispanic market). UI strings in
+  `src/i18n/messages/{en,es}.json` (kept at key parity by `parity.test.ts`); long-form in typed data.
+- **Tailwind 4** — tokens in `globals.css` via `@theme` (no `tailwind.config.js`).
+- **Resend** for the waitlist + contact forms (no DB, no auth, no PII stored).
+- Consent-gated **GA4 + Microsoft Clarity + Vercel Analytics** (see `src/lib/consent.ts`).
+- **Vercel** hosting. Locale routing is handled by `src/proxy.ts` (this version renamed
+  `middleware` → `proxy`) with Accept-Language negotiation.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000  (redirects to /en or /es)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts & verification
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev      # dev server
+npm run build    # compiles every route + validates content (the real gate)
+npm run start    # serve the production build
+npm run lint     # eslint
+npx tsc --noEmit # type-check
+npm run test     # vitest (incl. i18n parity)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment
 
-## Learn More
+Set these in Vercel (see `src/lib/env.ts` for the full list):
 
-To learn more about Next.js, take a look at the following resources:
+- `RESEND_API_KEY`, `CONTACT_EMAIL` — waitlist/contact email
+- `NEXT_PUBLIC_SITE_URL=https://gettaxly.com`
+- `NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_CLARITY_ID` — optional analytics (consent-gated)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Connect the repo to Vercel, set the domain `gettaxly.com` and the env vars above,
+push to `main`. Remaining launch tasks are tracked in [`TAXLY.md`](TAXLY.md).
 
-## Deploy on Vercel
+## Hard constraints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nothing goes live until it is factually true: **"IRS Authorized e-file Provider,"**
+**max-refund / accuracy guarantees,** and **audit support** all require the real thing
+to exist first. See [`TAXLY.md`](TAXLY.md).

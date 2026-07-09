@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { makeMetadata } from "@/lib/metadata";
 import type { LocalePageProps } from "@/types/page";
@@ -17,7 +17,6 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
 function AboutClient() {
   const t = useTranslations("about");
-  const locale = useLocale();
 
   return (
     <div className="py-20">

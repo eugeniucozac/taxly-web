@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { calculateRefund, type FilingStatus } from "../lib/calculator";
+import { trackEvent } from "@/lib/analytics";
 
 function formatUSD(n: number) {
   return new Intl.NumberFormat("en-US", {
@@ -94,6 +95,15 @@ export function RefundEstimator() {
 
   const isRefund = result.refund >= 0;
   const hasIncome = wages > 0 || freelance > 0 || withholding > 0;
+
+  // Fire the estimator-complete event once, when a real result first appears.
+  const firedComplete = useRef(false);
+  useEffect(() => {
+    if (hasIncome && !firedComplete.current) {
+      firedComplete.current = true;
+      trackEvent("refund_estimator_complete", { locale, isRefund });
+    }
+  }, [hasIncome, locale, isRefund]);
 
   const statuses: { value: FilingStatus; label: string }[] = [
     { value: "single", label: t("filingStatus.single") },
@@ -232,7 +242,7 @@ export function RefundEstimator() {
               </p>
               <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">{t("cta.sub")}</p>
               <Link
-                href={`/${locale}/signup`}
+                href="#waitlist"
                 className="block rounded-lg py-2.5 text-center text-sm font-semibold text-white transition"
                 style={{ backgroundColor: "#0ea5e9" }}
                 onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0284c7")}

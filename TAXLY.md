@@ -5,6 +5,9 @@
 Domain: `gettaxly.com` · Stack: Next.js 16 / Tailwind 4 / next-intl 4 (en + es) / Vercel
 Target: **TY2026 returns, filed early 2027**
 
+> This is the **deploy punch-list**. The full site blueprint (page inventory, i18n,
+> tracking, consent/analytics, SEO) is the product-root **[WEBSITE.md](../WEBSITE.md)**.
+
 ---
 
 ## What's left
@@ -16,18 +19,18 @@ Target: **TY2026 returns, filed early 2027**
 - Set env vars: `RESEND_API_KEY`, `CONTACT_EMAIL`, `NEXT_PUBLIC_SITE_URL=https://gettaxly.com`
 - Push to `main` → CI runs → Vercel builds
 
-### 2. Fix appslab Taxly entry
+### 2. Fix appslab Taxly entry ✅ done
 
 In the appslab repo (`src/features/products/data/products.ts`):
 
-- Change `markets: ["uk", "fr", "de"]` → `markets: ["us"]` (add `"us"` to the `Market` type)
-- Rewrite `products.taxly.*` i18n copy in EN/FR/DE locale files to say "United States"
+- ~~Change `markets: ["uk", "fr", "de"]` → `markets: ["us"]` (add `"us"` to the `Market` type)~~ — done (`markets: ["us"]`, `Market` type includes `"us"`, category `"Personal Tax"`)
+- ~~Rewrite `products.taxly.*` i18n copy in EN/FR/DE locale files to say "United States"~~ — done (EN/FR/DE all say United States / États-Unis / Vereinigten Staaten)
 
 ---
 
 ## Open decisions
 
-- [ ] Final tier prices sign-off (product/finance) — currently Free / Deluxe $29 / Premium $59 + $14/state
+- [ ] Final tier prices sign-off (product/finance) — currently Free / Deluxe $39 / Premium $69 + $29/state (matches [PRICING_PLANS.md](../PRICING_PLANS.md))
 - [ ] "Live"/expert-assisted tier — at TY2026 launch or later?
 
 ---

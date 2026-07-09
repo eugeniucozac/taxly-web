@@ -3,7 +3,6 @@ import { Resend } from "resend";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { env } from "@/lib/env";
 
-const resend = new Resend(env.RESEND_API_KEY);
 const NOTIFY = env.CONTACT_EMAIL.split(",")
   .map((e) => e.trim())
   .filter(Boolean);
@@ -54,6 +53,7 @@ export async function POST(req: NextRequest) {
 
   const copy = WELCOME[(locale as Locale) in WELCOME ? (locale as Locale) : "en"];
 
+  const resend = new Resend(env.RESEND_API_KEY);
   try {
     await Promise.all([
       resend.emails.send({

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLocale } from "next-intl";
 import { ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 type State = "idle" | "loading" | "success" | "error";
 
@@ -38,6 +39,7 @@ export function WaitlistForm({
         body: JSON.stringify({ email, locale }),
       });
       setState(res.ok ? "success" : "error");
+      if (res.ok) trackEvent("waitlist_signup", { locale });
     } catch {
       setState("error");
     }

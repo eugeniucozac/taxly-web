@@ -3,7 +3,6 @@ import { Resend } from "resend";
 import { checkRateLimit } from "@/lib/rate-limit";
 import { env } from "@/lib/env";
 
-const resend = new Resend(env.RESEND_API_KEY);
 const NOTIFY = env.CONTACT_EMAIL.split(",").map((e) => e.trim()).filter(Boolean);
 
 export async function POST(req: NextRequest) {
@@ -25,6 +24,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid input" }, { status: 400 });
   }
 
+  const resend = new Resend(env.RESEND_API_KEY);
   try {
     await resend.emails.send({
       from: "Taxly Contact <noreply@gettaxly.com>",

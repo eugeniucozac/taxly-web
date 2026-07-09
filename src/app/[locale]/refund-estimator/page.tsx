@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { RefundEstimator } from "@/features/refund-estimator/components/refund-estimator";
+import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { generateLocaleStaticParams, makeMetadata } from "@/lib/metadata";
 import type { LocalePageProps } from "@/types/page";
 
@@ -32,6 +33,22 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
       </div>
 
       <RefundEstimator />
+
+      {/* Waitlist (pre-launch conversion) */}
+      <div id="waitlist" className="mx-auto mt-16 max-w-lg scroll-mt-24 text-center">
+        <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+          {locale === "es"
+            ? "Cuando abramos, presenta tu declaración con confianza. Únete a la lista."
+            : "File it for real when we launch. Join the waitlist."}
+        </p>
+        <WaitlistForm
+          placeholder="your@email.com"
+          ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
+          successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
+          errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
+          className="justify-center"
+        />
+      </div>
     </main>
   );
 }

@@ -2,7 +2,6 @@ import { setRequestLocale } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import {
-  ArrowRight,
   CheckCircle2,
   Zap,
   TrendingUp,
@@ -39,16 +38,16 @@ const softwareAppSchema = {
     {
       "@type": "Offer",
       name: "Deluxe",
-      price: "29",
+      price: "39",
       priceCurrency: "USD",
-      description: "Deductions, homeowners, HSA — $14 per state.",
+      description: "Deductions, homeowners, HSA — $29 per state.",
     },
     {
       "@type": "Offer",
       name: "Premium",
-      price: "59",
+      price: "69",
       priceCurrency: "USD",
-      description: "Investments, crypto, rental, self-employed — $14 per state.",
+      description: "Investments, crypto, rental, self-employed — $29 per state.",
     },
   ],
 };
@@ -95,13 +94,15 @@ function HomePageClient() {
           <p className="mx-auto mb-10 max-w-2xl text-lg text-slate-600">
             {t("hero.subheading")}
           </p>
-          <WaitlistForm
-            placeholder="your@email.com"
-            ctaLabel={t("hero.cta")}
-            successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
-            errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
-            className="mx-auto max-w-lg justify-center"
-          />
+          <div id="waitlist" className="scroll-mt-24">
+            <WaitlistForm
+              placeholder="your@email.com"
+              ctaLabel={t("hero.cta")}
+              successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
+              errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
+              className="mx-auto max-w-lg justify-center"
+            />
+          </div>
           <p className="mt-3 text-sm text-slate-400">{t("hero.noCard")}</p>
         </div>
       </section>
@@ -240,7 +241,7 @@ function HomePageClient() {
                     ))}
                   </ul>
                   <Link
-                    href={`/${locale}/signup`}
+                    href="#waitlist"
                     className={`block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${
                       isDeluxe
                         ? "bg-white text-sky-600 hover:bg-sky-50"
@@ -314,13 +315,13 @@ function HomePageClient() {
             {t("hero.heading")}
           </h2>
           <p className="mb-8 text-lg text-sky-100">{t("hero.noCard")}</p>
-          <Link
-            href={`/${locale}/signup`}
-            className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3.5 text-base font-semibold text-sky-600 shadow-lg transition hover:bg-sky-50"
-          >
-            {t("hero.cta")}
-            <ArrowRight size={18} />
-          </Link>
+          <WaitlistForm
+            placeholder="your@email.com"
+            ctaLabel={t("hero.cta")}
+            successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
+            errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
+            className="mx-auto max-w-lg justify-center"
+          />
         </div>
       </section>
     </>

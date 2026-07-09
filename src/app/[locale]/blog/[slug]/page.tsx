@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { getAllPosts, getPostBySlug } from "@/features/blog/lib/blog";
+import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/utils";
 import { BASE_URL, getAlternates } from "@/lib/metadata";
@@ -133,6 +134,22 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
         >
           ← {t("backToBlog")}
         </Link>
+
+        {/* Waitlist (pre-launch conversion) */}
+        <div id="waitlist" className="mt-10 scroll-mt-24 rounded-2xl bg-sky-50 p-8 text-center dark:bg-sky-900/20">
+          <p className="mb-4 text-sm text-gray-700 dark:text-gray-300">
+            {locale === "es"
+              ? "Presenta tus impuestos de forma honesta y sencilla. Únete a la lista de espera."
+              : "File your taxes the honest, simple way. Join the waitlist."}
+          </p>
+          <WaitlistForm
+            placeholder="your@email.com"
+            ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}
+            successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
+            errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
+            className="mx-auto max-w-md justify-center"
+          />
+        </div>
       </footer>
     </main>
   );

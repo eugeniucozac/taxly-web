@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import { env } from "@/lib/env";
+import { trackEvent } from "@/lib/analytics";
 
 type State = "idle" | "loading" | "success" | "error";
 
@@ -34,6 +35,7 @@ function ContactClient() {
         }),
       });
       setState(res.ok ? "success" : "error");
+      if (res.ok) trackEvent("contact_submitted", { locale });
     } catch {
       setState("error");
     }

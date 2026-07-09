@@ -42,11 +42,12 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { label: t("features"), href: `/${locale}/#features` },
+    { label: t("features"), href: `/${locale}/features` },
     { label: t("howItWorks"), href: `/${locale}/how-it-works` },
     { label: t("pricing"), href: `/${locale}/pricing` },
     { label: t("estimator"), href: `/${locale}/refund-estimator` },
     { label: t("blog"), href: `/${locale}/blog` },
+    { label: t("help"), href: `/${locale}/help` },
   ];
 
   return (
@@ -73,14 +74,9 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <LocaleSwitcher />
+          {/* Pre-launch: no accounts yet — "Sign in" returns when the app is live. */}
           <Link
-            href={`/${locale}/login`}
-            className="text-sm font-medium text-slate-600 hover:text-slate-900"
-          >
-            {t("signIn")}
-          </Link>
-          <Link
-            href={`/${locale}/signup`}
+            href={`/${locale}#waitlist`}
             className="rounded-lg px-4 py-2 text-sm font-semibold text-white transition"
             style={{ backgroundColor: "#0ea5e9" }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0284c7")}
@@ -123,13 +119,8 @@ export function Navbar() {
               <LocaleSwitcher />
             </div>
             <Link
-              href={`/${locale}/login`}
-              className="rounded-lg border border-slate-200 py-2 text-center text-sm font-medium text-slate-700"
-            >
-              {t("signIn")}
-            </Link>
-            <Link
-              href={`/${locale}/signup`}
+              href={`/${locale}#waitlist`}
+              onClick={() => setMobileOpen(false)}
               className="rounded-lg py-2 text-center text-sm font-semibold text-white"
               style={{ backgroundColor: "#0ea5e9" }}
             >
