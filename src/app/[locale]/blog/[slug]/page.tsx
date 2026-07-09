@@ -5,6 +5,7 @@ import { getLivePosts, getPostBySlug } from "@/features/blog/lib/blog";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/utils";
+import { JsonLd } from "@/components/seo/json-ld";
 import { BASE_URL, getAlternates } from "@/lib/metadata";
 import { generateLocaleStaticParams } from "@/lib/metadata";
 import type { LocaleSlugPageProps } from "@/types/page";
@@ -58,8 +59,21 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
 
   const paragraphs = post.content.split("\n\n");
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    inLanguage: locale === "es" ? "es-US" : "en-US",
+    author: { "@type": "Organization", name: post.author },
+    publisher: { "@id": `${BASE_URL}/#org` },
+    mainEntityOfPage: `${BASE_URL}/${locale}/blog/${post.slug}`,
+  };
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+      <JsonLd data={articleJsonLd} />
       <Link
         href="/blog"
  className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"

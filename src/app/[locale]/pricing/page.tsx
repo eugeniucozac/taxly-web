@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { CheckCircle2, X, ChevronDown } from "lucide-react";
@@ -57,9 +57,23 @@ const pricingSchema = {
 export default async function PricingPage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // FAQ JSON-LD built from the same messages the visible accordion renders.
+  const tFaq = await getTranslations({ locale, namespace: "pricing.faq" });
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: (["q1", "q2", "q3", "q4", "q5"] as const).map((key) => ({
+      "@type": "Question",
+      name: tFaq(`${key}.question`),
+      acceptedAnswer: { "@type": "Answer", text: tFaq(`${key}.answer`) },
+    })),
+  };
+
   return (
     <>
       <JsonLd data={pricingSchema} />
+      <JsonLd data={faqJsonLd} />
       <TrackView event="view_pricing" />
       <PricingClient />
     </>

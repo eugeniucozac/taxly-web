@@ -178,7 +178,8 @@
       "how": "How to get support",
       "howText": "Forward the IRS or state notice to support@gettaxly.com. A tax specialist will review it and get back to you within one business day with a plain-English explanation and next steps.",
       "limits": "Audit support means guidance and assistance, not legal representation. For full representation before the IRS, consult a licensed CPA or tax attorney."
-    }
+    },
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These are the guarantees we launch with — the full written policy terms will be published on this page before we accept a single return."
   },
   "guarantees": {
     "heading": "Three promises we actually keep",
@@ -1065,5 +1066,12 @@
       },
       "disclaimer": "Illustrative estimate, not tax advice. Safe-harbor rules and dates come from IRS Form 1040-ES — verify the current year's figures at irs.gov."
     }
+  },
+  "homeExtras": {
+    "toolsHeading": "Free tools, no signup",
+    "toolsSub": "Straight answers to the scary questions — refund, penalties, quarterly payments. They work today, waitlist or not.",
+    "guidesHeading": "Latest guides",
+    "guidesSub": "Plain-English tax guides that name the free option when it is the better one.",
+    "guidesAll": "All guides"
   }
 }

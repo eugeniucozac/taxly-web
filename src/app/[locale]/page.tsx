@@ -1,7 +1,11 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import {
+  ArrowRight,
+  AlarmClock,
+  CalendarClock,
+  Calculator,
   CheckCircle2,
   Zap,
   TrendingUp,
@@ -15,55 +19,43 @@ import {
 } from "lucide-react";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { JsonLd } from "@/components/seo/json-ld";
-import { BASE_URL } from "@/lib/metadata";
+import { getLivePosts, type BlogPost } from "@/features/blog/lib/blog";
+import { formatDate } from "@/lib/utils";
 import type { LocalePageProps } from "@/types/page";
 
-const softwareAppSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: "Taxly",
-  applicationCategory: "FinanceApplication",
-  operatingSystem: "Web",
-  url: BASE_URL,
-  description:
-    "File your US federal and state taxes in minutes — guided, plain-English, maximum refund.",
-  offers: [
-    {
-      "@type": "Offer",
-      name: "Free",
-      price: "0",
-      priceCurrency: "USD",
-      description: "Simple W-2 returns — federal free, one state free.",
-    },
-    {
-      "@type": "Offer",
-      name: "Deluxe",
-      price: "39",
-      priceCurrency: "USD",
-      description: "Deductions, homeowners, HSA — $29 per state.",
-    },
-    {
-      "@type": "Offer",
-      name: "Premium",
-      price: "69",
-      priceCurrency: "USD",
-      description: "Investments, crypto, rental, self-employed — $29 per state.",
-    },
-  ],
-};
+// The SoftwareApplication entity lives in the locale layout's site graph;
+// the home page contributes the FAQ (built from the same messages the
+// visible accordion renders, so the two can't drift).
+const FAQ_KEYS = ["q1", "q2", "q3", "q4", "q5", "q6"] as const;
 
 export default async function HomePage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const [tFaq, livePosts] = await Promise.all([
+    getTranslations({ locale, namespace: "faq" }),
+    getLivePosts(locale),
+  ]);
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_KEYS.map((key) => ({
+      "@type": "Question",
+      name: tFaq(`${key}.question`),
+      acceptedAnswer: { "@type": "Answer", text: tFaq(`${key}.answer`) },
+    })),
+  };
+
   return (
     <>
-      <JsonLd data={softwareAppSchema} />
-      <HomePageClient />
+      <JsonLd data={faqJsonLd} />
+      <HomePageClient latestPosts={livePosts.slice(0, 3)} />
     </>
   );
 }
 
-function HomePageClient() {
+function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
   const t = useTranslations();
   const locale = useLocale();
 
@@ -255,8 +247,47 @@ function HomePageClient() {
         </div>
       </section>
 
-      {/* ── Guarantees ── */}
+      {/* ── Free tools ── */}
       <section className="bg-secondary py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="mb-3 text-center text-3xl font-bold text-foreground md:text-4xl">
+            {t("homeExtras.toolsHeading")}
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
+            {t("homeExtras.toolsSub")}
+          </p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {(
+              [
+                { key: "refund", href: "/refund-estimator", Icon: Calculator },
+                { key: "penalty", href: "/tools/penalty-estimator", Icon: AlarmClock },
+                { key: "quarterly", href: "/tools/quarterly-tax", Icon: CalendarClock },
+              ] as const
+            ).map(({ key, href, Icon }) => (
+              <Link
+                key={key}
+                href={`/${locale}${href}`}
+                className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-md"
+              >
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                  <Icon size={20} className="text-primary" aria-hidden />
+                </div>
+                <h3 className="text-base font-semibold text-foreground">
+                  {t(`tools.hub.${key}.title`)}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground">{t(`tools.hub.${key}.text`)}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                  {t("tools.hub.open")}
+                  <ArrowRight size={14} className="transition group-hover:translate-x-0.5" aria-hidden />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Guarantees ── */}
+      <section className="py-24">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">
             {t("guarantees.heading")}
@@ -278,7 +309,7 @@ function HomePageClient() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-24">
+      <section className="bg-secondary py-24">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="mb-12 text-center text-3xl font-bold text-foreground md:text-4xl">
             {t("faq.heading")}
@@ -300,6 +331,42 @@ function HomePageClient() {
                   {t(`faq.${key}.answer`)}
                 </p>
               </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Latest guides (live posts only) ── */}
+      <section className="py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-bold text-foreground md:text-4xl">
+                {t("homeExtras.guidesHeading")}
+              </h2>
+              <p className="mt-2 max-w-xl text-muted-foreground">{t("homeExtras.guidesSub")}</p>
+            </div>
+            <Link
+              href={`/${locale}/blog`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.guidesAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {latestPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/${locale}/blog/${post.slug}`}
+                className="group rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-md"
+              >
+                <p className="text-xs text-muted-foreground/80">{formatDate(post.date, locale)}</p>
+                <h3 className="mt-2 text-base font-semibold leading-snug text-foreground group-hover:text-primary">
+                  {post.title}
+                </h3>
+                <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{post.excerpt}</p>
+              </Link>
             ))}
           </div>
         </div>

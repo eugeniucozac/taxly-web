@@ -34,6 +34,9 @@ function GuaranteesClient() {
       <div className="mx-auto max-w-3xl px-6 text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
         <p className="text-lg text-muted-foreground">{t("subheading")}</p>
+        <p className="mx-auto mt-6 max-w-2xl rounded-xl border border-sky-200 bg-sky-50 p-4 text-left text-sm text-sky-900 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-200">
+          {t("preLaunchNote")}
+        </p>
       </div>
 
       {/* Guarantee cards */}

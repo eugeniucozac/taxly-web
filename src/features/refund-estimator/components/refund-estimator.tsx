@@ -101,7 +101,7 @@ export function RefundEstimator() {
   useEffect(() => {
     if (hasIncome && !firedComplete.current) {
       firedComplete.current = true;
-      trackEvent("refund_estimator_complete", { locale, isRefund });
+      trackEvent("tool_complete", { tool: "refund-estimator", locale, isRefund });
     }
   }, [hasIncome, locale, isRefund]);
 

@@ -13,8 +13,8 @@ export default async function Image({ params }: LocalePageProps) {
     ? "Presenta tus impuestos en minutos"
     : "File your taxes in minutes";
   const sub = isEs
-    ? "Guiado · Precio justo · Máximo reembolso"
-    : "Guided · Honest pricing · Maximum refund";
+    ? "Guiado · Precio fijo · Sin sorpresas"
+    : "Guided · Honest pricing · No surprises";
 
   return new ImageResponse(
     (

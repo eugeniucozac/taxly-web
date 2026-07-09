@@ -30,8 +30,9 @@ January (rivals reprice mid-season):
 - [ ] **Never** claim "IRS-authorized e-file provider" until the transmitter
       path is signed and authorization is real (llms.txt already carries the
       explicit disclaimer — keep it in sync).
-- [ ] Accuracy/max-refund guarantee wording stays OFF the site until it is a
-      written, funded, counsel-reviewed policy (guarantees page copy check).
+- [ ] Guarantees page carries the pre-launch honesty note (in place) and the
+      full written, funded, counsel-reviewed policy terms MUST be published
+      there before launch — the note promises exactly that.
 - [ ] Pre-launch notes on /vs pages stay until the product is live, then flip
       to launch pricing verified.
 - [ ] Legal draft banners come off only after counsel review (all 4 pages).

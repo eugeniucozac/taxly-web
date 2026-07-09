@@ -178,7 +178,8 @@
       "how": "Cómo obtener apoyo",
       "howText": "Reenvía el aviso del IRS o estatal a support@gettaxly.com. Un especialista fiscal lo revisará y te responderá en un día hábil con una explicación en español claro y los próximos pasos.",
       "limits": "El apoyo en auditorías significa orientación y asistencia, no representación legal. Para representación completa ante el IRS, consulta a un CPA o abogado fiscal certificado."
-    }
+    },
+    "preLaunchNote": "Estado honesto: Taxly abre para declaraciones del año fiscal 2026 en enero de 2027. Estas son las garantías con las que lanzamos — los términos completos por escrito se publicarán en esta página antes de aceptar una sola declaración."
   },
   "guarantees": {
     "heading": "Tres promesas que realmente cumplimos",
@@ -1065,5 +1066,12 @@
       },
       "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las reglas de puerto seguro y las fechas vienen del Formulario 1040-ES del IRS — verifica las cifras del año actual en irs.gov."
     }
+  },
+  "homeExtras": {
+    "toolsHeading": "Herramientas gratis, sin registro",
+    "toolsSub": "Respuestas directas a las preguntas que asustan — reembolso, multas, pagos trimestrales. Funcionan hoy, con o sin lista de espera.",
+    "guidesHeading": "Guías recientes",
+    "guidesSub": "Guías fiscales en lenguaje claro que nombran la opción gratuita cuando es la mejor.",
+    "guidesAll": "Todas las guías"
   }
 }
