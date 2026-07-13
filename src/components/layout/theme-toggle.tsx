@@ -11,6 +11,9 @@ export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const t = useTranslations("nav");
 
+  // next-themes mount guard: the theme is unknowable until after hydration,
+  // so this one-time post-mount flip is the documented pattern.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {

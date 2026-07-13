@@ -1,3 +1,6 @@
+/* Self-contained prerendered 404 shell — next/link can't be used here, so the
+   raw <a> navigation is intentional. */
+/* eslint-disable @next/next/no-html-link-for-pages */
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

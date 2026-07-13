@@ -23,6 +23,8 @@ export function ScrollReveal({
     const el = ref.current;
     if (!el) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // Reduced-motion users skip the reveal entirely — a one-time sync flip.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setVisible(true);
       return;
     }
