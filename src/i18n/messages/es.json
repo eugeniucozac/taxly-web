@@ -1680,7 +1680,12 @@
     "toolsSub": "Respuestas directas a las preguntas que asustan — reembolso, multas, pagos trimestrales. Funcionan hoy, con o sin lista de espera.",
     "guidesHeading": "Guías recientes",
     "guidesSub": "Guías fiscales en lenguaje claro que nombran la opción gratuita cuando es la mejor.",
-    "guidesAll": "Todas las guías"
+    "guidesAll": "Todas las guías",
+    "howItWorksAll": "Ver el recorrido completo",
+    "situationsAll": "Todo lo cubierto al lanzar",
+    "pricingAll": "Precios completos + comparación de planes",
+    "toolsAll": "Todas las herramientas, con ejemplos resueltos",
+    "guaranteesAll": "Lee las tres garantías completas"
   },
   "turbotaxAlternative": {
     "eyebrow": "La guía honesta",
@@ -1737,7 +1742,8 @@
         "q": "¿Es difícil cambiar de software de impuestos?",
         "a": "Menos de lo que crees. Tu declaración del año anterior (un PDF de cualquier software) lleva los números que una herramienta nueva necesita. El IRS además guarda transcripciones de salarios e ingresos que puedes descargar gratis en irs.gov si te falta algún documento."
       }
-    ]
+    ],
+    "faqHeading": "Preguntas frecuentes"
   },
   "freeTaxFiling": {
     "eyebrow": "La lista honesta",

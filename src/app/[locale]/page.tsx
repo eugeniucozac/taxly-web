@@ -14,7 +14,8 @@ import {
   PiggyBank,
   FileText,
   Shield,
-  Star,
+  ShieldCheck,
+  LifeBuoy,
   ChevronDown,
 } from "lucide-react";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
@@ -145,6 +146,15 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
               </div>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/how-it-works`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.howItWorksAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -177,6 +187,15 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
                 </div>
               );
             })}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/features`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.situationsAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
           </div>
         </div>
       </section>
@@ -220,7 +239,7 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
                       {t(`pricing.${plan}.federalPrice`)}
                     </span>
                     <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}>
-                      {" "}federal
+                      {t("pricing.federalSuffix")}
                     </span>
                   </div>
                   <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>
@@ -253,6 +272,15 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
                 </div>
               );
             })}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/pricing`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.pricingAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
           </div>
         </div>
       </section>
@@ -293,6 +321,15 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
               </Link>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/tools`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.toolsAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -303,10 +340,16 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
             {t("guarantees.heading")}
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
-            {(["maxRefund", "accuracy", "audit"] as const).map((key) => (
+            {(
+              [
+                { key: "maxRefund", Icon: TrendingUp },
+                { key: "accuracy", Icon: ShieldCheck },
+                { key: "audit", Icon: LifeBuoy },
+              ] as const
+            ).map(({ key, Icon }) => (
               <div key={key} className="rounded-2xl border bg-card p-8 shadow-sm text-center">
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-50 dark:bg-sky-500/10">
-                  <Star size={22} className="text-primary" />
+                  <Icon size={22} className="text-primary" aria-hidden />
                 </div>
                 <h3 className="mb-3 text-base font-semibold text-foreground">
                   {t(`guarantees.${key}.title`)}
@@ -314,6 +357,15 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
                 <p className="text-sm text-muted-foreground">{t(`guarantees.${key}.description`)}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href={`/${locale}/guarantees`}
+              className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
+            >
+              {t("homeExtras.guaranteesAll")}
+              <ArrowRight size={14} aria-hidden />
+            </Link>
           </div>
         </div>
       </section>

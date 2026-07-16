@@ -1680,7 +1680,12 @@
     "toolsSub": "Straight answers to the scary questions — refund, penalties, quarterly payments. They work today, waitlist or not.",
     "guidesHeading": "Latest guides",
     "guidesSub": "Plain-English tax guides that name the free option when it is the better one.",
-    "guidesAll": "All guides"
+    "guidesAll": "All guides",
+    "howItWorksAll": "See the full walkthrough",
+    "situationsAll": "Everything covered at launch",
+    "pricingAll": "Full pricing + plan comparison",
+    "toolsAll": "All tools, with worked examples",
+    "guaranteesAll": "Read the three guarantees in full"
   },
   "turbotaxAlternative": {
     "eyebrow": "The honest guide",
@@ -1737,7 +1742,8 @@
         "q": "Is switching tax software hard?",
         "a": "Less than you'd think. Your prior-year return (a PDF from any major software) carries the numbers a new tool needs. The IRS also keeps wage and income transcripts you can pull for free at irs.gov if you're missing documents."
       }
-    ]
+    ],
+    "faqHeading": "FAQ"
   },
   "freeTaxFiling": {
     "eyebrow": "The honest list",

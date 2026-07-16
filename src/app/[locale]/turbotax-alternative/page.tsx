@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { makeMetadata, BASE_URL, generateLocaleStaticParams } from "@/lib/metadata";
@@ -94,11 +94,18 @@ export default async function TurbotaxAlternativePage({ params }: LocalePageProp
           ))}
         </ul>
 
-        <h2 className="mb-6 mt-14 text-center text-2xl font-bold tracking-tight">FAQ</h2>
+        <h2 className="mb-6 mt-14 text-center text-2xl font-bold tracking-tight">{t("faqHeading")}</h2>
         <div className="space-y-3">
           {faqs.map(({ q, a }) => (
             <details key={q} className="group rounded-xl border bg-card px-5 py-4 open:shadow-sm">
-              <summary className="cursor-pointer list-none text-sm font-semibold">{q}</summary>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold">
+                {q}
+                <ChevronDown
+                  size={16}
+                  className="shrink-0 text-muted-foreground/80 transition-transform group-open:rotate-180"
+                  aria-hidden
+                />
+              </summary>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a}</p>
             </details>
           ))}
