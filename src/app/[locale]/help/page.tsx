@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
@@ -11,37 +11,34 @@ export async function generateMetadata({ params }: LocalePageProps) {
   return makeMetadata(locale, "metadata.help", "help");
 }
 
-const faqItems = [
-  { q: "Do I need to create an account to start?", a: "Yes, a free account is required to save your progress and file your return. It takes under a minute to sign up — just an email and password." },
-  { q: "Which tax year can I file with Taxly?", a: "You can file the current tax year return (due April 15) and amend returns from the prior two years." },
-  { q: "Can I import my return from another software?", a: "Yes. Upload a PDF of your prior-year TurboTax, H&R Block, or Taxly return and we'll pre-fill your basic info and prior-year figures." },
-  { q: "Can I use Taxly on mobile?", a: "Yes. Taxly is fully responsive and works on any smartphone or tablet browser. A dedicated mobile app is planned." },
-  { q: "When do I pay?", a: "You only pay when you e-file your return. You can prepare your return and see your refund estimate completely free before deciding." },
-  { q: "What payment methods do you accept?", a: "We accept all major credit and debit cards (Visa, Mastercard, Amex, Discover) and Apple Pay / Google Pay." },
-  { q: "Can I get a refund?", a: "If you've paid but not yet e-filed, contact us within 30 days for a full refund. After e-filing, the fee is non-refundable." },
-  { q: "Is my Social Security number safe?", a: "Yes. Your SSN is encrypted with AES-256 before storage and is never transmitted in plain text. It's only sent to the IRS during e-filing, over an encrypted connection." },
-  { q: "Does Taxly sell my data?", a: "Never. We use your data solely to prepare and file your taxes. We do not sell it, share it with advertisers, or use it to build advertising profiles." },
-  { q: "How do I enable two-factor authentication?", a: "Go to Account Settings → Security → Enable 2FA. We support authenticator apps (Google Authenticator, Authy) and SMS." },
-  { q: "How long does IRS processing take?", a: "The IRS typically accepts e-filed returns within 24–48 hours and issues refunds within 21 days of acceptance. You can check status at IRS.gov/refunds." },
-  { q: "What if I make a mistake after filing?", a: "You can amend your return using Form 1040-X. Taxly will guide you through the amendment process. There's no additional filing fee for amendments." },
-  { q: "How do I file an extension?", a: "File Form 4868 by April 15 to get a 6-month extension to October 15. Taxly handles this automatically. Note: an extension to file is not an extension to pay — any tax owed is still due April 15." },
-  { q: "Can I file jointly with my spouse?", a: "Yes. Choose 'Married Filing Jointly' when you start. Taxly will ask for your spouse's information and compare MFJ vs MFS to find the better outcome." },
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  url: `${BASE_URL}/help`,
-  mainEntity: faqItems.map(({ q, a }) => ({
-    "@type": "Question",
-    name: q,
-    acceptedAnswer: { "@type": "Answer", text: a },
-  })),
-};
+/** Section → question keys in messages (help.<section>.<q>.question/.answer).
+ * The visible accordion AND the FAQPage JSON-LD both render from these, so
+ * the schema always matches the page in every locale. */
+const SECTIONS = [
+  { key: "gettingStarted", questions: ["q1", "q2", "q3", "q4"] },
+  { key: "pricing", questions: ["q1", "q2", "q3"] },
+  { key: "security", questions: ["q1", "q2", "q3"] },
+  { key: "filing", questions: ["q1", "q2", "q3", "q4"] },
+] as const;
 
 export default async function HelpPage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "help" });
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: `${BASE_URL}/${locale}/help`,
+    mainEntity: SECTIONS.flatMap(({ key, questions }) =>
+      questions.map((q) => ({
+        "@type": "Question",
+        name: t(`${key}.${q}.question`),
+        acceptedAnswer: { "@type": "Answer", text: t(`${key}.${q}.answer`) },
+      })),
+    ),
+  };
+
   return (
     <>
       <JsonLd data={faqSchema} />
@@ -54,25 +51,6 @@ function HelpClient() {
   const t = useTranslations("help");
   const locale = useLocale();
 
-  const sections = [
-    {
-      key: "gettingStarted",
-      questions: ["q1", "q2", "q3", "q4"],
-    },
-    {
-      key: "pricing",
-      questions: ["q1", "q2", "q3"],
-    },
-    {
-      key: "security",
-      questions: ["q1", "q2", "q3"],
-    },
-    {
-      key: "filing",
-      questions: ["q1", "q2", "q3", "q4"],
-    },
-  ] as const;
-
   return (
     <div className="py-20">
       {/* Header */}
@@ -83,7 +61,7 @@ function HelpClient() {
 
       {/* Sections */}
       <div className="mx-auto mt-20 max-w-3xl space-y-16 px-6">
-        {sections.map(({ key, questions }) => (
+        {SECTIONS.map(({ key, questions }) => (
           <div key={key}>
             <h2 className="mb-6 text-xl font-bold text-foreground">{t(`sections.${key}`)}</h2>
             <div className="space-y-3">
