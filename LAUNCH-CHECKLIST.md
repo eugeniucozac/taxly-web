@@ -1,7 +1,7 @@
 # taxly-web — Launch Checklist (human-only work)
 
-*Created: 9 July 2026 · The code work is done (143 tests, all routes static);
-everything below needs a human decision, an account, or a fact check.*
+*Created: 9 July 2026 · The code work is done (vitest suite green, all routes
+static); everything below needs a human decision, an account, or a fact check.*
 
 ## 1. Fact verification (every number the site asserts)
 

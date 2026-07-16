@@ -1,6 +1,6 @@
 # Taxly — Marketing Site: Remaining Work
 
-*Updated: 2026-06-13*
+*Updated: 16 July 2026*
 
 Domain: `gettaxly.com` · Stack: Next.js 16 / Tailwind 4 / next-intl 4 (en + es) / Vercel
 Target: **TY2026 returns, filed early 2027**
@@ -31,9 +31,11 @@ In the appslab repo (`src/features/products/data/products.ts`):
 ## Critical-web pass (9 July 2026)
 
 The site was brought to the portfolio critical-web bar: dark mode, glossary, /vs cluster,
-three free tools with tested libs, blog status gating (14 posts x2 locales), full SEO layer,
-143 tests in 7 suites. Remaining human-only work moved to [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md);
-the content calendar lives in [CONTENT-BACKLOG.md](CONTENT-BACKLOG.md).
+three free tools with tested libs, a status-gated bilingual blog (the schedule and counts
+of record live in [CONTENT-BACKLOG.md](CONTENT-BACKLOG.md)), full SEO layer, and a green
+vitest suite (`npm test` is the count of record). A 16 July pass added the Form-404 brand
+chrome, the `/turbotax-alternative` + `/free-tax-filing` landers, and content batches 2–3.
+Remaining human-only work moved to [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md).
 
 ---
 

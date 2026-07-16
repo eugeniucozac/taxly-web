@@ -2,8 +2,10 @@
 
 Marketing site for **Taxly** — honest, plain-English US tax filing (`gettaxly.com`).
 Currently **pre-launch**: the site runs a waitlist while the filing app
-([`../taxly-app`](../taxly-app)) is built. Product strategy lives in the docs one
-level up (`../TAXLY.md`, `../GTM_TAXLY.md`, `../PRICING_PLANS.md`, …).
+([eugeniucozac/taxly](https://github.com/eugeniucozac/taxly)) is built. The deploy
+punch-list is [`TAXLY.md`](TAXLY.md) in this repo; the product-strategy docs
+(GTM, pricing, projections, …) live in a private planning repo (one level up
+in the local working layout).
 
 > ⚠️ This is **not** the Next.js you may know — this version has breaking changes.
 > Read `AGENTS.md` and the guides in `node_modules/next/dist/docs/` before writing code.
