@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ArrowRight, Check, Minus, X } from "lucide-react";
+import { ArrowRight, Check, ChevronDown, Minus, X } from "lucide-react";
 import { getComparisonBySlug, getComparisons } from "@/features/compare/lib/compare";
 import { JsonLd } from "@/components/seo/json-ld";
 import { BASE_URL, getAlternates, generateLocaleStaticParams } from "@/lib/metadata";
@@ -47,6 +47,11 @@ export default async function ComparisonPage({ params }: LocaleSlugPageProps) {
   const c = await getComparisonBySlug(slug, locale);
   if (!c) notFound();
   const t = await getTranslations({ locale, namespace: "vsHub" });
+  const others = (await getComparisons(locale)).filter((o) => o.slug !== slug);
+
+  // Honest scoreboard — counts every row, including the ones the rival wins.
+  const score = { taxly: 0, rival: 0, tie: 0 };
+  for (const row of c.rows) score[row.winner] += 1;
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -77,9 +82,14 @@ export default async function ComparisonPage({ params }: LocaleSlugPageProps) {
       <JsonLd data={faqJsonLd} />
       <JsonLd data={breadcrumbJsonLd} />
       <div className="mx-auto max-w-4xl px-6">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
-          {t("eyebrow")}
-        </p>
+        <span className="mb-6 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-xs font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+          <span className="flex items-center border-r-[1.5px] border-foreground px-2.5 py-1.5 font-bold uppercase tracking-wider">
+            {t("eyebrow")}
+          </span>
+          <span className="flex items-center px-2.5 py-1.5 text-muted-foreground">
+            {t("chip")}
+          </span>
+        </span>
         <h1 className="mb-4 text-4xl font-bold tracking-tight">Taxly vs {c.rival}</h1>
         <p className="mb-8 max-w-2xl text-lg text-muted-foreground">{c.description}</p>
 
@@ -96,13 +106,31 @@ export default async function ComparisonPage({ params }: LocaleSlugPageProps) {
           {t("preLaunchNote")}
         </div>
 
+        {/* Honest scoreboard — the rival's wins counted in public */}
+        <div className="mb-6 flex flex-wrap items-center gap-2">
+          <span className="inline-flex items-center gap-1.5 rounded-lg border border-sky-200 bg-sky-50 px-3 py-1.5 text-xs font-semibold text-sky-800 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-200">
+            <Check size={13} aria-hidden />
+            {t("scoreTaxly", { count: score.taxly })}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-lg border bg-card px-3 py-1.5 text-xs font-semibold text-muted-foreground">
+            <Check size={13} aria-hidden />
+            {t("scoreRival", { rival: c.rival, count: score.rival })}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-lg border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground/70">
+            <Minus size={13} aria-hidden />
+            {t("scoreTies", { count: score.tie })}
+          </span>
+        </div>
+
         {/* Comparison table */}
         <div className="overflow-x-auto rounded-2xl border bg-card shadow-sm">
           <table className="w-full min-w-160 text-left text-sm">
             <thead>
               <tr className="border-b bg-secondary">
                 <th className="px-5 py-3.5 font-semibold">{t("tableFeature")}</th>
-                <th className="px-5 py-3.5 font-semibold">Taxly</th>
+                <th className="bg-sky-50 px-5 py-3.5 font-semibold text-primary dark:bg-sky-500/10">
+                  Taxly
+                </th>
                 <th className="px-5 py-3.5 font-semibold">{c.rival}</th>
               </tr>
             </thead>
@@ -110,7 +138,7 @@ export default async function ComparisonPage({ params }: LocaleSlugPageProps) {
               {c.rows.map((row) => (
                 <tr key={row.feature} className="border-b last:border-b-0">
                   <td className="px-5 py-3.5 font-medium">{row.feature}</td>
-                  <td className="px-5 py-3.5 text-muted-foreground">
+                  <td className="bg-sky-50/60 px-5 py-3.5 text-muted-foreground dark:bg-sky-500/5">
                     <WinnerMark winner={row.winner} side="taxly" /> {row.taxly}
                   </td>
                   <td className="px-5 py-3.5 text-muted-foreground">
@@ -165,15 +193,47 @@ export default async function ComparisonPage({ params }: LocaleSlugPageProps) {
           <div className="space-y-3">
             {c.faqs.map((f) => (
               <details key={f.q} className="group rounded-xl border bg-card px-6 py-4">
-                <summary className="cursor-pointer text-sm font-semibold">{f.q}</summary>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold">
+                  {f.q}
+                  <ChevronDown
+                    size={16}
+                    className="shrink-0 text-muted-foreground/80 transition-transform group-open:rotate-180"
+                    aria-hidden
+                  />
+                </summary>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
               </details>
             ))}
           </div>
         </div>
 
+        {/* More comparisons — no dead ends */}
+        <div className="mt-16">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground/70">
+            {t("more")}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {others.map((o) => (
+              <Link
+                key={o.slug}
+                href={`/vs/${o.slug}`}
+                className="rounded-lg border px-3.5 py-2 text-sm font-medium text-muted-foreground transition hover:border-ring hover:text-foreground"
+              >
+                Taxly vs {o.rival}
+              </Link>
+            ))}
+            <Link
+              href="/vs"
+              className="inline-flex items-center gap-1 rounded-lg border px-3.5 py-2 text-sm font-medium text-primary transition hover:border-ring"
+            >
+              {t("allLink")}
+              <ArrowRight size={13} aria-hidden />
+            </Link>
+          </div>
+        </div>
+
         {/* Keep going */}
-        <div className="mt-16 rounded-2xl bg-sky-50 p-8 text-center dark:bg-sky-500/10">
+        <div className="mt-10 rounded-2xl bg-sky-50 p-8 text-center dark:bg-sky-500/10">
           <h2 className="text-xl font-bold">{t("cta.heading")}</h2>
           <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground">{t("cta.text")}</p>
           <div className="mt-5 flex flex-wrap justify-center gap-3">

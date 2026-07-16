@@ -1236,7 +1236,13 @@
       "text": "Join the waitlist for TY2026 filing. Simple returns free, Deluxe $39, Premium $69 — flat, disclosed up front, locked when you start.",
       "button": "Join the waitlist",
       "pricing": "See pricing"
-    }
+    },
+    "chip": "The rival’s wins are listed too",
+    "scoreTaxly": "{count, plural, one {Taxly wins # row} other {Taxly wins # rows}}",
+    "scoreRival": "{count, plural, one {{rival} wins # row} other {{rival} wins # rows}}",
+    "scoreTies": "{count, plural, one {# tie} other {# ties}}",
+    "more": "More comparisons",
+    "allLink": "All comparisons"
   },
   "cookiesPage": {
     "lastUpdated": "Last updated: July 9, 2026",

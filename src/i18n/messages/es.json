@@ -1236,7 +1236,13 @@
       "text": "Únete a la lista de espera para el año fiscal 2026. Declaraciones simples gratis, Deluxe $39, Premium $69 — fijo, revelado desde el inicio, bloqueado al empezar.",
       "button": "Unirme a la lista",
       "pricing": "Ver precios"
-    }
+    },
+    "chip": "Las victorias del rival también se listan",
+    "scoreTaxly": "{count, plural, one {Taxly gana # fila} other {Taxly gana # filas}}",
+    "scoreRival": "{count, plural, one {{rival} gana # fila} other {{rival} gana # filas}}",
+    "scoreTies": "{count, plural, one {# empate} other {# empates}}",
+    "more": "Más comparaciones",
+    "allLink": "Todas las comparaciones"
   },
   "cookiesPage": {
     "lastUpdated": "Última actualización: 9 de julio de 2026",
