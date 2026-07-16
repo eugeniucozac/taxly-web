@@ -229,7 +229,7 @@ If you can't file by April 15, file Form 4868 for an automatic extension to Octo
     readTime: 5,
     title: "Standard vs. Itemized Deduction: Which One Should You Take?",
     excerpt:
-      "Most Americans take the standard deduction. But if you own a home, made large charitable gifts, or had high medical expenses, itemizing might save you more. Here's how to decide.",
+      "Most Americans take the standard deduction. But if you own a home, made large charitable gifts, or had high medical expenses, itemizing might save you more.",
     date: "2026-02-16",
     author: "Taxly Team",
     tags: ["deductions", "basics", "homeowners"],
@@ -706,7 +706,7 @@ If April is looking impossible, file **Form 4868** by the deadline — it's an a
     status: "scheduled",
     readTime: 6,
     title: "TurboTax Alternatives in 2026 — An Honest Guide (From a Competitor)",
-    excerpt: "Yes, we're a competitor. So this guide names the free government option first, credits the budget rival that deserves it, and tells you who should just stay with TurboTax.",
+    excerpt: "Yes, we're a competitor. So this guide names the free government option first, credits the budget rival that deserves it, and says who should stay with TurboTax.",
     date: "2026-07-27",
     author: "Taxly Team",
     tags: ["comparisons","basics"],

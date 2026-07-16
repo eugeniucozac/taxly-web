@@ -770,7 +770,7 @@
     },
     "glossary": {
       "title": "Glosario fiscal de EE. UU. en lenguaje claro — Taxly",
-      "description": "Treinta términos fiscales de EE. UU. — AGI, 1099-NEC, impuesto de trabajo por cuenta propia, puerto seguro y más — explicados en dos frases honestas con enlaces a herramientas gratis."
+      "description": "Treinta términos fiscales de EE. UU. — AGI, 1099-NEC, impuesto de trabajo por cuenta propia, puerto seguro y más — explicados en dos frases honestas."
     },
     "vs": {
       "title": "Taxly vs TurboTax, FreeTaxUSA e IRS Direct File",
@@ -782,11 +782,11 @@
     },
     "subProcessors": {
       "title": "Subencargados — Taxly",
-      "description": "Los servicios de terceros que procesan datos para gettaxly.com hoy, y los proveedores planeados para el producto de declaración, con compromiso de notificación de cambios."
+      "description": "Los servicios de terceros que procesan datos para gettaxly.com hoy, más los proveedores planeados para el producto de declaración."
     },
     "tools": {
       "title": "Herramientas fiscales gratis — sin registro — Taxly",
-      "description": "Una calculadora de reembolso, una de multas del IRS y una de pagos trimestrales estimados. Gratis, sin pedir correo, con supuestos declarados y fuentes del IRS enlazadas."
+      "description": "Una calculadora de reembolso, una de multas del IRS y una de pagos trimestrales. Gratis, sin pedir correo, con supuestos declarados y fuentes del IRS."
     },
     "penaltyEstimator": {
       "title": "Calculadora de multas del IRS por presentar tarde — Taxly",
