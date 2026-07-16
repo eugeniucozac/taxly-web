@@ -559,7 +559,17 @@
       "Form 8949 (Capital Assets)",
       "Form 4562 (Depreciation)",
       "FBAR (FinCEN 114)"
-    ]
+    ],
+    "eyebrow": "Product",
+    "chip": "What’s covered at launch",
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. Everything on this page describes the launch build — if a situation isn’t listed, we don’t cover it at launch and we’d rather say so than surprise you mid-return.",
+    "coversLabel": "Covers",
+    "formsCount": "{count, plural, one {# form and schedule supported at launch} other {# forms and schedules supported at launch}}",
+    "cta": {
+      "note": "If your situation is on this page, Taxly was built for it. Join the waitlist and file when doors open.",
+      "button": "Join the TY2026 waitlist"
+    },
+    "relatedLabel": "Keep reading:"
   },
   "help": {
     "heading": "Help Center",

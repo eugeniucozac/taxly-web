@@ -559,7 +559,17 @@
       "Formulario 8949 (Activos de capital)",
       "Formulario 4562 (Depreciación)",
       "FBAR (FinCEN 114)"
-    ]
+    ],
+    "eyebrow": "Producto",
+    "chip": "Lo que cubre el lanzamiento",
+    "preLaunchNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Todo en esta página describe la versión de lanzamiento — si una situación no aparece, no la cubrimos al lanzar y preferimos decirlo antes que sorprenderte a mitad de la declaración.",
+    "coversLabel": "Cubre",
+    "formsCount": "{count, plural, one {# formulario y anexo soportado al lanzar} other {# formularios y anexos soportados al lanzar}}",
+    "cta": {
+      "note": "Si tu situación está en esta página, Taxly se construyó para ella. Únete a la lista de espera y declara cuando abramos.",
+      "button": "Únete a la lista de espera"
+    },
+    "relatedLabel": "Sigue leyendo:"
   },
   "help": {
     "heading": "Centro de Ayuda",
