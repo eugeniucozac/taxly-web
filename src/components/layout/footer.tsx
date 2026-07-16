@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { usePathname, useRouter } from "@/i18n/navigation";
+import { Logo } from "@/components/layout/logo";
 
 function FooterLocaleSwitcher() {
   const locale = useLocale();
@@ -119,7 +120,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-7">
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
-            <span className="text-xl font-bold text-primary">Taxly</span>
+            <Logo />
             <p className="mt-2 max-w-xs text-sm text-muted-foreground">{t("tagline")}</p>
             <p className="mt-4 inline-flex items-center gap-1.5 rounded-full border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground">
               <BadgeCheck size={14} className="text-primary" aria-hidden />
