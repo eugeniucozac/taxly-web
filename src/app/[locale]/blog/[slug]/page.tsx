@@ -90,8 +90,9 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
   };
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <main className="px-4 py-16 sm:px-6 lg:px-8">
       <JsonLd data={articleJsonLd} />
+      <div className="mx-auto max-w-3xl">
       <Link
         href="/blog"
  className="mb-8 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"
@@ -202,25 +203,28 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
         </div>
       </article>
 
-      <footer className="mt-12 border-t pt-8">
-        {related.length > 0 && (
-          <section className="mb-10">
-            <h2 className="mb-5 text-xl font-bold text-foreground">{t("relatedHeading")}</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((relatedPost) => (
-                <BlogPostCard
-                  key={relatedPost.slug}
-                  post={relatedPost}
-                  locale={locale}
-                  readMore={t("readMore")}
-                  categoryLabel={t(`categories.${relatedPost.category}`)}
-                  readTimeLabel={t("readTime", { minutes: relatedPost.readTime })}
-                />
-              ))}
-            </div>
-          </section>
-        )}
+      </div>
 
+      {/* Related posts break out of the article column to the index's grid width */}
+      {related.length > 0 && (
+        <section className="mx-auto mt-14 max-w-6xl border-t pt-10">
+          <h2 className="mb-6 text-xl font-bold text-foreground">{t("relatedHeading")}</h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((relatedPost) => (
+              <BlogPostCard
+                key={relatedPost.slug}
+                post={relatedPost}
+                locale={locale}
+                readMore={t("readMore")}
+                categoryLabel={t(`categories.${relatedPost.category}`)}
+                readTimeLabel={t("readTime", { minutes: relatedPost.readTime })}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      <footer className="mx-auto mt-14 max-w-3xl border-t pt-8">
         <Link
           href="/blog"
  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"
