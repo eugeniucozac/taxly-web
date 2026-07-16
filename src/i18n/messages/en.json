@@ -1400,11 +1400,11 @@
             "tool": "refund",
             "answer": "Refund estimator"
           }
-        ]
+        ],
+        "eyebrow": "Choose"
       },
       "examples": {
         "eyebrow": "Practice",
-        "chip": "Three worked examples",
         "heading": "Try one with example numbers",
         "intro": "Not ready to dig out your own paperwork? Walk through one of these made-up filers first — type their numbers in, check you get the same answer, and see how the tool thinks before you trust it with your real ones.",
         "enterLabel": "Type these in",
@@ -1466,8 +1466,10 @@
             "title": "Illustrative, not advice",
             "text": "Each result states its assumptions right next to the number. These are planning estimates — your return can differ, and edge cases like other credits, capital gains, or state tax aren’t modeled."
           }
-        ]
-      }
+        ],
+        "eyebrow": "Trust"
+      },
+      "chip": "Three calculators · no signup"
     },
     "penalty": {
       "eyebrow": "Free tool",

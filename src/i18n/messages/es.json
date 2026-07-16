@@ -1400,11 +1400,11 @@
             "tool": "refund",
             "answer": "Calculadora de reembolso"
           }
-        ]
+        ],
+        "eyebrow": "Elige"
       },
       "examples": {
         "eyebrow": "Práctica",
-        "chip": "Tres ejemplos resueltos",
         "heading": "Pruébala con números de ejemplo",
         "intro": "¿No quieres buscar tus papeles todavía? Recorre primero uno de estos contribuyentes inventados: escribe sus números, comprueba que obtienes la misma respuesta y mira cómo piensa la herramienta antes de confiarle los tuyos.",
         "enterLabel": "Escribe esto",
@@ -1466,8 +1466,10 @@
             "title": "Ilustrativo, no asesoría",
             "text": "Cada resultado declara sus supuestos junto al número. Son estimaciones de planificación — tu declaración puede diferir, y casos como otros créditos, ganancias de capital o impuestos estatales no están modelados."
           }
-        ]
-      }
+        ],
+        "eyebrow": "Confianza"
+      },
+      "chip": "Tres calculadoras · sin registro"
     },
     "penalty": {
       "eyebrow": "Herramienta gratis",

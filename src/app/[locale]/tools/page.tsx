@@ -65,44 +65,56 @@ export default async function ToolsPage({ params }: LocalePageProps) {
   return (
     <div className="py-20">
       <div className="mx-auto max-w-4xl px-6">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
-          {t("eyebrow")}
-        </p>
+        <span className="mb-6 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-xs font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+          <span className="flex items-center border-r-[1.5px] border-foreground px-2.5 py-1.5 font-bold uppercase tracking-wider">
+            {t("eyebrow")}
+          </span>
+          <span className="flex items-center px-2.5 py-1.5 text-muted-foreground">
+            {t("chip")}
+          </span>
+        </span>
         <h1 className="mb-4 text-4xl font-bold tracking-tight">{t("heading")}</h1>
         <p className="mb-12 max-w-2xl text-lg text-muted-foreground">{t("intro")}</p>
 
-        {/* ── The three tools ── */}
+        {/* ── The three tools — the page's primary objects, in brand chrome ── */}
         <div className="grid gap-6 sm:grid-cols-3">
-          {tools.map(({ key, icon: Icon }) => {
+          {tools.map(({ key, icon: Icon }, i) => {
             const needs = t.raw(`${key}.needs`) as string[];
             return (
               <Link
                 key={key}
                 href={TOOL_HREF[key]}
-                className="group flex flex-col rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-md"
+                className="group flex flex-col overflow-hidden rounded-xl border-[1.5px] border-foreground bg-card shadow-[3px_3px_0_0] shadow-sky-200 transition hover:-translate-y-0.5 hover:shadow-[5px_5px_0_0] dark:shadow-sky-500/20"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
-                  <Icon size={20} className="text-primary" aria-hidden />
+                <div className="flex items-stretch border-b-[1.5px] border-foreground text-xs font-bold uppercase tracking-wider">
+                  <span className="flex items-center border-r-[1.5px] border-foreground px-3 py-2 font-mono text-primary">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h2 className="flex items-center px-3 py-2">{t(`${key}.title`)}</h2>
                 </div>
-                <h2 className="text-lg font-semibold">{t(`${key}.title`)}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{t(`${key}.text`)}</p>
-                <p className="mt-4 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
-                  {t("needsLabel")}
-                </p>
-                <ul className="mt-1.5 space-y-1">
-                  {needs.map((need) => (
-                    <li key={need} className="flex gap-1.5 text-xs text-muted-foreground">
-                      <span className="text-primary" aria-hidden>
-                        —
-                      </span>
-                      {need}
-                    </li>
-                  ))}
-                </ul>
-                <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-medium text-primary">
-                  {t("open")}
-                  <ArrowRight size={14} className="transition group-hover:translate-x-0.5" aria-hidden />
-                </span>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                    <Icon size={20} className="text-primary" aria-hidden />
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{t(`${key}.text`)}</p>
+                  <p className="mt-4 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground/70">
+                    {t("needsLabel")}
+                  </p>
+                  <ul className="mt-1.5 space-y-1">
+                    {needs.map((need) => (
+                      <li key={need} className="flex gap-1.5 text-xs text-muted-foreground">
+                        <span className="text-primary" aria-hidden>
+                          —
+                        </span>
+                        {need}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="mt-auto inline-flex items-center gap-1 pt-5 text-sm font-medium text-primary">
+                    {t("open")}
+                    <ArrowRight size={14} className="transition group-hover:translate-x-0.5" aria-hidden />
+                  </span>
+                </div>
               </Link>
             );
           })}
@@ -110,6 +122,9 @@ export default async function ToolsPage({ params }: LocalePageProps) {
 
         {/* ── Which tool do I need? ── */}
         <section className="mt-20">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
+            {t("which.eyebrow")}
+          </p>
           <h2 className="mb-6 text-2xl font-bold tracking-tight">{t("which.heading")}</h2>
           <div className="divide-y overflow-hidden rounded-2xl border bg-card shadow-sm">
             {whichRows.map((row) => (
@@ -130,14 +145,9 @@ export default async function ToolsPage({ params }: LocalePageProps) {
 
         {/* ── Practice: worked examples ── */}
         <section className="mt-20">
-          <span className="mb-4 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-xs font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
-            <span className="flex items-center border-r-[1.5px] border-foreground px-2.5 py-1.5 font-bold uppercase tracking-wider">
-              {t("examples.eyebrow")}
-            </span>
-            <span className="flex items-center px-2.5 py-1.5 text-muted-foreground">
-              {t("examples.chip")}
-            </span>
-          </span>
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
+            {t("examples.eyebrow")}
+          </p>
           <h2 className="mb-3 text-2xl font-bold tracking-tight">{t("examples.heading")}</h2>
           <p className="mb-8 max-w-2xl text-muted-foreground">{t("examples.intro")}</p>
 
@@ -200,6 +210,9 @@ export default async function ToolsPage({ params }: LocalePageProps) {
 
         {/* ── How the estimates work ── */}
         <section className="mt-20">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">
+            {t("how.eyebrow")}
+          </p>
           <h2 className="mb-6 text-2xl font-bold tracking-tight">{t("how.heading")}</h2>
           <div className="grid gap-6 sm:grid-cols-3">
             {howItems.map((item, i) => {
@@ -215,7 +228,9 @@ export default async function ToolsPage({ params }: LocalePageProps) {
               );
             })}
           </div>
-          <p className="mt-10 text-sm text-muted-foreground">{t("note")}</p>
+          <p className="mx-auto mt-12 max-w-xl border-t border-dotted border-muted-foreground/40 pt-6 text-center text-sm text-muted-foreground">
+            {t("note")}
+          </p>
         </section>
       </div>
     </div>
