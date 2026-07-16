@@ -683,9 +683,78 @@
     },
     "team": {
       "heading": "Quién construye Taxly",
-      "text": "Somos AppsLab — una pequeña empresa de software enfocada en el cumplimiento normativo. Finovo, nuestro producto de contabilidad europeo, es usado por miles de freelancers y pequeñas empresas en el Reino Unido, Francia y Alemania.\n\nTaxly lleva el mismo rigor de ingeniería y atención obsesiva a la precisión al mercado estadounidense."
+      "text": "Somos AppsLab — una empresa de software pequeña, sin inversores y con el cumplimiento primero. Sin metas de crecimiento a cualquier costo, y por eso el argumento de honestidad se sostiene: nadie nos presiona a emboscarte al pagar.\n\nFinovo, nuestro producto europeo de contabilidad, sirve a freelancers y pequeñas empresas en el Reino Unido, Francia y Alemania. Taxly trae el mismo rigor de ingeniería y atención obsesiva a la precisión al mercado de EE. UU."
     },
-    "finovoLink": "Conoce Finovo →"
+    "finovoLink": "Conoce Finovo →",
+    "eyebrow": "Nosotros",
+    "chip": "Sin inversores · cumplimiento primero",
+    "principles": {
+      "heading": "Cómo se ve la honestidad aquí",
+      "intro": "Toda marca de impuestos dice “honesta” y “transparente”. La nuestra tiene que ser comprobable, así que cada punto se puede verificar en este sitio hoy:",
+      "items": [
+        {
+          "title": "El precio queda fijado antes de empezar",
+          "text": "El número de la primera pantalla es el número al pagar — es una garantía por escrito, no un eslogan. Las emboscadas de mejora a mitad del camino son la queja #1 de la industria, así que las eliminamos por diseño."
+        },
+        {
+          "title": "Publicamos dónde ganan los rivales",
+          "text": "Nuestras páginas de comparación puntúan cada fila en público — incluidas las que TurboTax, FreeTaxUSA y IRS Direct File ganan de verdad. Si una opción gratis te conviene más, nuestras propias páginas lo dicen."
+        },
+        {
+          "title": "Las herramientas gratis son gratis de verdad",
+          "text": "Tres calculadoras — reembolso, multas, pagos trimestrales — corren por completo en tu navegador. Sin registro, sin correo, sin SSN. Las buenas respuestas a preguntas que asustan son todo nuestro plan de marketing."
+        },
+        {
+          "title": "Pre-lanzamiento significa pre-lanzamiento",
+          "text": "Cada página te dice que Taxly abre en enero de 2027. Sin reseñas falsas, sin estrellas inventadas, sin logos de “visto en” que no hemos ganado. La confianza es el producto — no vamos a falsificar su primera versión."
+        }
+      ]
+    },
+    "numbers": {
+      "items": [
+        {
+          "value": "13 hrs",
+          "label": "lo que el estadounidense promedio pasa declarando cada año (estimación del IRS) — el tiempo que existimos para devolver"
+        },
+        {
+          "value": "$0",
+          "label": "una declaración W-2 simple con Taxly — federal más tu primer estado incluido"
+        },
+        {
+          "value": "3",
+          "label": "calculadoras gratis en este sitio hoy, sin registro"
+        },
+        {
+          "value": "0",
+          "label": "ventas adicionales a mitad de la declaración — por diseño, y por escrito"
+        }
+      ]
+    },
+    "timeline": {
+      "heading": "Dónde estamos hoy",
+      "steps": [
+        {
+          "tag": "Hoy",
+          "title": "Lista de espera abierta, herramientas en vivo",
+          "text": "Las calculadoras gratis, las guías y el glosario funcionan ahora mismo. El producto de declaración está en construcción, y este sitio es su vista previa honesta."
+        },
+        {
+          "tag": "Enero de 2027",
+          "title": "Abre la declaración del año fiscal 2026",
+          "text": "La lista de espera tiene acceso primero, a los precios ya publicados en este sitio — declaraciones simples gratis, Deluxe $39, Premium $69, primer estado incluido."
+        },
+        {
+          "tag": "Antes de la primera declaración",
+          "title": "Garantías en vigor, por escrito",
+          "text": "Las tres garantías y los términos legales revisados por abogados se publican antes de aceptar una sola declaración. Tómanos la palabra."
+        }
+      ]
+    },
+    "cta": {
+      "note": "Si esto suena al software de impuestos que quisieras que existiera, ayúdanos a demostrar que la honestidad escala.",
+      "button": "Únete a la lista de espera",
+      "tools": "Prueba las herramientas gratis"
+    }
   },
   "contact": {
     "heading": "Ponte en contacto",

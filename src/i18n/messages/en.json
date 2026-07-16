@@ -683,9 +683,78 @@
     },
     "team": {
       "heading": "Who builds Taxly",
-      "text": "We're AppsLab — a small, compliance-first software company. Finovo, our European accounting product, is used by thousands of freelancers and small businesses in the UK, France, and Germany.\n\nTaxly brings the same engineering rigour and obsessive attention to accuracy to the US market."
+      "text": "We’re AppsLab — a small, bootstrapped, compliance-first software company. No investors and no growth-at-any-cost targets, which is exactly why the honesty pitch holds: nobody is pressuring us to ambush you at checkout.\n\nFinovo, our European accounting product, serves freelancers and small businesses in the UK, France, and Germany. Taxly brings the same engineering rigour and obsessive attention to accuracy to the US market."
     },
-    "finovoLink": "Learn about Finovo →"
+    "finovoLink": "Learn about Finovo →",
+    "eyebrow": "About",
+    "chip": "Bootstrapped · compliance-first",
+    "principles": {
+      "heading": "What honesty looks like here",
+      "intro": "Every tax brand says “honest” and “transparent.” Ours has to be checkable, so each of these is verifiable on this site today:",
+      "items": [
+        {
+          "title": "The price is locked before you start",
+          "text": "The number on the first screen is the number at checkout — it’s a written guarantee, not a slogan. Mid-flow upgrade ambushes are the industry’s #1 complaint, so we designed them out."
+        },
+        {
+          "title": "We publish where rivals win",
+          "text": "Our comparison pages score every row in public — including the ones TurboTax, FreeTaxUSA, and IRS Direct File genuinely win. If a free option fits you better, our own pages say so."
+        },
+        {
+          "title": "The free tools are actually free",
+          "text": "Three calculators — refund, penalties, quarterly tax — run entirely in your browser. No signup, no email, no SSN. Good answers to scary questions are our whole marketing plan."
+        },
+        {
+          "title": "Pre-launch means pre-launch",
+          "text": "Every page tells you Taxly opens in January 2027. No fake reviews, no invented star ratings, no “as seen in” logos we haven’t earned. Trust is the product — we won’t fake the first version of it."
+        }
+      ]
+    },
+    "numbers": {
+      "items": [
+        {
+          "value": "13 hrs",
+          "label": "what the average American spends filing each year (IRS estimate) — the time we exist to give back"
+        },
+        {
+          "value": "/usr/bin/bash",
+          "label": "a simple W-2 return with Taxly — federal plus your first state included"
+        },
+        {
+          "value": "3",
+          "label": "free calculators live on this site today, no signup required"
+        },
+        {
+          "value": "0",
+          "label": "upsell prompts mid-filing — by design, and in writing"
+        }
+      ]
+    },
+    "timeline": {
+      "heading": "Where we are today",
+      "steps": [
+        {
+          "tag": "Today",
+          "title": "Waitlist open, tools live",
+          "text": "The free calculators, the guides, and the glossary work right now. The filing product is in build, and this site is its honest preview."
+        },
+        {
+          "tag": "January 2027",
+          "title": "TY2026 filing opens",
+          "text": "Waitlist members get first access, at the prices already published on this site — simple returns free, Deluxe $39, Premium $69, first state included."
+        },
+        {
+          "tag": "Before the first return",
+          "title": "Guarantees in force, in writing",
+          "text": "The three guarantees and counsel-reviewed legal terms are published before we accept a single return. Hold us to that."
+        }
+      ]
+    },
+    "cta": {
+      "note": "If this sounds like the tax software you wish existed, help us prove honesty scales.",
+      "button": "Join the TY2026 waitlist",
+      "tools": "Try the free tools"
+    }
   },
   "contact": {
     "heading": "Get in touch",
