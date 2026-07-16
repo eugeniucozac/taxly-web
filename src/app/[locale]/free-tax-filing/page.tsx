@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { ArrowRight, EyeOff } from "lucide-react";
+import { ArrowRight, EyeOff, TrendingUp, MapPin, ShieldCheck, MessageSquare } from "lucide-react";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { makeMetadata, BASE_URL, generateLocaleStaticParams } from "@/lib/metadata";
@@ -15,6 +15,9 @@ export async function generateMetadata({ params }: LocalePageProps) {
 
 type Option = { name: string; tag: string; body: string; linkLabel: string; href: string };
 type Faq = { q: string; a: string };
+type WhyItem = { title: string; text: string };
+
+const WHY_ICONS = [TrendingUp, MapPin, ShieldCheck, MessageSquare];
 
 /** The honesty lander: "actually free tax filing". Every genuinely free
  * option named first, our own fine print stated plainly. */
@@ -25,6 +28,7 @@ export default async function FreeTaxFilingPage({ params }: LocalePageProps) {
 
   const options = t.raw("options") as Option[];
   const hidesItems = t.raw("hidesItems") as string[];
+  const whyItems = t.raw("why.items") as WhyItem[];
   const faqs = t.raw("faq") as Faq[];
 
   const faqSchema = {
@@ -87,7 +91,41 @@ export default async function FreeTaxFilingPage({ params }: LocalePageProps) {
           <p className="text-muted-foreground">{t("honestyBody")}</p>
         </div>
 
-        <h2 className="mb-6 mt-14 text-center text-2xl font-bold tracking-tight">FAQ</h2>
+        {/* The counter-case: where Taxly earns the fee */}
+        <section className="mt-14">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight">{t("why.heading")}</h2>
+          <p className="mb-8 text-muted-foreground">{t("why.intro")}</p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {whyItems.map((item, i) => {
+              const Icon = WHY_ICONS[i] ?? ShieldCheck;
+              return (
+                <div key={item.title} className="rounded-2xl border bg-card p-6 shadow-sm">
+                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                    <Icon size={18} className="text-primary" aria-hidden />
+                  </div>
+                  <h3 className="text-sm font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <Link
+              href={`/${locale}/guarantees`}
+              className="rounded-lg border px-3.5 py-2 text-sm font-medium text-muted-foreground transition hover:border-ring hover:text-foreground"
+            >
+              {t("why.linkGuarantees")}
+            </Link>
+            <Link
+              href={`/${locale}/pricing`}
+              className="rounded-lg border px-3.5 py-2 text-sm font-medium text-muted-foreground transition hover:border-ring hover:text-foreground"
+            >
+              {t("why.linkPricing")}
+            </Link>
+          </div>
+        </section>
+
+        <h2 className="mb-6 mt-14 text-center text-2xl font-bold tracking-tight">{t("faqHeading")}</h2>
         <div className="space-y-3">
           {faqs.map(({ q, a }) => (
             <details key={q} className="group rounded-xl border bg-card px-5 py-4 open:shadow-sm">

@@ -225,7 +225,15 @@
       "description": "Los empleados de Taxly no pueden acceder a tus datos fiscales sin tu permiso explícito. Todo el acceso interno se registra y audita."
     },
     "certBadge": "SOC 2 Tipo II (en proceso)",
-    "certNote": "Estamos en proceso de obtener la certificación SOC 2 Tipo II. Nuestra infraestructura sigue sus controles hoy."
+    "certNote": "Estamos en proceso de obtener la certificación SOC 2 Tipo II. Nuestra infraestructura sigue sus controles hoy.",
+    "eyebrow": "Seguridad",
+    "chip": "Cómo se protegerán tus datos",
+    "preLaunchNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027, y esta página describe la seguridad con la que se lanza el producto. Hoy este sitio web guarda casi nada — la nota de abajo tiene los detalles.",
+    "today": {
+      "heading": "¿Y hoy, antes del lanzamiento?",
+      "text": "Este sitio de marketing no tiene cuentas ni base de datos fiscales. Las calculadoras gratis corren por completo en tu navegador, y lo único que guardamos es un correo de lista de espera si lo das y un mensaje de contacto si lo envías. La seguridad descrita arriba llega con el producto — y se verificará de nuevo antes de que fluya cualquier dato de contribuyentes.",
+      "linksLabel": "La letra pequeña:"
+    }
   },
   "guaranteesPage": {
     "heading": "Tres promesas que realmente cumplimos",
@@ -257,7 +265,14 @@
       "howText": "Reenvía el aviso del IRS o estatal a support@gettaxly.com. Un especialista fiscal lo revisará y te responderá en un día hábil con una explicación en español claro y los próximos pasos.",
       "limits": "El apoyo en auditorías significa orientación y asistencia, no representación legal. Para representación completa ante el IRS, consulta a un CPA o abogado fiscal certificado."
     },
-    "preLaunchNote": "Estado honesto: Taxly abre para declaraciones del año fiscal 2026 en enero de 2027. Estas son las garantías con las que lanzamos — los términos completos por escrito se publicarán en esta página antes de aceptar una sola declaración."
+    "preLaunchNote": "Estado honesto: Taxly abre para declaraciones del año fiscal 2026 en enero de 2027. Estas son las garantías con las que lanzamos — los términos completos por escrito se publicarán en esta página antes de aceptar una sola declaración.",
+    "eyebrow": "Garantías",
+    "chip": "Por escrito antes de aceptar una declaración",
+    "cardLabel": "Garantía",
+    "cta": {
+      "note": "Tómanos la palabra con las tres. Únete a la lista de espera y declara cuando Taxly abra para el año fiscal 2026.",
+      "button": "Únete a la lista de espera"
+    }
   },
   "guarantees": {
     "heading": "Tres promesas que realmente cumplimos",
@@ -1687,7 +1702,36 @@
       {
         "q": "¿Cuánto cobra Taxly?",
         "a": "Precios planeados, bloqueados desde el inicio: declaraciones W-2 simples gratis (federal más un estado), 39 dólares Deluxe, 69 para trabajo por cuenta propia, 29 por estado adicional. Taxly está en pre-lanzamiento y abre para la temporada 2027 — únete a la lista de espera para acceso primero."
+      },
+      {
+        "q": "Si existen opciones gratis, ¿por qué pagar a Taxly?",
+        "a": "Si una puerta gratis cubre toda tu situación, úsala — para eso existe esta página. Pagas a Taxly cuando tu situación supera las puertas (ingresos 1099, una HSA, deducciones detalladas, un estado que no participa) y prefieres ver 9 o 9 fijados por adelantado a chocar con un muro de pago sorpresa a mitad del camino — con tu primer estado incluido y tres garantías por escrito respaldando la declaración."
       }
-    ]
+    ],
+    "faqHeading": "Preguntas frecuentes",
+    "why": {
+      "heading": "El caso honesto para pagarnos",
+      "intro": "Si una opción gratis de arriba cubre toda tu situación, úsala — lo decimos en serio. Aquí es donde nos ganamos la tarifa:",
+      "items": [
+        {
+          "title": "Tu situación superó las puertas gratis",
+          "text": "Un ingreso 1099, una HSA, deducciones detalladas o un estado que no participa te sacan de todas las puertas gratis de arriba. En el software de emboscada, ese es el momento en que aparece un muro de pago a mitad del camino. Con Taxly viste 9 o 9 en la primera pantalla — y quedó fijado."
+        },
+        {
+          "title": "Tu primera declaración estatal está incluida",
+          "text": "Cada plan de Taxly — incluido el Gratis — cubre la federal más tu primer estado. El clásico “federal gratis, estado a 0 al pagar” es exactamente el truco del que esta página te advierte, así que lo eliminamos por diseño."
+        },
+        {
+          "title": "Alguien respalda la declaración",
+          "text": "Tres garantías por escrito: reembolso máximo, precisión — una multa causada por nuestro cálculo la pagamos nosotros — y orientación en auditorías cuando el IRS te escribe. Declara con la herramienta gratis del gobierno y estás solo desde el día siguiente a la aceptación."
+        },
+        {
+          "title": "Lenguaje claro, de principio a fin",
+          "text": "Una entrevista guiada hace preguntas y llena el 1040 tras bambalinas — sin campos crudos de formulario, sin jerga, y tu declaración anterior se importa de un PDF de TurboTax o H&R Block en vez de reescribirse."
+        }
+      ],
+      "linkGuarantees": "Lee las tres garantías",
+      "linkPricing": "Ver los precios completos"
+    }
   }
 }

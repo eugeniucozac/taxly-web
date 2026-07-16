@@ -225,7 +225,15 @@
       "description": "Taxly employees cannot access your tax data without your explicit permission. All internal access is logged and audited."
     },
     "certBadge": "SOC 2 Type II (in progress)",
-    "certNote": "We are actively pursuing SOC 2 Type II certification. Our infrastructure follows its controls today."
+    "certNote": "We are actively pursuing SOC 2 Type II certification. Our infrastructure follows its controls today.",
+    "eyebrow": "Security",
+    "chip": "How your data will be protected",
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027, and this page describes the security build it launches with. Today this website stores almost nothing — the note below has the details.",
+    "today": {
+      "heading": "And today, before launch?",
+      "text": "This marketing site has no accounts and no tax-data database. The free calculators run entirely in your browser, and the only things we keep are a waitlist email if you give one and a contact message if you send one. The security described above ships with the product — and will be re-verified before any taxpayer data flows.",
+      "linksLabel": "The fine print:"
+    }
   },
   "guaranteesPage": {
     "heading": "Three promises we actually keep",
@@ -257,7 +265,14 @@
       "howText": "Forward the IRS or state notice to support@gettaxly.com. A tax specialist will review it and get back to you within one business day with a plain-English explanation and next steps.",
       "limits": "Audit support means guidance and assistance, not legal representation. For full representation before the IRS, consult a licensed CPA or tax attorney."
     },
-    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These are the guarantees we launch with — the full written policy terms will be published on this page before we accept a single return."
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These are the guarantees we launch with — the full written policy terms will be published on this page before we accept a single return.",
+    "eyebrow": "Guarantees",
+    "chip": "In writing before we accept a return",
+    "cardLabel": "Guarantee",
+    "cta": {
+      "note": "Hold us to all three. Join the waitlist and file when Taxly opens for TY2026.",
+      "button": "Join the TY2026 waitlist"
+    }
   },
   "guarantees": {
     "heading": "Three promises we actually keep",
@@ -1687,7 +1702,36 @@
       {
         "q": "What does Taxly charge?",
         "a": "Planned pricing, locked at the start: simple W-2 returns free (federal plus one state), $39 Deluxe, $69 self-employed, $29 per additional state. Taxly is pre-launch and opens for the 2027 season — join the waitlist for first access."
+      },
+      {
+        "q": "If free options exist, why pay Taxly at all?",
+        "a": "If a free gate fits your whole situation, use it — that’s what this page is for. You pay Taxly when your situation outgrows the gates (1099 income, an HSA, itemizing, a non-participating state) and you’d rather see a locked 9 or 9 up front than hit a surprise paywall mid-flow — with your first state included and three written guarantees standing behind the return."
       }
-    ]
+    ],
+    "faqHeading": "FAQ",
+    "why": {
+      "heading": "The honest case for paying us",
+      "intro": "If a free option above covers your whole situation, use it — we mean that. Here is where we earn the fee instead:",
+      "items": [
+        {
+          "title": "Your situation outgrew the free gates",
+          "text": "A 1099 side gig, an HSA, itemizing, or a state that doesn’t participate pushes you out of every free gate above. On ambush software that’s the moment a paywall appears mid-flow. With Taxly you saw 9 or 9 on the first screen — and it was locked."
+        },
+        {
+          "title": "Your first state return is included",
+          "text": "Every Taxly tier — including Free — covers federal plus your first state. The classic “free federal, 0 state at checkout” move is the exact trick this page exists to warn you about, so we designed it out."
+        },
+        {
+          "title": "Someone stands behind the return",
+          "text": "Three written guarantees: maximum refund, accuracy — a penalty caused by our math is ours to pay — and audit guidance when the IRS writes to you. File with the free government tool and you’re on your own the day after acceptance."
+        },
+        {
+          "title": "Plain English, start to finish",
+          "text": "A guided interview asks questions and fills the 1040 behind the scenes — no raw form fields, no jargon, and your prior return imports from a TurboTax or H&R Block PDF instead of being retyped."
+        }
+      ],
+      "linkGuarantees": "Read the three guarantees",
+      "linkPricing": "See the full pricing"
+    }
   }
 }
