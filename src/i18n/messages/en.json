@@ -1112,7 +1112,6 @@
     }
   },
   "refundEstimator": {
-    "badge": "Free estimator — TY2026",
     "heading": "Estimate your federal tax refund",
     "subheading": "Answer 5 questions. See your estimate instantly. No account needed.",
     "filingStatus": {
@@ -1168,7 +1167,9 @@
         "q": "When will I get my refund after filing?",
         "a": "The IRS typically issues refunds within 21 days of accepting an e-filed return. You can track yours at irs.gov/refunds."
       }
-    ]
+    ],
+    "formTag": "1040",
+    "eyebrow": "Free tool"
   },
   "cookieBanner": {
     "title": "Cookies",
@@ -1530,7 +1531,8 @@
           "q": "Is this estimate exact?",
           "a": "No — it's an estimate for orientation. It doesn't include interest, first-time penalty abatement, or the reduced rate under a direct-debit payment plan. The IRS's own notice is the authoritative number."
         }
-      ]
+      ],
+      "formTag": "IRS"
     },
     "quarterly": {
       "eyebrow": "Free tool",
@@ -1573,9 +1575,14 @@
           "q": "What happens if I miss a quarter?",
           "a": "An underpayment penalty accrues per period, based on how long the shortfall stays unpaid. You can't retroactively fix a missed date, but paying as soon as you can stops the meter earlier and costs less."
         }
-      ]
+      ],
+      "formTag": "1040-ES"
     },
-    "faqHeading": "Questions about this tool"
+    "faqHeading": "Questions about this tool",
+    "loadExample": "Load an example",
+    "inputsLabel": "Your numbers",
+    "chipNote": "No signup · runs in your browser",
+    "moreHeading": "More free tools"
   },
   "homeExtras": {
     "toolsHeading": "Free tools, no signup",

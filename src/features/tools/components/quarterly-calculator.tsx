@@ -24,6 +24,7 @@ const fmt = (n: number) =>
 
 export function QuarterlyCalculator() {
   const t = useTranslations("tools.quarterly");
+  const tShared = useTranslations("tools");
   const [priorTaxRaw, setPriorTaxRaw] = useState("");
   const [withholdingRaw, setWithholdingRaw] = useState("0");
   const [profitRaw, setProfitRaw] = useState("");
@@ -47,9 +48,38 @@ export function QuarterlyCalculator() {
     trackEvent("tool_complete", { tool: "quarterly-tax" });
   }
 
+  // Riley from the hub's practice section: $12k prior tax, $4k withholding, $40k profit.
+  function loadExample() {
+    setPriorTaxRaw("12,000");
+    setWithholdingRaw("4,000");
+    setProfitRaw("40,000");
+    setHighAgi(false);
+    setError(null);
+    setResult({
+      q: safeHarborQuarterly({ priorYearTax: 12000, highAgi: false, expectedWithholding: 4000 }),
+      seTax: selfEmploymentTax(40000),
+    });
+    trackEvent("tool_example", { tool: "quarterly-tax" });
+  }
+
   return (
     <div className="mx-auto max-w-xl">
-      <div className="space-y-5 rounded-2xl border bg-card p-6 shadow-sm">
+      <div className="overflow-hidden rounded-xl border-[1.5px] border-foreground bg-card shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+        <div className="flex items-stretch justify-between border-b-[1.5px] border-foreground text-xs font-bold uppercase tracking-wider">
+          <span className="flex items-stretch">
+            <span className="flex items-center border-r-[1.5px] border-foreground px-3 py-2 font-mono text-primary">
+              {t("formTag")}
+            </span>
+            <span className="flex items-center px-3 py-2">{tShared("inputsLabel")}</span>
+          </span>
+          <button
+            onClick={loadExample}
+            className="border-l-[1.5px] border-foreground px-3 text-[11px] font-semibold normal-case tracking-normal text-primary transition hover:bg-sky-50 dark:hover:bg-sky-500/10"
+          >
+            {tShared("loadExample")}
+          </button>
+        </div>
+        <div className="space-y-5 p-6">
         <div>
           <label htmlFor="q-prior" className="mb-1.5 block text-sm font-medium">
             {t("priorLabel")}
@@ -132,6 +162,7 @@ export function QuarterlyCalculator() {
         >
           {t("calculate")}
         </button>
+        </div>
       </div>
 
       {result && (

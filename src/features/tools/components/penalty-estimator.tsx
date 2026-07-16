@@ -23,6 +23,7 @@ const fmt = (n: number) =>
 
 export function PenaltyEstimator() {
   const t = useTranslations("tools.penalty");
+  const tShared = useTranslations("tools");
   const [taxRaw, setTaxRaw] = useState("");
   const [monthsRaw, setMonthsRaw] = useState("1");
   const [filedOnTime, setFiledOnTime] = useState(false);
@@ -43,9 +44,34 @@ export function PenaltyEstimator() {
     trackEvent("tool_complete", { tool: "penalty-estimator" });
   }
 
+  // Sam from the hub's practice section: $3,000 owed, 2 months late, never filed.
+  function loadExample() {
+    setTaxRaw("3,000");
+    setMonthsRaw("2");
+    setFiledOnTime(false);
+    setError(null);
+    setResult(estimatePenalty({ unpaidTax: 3000, monthsLate: 2, filedOnTime: false }));
+    trackEvent("tool_example", { tool: "penalty-estimator" });
+  }
+
   return (
     <div className="mx-auto max-w-xl">
-      <div className="space-y-5 rounded-2xl border bg-card p-6 shadow-sm">
+      <div className="overflow-hidden rounded-xl border-[1.5px] border-foreground bg-card shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+        <div className="flex items-stretch justify-between border-b-[1.5px] border-foreground text-xs font-bold uppercase tracking-wider">
+          <span className="flex items-stretch">
+            <span className="flex items-center border-r-[1.5px] border-foreground px-3 py-2 font-mono text-primary">
+              {t("formTag")}
+            </span>
+            <span className="flex items-center px-3 py-2">{tShared("inputsLabel")}</span>
+          </span>
+          <button
+            onClick={loadExample}
+            className="border-l-[1.5px] border-foreground px-3 text-[11px] font-semibold normal-case tracking-normal text-primary transition hover:bg-sky-50 dark:hover:bg-sky-500/10"
+          >
+            {tShared("loadExample")}
+          </button>
+        </div>
+        <div className="space-y-5 p-6">
         <div>
           <label htmlFor="penalty-tax" className="mb-1.5 block text-sm font-medium">
             {t("taxLabel")}
@@ -101,6 +127,7 @@ export function PenaltyEstimator() {
         >
           {t("calculate")}
         </button>
+        </div>
       </div>
 
       {result && (

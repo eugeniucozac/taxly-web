@@ -15,16 +15,17 @@ function formatUSD(n: number) {
 }
 
 interface NumberInputProps {
+  id: string;
   label: string;
   hint?: string;
   value: number;
   onChange: (v: number) => void;
 }
 
-function NumberInput({ label, hint, value, onChange }: NumberInputProps) {
+function NumberInput({ id, label, hint, value, onChange }: NumberInputProps) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-muted-foreground">
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-muted-foreground">
         {label}
       </label>
       {hint && <p className="mb-1.5 text-xs text-muted-foreground">{hint}</p>}
@@ -33,6 +34,7 @@ function NumberInput({ label, hint, value, onChange }: NumberInputProps) {
           $
         </span>
         <input
+          id={id}
           type="number"
           min={0}
           value={value || ""}
@@ -80,6 +82,7 @@ function BreakdownRow({ label, value, highlight, negative, indent }: BreakdownRo
 
 export function RefundEstimator() {
   const t = useTranslations("refundEstimator");
+  const tShared = useTranslations("tools");
   const locale = useLocale();
 
   const [filingStatus, setFilingStatus] = useState<FilingStatus>("single");
@@ -111,11 +114,36 @@ export function RefundEstimator() {
     { value: "hoh", label: t("filingStatus.hoh") },
   ];
 
+  // Alex from the hub's practice section: single, $65k wages, $9.2k withheld.
+  function loadExample() {
+    setFilingStatus("single");
+    setWages(65000);
+    setWithholding(9200);
+    setFreelance(0);
+    setChildren(0);
+    trackEvent("tool_example", { tool: "refund-estimator" });
+  }
+
   return (
     <div className="mx-auto max-w-5xl">
       <div className="grid gap-8 lg:grid-cols-2">
         {/* ── Inputs ── */}
-        <div className="space-y-5 rounded-2xl border bg-card p-6 shadow-sm">
+        <div className="self-start overflow-hidden rounded-xl border-[1.5px] border-foreground bg-card shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+          <div className="flex items-stretch justify-between border-b-[1.5px] border-foreground text-xs font-bold uppercase tracking-wider">
+            <span className="flex items-stretch">
+              <span className="flex items-center border-r-[1.5px] border-foreground px-3 py-2 font-mono text-primary">
+                {t("formTag")}
+              </span>
+              <span className="flex items-center px-3 py-2">{tShared("inputsLabel")}</span>
+            </span>
+            <button
+              onClick={loadExample}
+              className="border-l-[1.5px] border-foreground px-3 text-[11px] font-semibold normal-case tracking-normal text-primary transition hover:bg-sky-50 dark:hover:bg-sky-500/10"
+            >
+              {tShared("loadExample")}
+            </button>
+          </div>
+          <div className="space-y-5 p-6">
           {/* Filing status */}
           <div>
             <p className="mb-2 text-sm font-medium text-muted-foreground">
@@ -138,9 +166,9 @@ export function RefundEstimator() {
             </div>
           </div>
 
-          <NumberInput label={t("wages")} value={wages} onChange={setWages} />
-          <NumberInput label={t("withholding")} hint={t("withholdingHint")} value={withholding} onChange={setWithholding} />
-          <NumberInput label={t("freelance")} hint={t("freelanceHint")} value={freelance} onChange={setFreelance} />
+          <NumberInput id="refund-wages" label={t("wages")} value={wages} onChange={setWages} />
+          <NumberInput id="refund-withholding" label={t("withholding")} hint={t("withholdingHint")} value={withholding} onChange={setWithholding} />
+          <NumberInput id="refund-freelance" label={t("freelance")} hint={t("freelanceHint")} value={freelance} onChange={setFreelance} />
 
           {/* Children stepper */}
           <div>
@@ -164,6 +192,7 @@ export function RefundEstimator() {
                 +
               </button>
             </div>
+          </div>
           </div>
         </div>
 

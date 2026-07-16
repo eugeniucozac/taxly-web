@@ -1112,7 +1112,6 @@
     }
   },
   "refundEstimator": {
-    "badge": "Calculadora gratis — AÑO FISCAL 2026",
     "heading": "Estima tu reembolso federal de impuestos",
     "subheading": "Responde 5 preguntas. Ve tu estimado al instante. Sin necesidad de cuenta.",
     "filingStatus": {
@@ -1168,7 +1167,9 @@
         "q": "¿Cuándo recibiré mi reembolso después de declarar?",
         "a": "El IRS normalmente emite reembolsos dentro de los 21 días de aceptar una declaración electrónica. Puedes rastrear el tuyo en irs.gov/refunds."
       }
-    ]
+    ],
+    "formTag": "1040",
+    "eyebrow": "Herramienta gratis"
   },
   "cookieBanner": {
     "title": "Cookies",
@@ -1530,7 +1531,8 @@
           "q": "¿Este estimado es exacto?",
           "a": "No — es un estimado para orientarte. No incluye intereses, la condonación por primera vez ni la tasa reducida bajo un plan de pago con débito directo. El aviso del propio IRS es el número autoritativo."
         }
-      ]
+      ],
+      "formTag": "IRS"
     },
     "quarterly": {
       "eyebrow": "Herramienta gratis",
@@ -1573,9 +1575,14 @@
           "q": "¿Qué pasa si salto un trimestre?",
           "a": "Se acumula una multa por pago insuficiente por período, según cuánto tiempo quede impago el faltante. No puedes arreglar retroactivamente una fecha perdida, pero pagar cuanto antes detiene el taxímetro más temprano y cuesta menos."
         }
-      ]
+      ],
+      "formTag": "1040-ES"
     },
-    "faqHeading": "Preguntas sobre esta herramienta"
+    "faqHeading": "Preguntas sobre esta herramienta",
+    "loadExample": "Cargar un ejemplo",
+    "inputsLabel": "Tus números",
+    "chipNote": "Sin registro · corre en tu navegador",
+    "moreHeading": "Más herramientas gratis"
   },
   "homeExtras": {
     "toolsHeading": "Herramientas gratis, sin registro",
