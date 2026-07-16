@@ -93,20 +93,24 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-secondary">
-      {/* CTA strip */}
+      {/* CTA strip — styled as the brand's form card: ink border, offset shadow, dotted fill-in rule */}
       <div className="border-b">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-6 py-12 sm:flex-row sm:items-center">
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">{t("ctaHeadline")}</h2>
-            <p className="mt-2 text-sm text-muted-foreground">{t("ctaNote")}</p>
-          </div>
-          <Link
-            href={`/${locale}#waitlist`}
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-md border-[1.5px] border-foreground bg-background p-8 shadow-[4px_4px_0_0] shadow-sky-200 dark:shadow-sky-500/15 sm:flex-row sm:items-center">
+            <div className="min-w-0">
+              <h2 className="text-2xl font-bold tracking-tight">{t("ctaHeadline")}</h2>
+              <p className="mt-2 border-b border-dotted border-muted-foreground/40 pb-1 text-sm text-muted-foreground">
+                {t("ctaNote")}
+              </p>
+            </div>
+            <Link
+              href={`/${locale}#waitlist`}
  className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
-          >
-            {t("ctaButton")}
-            <ArrowRight size={16} aria-hidden />
-          </Link>
+            >
+              {t("ctaButton")}
+              <ArrowRight size={16} aria-hidden />
+            </Link>
+          </div>
         </div>
       </div>
 

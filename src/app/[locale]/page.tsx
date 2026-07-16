@@ -76,9 +76,19 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
     <>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-cyan-50 dark:from-sky-950/40 dark:via-background dark:to-cyan-950/30 pb-24 pt-20">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-1.5 text-sm font-medium text-sky-700 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-sky-200">
-            {t("hero.badge")}
+        {/* Taxly's form signature — the ruled fill-in lines of a tax form, fading out below the fold */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          <div className="absolute inset-0 [background-image:repeating-linear-gradient(to_bottom,transparent_0,transparent_31px,rgba(2,132,199,0.08)_31px,rgba(2,132,199,0.08)_32px)] [mask-image:radial-gradient(ellipse_70%_65%_at_50%_0%,black,transparent_78%)]" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
+          {/* Form-box chip — the same form-number cell the 404's "Form 404" card wears */}
+          <span className="mb-6 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-sm font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+            <span className="flex items-center border-r-[1.5px] border-foreground bg-sky-100 px-2.5 py-1.5 text-xs font-bold tracking-tight text-foreground dark:bg-sky-500/20">
+              1040
+            </span>
+            <span className="flex items-center px-3.5 py-1.5 text-sky-700 dark:text-sky-200">
+              {t("hero.badge")}
+            </span>
           </span>
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-foreground md:text-6xl">
             {t("hero.heading")}
