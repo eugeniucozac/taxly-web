@@ -1265,19 +1265,61 @@
   },
   "notFound": {
     "heading": "Page not found",
-    "text": "That page doesn't exist — it may have moved, or the link was mistyped. The free tools and guides below are the fastest way back.",
+    "text": "That page doesn’t exist — it may have moved, or the link was mistyped. The free tools and guides below are the fastest way back.",
     "home": "Back to home",
     "tools": "Explore free tools",
     "card": {
       "formWord": "Form",
       "title": "Missing Page Return",
-      "dept": "Department of Pages That Moved · Do not file",
+      "dept": "Department of Pages That Moved",
+      "yearWord": "Tax year",
+      "yearFill": "any",
       "line1": "1. Page you were looking for",
       "fill1": "not found",
       "line2": "2. Penalty owed",
       "fill2": "$0.00",
-      "line3": "3. Fastest way back (check one)",
-      "fill3": "☑ below"
+      "line3": "3. Interest accrued",
+      "fill3": "$0.00",
+      "line4": "4. Refund due",
+      "fill4": "one working link",
+      "status": "Filing status:",
+      "statusSingle": "☐ Single",
+      "statusJoint": "☐ Jointly",
+      "statusLost": "☑ Lost",
+      "sign": "Sign here",
+      "signNote": "(you don’t have to)",
+      "date": "Date:",
+      "dateFill": "today",
+      "stamp": "Do not file"
+    },
+    "destinations": "Where people usually want to go",
+    "destinationsNote": "free means free — no signup",
+    "freeBadge": "Free",
+    "links": {
+      "refund": {
+        "title": "Refund estimator",
+        "desc": "A five-minute read on your refund or bill — no signup, no email."
+      },
+      "freeFiling": {
+        "title": "Actually free filing",
+        "desc": "Every genuinely free way to file, and what “free” usually hides."
+      },
+      "turbotax": {
+        "title": "TurboTax alternatives",
+        "desc": "The honest comparison — free government options named first."
+      },
+      "quarterly": {
+        "title": "Quarterly tax calculator",
+        "desc": "Safe-harbor amounts and the four due dates, computed for you."
+      },
+      "pricing": {
+        "title": "Pricing",
+        "desc": "Flat, locked tiers — the price you see is the price you pay."
+      },
+      "blog": {
+        "title": "Guides & blog",
+        "desc": "Plain-English tax guides that name the free option when it wins."
+      }
     }
   },
   "legal": {

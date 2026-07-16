@@ -1265,19 +1265,61 @@
   },
   "notFound": {
     "heading": "Página no encontrada",
-    "text": "Esa página no existe — puede que se haya movido o que el enlace esté mal escrito. Las herramientas y guías gratuitas son el camino de vuelta más rápido.",
+    "text": "Esa página no existe — puede que se haya movido o que el enlace esté mal escrito. Las herramientas y guías gratuitas de abajo son el camino de vuelta más rápido.",
     "home": "Volver al inicio",
     "tools": "Ver herramientas gratis",
     "card": {
       "formWord": "Formulario",
       "title": "Declaración de Página Perdida",
-      "dept": "Departamento de Páginas que se Mudaron · No presentar",
+      "dept": "Departamento de Páginas que se Mudaron",
+      "yearWord": "Año fiscal",
+      "yearFill": "cualquiera",
       "line1": "1. Página que buscabas",
       "fill1": "no encontrada",
       "line2": "2. Multa a pagar",
       "fill2": "$0.00",
-      "line3": "3. Camino más rápido de vuelta (marca uno)",
-      "fill3": "☑ abajo"
+      "line3": "3. Intereses acumulados",
+      "fill3": "$0.00",
+      "line4": "4. Reembolso a tu favor",
+      "fill4": "un enlace que funciona",
+      "status": "Estado civil:",
+      "statusSingle": "☐ Soltero",
+      "statusJoint": "☐ Conjunta",
+      "statusLost": "☑ Perdido",
+      "sign": "Firma aquí",
+      "signNote": "(no hace falta)",
+      "date": "Fecha:",
+      "dateFill": "hoy",
+      "stamp": "No presentar"
+    },
+    "destinations": "Adónde suele ir la gente",
+    "destinationsNote": "gratis significa gratis — sin registro",
+    "freeBadge": "Gratis",
+    "links": {
+      "refund": {
+        "title": "Estimador de reembolso",
+        "desc": "En cinco minutos sabes tu reembolso o saldo — sin registro ni correo."
+      },
+      "freeFiling": {
+        "title": "Declarar gratis de verdad",
+        "desc": "Todas las formas realmente gratuitas de declarar, y lo que «gratis» suele esconder."
+      },
+      "turbotax": {
+        "title": "Alternativas a TurboTax",
+        "desc": "La comparación honesta — las opciones gratuitas del gobierno, nombradas primero."
+      },
+      "quarterly": {
+        "title": "Calculadora de impuestos trimestrales",
+        "desc": "Los montos de puerto seguro y las cuatro fechas límite, calculados por ti."
+      },
+      "pricing": {
+        "title": "Precios",
+        "desc": "Niveles fijos y bloqueados — el precio que ves es el que pagas."
+      },
+      "blog": {
+        "title": "Guías y blog",
+        "desc": "Guías de impuestos en lenguaje claro que nombran la opción gratuita cuando gana."
+      }
     }
   },
   "legal": {
