@@ -713,7 +713,9 @@
     "badge": "Garantía de precio fijo — sin sorpresas al pagar",
     "copyright": "© {year} Taxly Inc. Todos los derechos reservados.",
     "tagline": "Impuestos en EE. UU., simples y claros.",
-    "disclaimer": "Taxly no es un bufete de abogados ni una firma de CPA. Esto no es asesoramiento fiscal."
+    "disclaimer": "Taxly no es un bufete de abogados ni una firma de CPA. Esto no es asesoramiento fiscal.",
+    "turbotaxAlternative": "Alternativas a TurboTax",
+    "freeTaxFiling": "Declarar gratis de verdad"
   },
   "metadata": {
     "home": {
@@ -721,19 +723,19 @@
       "description": "Declaración guiada de impuestos federales y estatales para individuos, freelancers y familias. Gratis para declaraciones simples con W-2."
     },
     "pricing": {
-      "title": "Precios — Taxly",
+      "title": "Precios para declarar impuestos — tarifas fijas — Taxly",
       "description": "Precios transparentes sin cargos sorpresa. Federal gratis para declaraciones simples. Deluxe y Premium para cada situación."
     },
     "howItWorks": {
-      "title": "Cómo Funciona — Taxly",
+      "title": "Cómo funciona declarar impuestos en línea — Taxly",
       "description": "Presenta tus impuestos federales y estatales en tres pasos simples. Importa documentos, responde preguntas y envía por e-file en minutos."
     },
     "features": {
-      "title": "Funciones — Taxly",
+      "title": "Funciones para declarar impuestos sin sorpresas — Taxly",
       "description": "Compatible con W-2, 1099, inversiones, propietarios, trabajadores independientes y más."
     },
     "security": {
-      "title": "Seguridad — Taxly",
+      "title": "Seguridad de tus datos fiscales — cifrado, sin venta de datos — Taxly",
       "description": "Cifrado AES-256, TLS 1.3, autenticación multifactor. Tus datos fiscales siempre protegidos."
     },
     "guarantees": {
@@ -741,7 +743,7 @@
       "description": "Garantía de reembolso máximo, garantía de exactitud al 100% y apoyo en auditorías — sin letra pequeña."
     },
     "help": {
-      "title": "Centro de Ayuda — Taxly",
+      "title": "Centro de Ayuda — preguntas sobre declarar impuestos — Taxly",
       "description": "Respuestas a preguntas frecuentes sobre presentación, precios, seguridad y reembolsos."
     },
     "about": {
@@ -761,7 +763,7 @@
       "description": "Términos que rigen el uso del software de preparación de impuestos de Taxly."
     },
     "blog": {
-      "title": "Blog — Taxly",
+      "title": "Guías y fechas límite de impuestos — el blog de Taxly",
       "description": "Guías en español claro sobre impuestos en EE. UU. — plazos, deducciones, trabajo independiente y más."
     },
     "refundEstimator": {
@@ -795,6 +797,14 @@
     "quarterlyTax": {
       "title": "Calculadora de pagos trimestrales (1040-ES) — Taxly",
       "description": "Calcula los pagos trimestrales de puerto seguro desde el impuesto del año pasado, anticipa el 15.3% de impuesto de trabajo por cuenta propia y evita la multa."
+    },
+    "turbotaxAlternative": {
+      "title": "Alternativas a TurboTax — comparación honesta — Taxly",
+      "description": "Primero las opciones gratuitas del gobierno, luego el rival económico que merece crédito, y dónde encaja Taxly con precios fijos. Una guía honesta de un competidor."
+    },
+    "freeTaxFiling": {
+      "title": "Declarar impuestos gratis de verdad — opciones reales — Taxly",
+      "description": "IRS Direct File, Free File, programas de voluntarios y lo que 'gratis' suele esconder. Todas las formas genuinamente gratuitas de declarar, contadas por un competidor."
     }
   },
   "refundEstimator": {
@@ -836,7 +846,25 @@
       "sub": "Taxly te guía con las mismas preguntas — y también hace la presentación.",
       "button": "Comenzar gratis con Taxly"
     },
-    "disclaimer": "Esta herramienta proporciona estimados únicamente y no constituye asesoramiento fiscal. Basada en la ley fiscal proyectada para el AÑO FISCAL 2026. Los resultados reales pueden diferir. Consulta a un profesional fiscal para tu situación específica."
+    "disclaimer": "Esta herramienta proporciona estimados únicamente y no constituye asesoramiento fiscal. Basada en la ley fiscal proyectada para el AÑO FISCAL 2026. Los resultados reales pueden diferir. Consulta a un profesional fiscal para tu situación específica.",
+    "faq": [
+      {
+        "q": "¿Qué tan preciso es este estimado de reembolso?",
+        "a": "Es un estimado direccional construido con los números que ingresas y supuestos declarados. Tu reembolso real depende de tu declaración completa — cada crédito, cada deducción y la retención exacta de tu W-2."
+      },
+      {
+        "q": "¿Necesito una cuenta? ¿Guardan lo que escribo?",
+        "a": "No. El estimador corre en tu navegador, no pide registro ni correo, y no guardamos lo que ingresas."
+      },
+      {
+        "q": "¿Por qué mi reembolso real podría diferir del estimado?",
+        "a": "Razones comunes: ingresos que el estimado no incluyó (intereses, trabajo de plataformas), créditos que entran o salen según el ingreso, y los impuestos estatales — esta herramienta se enfoca en tu panorama federal."
+      },
+      {
+        "q": "¿Cuándo recibiré mi reembolso después de declarar?",
+        "a": "El IRS normalmente emite reembolsos dentro de los 21 días de aceptar una declaración electrónica. Puedes rastrear el tuyo en irs.gov/refunds."
+      }
+    ]
   },
   "cookieBanner": {
     "title": "Cookies",
@@ -1039,7 +1067,25 @@
         "abatement": "3. ¿Primera vez que te pasa? Pregunta al IRS por la reducción de multa por primera vez — muchos califican y nunca la piden.",
         "cta": "Taxly abre para el año fiscal 2026 — únete a la lista"
       },
-      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las tasas y el piso de multa mínima cambian; verifica las cifras actuales en irs.gov/payments/penalties antes de actuar."
+      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las tasas y el piso de multa mínima cambian; verifica las cifras actuales en irs.gov/payments/penalties antes de actuar.",
+      "faq": [
+        {
+          "q": "¿Cómo se calculan las multas del IRS por presentar tarde?",
+          "a": "La multa por no presentar es el 5% del impuesto impago por mes (o fracción de mes), con tope del 25%. La multa por no pagar es el 0,5% mensual, también con tope del 25%. En los meses donde aplican ambas, el cargo combinado es 5%. Los intereses se acumulan aparte — verifica las tasas vigentes en irs.gov."
+        },
+        {
+          "q": "¿Hay una multa mínima por presentar muy tarde?",
+          "a": "Sí. Si tu declaración lleva más de 60 días de retraso, aplica una multa mínima — un monto fijo que el IRS ajusta periódicamente, o el 100% del impuesto impago si es menor. Consulta la cifra vigente en irs.gov."
+        },
+        {
+          "q": "¿Y si me deben un reembolso?",
+          "a": "Ambas multas son porcentajes del impuesto impago, así que si te corresponde un reembolso no hay multa por no presentar ni por no pagar. Pero debes presentar dentro de tres años para reclamarlo — después se pierde."
+        },
+        {
+          "q": "¿Este estimado es exacto?",
+          "a": "No — es un estimado para orientarte. No incluye intereses, la condonación por primera vez ni la tasa reducida bajo un plan de pago con débito directo. El aviso del propio IRS es el número autoritativo."
+        }
+      ]
     },
     "quarterly": {
       "eyebrow": "Herramienta gratis",
@@ -1064,8 +1110,27 @@
         "text": "El nivel Premium de Taxly está construido exactamente para esta declaración — ingreso 1099, deducciones encontradas, recordatorios trimestrales.",
         "button": "Unirme a la lista del año fiscal 2026"
       },
-      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las reglas de puerto seguro y las fechas vienen del Formulario 1040-ES del IRS — verifica las cifras del año actual en irs.gov."
-    }
+      "disclaimer": "Estimación ilustrativa, no asesoramiento fiscal. Las reglas de puerto seguro y las fechas vienen del Formulario 1040-ES del IRS — verifica las cifras del año actual en irs.gov.",
+      "faq": [
+        {
+          "q": "¿Quién tiene que hacer pagos trimestrales estimados?",
+          "a": "En general, cualquiera que espere deber al menos 1.000 dólares en el año después de retenciones y créditos — típicamente freelancers, contratistas, arrendadores e inversionistas. Los empleados con ingreso extra a menudo pueden evitarlos aumentando la retención de su cheque."
+        },
+        {
+          "q": "¿Qué es la regla del puerto seguro?",
+          "a": "Paga el 100% del impuesto total del año pasado (110% si tu ingreso bruto ajustado superó los 150.000 dólares) en cuatro cuotas y evitas multas por pago insuficiente sin importar cuánto termines debiendo este año. Verifica los detalles en irs.gov (Formulario 1040-ES)."
+        },
+        {
+          "q": "¿Cuándo vencen los pagos estimados?",
+          "a": "Aproximadamente el 15 de abril, 15 de junio, 15 de septiembre y 15 de enero del año siguiente — los períodos son desiguales, no trimestres reales. Las fechas se corren por fines de semana y feriados; verifica el calendario vigente en irs.gov."
+        },
+        {
+          "q": "¿Qué pasa si salto un trimestre?",
+          "a": "Se acumula una multa por pago insuficiente por período, según cuánto tiempo quede impago el faltante. No puedes arreglar retroactivamente una fecha perdida, pero pagar cuanto antes detiene el taxímetro más temprano y cuesta menos."
+        }
+      ]
+    },
+    "faqHeading": "Preguntas sobre esta herramienta"
   },
   "homeExtras": {
     "toolsHeading": "Herramientas gratis, sin registro",
@@ -1073,5 +1138,126 @@
     "guidesHeading": "Guías recientes",
     "guidesSub": "Guías fiscales en lenguaje claro que nombran la opción gratuita cuando es la mejor.",
     "guidesAll": "Todas las guías"
+  },
+  "turbotaxAlternative": {
+    "eyebrow": "La guía honesta",
+    "heading": "¿Buscas una alternativa a TurboTax?",
+    "intro": "Sí, somos competidores — y justo por eso esta guía nombra primero las opciones gratuitas del gobierno, da crédito al rival económico que lo merece y te dice claramente cuándo conviene quedarte donde estás. Si una recomendación de abajo no somos nosotros, es porque no deberíamos serlo.",
+    "options": [
+      {
+        "name": "IRS Direct File",
+        "tag": "Gratis · del gobierno",
+        "body": "La herramienta de declaración del propio IRS. Genuinamente gratuita — declaración federal y de estados participantes — y genuinamente buena si tu situación cabe dentro de sus líneas: ingresos W-2, deducción estándar, créditos comunes. Su disponibilidad se mueve con la política; revisa la lista de estados vigente antes de contar con ella.",
+        "linkLabel": "Cómo se compara Taxly con Direct File",
+        "href": "/vs/irs-direct-file"
+      },
+      {
+        "name": "IRS Free File",
+        "tag": "Gratis · con tope de ingresos",
+        "body": "Software de marca gratis mediante una alianza con el IRS si tu ingreso está bajo el tope del programa (se ajusta cada año — verifica en irs.gov). La trampa es la experiencia: te dirigen a productos de socios cuyo nivel gratuito termina donde tu situación fiscal se pone interesante.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "FreeTaxUSA",
+        "tag": "Rival económico",
+        "body": "La opción económica que se gana su reputación: declaración federal gratis para la mayoría de las situaciones, con una tarifa estatal modesta. La interfaz es más simple y el soporte más delgado — pero si el precio es tu único criterio, es el mejor trato hazlo-tú-mismo del mercado hoy.",
+        "linkLabel": "Taxly vs FreeTaxUSA, honestamente",
+        "href": "/vs/freetaxusa"
+      }
+    ],
+    "taxlyHeading": "Dónde encaja Taxly",
+    "taxlyBody": "El argumento de Taxly cabe en una frase: el precio que ves al empezar es el precio que pagas al declarar. Gratis para declaraciones W-2 simples, 39 dólares el nivel Deluxe federal, 69 para trabajo por cuenta propia, 29 por estado — fijados desde el inicio, sin emboscadas de mejora a mitad de camino. Estamos en pre-lanzamiento (abrimos para la temporada 2027), así que hoy la oferta honesta es un lugar en la lista de espera, no una caja de pago.",
+    "taxlyLink": "Lee la comparación completa Taxly vs TurboTax",
+    "stayHeading": "Cuándo conviene quedarte con TurboTax",
+    "stayItems": [
+      "Tu declaración es genuinamente compleja — varios estados, K-1, créditos raros — y quieres la cobertura de software más profunda disponible",
+      "Lo has usado por años, tu historial se importa limpio y el precio del final realmente no te molesta",
+      "Quieres el aparato de soporte ante auditorías de la marca más grande detrás de tu declaración"
+    ],
+    "ctaHeading": "¿Quieres que el precio que viste sea el precio que pagas?",
+    "ctaBody": "Únete a la lista de espera y te avisamos cuando Taxly abra para la temporada.",
+    "faq": [
+      {
+        "q": "¿Cuál es la mejor alternativa gratuita a TurboTax?",
+        "a": "Si calificas, IRS Direct File — la herramienta del propio gobierno, gratis para la declaración federal y de estados participantes. Si tu ingreso está bajo el tope anual, IRS Free File te da software de marca gratis. FreeTaxUSA cubre la mayoría de las demás situaciones con declaración federal gratis y una tarifa estatal pequeña."
+      },
+      {
+        "q": "¿Por qué TurboTax resulta tan caro al pagar?",
+        "a": "El precio anunciado y el precio final suelen diferir: el flujo sugiere mejoras cuando tu situación necesita otro formulario, y las declaraciones estatales se cobran aparte. Ese modelo es legal y común — y exactamente lo que los precios fijos y bloqueados existen para evitar."
+      },
+      {
+        "q": "¿Taxly ya está disponible?",
+        "a": "Todavía no — Taxly está en pre-lanzamiento y abre para la temporada de declaración de 2027. Los precios de esta página son los niveles planeados con precio bloqueado; la lista de espera recibe acceso primero."
+      },
+      {
+        "q": "¿Es difícil cambiar de software de impuestos?",
+        "a": "Menos de lo que crees. Tu declaración del año anterior (un PDF de cualquier software) lleva los números que una herramienta nueva necesita. El IRS además guarda transcripciones de salarios e ingresos que puedes descargar gratis en irs.gov si te falta algún documento."
+      }
+    ]
+  },
+  "freeTaxFiling": {
+    "eyebrow": "La lista honesta",
+    "heading": "Declarar impuestos gratis de verdad — todas las opciones reales",
+    "intro": "'Gratis' es la palabra más abusada del software de impuestos — los reguladores fueron tras la marca más grande por eso. Aquí está cada forma de declarar que es genuinamente gratuita, a quién le sirve cada una y lo que 'gratis' suele esconder. Nosotros vendemos declaración de impuestos, así que lee esto como un competidor mostrándote primero las salidas gratuitas.",
+    "options": [
+      {
+        "name": "IRS Direct File",
+        "tag": "Gratis · federal + algunos estados",
+        "body": "La herramienta del propio gobierno. Sin tope de ingresos, sin ventas adicionales — pero con una puerta estricta de situación: ingresos W-2, deducción estándar, créditos comunes, solo estados participantes. Si cabes, es la opción gratuita más limpia de Estados Unidos.",
+        "linkLabel": "Quién califica — nuestro desglose honesto",
+        "href": "/vs/irs-direct-file"
+      },
+      {
+        "name": "IRS Free File",
+        "tag": "Gratis · bajo el tope de ingresos",
+        "body": "Software comercial gratis mediante una alianza con el IRS cuando tu ingreso está bajo el tope anual del programa (verifica la cifra vigente en irs.gov). Entra por irs.gov — no por los sitios de las marcas, donde el camino 'gratis' tiene la costumbre de terminar en una pantalla de pago.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "VITA y AARP Tax-Aide",
+        "tag": "Gratis · en persona",
+        "body": "Voluntarios certificados por el IRS preparan tu declaración cara a cara, gratis — dirigido a ingresos moderados, personas mayores, discapacidades e inglés limitado. Los límites de ingreso y la disponibilidad varían; encuentra un sitio con el localizador de irs.gov.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "El nivel gratuito de Taxly",
+        "tag": "Gratis · declaraciones W-2 simples",
+        "body": "Cuando lancemos para la temporada 2027: declaraciones federales W-2 simples gratis, y el precio de todo lo demás mostrado antes de empezar y bloqueado. Hoy estamos en pre-lanzamiento — lo único en venta es la lista de espera.",
+        "linkLabel": "Mira los precios planeados completos",
+        "href": "/pricing"
+      }
+    ],
+    "hidesHeading": "Lo que 'gratis' suele esconder",
+    "hidesItems": [
+      "Declaraciones estatales — el clásico: lo federal es gratis, luego cada estado cuesta 30–60 dólares al pagar",
+      "Mejoras disparadas por formularios — un 1099, una HSA o deducciones detalladas te mueven en silencio a un nivel de pago",
+      "Pagar desde tu reembolso — una comodidad que normalmente suma su propia tarifa de procesamiento",
+      "'Orientación gratis' que se convierte en una revisión de pago antes de poder declarar"
+    ],
+    "honestyHeading": "Nuestra propia letra pequeña, dicha claramente",
+    "honestyBody": "El nivel gratuito de Taxly cubre declaraciones federales W-2 simples. El trabajo por cuenta propia cuesta 69 dólares, Deluxe 39, y cada declaración estatal 29 — eso no es gratis, y preferimos decirlo aquí que sorprenderte al pagar. Cada precio queda bloqueado cuando empiezas.",
+    "ctaHeading": "¿Quieres declarar sin letra pequeña?",
+    "ctaBody": "Únete a la lista de espera — acceso primero cuando Taxly abra para la temporada.",
+    "faq": [
+      {
+        "q": "¿Existe una forma realmente gratuita de declarar impuestos?",
+        "a": "Sí, varias: IRS Direct File (si tu situación califica), IRS Free File (si tu ingreso está bajo el tope), la preparación con voluntarios VITA/AARP (ingresos moderados, personas mayores) y niveles gratuitos como el de Taxly para declaraciones W-2 simples. Cada una tiene su puerta — lo gratis siempre viene con una condición de 'a quién le sirve'."
+      },
+      {
+        "q": "¿Por qué lo 'gratis' en impuestos se volvió polémico?",
+        "a": "Porque los anuncios de 'gratis' terminaban rutinariamente en cajas de pago. Los reguladores de EE. UU. fallaron contra la publicidad de la marca más grande exactamente por esto. El hábito seguro: entra a los programas gratuitos por irs.gov, y trata cualquier sugerencia de mejora a mitad del flujo como una etiqueta de precio."
+      },
+      {
+        "q": "¿Declarar el estado es gratis alguna vez?",
+        "a": "A veces: IRS Direct File incluye estados participantes, algunas ofertas de Free File incluyen la declaración estatal, y unos pocos estados tienen sus propios portales gratuitos. Con software comercial, asume que el estado cuesta extra hasta que veas lo contrario por escrito."
+      },
+      {
+        "q": "¿Cuánto cobra Taxly?",
+        "a": "Precios planeados, bloqueados desde el inicio: gratis para declaraciones federales W-2 simples, 39 dólares Deluxe, 69 para trabajo por cuenta propia, 29 por estado. Taxly está en pre-lanzamiento y abre para la temporada 2027 — únete a la lista de espera para acceso primero."
+      }
+    ]
   }
 }

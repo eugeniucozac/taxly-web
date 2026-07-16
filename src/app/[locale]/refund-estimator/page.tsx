@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { RefundEstimator } from "@/features/refund-estimator/components/refund-estimator";
+import { ToolFaq } from "@/features/tools/components/tool-faq";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { generateLocaleStaticParams, makeMetadata } from "@/lib/metadata";
 import type { LocalePageProps } from "@/types/page";
@@ -17,6 +18,7 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "refundEstimator" });
+  const tTools = await getTranslations({ locale, namespace: "tools" });
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -33,6 +35,12 @@ export default async function RefundEstimatorPage({ params }: LocalePageProps) {
       </div>
 
       <RefundEstimator />
+
+      <ToolFaq
+        items={t.raw("faq") as { q: string; a: string }[]}
+        heading={tTools("faqHeading")}
+        path={`/${locale}/refund-estimator`}
+      />
 
       {/* Waitlist (pre-launch conversion) */}
       <div id="waitlist" className="mx-auto mt-16 max-w-lg scroll-mt-24 text-center">

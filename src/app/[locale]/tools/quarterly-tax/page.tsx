@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { QuarterlyCalculator } from "@/features/tools/components/quarterly-calculator";
+import { ToolFaq } from "@/features/tools/components/tool-faq";
 import { makeMetadata } from "@/lib/metadata";
 import type { LocalePageProps } from "@/types/page";
 
@@ -12,6 +13,7 @@ export default async function QuarterlyTaxPage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "tools.quarterly" });
+  const tTools = await getTranslations({ locale, namespace: "tools" });
 
   return (
     <div className="py-20">
@@ -25,6 +27,11 @@ export default async function QuarterlyTaxPage({ params }: LocalePageProps) {
       <div className="px-6">
         <QuarterlyCalculator />
       </div>
+      <ToolFaq
+        items={t.raw("faq") as { q: string; a: string }[]}
+        heading={tTools("faqHeading")}
+        path={`/${locale}/tools/quarterly-tax`}
+      />
     </div>
   );
 }

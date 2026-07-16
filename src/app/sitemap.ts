@@ -20,6 +20,8 @@ const staticRoutes = [
   "/blog",
   "/glossary",
   "/vs",
+  "/turbotax-alternative",
+  "/free-tax-filing",
   "/tools",
   "/refund-estimator",
   "/tools/penalty-estimator",
@@ -33,6 +35,7 @@ const staticRoutes = [
 function priorityFor(route: string): number {
   if (route === "") return 1.0;
   if (route === "/pricing") return 0.9;
+  if (["/turbotax-alternative", "/free-tax-filing"].includes(route)) return 0.9;
   if (route.startsWith("/tools") || route === "/refund-estimator" || route.startsWith("/vs"))
     return 0.8;
   if (["/privacy-policy", "/terms", "/cookies", "/sub-processors"].includes(route)) return 0.3;

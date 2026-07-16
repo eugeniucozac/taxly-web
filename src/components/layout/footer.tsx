@@ -68,6 +68,8 @@ export function Footer() {
         { label: t("vsTurbotax"), href: `/${locale}/vs/turbotax` },
         { label: t("vsFreetaxusa"), href: `/${locale}/vs/freetaxusa` },
         { label: t("vsDirectFile"), href: `/${locale}/vs/irs-direct-file` },
+        { label: t("turbotaxAlternative"), href: `/${locale}/turbotax-alternative` },
+        { label: t("freeTaxFiling"), href: `/${locale}/free-tax-filing` },
         { label: t("glossary"), href: `/${locale}/glossary` },
       ],
     },

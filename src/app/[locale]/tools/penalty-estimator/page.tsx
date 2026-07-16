@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { PenaltyEstimator } from "@/features/tools/components/penalty-estimator";
+import { ToolFaq } from "@/features/tools/components/tool-faq";
 import { makeMetadata } from "@/lib/metadata";
 import type { LocalePageProps } from "@/types/page";
 
@@ -12,6 +13,7 @@ export default async function PenaltyEstimatorPage({ params }: LocalePageProps) 
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "tools.penalty" });
+  const tTools = await getTranslations({ locale, namespace: "tools" });
 
   return (
     <div className="py-20">
@@ -28,6 +30,11 @@ export default async function PenaltyEstimatorPage({ params }: LocalePageProps) 
       <div className="px-6">
         <PenaltyEstimator />
       </div>
+      <ToolFaq
+        items={t.raw("faq") as { q: string; a: string }[]}
+        heading={tTools("faqHeading")}
+        path={`/${locale}/tools/penalty-estimator`}
+      />
     </div>
   );
 }

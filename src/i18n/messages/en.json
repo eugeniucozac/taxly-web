@@ -456,7 +456,7 @@
     ]
   },
   "help": {
-    "heading": "Help Centre",
+    "heading": "Help Center",
     "subheading": "Quick answers to the most common questions.",
     "contactPrompt": "Can't find what you need?",
     "contactLink": "Contact us",
@@ -713,7 +713,9 @@
     "badge": "Price-lock guarantee — no checkout surprises",
     "copyright": "© {year} Taxly Inc. All rights reserved.",
     "tagline": "US taxes, plain and simple.",
-    "disclaimer": "Taxly is not a law firm or CPA firm. This is not tax advice."
+    "disclaimer": "Taxly is not a law firm or CPA firm. This is not tax advice.",
+    "turbotaxAlternative": "TurboTax alternatives",
+    "freeTaxFiling": "Actually free filing"
   },
   "metadata": {
     "home": {
@@ -721,19 +723,19 @@
       "description": "Guided federal and state tax filing for individuals, freelancers, and families. Free for simple W-2 returns. No surprise fees."
     },
     "pricing": {
-      "title": "Pricing — Taxly",
+      "title": "Tax Filing Prices — Flat, Locked Tiers — Taxly",
       "description": "Transparent flat pricing with no upsells at checkout. Free federal for simple returns. Deluxe and Premium for every situation."
     },
     "howItWorks": {
-      "title": "How It Works — Taxly",
+      "title": "How Online Tax Filing Works, Step by Step — Taxly",
       "description": "File your federal and state taxes in three simple steps. Import your documents, answer plain questions, and e-file in minutes."
     },
     "features": {
-      "title": "Features — Taxly",
+      "title": "Tax Filing Features — Plain English, No Upsells — Taxly",
       "description": "Covers W-2, 1099, investments, homeowners, self-employed, and more. See every situation Taxly supports."
     },
     "security": {
-      "title": "Security — Taxly",
+      "title": "Tax Data Security — Encryption, No Data Sales — Taxly",
       "description": "AES-256 encryption, TLS 1.3, multi-factor authentication. Your tax data is always protected."
     },
     "guarantees": {
@@ -741,7 +743,7 @@
       "description": "Maximum Refund Guarantee, 100% Accuracy Guarantee, and Audit Support — with no fine print."
     },
     "help": {
-      "title": "Help Centre — Taxly",
+      "title": "Help Center — US Tax Filing Questions — Taxly",
       "description": "Answers to common questions about filing, pricing, security, and refunds."
     },
     "about": {
@@ -761,7 +763,7 @@
       "description": "Terms governing your use of Taxly's tax preparation software."
     },
     "blog": {
-      "title": "Blog — Taxly",
+      "title": "US Tax Guides & Deadlines — the Taxly Blog",
       "description": "Plain-English guides to US taxes — deadlines, deductions, self-employment, and more."
     },
     "refundEstimator": {
@@ -795,6 +797,14 @@
     "quarterlyTax": {
       "title": "Quarterly estimated tax calculator (1040-ES) — Taxly",
       "description": "Work out safe-harbor quarterly payments from last year's tax, see the 15.3% self-employment tax coming, and dodge the underpayment penalty."
+    },
+    "turbotaxAlternative": {
+      "title": "TurboTax Alternatives — an Honest Comparison — Taxly",
+      "description": "The free government options first, the budget rival that earns its praise, and where flat-priced Taxly fits. An honest guide from a competitor."
+    },
+    "freeTaxFiling": {
+      "title": "Actually Free Tax Filing — Every Real Option, Honestly — Taxly",
+      "description": "IRS Direct File, Free File, volunteer programs, and what 'free' usually hides in tax software. Every genuinely free way to file, from a competitor who names them."
     }
   },
   "refundEstimator": {
@@ -836,7 +846,25 @@
       "sub": "Taxly walks you through the same questions — and does the filing too.",
       "button": "Start free with Taxly"
     },
-    "disclaimer": "This tool provides estimates only and does not constitute tax advice. Based on projected TY2026 tax law. Actual results may differ. Consult a tax professional for your specific situation."
+    "disclaimer": "This tool provides estimates only and does not constitute tax advice. Based on projected TY2026 tax law. Actual results may differ. Consult a tax professional for your specific situation.",
+    "faq": [
+      {
+        "q": "How accurate is this refund estimate?",
+        "a": "It's a directional estimate built from the numbers you enter and stated assumptions. Your actual refund depends on your complete return — every credit, deduction, and the exact withholding on your W-2."
+      },
+      {
+        "q": "Do I need an account, and do you store what I type?",
+        "a": "No. The estimator runs in your browser, needs no signup and no email, and we don't store what you enter."
+      },
+      {
+        "q": "Why might my actual refund differ from the estimate?",
+        "a": "Common reasons: extra income the estimate didn't include (interest, gig work), credits that phase in or out with income, and state taxes — this tool focuses on your federal picture."
+      },
+      {
+        "q": "When will I get my refund after filing?",
+        "a": "The IRS typically issues refunds within 21 days of accepting an e-filed return. You can track yours at irs.gov/refunds."
+      }
+    ]
   },
   "cookieBanner": {
     "title": "Cookies",
@@ -1039,7 +1067,25 @@
         "abatement": "3. First time this happened? Ask the IRS about first-time penalty abatement — many filers qualify and never ask.",
         "cta": "Taxly opens for TY2026 — join the waitlist"
       },
-      "disclaimer": "Illustrative estimate, not tax advice. Rates and the minimum-penalty floor change; verify current figures at irs.gov/payments/penalties before acting."
+      "disclaimer": "Illustrative estimate, not tax advice. Rates and the minimum-penalty floor change; verify current figures at irs.gov/payments/penalties before acting.",
+      "faq": [
+        {
+          "q": "How are IRS late-filing penalties calculated?",
+          "a": "The failure-to-file penalty is 5% of the unpaid tax per month (or part of a month), capped at 25%. The failure-to-pay penalty is 0.5% per month, also capped at 25%. In months where both apply, the combined charge is 5%. Interest accrues on top — verify current rates at irs.gov."
+        },
+        {
+          "q": "Is there a minimum penalty for filing very late?",
+          "a": "Yes. If your return is more than 60 days late, a minimum penalty applies — a fixed dollar amount the IRS adjusts periodically, or 100% of the unpaid tax if that's smaller. Check the current figure on irs.gov."
+        },
+        {
+          "q": "What if I'm owed a refund?",
+          "a": "Both penalties are percentages of unpaid tax, so if you're due a refund there is no failure-to-file or failure-to-pay penalty. But you must file within three years to claim the refund — after that it's forfeited."
+        },
+        {
+          "q": "Is this estimate exact?",
+          "a": "No — it's an estimate for orientation. It doesn't include interest, first-time penalty abatement, or the reduced rate under a direct-debit payment plan. The IRS's own notice is the authoritative number."
+        }
+      ]
     },
     "quarterly": {
       "eyebrow": "Free tool",
@@ -1064,8 +1110,27 @@
         "text": "Taxly's Premium tier is built around exactly this return — 1099 income, deductions found, quarterly reminders.",
         "button": "Join the TY2026 waitlist"
       },
-      "disclaimer": "Illustrative estimate, not tax advice. Safe-harbor rules and dates come from IRS Form 1040-ES — verify the current year's figures at irs.gov."
-    }
+      "disclaimer": "Illustrative estimate, not tax advice. Safe-harbor rules and dates come from IRS Form 1040-ES — verify the current year's figures at irs.gov.",
+      "faq": [
+        {
+          "q": "Who has to make quarterly estimated payments?",
+          "a": "Generally anyone who expects to owe at least $1,000 for the year after withholding and credits — typically freelancers, contractors, landlords, and investors. Employees with side income can often skip quarterlies by increasing paycheck withholding instead."
+        },
+        {
+          "q": "What is the safe-harbor rule?",
+          "a": "Pay 100% of last year's total tax (110% if your adjusted gross income was over $150,000) in four installments and you avoid underpayment penalties no matter what you end up owing this year. Verify the details on irs.gov (Form 1040-ES)."
+        },
+        {
+          "q": "When are estimated payments due?",
+          "a": "Roughly April 15, June 15, September 15, and January 15 of the following year — the periods are uneven, not true quarters. Dates shift for weekends and holidays; verify the current schedule on irs.gov."
+        },
+        {
+          "q": "What happens if I miss a quarter?",
+          "a": "An underpayment penalty accrues per period, based on how long the shortfall stays unpaid. You can't retroactively fix a missed date, but paying as soon as you can stops the meter earlier and costs less."
+        }
+      ]
+    },
+    "faqHeading": "Questions about this tool"
   },
   "homeExtras": {
     "toolsHeading": "Free tools, no signup",
@@ -1073,5 +1138,126 @@
     "guidesHeading": "Latest guides",
     "guidesSub": "Plain-English tax guides that name the free option when it is the better one.",
     "guidesAll": "All guides"
+  },
+  "turbotaxAlternative": {
+    "eyebrow": "The honest guide",
+    "heading": "Looking for a TurboTax alternative?",
+    "intro": "Yes, we're a competitor — which is exactly why this guide names the free government options first, credits the budget rival that deserves it, and tells you plainly when you should just stay put. If a recommendation below isn't us, it's because it shouldn't be.",
+    "options": [
+      {
+        "name": "IRS Direct File",
+        "tag": "Free · government",
+        "body": "The IRS's own filing tool. Genuinely free — federal and participating-state returns — and genuinely good if your situation fits inside its lines: W-2 income, standard deduction, common credits. Availability moves with politics; check the current state list before planning on it.",
+        "linkLabel": "How Taxly compares to Direct File",
+        "href": "/vs/irs-direct-file"
+      },
+      {
+        "name": "IRS Free File",
+        "tag": "Free · income-capped",
+        "body": "Brand-name software free through an IRS partnership if your income is under the program's cap (it adjusts yearly — verify on irs.gov). The catch is the experience: you're routed to partner products whose free tier ends where your tax situation gets interesting.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "FreeTaxUSA",
+        "tag": "Budget rival",
+        "body": "The budget option that earns its reputation: free federal returns for most situations, with a modest per-state fee. The interface is plainer and support is thinner — but if price is your only criterion, it's the strongest do-it-yourself deal in the market today.",
+        "linkLabel": "Taxly vs FreeTaxUSA, honestly",
+        "href": "/vs/freetaxusa"
+      }
+    ],
+    "taxlyHeading": "Where Taxly fits",
+    "taxlyBody": "Taxly's case is one sentence: the price you see when you start is the price you pay when you file. Free for simple W-2 returns, $39 federal for Deluxe, $69 for self-employed, $29 per state — locked at the start, no mid-flow upgrade ambush. We're pre-launch (opening for the 2027 season), so today the honest offer is a waitlist spot, not a checkout.",
+    "taxlyLink": "Read the full Taxly vs TurboTax comparison",
+    "stayHeading": "When you should just stay with TurboTax",
+    "stayItems": [
+      "Your return is genuinely complex — multi-state, K-1s, rare credits — and you want the deepest software coverage available",
+      "You've used it for years, your history imports cleanly, and the checkout price doesn't actually bother you",
+      "You want the biggest brand's audit-support apparatus behind your return"
+    ],
+    "ctaHeading": "Want the price you saw to be the price you pay?",
+    "ctaBody": "Join the waitlist and we'll email you when Taxly opens for the season.",
+    "faq": [
+      {
+        "q": "What is the best free alternative to TurboTax?",
+        "a": "If you qualify, IRS Direct File — the government's own tool, free for federal and participating-state returns. If your income is under the yearly cap, IRS Free File gives you brand-name software free. FreeTaxUSA covers most other do-it-yourself situations with free federal filing and a small state fee."
+      },
+      {
+        "q": "Why is TurboTax so expensive at checkout?",
+        "a": "The advertised price and the checkout price often differ: the flow prompts upgrades when your situation needs another form, and state returns are charged separately. That pricing model is legal, common — and exactly what flat, price-locked tiers exist to avoid."
+      },
+      {
+        "q": "Is Taxly available now?",
+        "a": "Not yet — Taxly is pre-launch and opens for the 2027 filing season. The prices on this page are the planned, price-locked tiers; the waitlist gets first access."
+      },
+      {
+        "q": "Is switching tax software hard?",
+        "a": "Less than you'd think. Your prior-year return (a PDF from any major software) carries the numbers a new tool needs. The IRS also keeps wage and income transcripts you can pull for free at irs.gov if you're missing documents."
+      }
+    ]
+  },
+  "freeTaxFiling": {
+    "eyebrow": "The honest list",
+    "heading": "Actually free tax filing — every real option",
+    "intro": "'Free' is the most abused word in tax software — regulators went after the biggest brand over it. Here is every way to file that is genuinely free, who each one fits, and what 'free' usually hides. We sell tax filing, so read this as a competitor showing you the free exits first.",
+    "options": [
+      {
+        "name": "IRS Direct File",
+        "tag": "Free · federal + some states",
+        "body": "The government's own tool. No income cap, no upsell — but a strict situation gate: W-2 income, standard deduction, common credits, participating states only. If you fit, it's the cleanest free option in America.",
+        "linkLabel": "Who qualifies — our honest breakdown",
+        "href": "/vs/irs-direct-file"
+      },
+      {
+        "name": "IRS Free File",
+        "tag": "Free · under the income cap",
+        "body": "Commercial software free through an IRS partnership when your income is under the program's yearly cap (verify the current figure on irs.gov). Enter through irs.gov — not through the brands' own sites, where the 'free' path has a way of ending at a paywall.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "VITA and AARP Tax-Aide",
+        "tag": "Free · in person",
+        "body": "IRS-certified volunteers prepare your return face to face, free — aimed at moderate incomes, older filers, disabilities, and limited English. Income limits and site availability vary; find a location through the locator on irs.gov.",
+        "linkLabel": "",
+        "href": ""
+      },
+      {
+        "name": "Taxly's free tier",
+        "tag": "Free · simple W-2 returns",
+        "body": "When we launch for the 2027 season: simple W-2 federal returns free, and the price for everything else shown before you start and locked. We're pre-launch today — the waitlist is the only thing on sale.",
+        "linkLabel": "See the full planned pricing",
+        "href": "/pricing"
+      }
+    ],
+    "hidesHeading": "What 'free' usually hides",
+    "hidesItems": [
+      "State returns — the classic: federal is free, then each state costs $30–$60 at checkout",
+      "Form-triggered upgrades — a 1099, HSA, or itemized deduction quietly moves you to a paid tier",
+      "Paying from your refund — a convenience that typically adds its own processing fee",
+      "'Free guidance' that turns into a paid review before you can file"
+    ],
+    "honestyHeading": "Our own fine print, stated plainly",
+    "honestyBody": "Taxly's free tier covers simple W-2 federal returns. Self-employment is $69, Deluxe is $39, and each state return is $29 — those aren't free, and we'd rather say so here than surprise you at checkout. Every price is locked when you start.",
+    "ctaHeading": "Want filing without the fine print?",
+    "ctaBody": "Join the waitlist — first access when Taxly opens for the season.",
+    "faq": [
+      {
+        "q": "Is there a truly free way to file taxes?",
+        "a": "Yes, several: IRS Direct File (if your situation qualifies), IRS Free File (if your income is under the cap), VITA/AARP volunteer preparation (moderate incomes, seniors), and free tiers like Taxly's for simple W-2 returns. Each has a gate — free always comes with a 'who fits' condition."
+      },
+      {
+        "q": "Why did 'free' tax filing become controversial?",
+        "a": "Because 'free' ads routinely led to paid checkouts. US regulators ruled against the biggest brand's advertising over exactly this. The safe habit: enter free programs through irs.gov, and treat any mid-flow upgrade prompt as a price tag."
+      },
+      {
+        "q": "Is state filing ever free?",
+        "a": "Sometimes: IRS Direct File includes participating states, some Free File offers include state returns, and a few states run their own free e-file portals. With commercial software, assume state costs extra until you see otherwise in writing."
+      },
+      {
+        "q": "What does Taxly charge?",
+        "a": "Planned pricing, locked at the start: free for simple W-2 federal returns, $39 Deluxe, $69 self-employed, $29 per state. Taxly is pre-launch and opens for the 2027 season — join the waitlist for first access."
+      }
+    ]
   }
 }
