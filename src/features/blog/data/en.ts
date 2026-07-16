@@ -874,4 +874,349 @@ Move between a taxing state and a no-tax state mid-year, and you'll typically fi
 No-income-tax states are the one place tax filing genuinely is as simple as it sounds: one federal return and done, for most people. That's why they're Taxly's launch states — TX, FL, and WA residents get the full guided federal experience with no state return to charge for. The free tier plus a no-tax state is about as cheap as legitimate filing gets.
 `,
   },
+  {
+    slug: "w4-withholding-checkup",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "The August W-4 Checkup: Fix Your Withholding Before It Costs You",
+    excerpt:
+      "A twenty-minute W-4 checkup in late summer can fix a year of over- or under-withholding. How to read your paystub, when to adjust, and the honest math.",
+    date: "2026-08-24",
+    author: "Taxly Team",
+    tags: ["basics", "forms"],
+    content: `
+Your W-4 decides how much tax comes out of every paycheck. Most people set it once — on their first day of work — and never look at it again. By late summer you have seven months of paystubs to check it against, and enough paychecks left in the year to fix what's wrong. That's why August is the right month for this, not December.
+
+## The two ways a W-4 goes wrong
+
+**Under-withholding: you'll owe in April.**
+
+If too little comes out of each check, you get a bill at filing time — possibly with an underpayment penalty on top. The usual causes: a second job, a working spouse when both W-4s claim the full standard deduction, or side income with no withholding at all.
+
+**Over-withholding: you're making the IRS an interest-free loan.**
+
+A big refund feels great, but it means you handed over money all year that you could have used. A $3,600 refund is $300 a month you didn't have to give up. Some people genuinely prefer the forced savings — that's a fair choice if you make it on purpose.
+
+## How to actually check
+
+The IRS's own Tax Withholding Estimator at irs.gov is genuinely good — we say that as a company that competes with free government tools. Grab your most recent paystub (and your spouse's, if filing jointly), enter the year-to-date numbers, and it tells you whether you're on track and exactly what to put on a new W-4.
+
+Our free refund estimator does a faster version of the same check: rough in your year's income and withholding and see the direction and size of your April number.
+
+## When you should re-do your W-4
+
+- You got married, divorced, or had a child this year
+- You or your spouse started or left a job
+- You picked up freelance or gig income with no withholding
+- Last year's refund or bill surprised you in either direction
+
+## The fix takes one form
+
+Ask payroll for a new W-4 (or update it in your payroll portal — most let you). Changes usually take effect within one or two pay cycles. If you're behind, Step 4(c) lets you add a flat extra amount per paycheck — with several months left, even a modest extra amount per check can close most gaps by December.
+
+## The honest summary
+
+A W-4 checkup is twenty minutes that decides whether April is a shrug or a surprise. Do it while there are enough paychecks left for small adjustments to work.
+`,
+  },
+  {
+    slug: "llc-first-year-taxes",
+    category: "gig",
+    status: "scheduled",
+    readTime: 6,
+    title: "Your First Year with an LLC: What Actually Changes at Tax Time",
+    excerpt:
+      "A single-member LLC changes your legal setup more than your taxes. What a disregarded entity means, when an EIN matters, and which elections change the math.",
+    date: "2026-08-31",
+    author: "Taxly Team",
+    tags: ["self-employed", "schedule-c"],
+    content: `
+You formed an LLC this year. Congratulations — and here's the anticlimax: for federal income tax, a single-member LLC changes almost nothing. Knowing exactly what changed (and what didn't) saves you from both overpaying and overcomplicating.
+
+## The default: a "disregarded entity"
+
+The IRS ignores a single-member LLC by default. You still file Schedule C with your personal return, you still pay self-employment tax on the profit, and you still make quarterly estimated payments. Same forms as a sole proprietor, same math. The LLC's benefits in this setup are legal (liability separation) and practical (a business name, a business bank account) — not tax savings.
+
+**An LLC does not, by itself, lower your taxes.**
+
+Anyone who sold you the LLC promising tax magic skipped this part. The deductions you can take — home office, supplies, mileage, software — were already available to you as a sole proprietor.
+
+## What you should actually do differently
+
+- Get an EIN (free, five minutes, on irs.gov — never pay a third-party site for one)
+- Open a separate business bank account and run all business income and expenses through it
+- Keep quarterly estimated payments going — the LLC doesn't pause self-employment tax
+- Check your state's rules: some charge LLC franchise taxes or annual fees regardless of profit — California's is famously $800 a year — and that's state money, not federal
+
+## The election everyone asks about: S-corp
+
+An LLC can elect S-corp taxation. The pitch: pay yourself a reasonable salary, take the rest as distributions not subject to self-employment tax. The honest version: it only wins once profits are comfortably clear of a reasonable salary for your work — commonly tens of thousands above it — because payroll service costs, a separate business return, and state rules eat the savings below that. Plenty of first-year owners elect too early and lose money on the overhead.
+
+Run the numbers before electing, not after. If your profit is modest, the default disregarded-entity setup is usually right, and you can elect later when the math turns.
+
+## Quarterlies with a new LLC
+
+Your first LLC year often means income that's lumpier than a salary. Our free quarterly tax calculator does the safe-harbor arithmetic and shows the due dates, so the new business doesn't come with a surprise penalty attached.
+
+## The honest summary
+
+Form the LLC for the legal separation and the clean books. File exactly as before unless the profit numbers genuinely justify an election — and verify any threshold or fee on irs.gov and your state's tax site, because they move.
+`,
+  },
+  {
+    slug: "q3-estimated-taxes-september-15",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "September 15 Is a Tax Deadline: Q3 Estimated Payments, Explained",
+    excerpt:
+      "The third estimated payment is due September 15 — the quarter everyone forgets. Who owes it, the safe-harbor math, and how to catch up if you skipped one.",
+    date: "2026-09-07",
+    author: "Taxly Team",
+    tags: ["quarterly-taxes", "deadlines"],
+    content: `
+April 15 gets all the attention. June 15 catches some people. September 15 is the quarterly deadline that summer swallows — and it arrives this week for anyone with income that doesn't have taxes withheld.
+
+## Who actually owes a payment
+
+If you're a freelancer, contractor, landlord, or investor and you expect to owe at least $1,000 for the year after withholding and credits, the IRS expects payments through the year — not one check in April. Employees with a side income can often skip quarterlies entirely by increasing job withholding instead (see our W-4 checkup guide); everyone else pays quarterly.
+
+## The "quarters" aren't quarters
+
+The IRS's payment periods are famously uneven. The September 15 payment covers June through August — three months — while the January payment covers four. Don't compute "a quarter of the year's tax"; compute what the period actually requires or use the safe harbor.
+
+## The safe harbor, in one paragraph
+
+Pay 100% of last year's total tax (110% if your adjusted gross income was over $150,000), spread across the four due dates, and you're penalty-proof no matter how this year turns out. It's the simplest defensible strategy when income is lumpy: last year's tax is a number you already know. Our free quarterly tax calculator does exactly this arithmetic and shows the due dates.
+
+## Skipped Q1 or Q2? Pay now anyway
+
+Underpayment penalties accrue per period, based on how long the shortfall sits unpaid. You can't retroactively fix a missed June payment, but every day earlier you pay stops more of the meter. Catching up in September costs less than catching up in January, which costs less than settling up in April.
+
+## How to pay (free, five minutes)
+
+IRS Direct Pay at irs.gov pulls from your bank account with no fee — pick "Estimated Tax" and the current tax year. Skip the card processors that charge a percentage. Your state may want its own estimated payment too; check your state's tax site.
+
+## The honest summary
+
+September 15 is the year's most-missed tax deadline because nothing reminds you. Put the January one in your calendar now — it's the other one summer amnesia claims.
+`,
+  },
+  {
+    slug: "cant-pay-your-taxes",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "Can't Pay Your Taxes? File Anyway — Then Pick a Plan",
+    excerpt:
+      "The failure-to-file penalty is ten times the failure-to-pay penalty. Why filing without paying is always the right move, and how IRS payment plans really work.",
+    date: "2026-09-14",
+    author: "Taxly Team",
+    tags: ["penalties", "basics"],
+    content: `
+Owing the IRS money you don't have feels like a reason not to file. It's the opposite. The tax system punishes not-filing about ten times harder than not-paying, and it offers payment plans to almost everyone who asks. Here's the playbook, in order.
+
+## Step 1: File the return (or the extension) no matter what
+
+The failure-to-file penalty runs 5% of the unpaid tax per month, up to 25%. The failure-to-pay penalty runs 0.5% per month. Filing on time with zero payment attached instantly avoids the big one. There is no version of this where waiting to file helps you.
+
+**Filing without paying cuts your penalty exposure by roughly 90%.**
+
+Our free penalty estimator shows what your specific balance and delay actually cost, month by month.
+
+## Step 2: Pay whatever you can with the return
+
+Penalties and interest accrue on the unpaid balance, so every dollar you send now shrinks the meter. There's no minimum — partial payment is always accepted and always helps.
+
+## Step 3: Pick the payment plan that fits
+
+- **Short-term plan (up to 180 days):** no setup fee, apply online at irs.gov in minutes. Right for "I'll have it by year-end" situations.
+- **Long-term installment agreement:** monthly payments over several years. There's a setup fee (lower if you apply online and pay by direct debit — verify current amounts on irs.gov), and direct debit also halves the ongoing failure-to-pay rate to 0.25% per month while the agreement is active.
+
+Approval for individuals under the online thresholds is close to automatic — no negotiation, no phone call, no proof of hardship.
+
+## The "pennies on the dollar" ads — read this before calling one
+
+An Offer in Compromise is real: the IRS sometimes settles for less than the full balance. But it's designed for genuine can-never-pay situations, judged on your assets and income, and most people who owe a manageable balance simply don't qualify. The firms advertising settlements charge thousands to file paperwork you can file yourself — and the IRS has a free pre-qualifier tool on irs.gov that tells you in ten minutes whether an offer is even plausible. Check it before paying anyone.
+
+## The honest summary
+
+File on time, pay what you can, set up the plan online, and let direct debit shrink the penalty rate. The IRS is genuinely boring to deal with when you follow this order — the horror stories almost all start with an unfiled return.
+`,
+  },
+  {
+    slug: "side-hustle-hobby-or-business",
+    category: "gig",
+    status: "scheduled",
+    readTime: 5,
+    title: "Side Hustle Taxes: When the IRS Says Your Hobby Is a Business",
+    excerpt:
+      "Hobby income is taxable but hobby losses aren't deductible. Where the IRS draws the line, why the label decides your deductions, and what a 1099-K changes.",
+    date: "2026-09-21",
+    author: "Taxly Team",
+    tags: ["freelance", "1099"],
+    content: `
+You sell prints on Etsy, flip furniture, or coach on weekends. Is that a business or a hobby? The answer changes your tax return more than most people expect — and it isn't decided by what you call it.
+
+## The part that surprises people: income is taxable either way
+
+Hobby income is fully taxable. There's no "it's just a hobby" exemption, no minimum before it counts, and a 1099-K from a payment app doesn't create the obligation — it just tells the IRS what already existed.
+
+## The label decides your deductions
+
+**A business reports income minus expenses. A hobby reports income, period.**
+
+Since the 2018 tax law, hobby expenses are simply not deductible. Sell $4,000 of prints as a business with $2,500 of costs, and you're taxed on $1,500 profit (minus self-employment tax on it). Same numbers as a hobby, and you're taxed on the full $4,000 with nothing to subtract. The business label — with its Schedule C and self-employment tax — is usually still the better deal when you have real costs.
+
+## Where the IRS draws the line
+
+The test is profit motive: are you genuinely trying to make money? The IRS weighs how businesslike your records are, the time and effort you put in, your expertise, your history of profit, and whether you depend on the income. There's also a practical presumption: profit in three of the last five years generally makes you a business.
+
+- Businesslike: separate account, tracked expenses, prices set to earn, marketing effort
+- Hobby-like: cash mixed with personal spending, losses every year, no attempt to improve
+
+## The loss question is where audits live
+
+Claiming business losses year after year against wage income — for an activity with an enjoyment component (photography, horses, crafts, racing) — is the classic hobby-loss audit trigger. If you're profitable, or occasionally profitable, the business label is safe. If you're engineering perpetual losses, expect to defend the profit motive with records.
+
+## If it's a business, act like one
+
+Schedule C, self-employment tax above the small-earnings threshold, and quarterly estimated payments once you expect to owe $1,000+. Our free quarterly tax calculator turns a lumpy side income into four safe-harbor payments with due dates.
+
+## The honest summary
+
+Report the income either way — that part isn't optional. Then claim the business label if the facts support it: it's what unlocks your deductions, and with honest records it's nothing to fear.
+`,
+  },
+  {
+    slug: "october-15-extension-deadline",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "October 15: The Last Exit for Extended Returns",
+    excerpt:
+      "If you filed an extension in April, the real deadline is October 15 — and it doesn't extend. What missing it costs, and how to finish a stuck return fast.",
+    date: "2026-09-28",
+    author: "Taxly Team",
+    tags: ["extension", "deadlines"],
+    content: `
+Roughly one in ten filers takes the automatic extension every spring. If you're one of them, the six months are nearly up: extended returns are due October 15, and unlike April, there is no second extension. Here's what the deadline actually means and how to land it.
+
+## What October 15 is — and isn't
+
+The extension moved your filing deadline, not your payment deadline. Whatever you owed was due back on April 15, and the failure-to-pay meter (0.5% per month, plus interest) has been running on any unpaid balance since then. October 15 is about the return itself.
+
+**Miss October 15 with a balance due, and the failure-to-file penalty — 5% per month — starts stacking on top.**
+
+That's the expensive cliff. Our free penalty estimator shows what your specific balance and delay costs.
+
+## If you're owed a refund, breathe
+
+Both penalties are percentages of unpaid tax. If your withholding covered you and the IRS owes you money, missing October 15 costs you nothing in penalties — you're just delaying your own refund (and the clock to claim it runs out after three years). File soon, but don't panic.
+
+## Stuck because a document is missing?
+
+The most common reason returns sit unfinished is a missing W-2 or 1099. You don't have to wait on the issuer: the IRS already has copies. Create an account at irs.gov and pull your Wage and Income Transcript — it lists what every employer and platform reported for you, free. File from that.
+
+## Two more things worth knowing
+
+- If you're in a federally declared disaster area, your deadline may already be later — check the IRS disaster-relief page for your county rather than assuming
+- E-file stays open past October 15, but the IRS shuts annual e-file maintenance later in the season — verify current dates on irs.gov if you're cutting it close to year-end
+
+## The honest summary
+
+October 15 is a hard deadline with a soft landing for refund-getters and an expensive cliff for owers. Know which one you are — that single fact decides whether this week is urgent.
+`,
+  },
+  {
+    slug: "hsa-triple-tax-advantage",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "The HSA Is the Best Tax Break Most People Ignore",
+    excerpt:
+      "Deductible going in, tax-free growing, tax-free coming out for medical costs. Who actually qualifies for an HSA, the honest catches, and the deadline quirk.",
+    date: "2026-10-05",
+    author: "Taxly Team",
+    tags: ["deductions", "basics"],
+    content: `
+No other account in the tax code does all three: contributions are deductible, growth is untaxed, and withdrawals are tax-free when spent on qualified medical costs. The HSA is the only triple. It's also widely misunderstood, so here's the honest version — including who shouldn't chase it.
+
+## The triple, spelled out
+
+- **Going in:** contributions reduce your taxable income — and you don't need to itemize to get the deduction
+- **Growing:** interest and investment gains inside the account aren't taxed
+- **Coming out:** withdrawals for qualified medical expenses are tax-free, at any age, with no expiration on when you reimburse yourself
+
+Contributions through payroll do even better: they usually skip Social Security and Medicare tax too, which even 401(k) contributions don't.
+
+## The catch that decides everything
+
+You can only contribute while covered by a qualifying high-deductible health plan (HDHP). That's the real gate — and it means the HSA question is really a health-insurance question.
+
+**Don't pick a worse health plan to get a tax break.**
+
+If you have regular prescriptions, ongoing care, or a family that hits the doctor often, a low-deductible plan can beat the HDHP-plus-HSA combo even after the tax savings. The HSA math shines for people who are mostly healthy or who can cash-flow the deductible. Run your actual expected care costs through both plans during open enrollment — that comparison, not the tax break, should decide.
+
+## The numbers move — verify before you contribute
+
+Contribution limits change every year (there's a limit for self-only coverage, a higher one for family coverage, and a catch-up amount at 55+). The HDHP definition — minimum deductibles, out-of-pocket caps — moves annually too. Check the current figures on irs.gov before setting your payroll deferral.
+
+## The deadline quirk worth knowing
+
+Like an IRA, you can contribute for a tax year until the April filing deadline of the next year. Under-contributed for last year and owe in April? A prior-year HSA contribution is one of the few levers that still works after December 31 — our free refund estimator shows what the deduction does to your number.
+
+## Two fine-print items
+
+- Keep receipts for medical costs you pay out of pocket — you can reimburse yourself from the HSA years later, tax-free, as long as the expense came after the account opened
+- A couple of states (California and New Jersey) don't follow the federal treatment and tax HSA earnings at the state level
+
+## The honest summary
+
+If an HDHP already fits how you use healthcare, the HSA is the strongest tax-advantaged dollar available to you. If it doesn't fit, skip it without guilt — a tax break should never cost more in deductibles than it saves in tax.
+`,
+  },
+  {
+    slug: "year-end-tax-moves",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "Year-End Tax Moves That Actually Matter (and the Ones That Don't)",
+    excerpt:
+      "Most December tax tips quietly assume you itemize. The moves that work for W-2 filers, the deadlines that really are December 31, and what can wait for April.",
+    date: "2026-10-12",
+    author: "Taxly Team",
+    tags: ["basics", "deductions"],
+    content: `
+Every December, the internet fills with year-end tax checklists — and most items on them only help the minority of filers who itemize deductions. Here's the honest split: what actually moves the number for a standard-deduction filer, what's itemizer-only, and which deadlines are real.
+
+## The deadline split that organizes everything
+
+**December 31 deadlines:** workplace retirement contributions (401(k), 403(b)) via payroll, FSA spending (mostly), charitable gifts, and realizing investment gains or losses.
+
+**April 15 deadlines:** IRA contributions and HSA contributions for the prior year.
+
+That second list is the pressure release: if you find money in February, you can still cut last April's bill with a prior-year IRA or HSA contribution. Don't let a December panic push you into decisions the calendar doesn't require.
+
+## Moves that work even with the standard deduction
+
+- **Raise your 401(k) deferral for the last paychecks.** Payroll contributions reduce taxable income with no itemizing needed — and the December 31 cutoff is real
+- **Fix your withholding.** Tax withheld from a paycheck is treated as if paid evenly through the year, so a bigger December withholding can erase an underpayment penalty that quarterly payments made now can't. This is the one genuinely underrated year-end move
+- **Spend the FSA.** Flexible spending accounts are use-it-or-lose-it; check whether your plan has a grace period or a small carryover, and book the dentist accordingly
+- **Harvest investment losses.** Realized losses offset realized gains, plus a limited amount of ordinary income — mind the wash-sale rule (don't rebuy the same security within 30 days)
+
+## Moves that only matter if you itemize
+
+Charitable donations, bunching two years of gifts into one, and prepaying deductible expenses all assume your itemized total beats the standard deduction. Most filers' doesn't. Estimate your itemized total honestly first — if it's not close, these tips cost you effort (or actual money) for zero tax change. Donate because you want to support something, not for a deduction you won't receive.
+
+## Check before you optimize
+
+Run your rough numbers first — our free refund estimator takes five minutes and tells you whether you're heading for a bill or a refund. Optimizing blind is how people prepay expenses they didn't need to. And verify any limit or threshold on irs.gov; the annual figures move every year.
+
+## The honest summary
+
+For most W-2 filers, year-end tax planning is three moves: top up the 401(k), fix the withholding, spend the FSA. Everything else is either itemizer-only or can wait for April. Simple beats clever here.
+`,
+  },
 ];

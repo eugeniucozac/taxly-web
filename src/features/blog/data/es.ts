@@ -768,4 +768,349 @@ Si te mudas entre un estado con impuesto y uno sin él a mitad de año, normalme
 Los estados sin impuesto sobre la renta son el único lugar donde declarar es genuinamente tan simple como suena: una declaración federal y listo, para la mayoría. Por eso son los estados de lanzamiento de Taxly — los residentes de TX, FL y WA reciben la experiencia federal guiada completa sin declaración estatal que cobrar. El nivel gratis más un estado sin impuesto es lo más barato que puede ser declarar legítimamente.
 `,
   },
+  {
+    slug: "w4-withholding-checkup",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "El chequeo del W-4 en agosto: corrige tu retención antes de que te cueste",
+    excerpt:
+      "Veinte minutos revisando tu W-4 a fin del verano corrigen un año de retención mal calibrada. Cómo leer tu talón de pago, cuándo ajustar y la cuenta honesta.",
+    date: "2026-08-24",
+    author: "Taxly Team",
+    tags: ["básicos", "forms"],
+    content: `
+Tu W-4 decide cuánto impuesto sale de cada cheque de pago. La mayoría lo configura una vez — el primer día de trabajo — y nunca lo vuelve a mirar. A fines del verano tienes siete meses de talones de pago para verificarlo, y suficientes cheques restantes en el año para corregir lo que esté mal. Por eso agosto es el mes correcto para esto, no diciembre.
+
+## Las dos formas en que un W-4 sale mal
+
+**Retención insuficiente: deberás en abril.**
+
+Si sale muy poco de cada cheque, recibes una factura al declarar — posiblemente con una multa por pago insuficiente encima. Las causas habituales: un segundo trabajo, un cónyuge que trabaja cuando ambos W-4 reclaman la deducción estándar completa, o ingresos extra sin ninguna retención.
+
+**Retención excesiva: le estás dando al IRS un préstamo sin intereses.**
+
+Un reembolso grande se siente bien, pero significa que entregaste dinero todo el año que podrías haber usado. Un reembolso de 3.600 dólares son 300 dólares al mes que no tenías que ceder. Algunas personas genuinamente prefieren el ahorro forzado — es una elección válida si la haces a propósito.
+
+## Cómo verificarlo de verdad
+
+El Estimador de Retención del propio IRS en irs.gov es genuinamente bueno — lo decimos como empresa que compite con herramientas gratuitas del gobierno. Toma tu talón de pago más reciente (y el de tu cónyuge, si declaran juntos), ingresa los números acumulados del año, y te dice si vas bien encaminado y exactamente qué poner en un W-4 nuevo.
+
+Nuestro estimador de reembolso gratuito hace una versión más rápida del mismo chequeo: aproxima tus ingresos y retenciones del año y ve la dirección y el tamaño de tu número de abril.
+
+## Cuándo deberías rehacer tu W-4
+
+- Te casaste, divorciaste o tuviste un hijo este año
+- Tú o tu cónyuge empezaron o dejaron un trabajo
+- Sumaste ingresos freelance o de plataformas sin retención
+- El reembolso o la factura del año pasado te sorprendió en cualquier dirección
+
+## La corrección toma un formulario
+
+Pide a nómina un W-4 nuevo (o actualízalo en tu portal de nómina — la mayoría lo permite). Los cambios suelen aplicarse en uno o dos ciclos de pago. Si vas atrasado, el Paso 4(c) permite añadir un monto extra fijo por cheque — con varios meses restantes, incluso un extra modesto por cheque cierra la mayoría de las brechas para diciembre.
+
+## El resumen honesto
+
+Un chequeo del W-4 son veinte minutos que deciden si abril es un encogimiento de hombros o una sorpresa. Hazlo mientras quedan suficientes cheques para que los ajustes pequeños funcionen.
+`,
+  },
+  {
+    slug: "llc-first-year-taxes",
+    category: "gig",
+    status: "scheduled",
+    readTime: 6,
+    title: "Tu primer año con una LLC: qué cambia realmente al declarar impuestos",
+    excerpt:
+      "Una LLC de un solo miembro cambia tu situación legal más que tus impuestos. Qué es una entidad no considerada, cuándo importa el EIN y qué elecciones cambian.",
+    date: "2026-08-31",
+    author: "Taxly Team",
+    tags: ["trabajador-independiente", "schedule-c"],
+    content: `
+Formaste una LLC este año. Felicidades — y aquí viene el anticlímax: para el impuesto federal sobre la renta, una LLC de un solo miembro no cambia casi nada. Saber exactamente qué cambió (y qué no) te salva tanto de pagar de más como de complicarte de más.
+
+## Lo predeterminado: una "entidad no considerada"
+
+El IRS ignora una LLC de un solo miembro por defecto. Sigues presentando el Schedule C con tu declaración personal, sigues pagando impuesto de trabajo por cuenta propia sobre la ganancia, y sigues haciendo pagos trimestrales estimados. Los mismos formularios que un propietario único, la misma cuenta. Los beneficios de la LLC en este esquema son legales (separación de responsabilidad) y prácticos (un nombre comercial, una cuenta bancaria de negocio) — no ahorros fiscales.
+
+**Una LLC no baja tus impuestos por sí sola.**
+
+Quien te vendió la LLC prometiendo magia fiscal se saltó esta parte. Las deducciones que puedes tomar — oficina en casa, insumos, millaje, software — ya estaban disponibles para ti como propietario único.
+
+## Lo que sí deberías hacer diferente
+
+- Obtén un EIN (gratis, cinco minutos, en irs.gov — nunca pagues a un sitio intermediario por uno)
+- Abre una cuenta bancaria de negocio separada y pasa todos los ingresos y gastos del negocio por ella
+- Mantén los pagos trimestrales estimados — la LLC no pausa el impuesto de trabajo por cuenta propia
+- Revisa las reglas de tu estado: algunos cobran impuestos de franquicia o cuotas anuales a las LLC sin importar la ganancia — el de California es famosamente de 800 dólares al año — y eso es dinero estatal, no federal
+
+## La elección que todos preguntan: S-corp
+
+Una LLC puede elegir tributar como S-corp. La promesa: págate un salario razonable y toma el resto como distribuciones no sujetas al impuesto de trabajo por cuenta propia. La versión honesta: solo gana cuando las ganancias superan cómodamente un salario razonable por tu trabajo — comúnmente decenas de miles por encima — porque el costo del servicio de nómina, una declaración de negocio separada y las reglas estatales se comen el ahorro por debajo de eso. Muchos dueños de primer año eligen demasiado pronto y pierden dinero en los gastos generales.
+
+Haz los números antes de elegir, no después. Si tu ganancia es modesta, el esquema predeterminado suele ser el correcto, y puedes elegir más adelante cuando la cuenta cambie.
+
+## Trimestrales con una LLC nueva
+
+Tu primer año de LLC suele traer ingresos más irregulares que un salario. Nuestra calculadora de impuestos trimestrales gratuita hace la aritmética del puerto seguro y muestra las fechas de vencimiento, para que el negocio nuevo no venga con una multa sorpresa adjunta.
+
+## El resumen honesto
+
+Forma la LLC por la separación legal y los libros limpios. Declara exactamente como antes, salvo que los números de ganancia justifiquen genuinamente una elección — y verifica cualquier umbral o cuota en irs.gov y el sitio fiscal de tu estado, porque se mueven.
+`,
+  },
+  {
+    slug: "q3-estimated-taxes-september-15",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "El 15 de septiembre es una fecha límite fiscal: el pago estimado del Q3, explicado",
+    excerpt:
+      "El tercer pago estimado vence el 15 de septiembre — el que todos olvidan. Quién lo debe, la cuenta del puerto seguro y cómo ponerte al día si saltaste uno.",
+    date: "2026-09-07",
+    author: "Taxly Team",
+    tags: ["quarterly-taxes", "fechas-límite"],
+    content: `
+El 15 de abril se lleva toda la atención. El 15 de junio atrapa a algunos. El 15 de septiembre es la fecha trimestral que el verano se traga — y llega esta semana para cualquiera con ingresos sin retención de impuestos.
+
+## Quién debe un pago realmente
+
+Si eres freelancer, contratista, arrendador o inversionista y esperas deber al menos 1.000 dólares en el año después de retenciones y créditos, el IRS espera pagos a lo largo del año — no un cheque en abril. Los empleados con un ingreso extra a menudo pueden saltarse los trimestrales aumentando la retención del empleo (mira nuestra guía del chequeo del W-4); todos los demás pagan por trimestre.
+
+## Los "trimestres" no son trimestres
+
+Los períodos de pago del IRS son famosamente desiguales. El pago del 15 de septiembre cubre de junio a agosto — tres meses — mientras que el de enero cubre cuatro. No calcules "un cuarto del impuesto del año"; calcula lo que el período realmente requiere o usa el puerto seguro.
+
+## El puerto seguro, en un párrafo
+
+Paga el 100% del impuesto total del año pasado (110% si tu ingreso bruto ajustado superó los 150.000 dólares), repartido entre las cuatro fechas de vencimiento, y quedas a prueba de multas sin importar cómo resulte este año. Es la estrategia defendible más simple cuando el ingreso es irregular: el impuesto del año pasado es un número que ya conoces. Nuestra calculadora de impuestos trimestrales gratuita hace exactamente esta aritmética y muestra las fechas de vencimiento.
+
+## ¿Saltaste el Q1 o el Q2? Paga ahora de todos modos
+
+Las multas por pago insuficiente se acumulan por período, según cuánto tiempo queda impago el faltante. No puedes arreglar retroactivamente un pago de junio perdido, pero cada día que pagas antes detiene más del taxímetro. Ponerte al día en septiembre cuesta menos que en enero, que cuesta menos que saldar en abril.
+
+## Cómo pagar (gratis, cinco minutos)
+
+IRS Direct Pay en irs.gov debita tu cuenta bancaria sin comisión — elige "Estimated Tax" y el año fiscal actual. Evita los procesadores de tarjeta que cobran un porcentaje. Tu estado puede querer su propio pago estimado también; revisa el sitio fiscal de tu estado.
+
+## El resumen honesto
+
+El 15 de septiembre es la fecha fiscal más olvidada del año porque nada te la recuerda. Pon la de enero en tu calendario ahora — es la otra que la amnesia del descanso reclama.
+`,
+  },
+  {
+    slug: "cant-pay-your-taxes",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "¿No puedes pagar tus impuestos? Declara igual — y luego elige un plan",
+    excerpt:
+      "La multa por no declarar es diez veces la de no pagar. Por qué declarar sin pagar siempre es lo correcto y cómo funcionan de verdad los planes de pago del IRS.",
+    date: "2026-09-14",
+    author: "Taxly Team",
+    tags: ["penalties", "básicos"],
+    content: `
+Deberle al IRS dinero que no tienes se siente como una razón para no declarar. Es lo contrario. El sistema fiscal castiga no declarar unas diez veces más fuerte que no pagar, y ofrece planes de pago a casi cualquiera que los pida. Aquí está la jugada, en orden.
+
+## Paso 1: presenta la declaración (o la prórroga) pase lo que pase
+
+La multa por no declarar corre al 5% del impuesto impago por mes, hasta el 25%. La multa por no pagar corre al 0,5% por mes. Declarar a tiempo con cero pago adjunto evita instantáneamente la grande. No existe versión de esto donde esperar para declarar te ayude.
+
+**Declarar sin pagar recorta tu exposición a multas en aproximadamente un 90%.**
+
+Nuestro estimador de multas gratuito muestra lo que tu saldo y tu demora específicos cuestan realmente, mes a mes.
+
+## Paso 2: paga lo que puedas con la declaración
+
+Las multas y los intereses se acumulan sobre el saldo impago, así que cada dólar que envías ahora encoge el taxímetro. No hay mínimo — el pago parcial siempre se acepta y siempre ayuda.
+
+## Paso 3: elige el plan de pago que te quede
+
+- **Plan a corto plazo (hasta 180 días):** sin cuota de apertura, solicítalo en línea en irs.gov en minutos. Ideal para situaciones de "lo tendré a fin de año".
+- **Acuerdo de pagos a plazos:** pagos mensuales durante varios años. Tiene cuota de apertura (más baja si solicitas en línea y pagas por débito directo — verifica los montos vigentes en irs.gov), y el débito directo además reduce a la mitad la tasa por no pagar, al 0,25% mensual, mientras el acuerdo está activo.
+
+La aprobación para individuos bajo los umbrales en línea es casi automática — sin negociación, sin llamada, sin prueba de dificultad económica.
+
+## Los anuncios de "centavos por dólar" — lee esto antes de llamar
+
+El Ofrecimiento de Transacción es real: el IRS a veces acepta menos que el saldo completo. Pero está diseñado para situaciones genuinas de nunca-podré-pagar, se juzga por tus activos e ingresos, y la mayoría de quienes deben un saldo manejable simplemente no califica. Las firmas que anuncian arreglos cobran miles por presentar papeleo que puedes presentar tú mismo — y el IRS tiene un pre-calificador gratuito en irs.gov que te dice en diez minutos si una oferta es siquiera plausible. Revísalo antes de pagarle a alguien.
+
+## El resumen honesto
+
+Declara a tiempo, paga lo que puedas, configura el plan en línea y deja que el débito directo encoja la tasa de multa. El IRS es genuinamente aburrido de tratar cuando sigues este orden — casi todas las historias de terror empiezan con una declaración sin presentar.
+`,
+  },
+  {
+    slug: "side-hustle-hobby-or-business",
+    category: "gig",
+    status: "scheduled",
+    readTime: 5,
+    title: "Impuestos del ingreso extra: cuándo el IRS dice que tu hobby es un negocio",
+    excerpt:
+      "El ingreso de un hobby paga impuestos pero sus pérdidas no se deducen. Dónde traza la línea el IRS, por qué la etiqueta decide y qué cambia un 1099-K.",
+    date: "2026-09-21",
+    author: "Taxly Team",
+    tags: ["freelance", "1099"],
+    content: `
+Vendes impresiones en Etsy, restauras muebles o entrenas los fines de semana. ¿Eso es un negocio o un hobby? La respuesta cambia tu declaración más de lo que la mayoría espera — y no la decide cómo lo llames tú.
+
+## La parte que sorprende: el ingreso paga impuestos de cualquier forma
+
+El ingreso de un hobby es totalmente gravable. No hay exención de "es solo un hobby", no hay mínimo antes de que cuente, y un 1099-K de una app de pagos no crea la obligación — solo le cuenta al IRS lo que ya existía.
+
+## La etiqueta decide tus deducciones
+
+**Un negocio reporta ingresos menos gastos. Un hobby reporta ingresos, punto.**
+
+Desde la ley fiscal de 2018, los gastos de un hobby simplemente no son deducibles. Vende 4.000 dólares en impresiones como negocio con 2.500 de costos, y tributas sobre 1.500 de ganancia (más el impuesto de trabajo por cuenta propia sobre ella). Los mismos números como hobby, y tributas sobre los 4.000 completos sin nada que restar. La etiqueta de negocio — con su Schedule C y su impuesto de trabajo por cuenta propia — suele seguir siendo el mejor trato cuando tienes costos reales.
+
+## Dónde traza la línea el IRS
+
+La prueba es el ánimo de lucro: ¿estás genuinamente tratando de ganar dinero? El IRS pondera qué tan profesionales son tus registros, el tiempo y esfuerzo que dedicas, tu experiencia, tu historial de ganancias y si dependes del ingreso. También hay una presunción práctica: ganancia en tres de los últimos cinco años generalmente te hace un negocio.
+
+- Como negocio: cuenta separada, gastos registrados, precios puestos para ganar, esfuerzo de marketing
+- Como hobby: efectivo mezclado con gastos personales, pérdidas todos los años, ningún intento de mejorar
+
+## La pregunta de las pérdidas es donde viven las auditorías
+
+Reclamar pérdidas de negocio año tras año contra ingresos salariales — en una actividad con componente de disfrute (fotografía, caballos, artesanías, carreras) — es el clásico detonante de auditoría por hobby. Si eres rentable, u ocasionalmente rentable, la etiqueta de negocio es segura. Si estás fabricando pérdidas perpetuas, espera defender el ánimo de lucro con registros.
+
+## Si es un negocio, actúa como tal
+
+Schedule C, impuesto de trabajo por cuenta propia por encima del umbral de ganancias pequeñas, y pagos trimestrales estimados cuando esperes deber 1.000 dólares o más. Nuestra calculadora de impuestos trimestrales gratuita convierte un ingreso extra irregular en cuatro pagos de puerto seguro con fechas de vencimiento.
+
+## El resumen honesto
+
+Reporta el ingreso de cualquier forma — esa parte no es opcional. Luego reclama la etiqueta de negocio si los hechos la sostienen: es lo que desbloquea tus deducciones, y con registros honestos no hay nada que temer.
+`,
+  },
+  {
+    slug: "october-15-extension-deadline",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "15 de octubre: la última salida para declaraciones con prórroga",
+    excerpt:
+      "Si pediste prórroga en abril, la fecha real es el 15 de octubre — y no se extiende. Qué pasa si la pierdes y cómo terminar rápido una declaración atascada.",
+    date: "2026-09-28",
+    author: "Taxly Team",
+    tags: ["prórroga", "fechas-límite"],
+    content: `
+Aproximadamente uno de cada diez contribuyentes toma la prórroga automática cada primavera. Si eres uno de ellos, los seis meses casi se acaban: las declaraciones con prórroga vencen el 15 de octubre y, a diferencia de abril, no hay segunda prórroga. Esto es lo que la fecha significa realmente y cómo aterrizarla.
+
+## Qué es el 15 de octubre — y qué no es
+
+La prórroga movió tu fecha para declarar, no tu fecha para pagar. Lo que debías venció el 15 de abril, y el taxímetro por no pagar (0,5% mensual, más intereses) ha estado corriendo sobre cualquier saldo impago desde entonces. El 15 de octubre es sobre la declaración en sí.
+
+**Pierde el 15 de octubre con saldo pendiente, y la multa por no declarar — 5% mensual — empieza a apilarse encima.**
+
+Ese es el precipicio caro. Nuestro estimador de multas gratuito muestra lo que cuestan tu saldo y tu demora específicos.
+
+## Si te deben un reembolso, respira
+
+Ambas multas son porcentajes del impuesto impago. Si tu retención te cubrió y el IRS te debe dinero, perder el 15 de octubre no te cuesta nada en multas — solo estás retrasando tu propio reembolso (y el plazo para reclamarlo se agota a los tres años). Declara pronto, pero sin pánico.
+
+## ¿Atascado porque falta un documento?
+
+La razón más común por la que una declaración queda sin terminar es un W-2 o 1099 faltante. No tienes que esperar al emisor: el IRS ya tiene copias. Crea una cuenta en irs.gov y descarga tu Transcripción de Salarios e Ingresos — lista lo que cada empleador y plataforma reportó de ti, gratis. Declara con eso.
+
+## Dos cosas más que vale la pena saber
+
+- Si estás en una zona de desastre declarada federalmente, tu fecha límite puede ser posterior — revisa la página de alivio por desastres del IRS para tu condado en lugar de asumir
+- El e-file sigue abierto después del 15 de octubre, pero el IRS cierra el mantenimiento anual del e-file más tarde en la temporada — verifica las fechas vigentes en irs.gov si lo dejas para fin de año
+
+## El resumen honesto
+
+El 15 de octubre es una fecha dura con aterrizaje suave para quienes esperan reembolso y un precipicio caro para quienes deben. Saber cuál eres — ese único dato decide si esta semana es urgente.
+`,
+  },
+  {
+    slug: "hsa-triple-tax-advantage",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "La HSA es el mejor beneficio fiscal que la mayoría ignora",
+    excerpt:
+      "Deducible al entrar, crece sin impuestos y sale libre para gastos médicos. Quién califica de verdad para una HSA, las trampas honestas y el truco del plazo.",
+    date: "2026-10-05",
+    author: "Taxly Team",
+    tags: ["deducciones", "básicos"],
+    content: `
+Ninguna otra cuenta del código fiscal hace las tres cosas: las contribuciones son deducibles, el crecimiento no tributa y los retiros son libres de impuestos cuando se gastan en costos médicos calificados. La HSA es el único triple. También es ampliamente malentendida, así que aquí está la versión honesta — incluyendo quién no debería perseguirla.
+
+## El triple, deletreado
+
+- **Al entrar:** las contribuciones reducen tu ingreso gravable — y no necesitas detallar deducciones para obtenerla
+- **Al crecer:** los intereses y ganancias de inversión dentro de la cuenta no tributan
+- **Al salir:** los retiros para gastos médicos calificados son libres de impuestos, a cualquier edad, sin vencimiento sobre cuándo te reembolsas
+
+Las contribuciones por nómina rinden aún más: normalmente se saltan también los impuestos de Seguro Social y Medicare, algo que ni las contribuciones al 401(k) logran.
+
+## La trampa que lo decide todo
+
+Solo puedes contribuir mientras estés cubierto por un plan de salud de deducible alto (HDHP) calificado. Esa es la verdadera puerta — y significa que la pregunta de la HSA es en realidad una pregunta de seguro médico.
+
+**No elijas un plan de salud peor para conseguir un beneficio fiscal.**
+
+Si tienes recetas regulares, atención continua o una familia que visita al médico seguido, un plan de deducible bajo puede ganarle al combo HDHP-más-HSA incluso después del ahorro fiscal. La cuenta de la HSA brilla para gente mayormente sana o que puede absorber el deducible. Pasa tus costos reales esperados de atención por ambos planes durante la inscripción abierta — esa comparación, no el beneficio fiscal, debería decidir.
+
+## Los números se mueven — verifica antes de contribuir
+
+Los límites de contribución cambian cada año (hay un límite para cobertura individual, uno más alto para familiar y un monto adicional a partir de los 55). La definición de HDHP — deducibles mínimos, topes de gasto de bolsillo — también se mueve anualmente. Consulta las cifras vigentes en irs.gov antes de fijar tu descuento de nómina.
+
+## El truco del plazo que vale conocer
+
+Como con una IRA, puedes contribuir para un año fiscal hasta la fecha límite de declaración de abril del año siguiente. ¿Contribuiste poco el año pasado y debes en abril? Una contribución de año anterior a la HSA es una de las pocas palancas que aún funciona después del 31 de diciembre — nuestro estimador de reembolso gratuito muestra lo que la deducción hace con tu número.
+
+## Dos letras pequeñas
+
+- Guarda los recibos de costos médicos que pagas de tu bolsillo — puedes reembolsarte desde la HSA años después, libre de impuestos, siempre que el gasto sea posterior a la apertura de la cuenta
+- Un par de estados (California y Nueva Jersey) no siguen el tratamiento federal y gravan las ganancias de la HSA a nivel estatal
+
+## El resumen honesto
+
+Si un HDHP ya encaja con cómo usas la atención médica, la HSA es el dólar con ventaja fiscal más fuerte disponible para ti. Si no encaja, sáltala sin culpa — un beneficio fiscal nunca debería costar más en deducibles de lo que ahorra en impuestos.
+`,
+  },
+  {
+    slug: "year-end-tax-moves",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "Movidas fiscales de fin de año que sí importan (y las que no)",
+    excerpt:
+      "Los consejos de diciembre suelen asumir que detallas deducciones. Las movidas que sirven al contribuyente W-2, los plazos que sí son el 31 y qué puede esperar.",
+    date: "2026-10-12",
+    author: "Taxly Team",
+    tags: ["básicos", "deducciones"],
+    content: `
+Cada diciembre, internet se llena de listas fiscales de fin de año — y la mayoría de sus puntos solo ayuda a la minoría que detalla deducciones. Aquí está la división honesta: qué mueve realmente el número para quien toma la deducción estándar, qué es solo para detalladores y cuáles plazos son reales.
+
+## La división de plazos que lo ordena todo
+
+**Plazos del 31 de diciembre:** contribuciones a planes de retiro del trabajo (401(k), 403(b)) vía nómina, gasto de la FSA (en general), donaciones caritativas y realizar ganancias o pérdidas de inversión.
+
+**Plazos del 15 de abril:** contribuciones a IRA y a HSA para el año anterior.
+
+Esa segunda lista es la válvula de escape: si encuentras dinero en febrero, todavía puedes recortar la factura del abril pasado con una contribución de año anterior a la IRA o la HSA. No dejes que el pánico de diciembre te empuje a decisiones que el calendario no exige.
+
+## Movidas que funcionan incluso con la deducción estándar
+
+- **Sube tu aporte al 401(k) en los últimos cheques.** Las contribuciones por nómina reducen el ingreso gravable sin detallar nada — y el corte del 31 de diciembre es real
+- **Corrige tu retención.** El impuesto retenido de un cheque se trata como pagado uniformemente durante el año, así que una retención mayor en diciembre puede borrar una multa por pago insuficiente que los pagos trimestrales hechos ahora ya no borran. Esta es la movida de fin de año genuinamente subestimada
+- **Gasta la FSA.** Las cuentas de gastos flexibles son de úsalo-o-piérdelo; revisa si tu plan tiene período de gracia o un arrastre pequeño, y agenda al dentista en consecuencia
+- **Cosecha pérdidas de inversión.** Las pérdidas realizadas compensan ganancias realizadas, más un monto limitado de ingreso ordinario — cuidado con la regla de venta ficticia (no recompres el mismo valor dentro de 30 días)
+
+## Movidas que solo importan si detallas
+
+Las donaciones caritativas, agrupar dos años de regalos en uno y prepagar gastos deducibles asumen que tu total detallado supera la deducción estándar. El de la mayoría no lo hace. Estima tu total detallado con honestidad primero — si no está cerca, estos consejos te cuestan esfuerzo (o dinero real) por cero cambio fiscal. Dona porque quieres apoyar algo, no por una deducción que no recibirás.
+
+## Verifica antes de optimizar
+
+Corre tus números aproximados primero — nuestro estimador de reembolso gratuito toma cinco minutos y te dice si vas hacia una factura o un reembolso. Optimizar a ciegas es como la gente prepaga gastos que no necesitaba. Y verifica cualquier límite o umbral en irs.gov; las cifras anuales se mueven cada año.
+
+## El resumen honesto
+
+Para la mayoría de los contribuyentes W-2, la planificación de fin de año son tres movidas: completar el 401(k), corregir la retención y gastar la FSA. Todo lo demás es solo para detalladores o puede esperar a abril. Aquí lo simple le gana a lo ingenioso.
+`,
+  },
 ];
