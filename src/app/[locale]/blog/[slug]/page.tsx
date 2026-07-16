@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { getLivePosts, getPostBySlug } from "@/features/blog/lib/blog";
+import { categoryThemes } from "@/features/blog/lib/category-theme";
+import { BlogPostCard } from "@/features/blog/components/blog-post-card";
 import { WaitlistForm } from "@/components/shared/waitlist-form";
 import { Link } from "@/i18n/navigation";
 import { formatDate } from "@/lib/utils";
@@ -58,6 +60,22 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
   if (!post) notFound();
 
   const paragraphs = post.content.split("\n\n");
+  const theme = categoryThemes[post.category];
+  const CategoryIcon = theme.icon;
+
+  // "In this guide" TOC from the post's own ## headings (shown when 3+).
+  const headings = paragraphs
+    .map((block) => block.trim())
+    .filter((block) => block.startsWith("## "))
+    .map((block) => block.slice(3));
+  const showToc = headings.length >= 3;
+
+  // Related: same category first, then newest others; never the post itself.
+  const livePosts = await getLivePosts(locale);
+  const related = [
+    ...livePosts.filter((p) => p.slug !== post.slug && p.category === post.category),
+    ...livePosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+  ].slice(0, 3);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -83,11 +101,20 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
 
       <article>
         <header className="mb-8">
-          <div className="mb-3 flex flex-wrap gap-2">
+          <div className="mb-3 flex flex-wrap items-center gap-2">
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium ${theme.chip}`}
+            >
+              <CategoryIcon size={12} aria-hidden />
+              {t(`categories.${post.category}`)}
+            </span>
+            <span className="text-xs text-muted-foreground/80">
+              {t("readTime", { minutes: post.readTime })}
+            </span>
             {post.tags.map((tag) => (
               <span
                 key={tag}
- className="rounded-full bg-sky-50 dark:bg-sky-500/10 px-2.5 py-0.5 text-xs font-medium text-sky-700 dark:bg-sky-900/30 dark:text-sky-400"
+                className="rounded-full border px-2.5 py-0.5 text-xs font-medium text-muted-foreground"
               >
                 {tag}
               </span>
@@ -103,15 +130,46 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
           </p>
         </header>
 
+        {showToc && (
+          <nav
+            aria-label={t("tocHeading")}
+            className="mb-10 rounded-xl border bg-card p-5 shadow-sm"
+          >
+            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground/80">
+              {t("tocHeading")}
+            </p>
+            <ol className="grid gap-1.5 text-sm sm:grid-cols-2">
+              {headings.map((heading, i) => (
+                <li key={heading}>
+                  <a
+                    href={`#${headingId(heading)}`}
+                    className="inline-flex gap-2 text-muted-foreground transition hover:text-foreground"
+                  >
+                    <span className="font-mono text-xs leading-5 text-primary">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {heading}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
         <div className="prose prose-gray max-w-none dark:prose-invert prose-headings:font-semibold prose-a:text-primary dark:prose-a:text-sky-400">
           {paragraphs.map((block, i) => {
             const trimmed = block.trim();
             if (!trimmed) return null;
 
             if (trimmed.startsWith("## ")) {
+              const heading = trimmed.slice(3);
               return (
-                <h2 key={i} className="mb-3 mt-8 text-xl font-semibold text-foreground">
-                  {trimmed.slice(3)}
+                <h2
+                  key={i}
+                  id={headingId(heading)}
+                  className="mb-3 mt-8 scroll-mt-24 text-xl font-semibold text-foreground"
+                >
+                  {heading}
                 </h2>
               );
             }
@@ -145,6 +203,24 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
       </article>
 
       <footer className="mt-12 border-t pt-8">
+        {related.length > 0 && (
+          <section className="mb-10">
+            <h2 className="mb-5 text-xl font-bold text-foreground">{t("relatedHeading")}</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {related.map((relatedPost) => (
+                <BlogPostCard
+                  key={relatedPost.slug}
+                  post={relatedPost}
+                  locale={locale}
+                  readMore={t("readMore")}
+                  categoryLabel={t(`categories.${relatedPost.category}`)}
+                  readTimeLabel={t("readTime", { minutes: relatedPost.readTime })}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         <Link
           href="/blog"
  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline dark:text-sky-400"
@@ -170,6 +246,14 @@ export default async function BlogPostPage({ params }: LocaleSlugPageProps) {
       </footer>
     </main>
   );
+}
+
+/** Stable anchor id from a heading — must match between the TOC and the h2. */
+function headingId(heading: string): string {
+  return heading
+    .toLowerCase()
+    .replace(/[^a-z0-9áéíóúüñ]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function renderInline(text: string): React.ReactNode {

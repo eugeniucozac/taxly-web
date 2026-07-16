@@ -1058,7 +1058,13 @@
       "gig": "Gig y 1099",
       "deadlines": "Fechas y multas"
     },
-    "readTime": "{minutes} min de lectura"
+    "readTime": "{minutes} min de lectura",
+    "eyebrow": "Guías",
+    "countChip": "{count, plural, one {# guía publicada} other {# guías publicadas}}",
+    "featuredLabel": "Guía más reciente",
+    "filterAll": "Todas",
+    "tocHeading": "En esta guía",
+    "relatedHeading": "Sigue leyendo"
   },
   "footer": {
     "product": "Producto",

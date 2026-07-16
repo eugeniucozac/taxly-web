@@ -1058,7 +1058,13 @@
       "gig": "Gig & 1099",
       "deadlines": "Deadlines & penalties"
     },
-    "readTime": "{minutes} min read"
+    "readTime": "{minutes} min read",
+    "eyebrow": "Guides",
+    "countChip": "{count, plural, one {# guide live} other {# guides live}}",
+    "featuredLabel": "Latest guide",
+    "filterAll": "All",
+    "tocHeading": "In this guide",
+    "relatedHeading": "Keep reading"
   },
   "footer": {
     "product": "Product",
