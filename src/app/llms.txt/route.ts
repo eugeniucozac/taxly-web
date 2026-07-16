@@ -18,8 +18,8 @@ export async function GET() {
 - Status: pre-launch waitlist. Taxly is NOT yet an IRS-authorized e-file
   provider and makes no such claim until authorization is granted.
 - Planned pricing (TY2026, price-locked): Free tier for simple W-2 returns
-  (federal + one state included); Deluxe $39 federal; Premium $69 federal
-  (self-employed/1099); state returns beyond the free tier $29 each. The
+  (federal + one state included); Deluxe $39; Premium $69 (self-employed/1099)
+  — every tier includes one state return; extra states $29 each. The
   price shown at the start is the price paid at the end.
 - Launch states: TX, FL, WA (no state income tax → federal-only), with CA
   and NY planned conditionally.

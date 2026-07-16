@@ -26,9 +26,9 @@ export const comparisons: Comparison[] = [
       },
       {
         feature: "Precio por declaración estatal",
-        taxly: "$29 fijo por estado",
+        taxly: "Primer estado incluido, luego $29 fijo",
         rival: "A menudo $40–$60+ por estado",
-        winner: "rival",
+        winner: "taxly",
       },
       {
         feature: "Amplitud de situaciones fiscales",
@@ -90,7 +90,7 @@ export const comparisons: Comparison[] = [
       },
       {
         q: "¿Por qué TurboTax es más caro para freelancers?",
-        a: "El ingreso de trabajo independiente requiere su nivel de consumo más alto, y las declaraciones estatales se cobran aparte. Un trabajador gig con un estado puede llegar razonablemente a $150+ al pagar. El equivalente de Taxly es $69 federal + $29 estatal, revelado antes de empezar. Verifica los precios actuales de TurboTax en su sitio — cambian a mitad de temporada.",
+        a: "El ingreso de trabajo independiente requiere su nivel de consumo más alto, y las declaraciones estatales se cobran aparte. Un trabajador gig con un estado puede llegar razonablemente a $150+ al pagar. El equivalente de Taxly es $69 todo incluido — la primera declaración estatal está incluida — revelado antes de empezar. Verifica los precios actuales de TurboTax en su sitio — cambian a mitad de temporada.",
       },
       {
         q: "¿Puedo cambiarme a Taxly si usé TurboTax el año pasado?",
@@ -120,9 +120,9 @@ export const comparisons: Comparison[] = [
       },
       {
         feature: "Precio por declaración estatal",
-        taxly: "$29",
-        rival: "~$15 (verifica el precio actual)",
-        winner: "rival",
+        taxly: "Primer estado incluido, luego $29",
+        rival: "~$15 cada uno (verifica el precio actual)",
+        winner: "taxly",
       },
       {
         feature: "Precios honestos sin ventas adicionales",

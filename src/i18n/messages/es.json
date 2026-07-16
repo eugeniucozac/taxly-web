@@ -206,7 +206,7 @@
     "free": {
       "name": "Gratis",
       "federalPrice": "$0",
-      "statePrice": "$0",
+      "statePrice": "1 estado incluido",
       "period": "federal + 1 estado",
       "description": "Declaraciones simples con W-2. Sin límite de ingresos.",
       "cta": "Presentar gratis",
@@ -222,8 +222,8 @@
     "deluxe": {
       "name": "Deluxe",
       "federalPrice": "$39",
-      "statePrice": "+ $29 / estado",
-      "period": "federal",
+      "statePrice": "1 estado incluido · estados extra $29",
+      "period": "federal + 1 estado",
       "description": "Deducciones, propietarios de vivienda, HSA y más.",
       "cta": "Comenzar Deluxe",
       "badge": "Más popular",
@@ -239,8 +239,8 @@
     "premium": {
       "name": "Premium",
       "federalPrice": "$69",
-      "statePrice": "+ $29 / estado",
-      "period": "federal",
+      "statePrice": "1 estado incluido · estados extra $29",
+      "period": "federal + 1 estado",
       "description": "Inversiones, cripto, alquileres, trabajo independiente.",
       "cta": "Comenzar Premium",
       "features": [
@@ -270,8 +270,8 @@
         "stateReturn": {
           "label": "Declaración estatal",
           "free": "Gratis (1 estado)",
-          "deluxe": "$29 / estado",
-          "premium": "$29 / estado"
+          "deluxe": "1 incluido, luego $29 cada uno",
+          "premium": "1 incluido, luego $29 cada uno"
         },
         "eFile": {
           "label": "E-file del IRS",
@@ -378,8 +378,8 @@
         "answer": "Sí. Gratis significa $0 para la declaración federal y $0 para una declaración estatal. No te pedimos tarjeta de crédito hasta que actualices a Deluxe o Premium."
       },
       "q2": {
-        "question": "¿Qué significa 'por estado'?",
-        "answer": "Cada declaración estatal cuesta $29, independientemente del plan (Deluxe o Premium). Dos estados = $58, tres estados = $87. No hay cargos estatales en el plan Gratis para tu primer estado."
+        "question": "¿Cómo se cobran las declaraciones estatales?",
+        "answer": "Cada plan incluye tu primera declaración estatal — Gratis, Deluxe y Premium. Los estados adicionales cuestan $29 cada uno: un segundo estado suma $29, un tercero $58. El precio estatal se muestra antes de empezar y queda bloqueado como todo lo demás."
       },
       "q3": {
         "question": "¿Puedo actualizar después de comenzar?",
@@ -413,7 +413,7 @@
       },
       "taxly": {
         "title": "Taxly Premium",
-        "price": "$69 + $29/estado",
+        "price": "$69 incl. 1 estado",
         "text": "Lo que compra el precio: una entrevista guiada en lenguaje claro que encuentra deducciones que quien presenta un 1099 por primera vez no sabe que existen — a un precio que no puede cambiar al pagar.",
         "href": "/how-it-works",
         "linkLabel": "Cómo funciona →"
@@ -1180,7 +1180,7 @@
       }
     ],
     "taxlyHeading": "Dónde encaja Taxly",
-    "taxlyBody": "El argumento de Taxly cabe en una frase: el precio que ves al empezar es el precio que pagas al declarar. Declaraciones W-2 simples gratis (federal más un estado), 39 dólares el nivel Deluxe federal, 69 para trabajo por cuenta propia, 29 por estado fuera del nivel gratuito — fijados desde el inicio, sin emboscadas de mejora a mitad de camino. Estamos en pre-lanzamiento (abrimos para la temporada 2027), así que hoy la oferta honesta es un lugar en la lista de espera, no una caja de pago.",
+    "taxlyBody": "El argumento de Taxly cabe en una frase: el precio que ves al empezar es el precio que pagas al declarar. Declaraciones W-2 simples gratis (federal más un estado), 39 dólares el nivel Deluxe, 69 para trabajo por cuenta propia — cada plan incluye tu primer estado, los estados extra cuestan 29 cada uno — fijados desde el inicio, sin emboscadas de mejora a mitad de camino. Estamos en pre-lanzamiento (abrimos para la temporada 2027), así que hoy la oferta honesta es un lugar en la lista de espera, no una caja de pago.",
     "taxlyLink": "Lee la comparación completa Taxly vs TurboTax",
     "stayHeading": "Cuándo conviene quedarte con TurboTax",
     "stayItems": [
@@ -1251,7 +1251,7 @@
       "'Orientación gratis' que se convierte en una revisión de pago antes de poder declarar"
     ],
     "honestyHeading": "Nuestra propia letra pequeña, dicha claramente",
-    "honestyBody": "El nivel gratuito de Taxly cubre declaraciones W-2 simples — federal más un estado incluido. Deluxe cuesta 39 dólares, el trabajo por cuenta propia 69, y las declaraciones estatales fuera del nivel gratuito cuestan 29 cada una — eso no es gratis, y preferimos decirlo aquí que sorprenderte al pagar. Cada precio queda bloqueado cuando empiezas.",
+    "honestyBody": "El nivel gratuito de Taxly cubre declaraciones W-2 simples — federal más un estado incluido. Deluxe cuesta 39 dólares y el trabajo por cuenta propia 69, cada uno con tu primera declaración estatal incluida; los estados adicionales cuestan 29 cada uno — eso no es gratis, y preferimos decirlo aquí que sorprenderte al pagar. Cada precio queda bloqueado cuando empiezas.",
     "ctaHeading": "¿Quieres declarar sin letra pequeña?",
     "ctaBody": "Únete a la lista de espera — acceso primero cuando Taxly abra para la temporada.",
     "faq": [

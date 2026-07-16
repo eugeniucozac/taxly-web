@@ -224,7 +224,7 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
                     </span>
                   </div>
                   <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>
-                    {t(`pricing.${plan}.statePrice`)} state
+                    {t(`pricing.${plan}.statePrice`)}
                   </p>
                   <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>
                     {t(`pricing.${plan}.description`)}

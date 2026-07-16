@@ -633,7 +633,7 @@ El problema de TurboTax nunca fue la calidad. El fallo de la FTC en 2024 fue por
 
 ## Dónde encaja Taxly
 
-Taxly abre para declaraciones del año fiscal 2026 en enero de 2027, construido para el trabajador gig y 1099 al que TurboTax dirige a su nivel más caro: una entrevista guiada en lenguaje claro, $69 federal + $29 estatal para declaraciones de trabajo independiente, y una garantía de precio fijo — el número que ves al empezar es el número que pagas al final. Nuestras comparaciones detalladas contra TurboTax, FreeTaxUSA y Direct File explican exactamente dónde gana cada rival.
+Taxly abre para declaraciones del año fiscal 2026 en enero de 2027, construido para el trabajador gig y 1099 al que TurboTax dirige a su nivel más caro: una entrevista guiada en lenguaje claro, $69 para declaraciones de trabajo independiente con el primer estado incluido, y una garantía de precio fijo — el número que ves al empezar es el número que pagas al final. Nuestras comparaciones detalladas contra TurboTax, FreeTaxUSA y Direct File explican exactamente dónde gana cada rival.
 
 **El resumen honesto:** declaración simple en un estado cubierto → Direct File. Conoces tus impuestos y quieres barato → FreeTaxUSA. Declaración compleja o necesitas un humano → TurboTax o Block. Primer año con 1099 y quieres orientación sin emboscada → para eso estamos construyendo.
 `,

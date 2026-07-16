@@ -50,7 +50,7 @@ export const comparisons: Comparison[] = [
       },
       {
         feature: "State return price",
-        taxly: "$29 flat per state",
+        taxly: "First state included, then $29 flat",
         rival: "Often $40–$60+ per state",
         winner: "taxly",
       },
@@ -114,7 +114,7 @@ export const comparisons: Comparison[] = [
       },
       {
         q: "Why is TurboTax more expensive for freelancers?",
-        a: "Self-employment income requires its highest consumer tier, and state returns are priced separately on top. A gig worker with one state can reasonably reach $150+ at checkout. Taxly's equivalent is $69 federal + $29 state, disclosed before you start. Verify TurboTax's current prices on their site — they change mid-season.",
+        a: "Self-employment income requires its highest consumer tier, and state returns are priced separately on top. A gig worker with one state can reasonably reach $150+ at checkout. Taxly's equivalent is $69 all-in — the first state return is included — disclosed before you start. Verify TurboTax's current prices on their site — they change mid-season.",
       },
       {
         q: "Can I switch to Taxly if I used TurboTax last year?",
@@ -144,9 +144,9 @@ export const comparisons: Comparison[] = [
       },
       {
         feature: "State return price",
-        taxly: "$29",
-        rival: "~$15 (verify current pricing)",
-        winner: "rival",
+        taxly: "First state included, then $29",
+        rival: "~$15 each (verify current pricing)",
+        winner: "taxly",
       },
       {
         feature: "Honest, upsell-free pricing",

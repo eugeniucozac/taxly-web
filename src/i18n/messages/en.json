@@ -206,7 +206,7 @@
     "free": {
       "name": "Free",
       "federalPrice": "$0",
-      "statePrice": "$0",
+      "statePrice": "1 state included",
       "period": "federal + 1 state",
       "description": "Simple W-2 returns. No income limits.",
       "cta": "File free",
@@ -222,8 +222,8 @@
     "deluxe": {
       "name": "Deluxe",
       "federalPrice": "$39",
-      "statePrice": "+ $29 / state",
-      "period": "federal",
+      "statePrice": "1 state included · extra states $29",
+      "period": "federal + 1 state",
       "description": "Deductions, homeowners, HSA, and more.",
       "cta": "Start Deluxe",
       "badge": "Most popular",
@@ -239,8 +239,8 @@
     "premium": {
       "name": "Premium",
       "federalPrice": "$69",
-      "statePrice": "+ $29 / state",
-      "period": "federal",
+      "statePrice": "1 state included · extra states $29",
+      "period": "federal + 1 state",
       "description": "Investments, crypto, rentals, self-employment.",
       "cta": "Start Premium",
       "features": [
@@ -270,8 +270,8 @@
         "stateReturn": {
           "label": "State return",
           "free": "Free (1 state)",
-          "deluxe": "$29 / state",
-          "premium": "$29 / state"
+          "deluxe": "1 included, then $29 each",
+          "premium": "1 included, then $29 each"
         },
         "eFile": {
           "label": "IRS e-file",
@@ -378,8 +378,8 @@
         "answer": "Yes. Free means $0 for federal and $0 for one state return. We don't ask for your credit card until you upgrade to Deluxe or Premium. The price you see when you start is the price you pay."
       },
       "q2": {
-        "question": "What does 'per state' mean?",
-        "answer": "Each state return costs $29, regardless of which plan you're on (Deluxe or Premium). So two states = $58, three states = $87. There are no state fees on the Free plan for your first state."
+        "question": "How are state returns priced?",
+        "answer": "Every plan includes your first state return — Free, Deluxe, and Premium. Additional states are $29 each: a second state adds $29, a third adds $58. State pricing is shown before you start and locked like everything else."
       },
       "q3": {
         "question": "Can I upgrade after I start?",
@@ -413,7 +413,7 @@
       },
       "taxly": {
         "title": "Taxly Premium",
-        "price": "$69 + $29/state",
+        "price": "$69 incl. 1 state",
         "text": "What the premium buys: a plain-English guided interview that finds deductions a first-time 1099 filer doesn't know exist — at a price that can't change at checkout.",
         "href": "/how-it-works",
         "linkLabel": "How it works →"
@@ -1180,7 +1180,7 @@
       }
     ],
     "taxlyHeading": "Where Taxly fits",
-    "taxlyBody": "Taxly's case is one sentence: the price you see when you start is the price you pay when you file. Simple W-2 returns free (federal plus one state), $39 federal for Deluxe, $69 for self-employed, $29 per state beyond the free tier — locked at the start, no mid-flow upgrade ambush. We're pre-launch (opening for the 2027 season), so today the honest offer is a waitlist spot, not a checkout.",
+    "taxlyBody": "Taxly's case is one sentence: the price you see when you start is the price you pay when you file. Simple W-2 returns free (federal plus one state), $39 for Deluxe, $69 for self-employed — every plan includes your first state, extra states are $29 each — locked at the start, no mid-flow upgrade ambush. We're pre-launch (opening for the 2027 season), so today the honest offer is a waitlist spot, not a checkout.",
     "taxlyLink": "Read the full Taxly vs TurboTax comparison",
     "stayHeading": "When you should just stay with TurboTax",
     "stayItems": [
@@ -1251,7 +1251,7 @@
       "'Free guidance' that turns into a paid review before you can file"
     ],
     "honestyHeading": "Our own fine print, stated plainly",
-    "honestyBody": "Taxly's free tier covers simple W-2 returns — federal plus one state included. Deluxe is $39, self-employment is $69, and state returns beyond the free tier are $29 each — those aren't free, and we'd rather say so here than surprise you at checkout. Every price is locked when you start.",
+    "honestyBody": "Taxly's free tier covers simple W-2 returns — federal plus one state included. Deluxe is $39 and self-employment is $69, each including your first state return; additional states are $29 each — not free, and we'd rather say so here than surprise you at checkout. Every price is locked when you start.",
     "ctaHeading": "Want filing without the fine print?",
     "ctaBody": "Join the waitlist — first access when Taxly opens for the season.",
     "faq": [

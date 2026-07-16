@@ -76,7 +76,7 @@ const siteGraph = {
         "@type": "Offer",
         price: "0",
         priceCurrency: "USD",
-        description: "Free tier for simple W-2 returns; Deluxe $39, Premium $69, states $29.",
+        description: "Free tier for simple W-2 returns; Deluxe $39, Premium $69 — every tier includes one state return, extra states $29.",
       },
       publisher: { "@id": `${BASE_URL}/#org` },
     },

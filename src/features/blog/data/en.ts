@@ -739,7 +739,7 @@ TurboTax's problem was never quality. The FTC's 2024 ruling was about deceptive 
 
 ## Where Taxly fits
 
-Taxly opens for TY2026 returns in January 2027, built for the gig and 1099 filer TurboTax routes to its most expensive tier: a guided plain-English interview, $69 federal + $29 state for self-employment returns, and a price-lock guarantee — the number you see at the start is the number you pay at the end. Our detailed comparisons against TurboTax, FreeTaxUSA, and Direct File spell out exactly where each rival wins.
+Taxly opens for TY2026 returns in January 2027, built for the gig and 1099 filer TurboTax routes to its most expensive tier: a guided plain-English interview, $69 for self-employment returns with the first state included, and a price-lock guarantee — the number you see at the start is the number you pay at the end. Our detailed comparisons against TurboTax, FreeTaxUSA, and Direct File spell out exactly where each rival wins.
 
 **The honest summary:** simple return in a covered state → Direct File. Know your taxes, want cheap → FreeTaxUSA. Complex return or need a human → TurboTax or Block. First-year 1099 filer who wants guidance without the ambush → that's who we're building for.
 `,

@@ -39,7 +39,7 @@ const pricingSchema = {
       availability: "https://schema.org/InStock",
       url: `${BASE_URL}/pricing`,
       description:
-        "Federal $39, state $29 each. Itemized deductions, mortgage interest, HSA, homeowners.",
+        "Federal $39 with first state included; extra states $29 each. Itemized deductions, mortgage interest, HSA, homeowners.",
     },
     {
       "@type": "Offer",
@@ -49,7 +49,7 @@ const pricingSchema = {
       availability: "https://schema.org/InStock",
       url: `${BASE_URL}/pricing`,
       description:
-        "Federal $69, state $29 each. Investments, crypto, rental income, self-employed (Schedule C).",
+        "Federal $69 with first state included; extra states $29 each. Investments, crypto, rental income, self-employed (Schedule C).",
     },
   ],
 };
@@ -153,7 +153,7 @@ function PricingClient() {
                   <span className="text-4xl font-bold">{t(`${plan}.federalPrice`)}</span>
                   <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}> federal</span>
                 </div>
-                <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.statePrice`)} state</p>
+                <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.statePrice`)}</p>
                 <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.description`)}</p>
                 <ul className="mb-8 space-y-3">
                   {features.map((f) => (
