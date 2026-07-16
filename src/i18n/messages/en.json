@@ -879,7 +879,18 @@
     "heading": "Page not found",
     "text": "That page doesn't exist — it may have moved, or the link was mistyped. The free tools and guides below are the fastest way back.",
     "home": "Back to home",
-    "tools": "Explore free tools"
+    "tools": "Explore free tools",
+    "card": {
+      "formWord": "Form",
+      "title": "Missing Page Return",
+      "dept": "Department of Pages That Moved · Do not file",
+      "line1": "1. Page you were looking for",
+      "fill1": "not found",
+      "line2": "2. Penalty owed",
+      "fill2": "$0.00",
+      "line3": "3. Fastest way back (check one)",
+      "fill3": "☑ below"
+    }
   },
   "legal": {
     "draftBanner": "Draft — this document has not yet been reviewed by counsel. It describes our real practices, but wording may change before launch."

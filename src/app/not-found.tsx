@@ -22,7 +22,7 @@ const css = `
     background: radial-gradient(ellipse 80% 60% at 50% -10%, #e0f2fe, #ffffff 60%);
     color: #0f172a;
   }
-  main { max-width: 42rem; padding: 3rem 1.5rem; text-align: center; }
+  main { max-width: 52rem; padding: 3rem 1.5rem; text-align: center; }
   .form {
     margin: 0 auto; max-width: 26rem; border: 1.5px solid #0f172a; border-radius: 0.375rem;
     background: #ffffff; text-align: left; box-shadow: 4px 4px 0 #bae6fd;
@@ -59,7 +59,64 @@ const css = `
   a.ghost { border: 1px solid #cbd5e1; color: #0f172a; }
   a.ghost:hover { border-color: #0ea5e9; color: #0284c7; }
   a:focus-visible { outline: 2px solid #0ea5e9; outline-offset: 2px; }
+  .links-label {
+    margin: 3rem 0 0; font-size: 0.6875rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; color: #64748b;
+  }
+  .grid { margin-top: 1rem; display: grid; gap: 0.875rem; text-align: left; }
+  @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  .grid a {
+    display: block; padding: 1.125rem 1.25rem; border-radius: 0.75rem;
+    border: 1px solid #cbd5e1; background: #ffffff; text-decoration: none;
+    transition: border-color 150ms, box-shadow 150ms, transform 150ms;
+  }
+  .grid a:hover {
+    border-color: #0ea5e9; transform: translateY(-2px);
+    box-shadow: 0 8px 20px -12px rgba(2, 132, 199, 0.4);
+  }
+  .grid .t { display: block; font-size: 0.9375rem; font-weight: 600; color: #0f172a; }
+  .grid .d { display: block; margin-top: 0.25rem; font-size: 0.8125rem; line-height: 1.5; color: #64748b; }
+  .grid .free {
+    display: inline-block; margin-left: 0.375rem; padding: 0.1rem 0.5rem; border-radius: 9999px;
+    background: #d1fae5; color: #047857; font-size: 0.6875rem; font-weight: 600;
+  }
 `;
+
+const LINKS: { href: string; title: string; desc: string; free?: boolean }[] = [
+  {
+    href: "/en/refund-estimator",
+    title: "Refund estimator",
+    desc: "A five-minute read on your refund or bill — no signup, no email.",
+    free: true,
+  },
+  {
+    href: "/en/free-tax-filing",
+    title: "Actually free filing",
+    desc: "Every genuinely free way to file, and what 'free' usually hides.",
+  },
+  {
+    href: "/en/turbotax-alternative",
+    title: "TurboTax alternatives",
+    desc: "The honest comparison — free government options named first.",
+  },
+  {
+    href: "/en/tools/quarterly-tax",
+    title: "Quarterly tax calculator",
+    desc: "Safe-harbor amounts and the four due dates, computed for you.",
+    free: true,
+  },
+  {
+    href: "/en/pricing",
+    title: "Pricing",
+    desc: "Flat, locked tiers — the price you see is the price you pay.",
+  },
+  {
+    href: "/en/blog",
+    title: "Guides & blog",
+    desc: "Plain-English tax guides that name the free option when it wins.",
+  },
+];
 
 export default function RootNotFound() {
   return (
@@ -105,6 +162,18 @@ export default function RootNotFound() {
             <a className="ghost" href="/en/tools">
               Explore free tools
             </a>
+          </div>
+          <p className="links-label">Where people usually want to go</p>
+          <div className="grid">
+            {LINKS.map(({ href, title, desc, free }) => (
+              <a key={href} href={href}>
+                <span className="t">
+                  {title}
+                  {free && <span className="free">Free</span>}
+                </span>
+                <span className="d">{desc}</span>
+              </a>
+            ))}
           </div>
         </main>
       </body>

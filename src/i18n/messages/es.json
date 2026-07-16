@@ -879,7 +879,18 @@
     "heading": "Página no encontrada",
     "text": "Esa página no existe — puede que se haya movido o que el enlace esté mal escrito. Las herramientas y guías gratuitas son el camino de vuelta más rápido.",
     "home": "Volver al inicio",
-    "tools": "Ver herramientas gratis"
+    "tools": "Ver herramientas gratis",
+    "card": {
+      "formWord": "Formulario",
+      "title": "Declaración de Página Perdida",
+      "dept": "Departamento de Páginas que se Mudaron · No presentar",
+      "line1": "1. Página que buscabas",
+      "fill1": "no encontrada",
+      "line2": "2. Multa a pagar",
+      "fill2": "$0.00",
+      "line3": "3. Camino más rápido de vuelta (marca uno)",
+      "fill3": "☑ abajo"
+    }
   },
   "legal": {
     "draftBanner": "Borrador — este documento aún no ha sido revisado por un abogado. Describe nuestras prácticas reales, pero la redacción puede cambiar antes del lanzamiento."
