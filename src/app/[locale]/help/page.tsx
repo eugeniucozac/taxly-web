@@ -57,6 +57,10 @@ function HelpClient() {
       <div className="mx-auto max-w-3xl px-6 text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
         <p className="text-lg text-muted-foreground">{t("subheading")}</p>
+        {/* Same honesty register as the guarantees page: these answers describe the product being built */}
+        <p className="mx-auto mt-6 max-w-2xl rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
+          {t("preLaunchNote")}
+        </p>
       </div>
 
       {/* Sections */}

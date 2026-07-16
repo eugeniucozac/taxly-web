@@ -16,13 +16,14 @@
     "subheading": "Taxly te guía paso a paso por tu declaración federal y estatal en español claro. Sin jerga. Sin cargos sorpresa. Reembolso máximo.",
     "cta": "Comenzar gratis",
     "ctaSecondary": "Ver cómo funciona",
-    "noCard": "Sin tarjeta de crédito · Declaración federal gratuita"
+    "noCard": "Sin tarjeta de crédito · Declaración federal gratuita",
+    "waitlistCta": "Unirme a la lista"
   },
   "trust": {
     "item1": "Cifrado de 256 bits",
-    "item2": "Listo para e-file del IRS",
+    "item2": "Nunca vendemos tus datos",
     "item3": "Garantía de reembolso máximo",
-    "item4": "Calificación 4.8 ★"
+    "item4": "En inglés y español"
   },
   "howItWorks": {
     "heading": "Tres pasos. Tú tienes el control.",
@@ -529,7 +530,8 @@
         "question": "¿Puedo presentar conjuntamente con mi cónyuge?",
         "answer": "Sí. Elige 'Casado presentando conjuntamente' al comenzar. Taxly pedirá la información de tu cónyuge y comparará MFJ vs MFS para encontrar la mejor opción."
       }
-    }
+    },
+    "preLaunchNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Estas respuestas describen el producto que estamos construyendo — lo operativo (cuentas, pagos, reembolsos, 2FA) aplica desde el lanzamiento."
   },
   "about": {
     "heading": "Construido por personas que creen que los impuestos no deberían ser tan difíciles",
@@ -1167,7 +1169,7 @@
       }
     ],
     "taxlyHeading": "Dónde encaja Taxly",
-    "taxlyBody": "El argumento de Taxly cabe en una frase: el precio que ves al empezar es el precio que pagas al declarar. Gratis para declaraciones W-2 simples, 39 dólares el nivel Deluxe federal, 69 para trabajo por cuenta propia, 29 por estado — fijados desde el inicio, sin emboscadas de mejora a mitad de camino. Estamos en pre-lanzamiento (abrimos para la temporada 2027), así que hoy la oferta honesta es un lugar en la lista de espera, no una caja de pago.",
+    "taxlyBody": "El argumento de Taxly cabe en una frase: el precio que ves al empezar es el precio que pagas al declarar. Declaraciones W-2 simples gratis (federal más un estado), 39 dólares el nivel Deluxe federal, 69 para trabajo por cuenta propia, 29 por estado fuera del nivel gratuito — fijados desde el inicio, sin emboscadas de mejora a mitad de camino. Estamos en pre-lanzamiento (abrimos para la temporada 2027), así que hoy la oferta honesta es un lugar en la lista de espera, no una caja de pago.",
     "taxlyLink": "Lee la comparación completa Taxly vs TurboTax",
     "stayHeading": "Cuándo conviene quedarte con TurboTax",
     "stayItems": [
@@ -1225,7 +1227,7 @@
       {
         "name": "El nivel gratuito de Taxly",
         "tag": "Gratis · declaraciones W-2 simples",
-        "body": "Cuando lancemos para la temporada 2027: declaraciones federales W-2 simples gratis, y el precio de todo lo demás mostrado antes de empezar y bloqueado. Hoy estamos en pre-lanzamiento — lo único en venta es la lista de espera.",
+        "body": "Cuando lancemos para la temporada 2027: declaraciones W-2 simples gratis — federal más un estado — y el precio de todo lo demás mostrado antes de empezar y bloqueado. Hoy estamos en pre-lanzamiento — lo único en venta es la lista de espera.",
         "linkLabel": "Mira los precios planeados completos",
         "href": "/pricing"
       }
@@ -1238,7 +1240,7 @@
       "'Orientación gratis' que se convierte en una revisión de pago antes de poder declarar"
     ],
     "honestyHeading": "Nuestra propia letra pequeña, dicha claramente",
-    "honestyBody": "El nivel gratuito de Taxly cubre declaraciones federales W-2 simples. El trabajo por cuenta propia cuesta 69 dólares, Deluxe 39, y cada declaración estatal 29 — eso no es gratis, y preferimos decirlo aquí que sorprenderte al pagar. Cada precio queda bloqueado cuando empiezas.",
+    "honestyBody": "El nivel gratuito de Taxly cubre declaraciones W-2 simples — federal más un estado incluido. Deluxe cuesta 39 dólares, el trabajo por cuenta propia 69, y las declaraciones estatales fuera del nivel gratuito cuestan 29 cada una — eso no es gratis, y preferimos decirlo aquí que sorprenderte al pagar. Cada precio queda bloqueado cuando empiezas.",
     "ctaHeading": "¿Quieres declarar sin letra pequeña?",
     "ctaBody": "Únete a la lista de espera — acceso primero cuando Taxly abra para la temporada.",
     "faq": [
@@ -1256,7 +1258,7 @@
       },
       {
         "q": "¿Cuánto cobra Taxly?",
-        "a": "Precios planeados, bloqueados desde el inicio: gratis para declaraciones federales W-2 simples, 39 dólares Deluxe, 69 para trabajo por cuenta propia, 29 por estado. Taxly está en pre-lanzamiento y abre para la temporada 2027 — únete a la lista de espera para acceso primero."
+        "a": "Precios planeados, bloqueados desde el inicio: declaraciones W-2 simples gratis (federal más un estado), 39 dólares Deluxe, 69 para trabajo por cuenta propia, 29 por estado adicional. Taxly está en pre-lanzamiento y abre para la temporada 2027 — únete a la lista de espera para acceso primero."
       }
     ]
   }

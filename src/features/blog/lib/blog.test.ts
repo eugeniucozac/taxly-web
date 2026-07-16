@@ -127,9 +127,9 @@ describe("live gating (isLive / getLivePosts)", () => {
 });
 
 describe("content quality", () => {
-  it("there are 22 posts per locale", () => {
-    expect(enPosts.length).toBe(22);
-    expect(esPosts.length).toBe(22);
+  it("there are 27 posts per locale", () => {
+    expect(enPosts.length).toBe(27);
+    expect(esPosts.length).toBe(27);
   });
 
   it("every post has a valid category and positive read time", () => {

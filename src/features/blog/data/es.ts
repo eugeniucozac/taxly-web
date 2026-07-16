@@ -1113,4 +1113,194 @@ Corre tus números aproximados primero — nuestro estimador de reembolso gratui
 Para la mayoría de los contribuyentes W-2, la planificación de fin de año son tres movidas: completar el 401(k), corregir la retención y gastar la FSA. Todo lo demás es solo para detalladores o puede esperar a abril. Aquí lo simple le gana a lo ingenioso.
 `,
   },
+  {
+    slug: "como-declarar-impuestos-primera-vez",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "Cómo declarar impuestos en EE. UU. por primera vez (guía en español)",
+    excerpt:
+      "Tu primera declaración en Estados Unidos, explicada en español: qué documentos necesitas, SSN vs ITIN, las opciones gratuitas de verdad y los errores más comunes.",
+    date: "2026-10-19",
+    author: "Taxly Team",
+    tags: ["primera-vez", "básicos"],
+    content: `
+Declarar impuestos en Estados Unidos por primera vez intimida a cualquiera — y si tu idioma principal es el español, la mitad de las guías disponibles no te hablan a ti. Esta sí. Escrita primero en español, no traducida como cortesía.
+
+## Lo primero: ¿tienes que declarar?
+
+Si trabajaste en EE. UU. y ganaste por encima del umbral de declaración (cambia cada año — verifícalo en irs.gov), sí. Y aunque no llegues al umbral, a menudo conviene declarar de todos modos: si tu empleador te retuvo impuestos, un reembolso solo llega si presentas. Muchos recién llegados dejan dinero en la mesa por no saberlo.
+
+## SSN o ITIN — tu número de identificación
+
+- **SSN (Seguro Social):** si tienes autorización de trabajo, este es tu número.
+- **ITIN:** si no calificas para un SSN, el IRS emite un número de identificación personal para declarar impuestos. Se solicita con el Formulario W-7, y declarar con ITIN no afecta tu situación migratoria — el IRS está legalmente restringido en cómo comparte esa información.
+
+## Los documentos que necesitas
+
+- El **W-2** de cada empleador (llega antes del 31 de enero)
+- Cualquier **1099** si hiciste trabajos por tu cuenta o por aplicaciones
+- Tu SSN o ITIN, y los de tu cónyuge y dependientes si aplica
+- Una identificación y, para depósito directo, tu número de cuenta bancaria
+
+## Las opciones gratuitas de verdad
+
+Lo decimos como empresa que vende declaración de impuestos: primero mira lo gratis. **IRS Direct File** (la herramienta del propio gobierno, disponible en español) si tu situación es simple y tu estado participa. **VITA**, donde voluntarios certificados — muchos hispanohablantes — preparan tu declaración gratis en persona. Y cuando Taxly lance, las declaraciones W-2 simples serán gratis, en español, federal más un estado.
+
+## Los errores que más cuestan
+
+- No declarar porque "gané poco" — y perder el reembolso de las retenciones
+- Pagar a un preparador que no firma la declaración (los "preparadores fantasma" son la estafa clásica — un preparador pagado legítimo firma siempre)
+- No reclamar créditos como el EITC o el Crédito por Hijos por no saber que existen
+- Esperar hasta abril y hacerlo todo con prisa
+
+## El resumen honesto
+
+Tu primera declaración es más simple de lo que parece: junta los documentos, usa una opción gratuita si calificas y reclama tus créditos. Nuestro estimador de reembolso gratuito te da una idea del resultado en cinco minutos, en español, sin registrarte.
+`,
+  },
+  {
+    slug: "irs-online-account-setup",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "Crea tu cuenta en línea del IRS antes de necesitarla",
+    excerpt:
+      "La cuenta en línea del IRS muestra lo que el gobierno ya sabe de ti: transcripciones, saldos, cartas y planes de pago. Créala en un día tranquilo, no en una crisis.",
+    date: "2026-10-26",
+    author: "Taxly Team",
+    tags: ["básicos", "comenzar"],
+    content: `
+Hay una regla simple con el IRS: el peor momento para crear tu cuenta en línea es cuando la necesitas con urgencia. La verificación de identidad puede tener fricción, y hacerla con calma en octubre le gana siempre a hacerla en pánico en abril.
+
+## Qué te muestra la cuenta
+
+- **Transcripciones de salarios e ingresos:** lo que cada empleador y plataforma reportó de ti. ¿Te falta un W-2 o un 1099? Aquí está, gratis
+- **Tu saldo:** lo que debes, año por año, con multas e intereses al día
+- **Historial de pagos:** cada pago estimado que hiciste (adiós a adivinar en abril qué pagaste en junio)
+- **Copias digitales de muchas cartas** del IRS — antes de que el papel llegue o después de que se pierda
+- **Planes de pago:** solicitar uno en línea es la vía rápida, y requiere la cuenta
+
+## Cómo crearla
+
+En irs.gov, con un proveedor de verificación de identidad: necesitas una identificación con foto y un teléfono a tu nombre, y a veces una videollamada corta. Son 15–30 minutos una sola vez.
+
+## Por qué octubre es el mes correcto
+
+Ningún plazo encima, el sistema sin la carga de la temporada, y tiempo de sobra para resolver cualquier tropiezo de verificación. Además: si te llegó una carta del IRS este año, la cuenta es la forma más rápida de ver qué significa de verdad — nuestro estimador de multas te dice qué cuesta un retraso, pero tu cuenta te dice el saldo exacto oficial.
+
+## El resumen honesto
+
+Es gratis, tarda media hora y convierte tres o cuatro crisis fiscales clásicas ("no tengo mi W-2", "¿cuánto debo?", "¿llegó mi pago?") en una consulta de dos minutos. Hazlo esta semana y olvídate.
+`,
+  },
+  {
+    slug: "when-can-you-file-2027",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "¿Cuándo puedes declarar en 2027? El día de apertura, explicado",
+    excerpt:
+      "El IRS abre la temporada a fines de enero, pero tus documentos mandan: los W-2 llegan hasta el 31. Qué ganas declarando temprano y cuándo conviene esperar.",
+    date: "2027-01-04",
+    author: "Taxly Team",
+    tags: ["fechas-límite", "básicos"],
+    content: `
+Año nuevo, y la pregunta de temporada: ¿cuándo puedo declarar? La respuesta corta: el IRS normalmente abre la aceptación de declaraciones a fines de enero (la fecha exacta se anuncia cada año — verifícala en irs.gov). La respuesta útil es sobre tus documentos, no sobre el IRS.
+
+## El calendario real de enero
+
+- **Fines de enero:** el IRS empieza a aceptar declaraciones electrónicas
+- **31 de enero:** fecha límite para que los empleadores envíen los W-2 y la mayoría de los 1099
+- **Mediados de febrero:** por ley, los reembolsos con EITC o Crédito por Hijos adicional no salen antes de mediados de febrero, declares cuando declares
+
+## Por qué declarar temprano gana
+
+La razón número uno no es el reembolso — es la **seguridad**. Presentar temprano cierra tu número de Seguro Social ante los estafadores que presentan declaraciones falsas para robar reembolsos. La declaración que llega primero gana; que sea la tuya. Y sí, el reembolso también llega antes: el IRS típicamente paga dentro de 21 días de aceptar tu declaración electrónica.
+
+## Cuándo conviene esperar
+
+Declarar antes de tener TODOS tus documentos es el clásico gol en contra. Si te falta un 1099 de una cuenta de inversión (suelen llegar en febrero) o un documento de tu plataforma de trabajo, esperar dos semanas te ahorra una declaración enmendada. La regla: declara tan temprano como tus documentos lo permitan — ni un día antes.
+
+## Prepárate esta semana
+
+Mientras llegan los papeles: reúne los del año pasado, confirma tu cuenta bancaria para el depósito directo y corre tus números preliminares — nuestro estimador de reembolso gratuito te dice en cinco minutos si viene reembolso o factura, sin esperar al IRS.
+
+## El resumen honesto
+
+La apertura del IRS es a fines de enero, tus W-2 llegan hasta el 31, y los estafadores no esperan a nadie. Declara temprano — pero completo.
+`,
+  },
+  {
+    slug: "q4-estimated-taxes-january-15",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 4,
+    title: "15 de enero: la fecha de pagos estimados que las fiestas hacen olvidar",
+    excerpt:
+      "El cuarto pago estimado vence el 15 de enero — semanas antes de que alguien piense en impuestos. Quién lo debe, la excepción del 31 de enero y cómo pagar.",
+    date: "2027-01-11",
+    author: "Taxly Team",
+    tags: ["quarterly-taxes", "fechas-límite"],
+    content: `
+Si haces pagos estimados trimestrales, este es el aviso que las fiestas se tragan cada año: el cuarto pago — el que cubre de septiembre a diciembre — vence el **15 de enero**. Semanas antes de que la temporada de impuestos exista en la cabeza de nadie.
+
+## Quién debe este pago
+
+El mismo grupo de siempre: freelancers, contratistas, arrendadores e inversionistas que esperan deber 1.000 dólares o más en el año. Si seguiste el puerto seguro (100% del impuesto del año pasado, 110% si tu ingreso bruto ajustado superó los 150.000), este es el último de los cuatro pagos iguales. Nuestra calculadora de impuestos trimestrales gratuita muestra el monto y la fecha.
+
+## La excepción curiosa del 31 de enero
+
+Regla poco conocida: si presentas tu declaración completa Y pagas todo el saldo antes del 31 de enero, puedes saltarte el pago del 15 de enero sin multa. En la práctica es difícil — los W-2 y 1099 apenas están llegando — pero para quien tiene todo listo temprano, existe.
+
+## ¿Diciembre fue mejor de lo esperado?
+
+El cuarto período es tu última oportunidad de ajustar. Si el fin de año trajo más ingreso del planeado (ventas navideñas, un proyecto grande, una distribución), sube este último pago para acercarte al puerto seguro. Si fue peor, puedes pagar menos — el puerto seguro se calcula por período.
+
+## Cómo pagar
+
+IRS Direct Pay en irs.gov, desde tu cuenta bancaria, sin comisión, en cinco minutos. Elige "Estimated Tax" y — atención — el **año fiscal 2026**, no 2027: este pago pertenece al año que acaba de terminar. Es el error clásico de enero.
+
+## El resumen honesto
+
+Es el pago trimestral con peor timing del año y el que más multas genera por puro olvido. Cinco minutos hoy, y tu declaración de abril llega sin sorpresas acumuladas.
+`,
+  },
+  {
+    slug: "your-w2-arrived-now-what",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "Llegó tu W-2 — esto es exactamente qué hacer con él",
+    excerpt:
+      "El sobre (o el PDF) ya está aquí. Qué significa cada casilla que importa, los tres errores a revisar antes de declarar y cuándo tienes todo para presentar.",
+    date: "2027-01-18",
+    author: "Taxly Team",
+    tags: ["w-2", "básicos"],
+    content: `
+Cada enero, millones de W-2 llegan y aterrizan en un cajón "para después". Este es el empujón para el ahora: cinco minutos de revisión y sabrás si estás listo para declarar.
+
+## Las casillas que importan
+
+- **Casilla 1 — salario gravable:** tu paga total menos las contribuciones antes de impuestos (401(k), seguro médico). Por eso es normal que sea menor que tu salario anual
+- **Casilla 2 — impuesto federal retenido:** lo que ya pagaste durante el año. Esta cifra contra tu impuesto real decide reembolso o factura
+- **Casillas 15–17 — estado:** salario y retención estatales, si tu estado tiene impuesto sobre la renta
+
+## Los tres errores a revisar hoy
+
+- **Tu número de Seguro Social.** Un dígito equivocado atasca todo — pide la corrección antes de declarar
+- **Tu nombre y dirección.** Cambios de apellido o mudanzas del año pasado son la causa clásica de discrepancias
+- **¿Falta un W-2?** Debes recibir uno de CADA empleador del año — incluido ese trabajo de tres semanas en marzo. El total se declara junto
+
+Si algo está mal, tu empleador emite un **W-2c** (corregido). Pídelo ya: cada semana de espera es una semana menos de temporada.
+
+## ¿Cuándo tienes todo?
+
+W-2 de cada empleador, 1099 de cada banco, corredor o plataforma (muchos llegan en febrero), y los documentos de tus dependientes. La forma más rápida de verificar qué reportaron de ti: tu cuenta en línea del IRS, con la transcripción de salarios e ingresos gratis.
+
+## El resumen honesto
+
+Un W-2 correcto y completo es el 80% de una declaración simple. Revísalo hoy, corre tus números en nuestro estimador de reembolso gratuito y declara cuando el último documento llegue — temprano, pero completo.
+`,
+  },
 ];

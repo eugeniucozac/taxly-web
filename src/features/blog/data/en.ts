@@ -1219,4 +1219,194 @@ Run your rough numbers first — our free refund estimator takes five minutes an
 For most W-2 filers, year-end tax planning is three moves: top up the 401(k), fix the withholding, spend the FSA. Everything else is either itemizer-only or can wait for April. Simple beats clever here.
 `,
   },
+  {
+    slug: "como-declarar-impuestos-primera-vez",
+    category: "basics",
+    status: "scheduled",
+    readTime: 6,
+    title: "How to File US Taxes for the First Time — a Spanish-First Guide",
+    excerpt:
+      "Your first US tax return, written Spanish-first and translated here: the documents you need, SSN vs ITIN, the genuinely free options, and the costliest mistakes.",
+    date: "2026-10-19",
+    author: "Taxly Team",
+    tags: ["first-time", "basics"],
+    content: `
+Filing US taxes for the first time intimidates everyone — and if your first language is Spanish, half the guides out there aren't talking to you. This one is: we wrote it in Spanish first and translated it here, not the other way around.
+
+## First things first: do you have to file?
+
+If you worked in the US and earned above the filing threshold (it changes yearly — verify on irs.gov), yes. And even below the threshold, filing often pays: if your employer withheld taxes, the refund only arrives if you file. Many newcomers leave money on the table simply by not knowing this.
+
+## SSN or ITIN — your identification number
+
+- **SSN (Social Security number):** if you have work authorization, this is your number.
+- **ITIN:** if you don't qualify for an SSN, the IRS issues an individual taxpayer identification number for filing. You apply with Form W-7, and filing with an ITIN doesn't affect your immigration case — the IRS is legally restricted in how it shares that information.
+
+## The documents you need
+
+- A **W-2** from every employer (they arrive by January 31)
+- Any **1099s** if you did independent or app-based work
+- Your SSN or ITIN, plus your spouse's and dependents' if applicable
+- A photo ID and, for direct deposit, your bank account number
+
+## The genuinely free options
+
+We say this as a company that sells tax filing: look at the free options first. **IRS Direct File** (the government's own tool, available in Spanish) if your situation is simple and your state participates. **VITA**, where IRS-certified volunteers — many Spanish-speaking — prepare your return free, in person. And when Taxly launches, simple W-2 returns will be free, in Spanish, federal plus one state.
+
+## The mistakes that cost the most
+
+- Not filing because "I didn't earn much" — and losing the refund of your withholding
+- Paying a preparer who won't sign the return (the "ghost preparer" is the classic scam — a legitimate paid preparer always signs)
+- Missing credits like the EITC or the Child Tax Credit because nobody told you they exist
+- Waiting until April and rushing everything
+
+## The honest summary
+
+Your first return is simpler than it looks: gather the documents, use a free option if you qualify, and claim your credits. Our free refund estimator gives you a read on the outcome in five minutes, in Spanish, no signup.
+`,
+  },
+  {
+    slug: "irs-online-account-setup",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "Set Up Your IRS Online Account Before You Need It",
+    excerpt:
+      "Your IRS online account shows what the government already knows about you: transcripts, balances, letters, payment plans. Set it up on a calm day, not in a crisis.",
+    date: "2026-10-26",
+    author: "Taxly Team",
+    tags: ["basics", "getting-started"],
+    content: `
+There's a simple rule with the IRS: the worst time to create your online account is the moment you urgently need it. Identity verification can have friction, and doing it calmly in October always beats doing it in an April panic.
+
+## What the account shows you
+
+- **Wage and income transcripts:** what every employer and platform reported about you. Missing a W-2 or 1099? It's here, free
+- **Your balance:** what you owe, year by year, with penalties and interest current
+- **Payment history:** every estimated payment you made (no more April guessing about what you paid in June)
+- **Digital copies of many IRS letters** — before the paper arrives or after it's lost
+- **Payment plans:** applying online is the fast lane, and it requires the account
+
+## How to set it up
+
+At irs.gov, through an identity-verification provider: you'll need a photo ID and a phone in your name, sometimes a short video call. It's 15–30 minutes, once.
+
+## Why October is the right month
+
+No deadline breathing on you, systems without the season's load, and plenty of time to sort out any verification hiccup. Also: if an IRS letter reached you this year, the account is the fastest way to see what it really means — our free penalty estimator tells you what a delay costs, but your account tells you the exact official balance.
+
+## The honest summary
+
+It's free, takes half an hour, and turns three or four classic tax crises ("I don't have my W-2", "how much do I owe?", "did my payment arrive?") into a two-minute lookup. Do it this week and forget about it.
+`,
+  },
+  {
+    slug: "when-can-you-file-2027",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 5,
+    title: "When Can You Actually File in 2027? Opening Day, Explained",
+    excerpt:
+      "The IRS opens the season in late January, but your documents rule: W-2s arrive by the 31st. What filing early actually buys you, and when waiting is smarter.",
+    date: "2027-01-04",
+    author: "Taxly Team",
+    tags: ["deadlines", "basics"],
+    content: `
+New year, and the season's first question: when can I file? The short answer: the IRS typically opens e-file acceptance in late January (the exact date is announced each year — verify on irs.gov). The useful answer is about your documents, not the IRS.
+
+## The real January calendar
+
+- **Late January:** the IRS starts accepting e-filed returns
+- **January 31:** the deadline for employers to send W-2s and most 1099s
+- **Mid-February:** by law, refunds claiming the EITC or Additional Child Tax Credit can't go out before mid-February, no matter how early you file
+
+## Why filing early wins
+
+The number-one reason isn't the refund — it's **security**. Filing early locks your Social Security number against scammers who file fake returns to steal refunds. The first return to arrive wins; make it yours. And yes, the refund comes sooner too: the IRS typically pays within 21 days of accepting an e-filed return.
+
+## When waiting is smarter
+
+Filing before you have ALL your documents is the classic own goal. If you're waiting on a 1099 from an investment account (they often arrive in February) or a platform's tax summary, two weeks of patience saves you an amended return. The rule: file as early as your documents allow — and not a day earlier.
+
+## Get ready this week
+
+While the paperwork trickles in: pull last year's return, confirm your bank details for direct deposit, and run your preliminary numbers — our free refund estimator tells you in five minutes whether a refund or a bill is coming, no waiting on the IRS.
+
+## The honest summary
+
+The IRS opens in late January, your W-2s arrive by the 31st, and scammers wait for no one. File early — but complete.
+`,
+  },
+  {
+    slug: "q4-estimated-taxes-january-15",
+    category: "deadlines",
+    status: "scheduled",
+    readTime: 4,
+    title: "January 15: the Estimated-Tax Deadline the Holidays Erase",
+    excerpt:
+      "The fourth estimated payment is due January 15 — weeks before anyone thinks about taxes. Who owes it, the January 31 exception, and how to pay in five minutes.",
+    date: "2027-01-11",
+    author: "Taxly Team",
+    tags: ["quarterly-taxes", "deadlines"],
+    content: `
+If you make quarterly estimated payments, this is the reminder the holidays swallow every year: the fourth payment — covering September through December — is due **January 15**. Weeks before tax season exists in anyone's head.
+
+## Who owes this payment
+
+The usual crowd: freelancers, contractors, landlords, and investors expecting to owe $1,000 or more for the year. If you followed the safe harbor (100% of last year's tax, 110% if your adjusted gross income was over $150,000), this is the last of the four equal installments. Our free quarterly tax calculator shows the amount and the date.
+
+## The curious January 31 exception
+
+Little-known rule: if you file your complete return AND pay the full balance by January 31, you can skip the January 15 payment without penalty. In practice it's hard — W-2s and 1099s are barely arriving — but for someone with everything ready early, it exists.
+
+## Did December run better than planned?
+
+The fourth period is your last chance to adjust. If year-end brought more income than expected (holiday sales, a big project, a distribution), raise this final payment to stay near the safe harbor. If it ran worse, you can pay less — the safe harbor computes per period.
+
+## How to pay
+
+IRS Direct Pay at irs.gov, from your bank account, no fee, five minutes. Choose "Estimated Tax" and — careful — tax year **2026**, not 2027: this payment belongs to the year that just ended. It's the classic January mistake.
+
+## The honest summary
+
+It's the worst-timed quarterly of the year and the one that generates the most penalties out of pure forgetfulness. Five minutes today, and your April return arrives without accumulated surprises.
+`,
+  },
+  {
+    slug: "your-w2-arrived-now-what",
+    category: "basics",
+    status: "scheduled",
+    readTime: 5,
+    title: "Your W-2 Arrived — Here's Exactly What to Do With It",
+    excerpt:
+      "The envelope (or PDF) is here. What each box that matters actually means, the three errors to check before you file, and how to know when you have everything.",
+    date: "2027-01-18",
+    author: "Taxly Team",
+    tags: ["w-2", "basics"],
+    content: `
+Every January, millions of W-2s arrive and land in a "later" drawer. This is the nudge for now: five minutes of checking and you'll know whether you're ready to file.
+
+## The boxes that matter
+
+- **Box 1 — taxable wages:** your total pay minus pre-tax contributions (401(k), health insurance). That's why it's normally smaller than your salary
+- **Box 2 — federal tax withheld:** what you already paid during the year. This number against your actual tax decides refund or bill
+- **Boxes 15–17 — state:** state wages and withholding, if your state has an income tax
+
+## The three errors to check today
+
+- **Your Social Security number.** One wrong digit jams everything — get it corrected before you file
+- **Your name and address.** Last year's name changes and moves are the classic source of mismatches
+- **A missing W-2?** You should get one from EVERY employer this year — including that three-week job in March. The total gets filed together
+
+If something's wrong, your employer issues a **W-2c** (corrected). Ask now: every week of waiting is a week less of season.
+
+## When do you have everything?
+
+A W-2 from each employer, 1099s from every bank, broker, or platform (many arrive in February), and your dependents' documents. The fastest way to verify what was reported about you: your IRS online account, with the free wage and income transcript.
+
+## The honest summary
+
+A correct, complete W-2 is 80% of a simple return. Check it today, run your numbers through our free refund estimator, and file when the last document lands — early, but complete.
+`,
+  },
 ];

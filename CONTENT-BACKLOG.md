@@ -26,9 +26,19 @@
 | 2026-09-28 | october-15-extension-deadline | deadlines | scheduled |
 | 2026-10-05 | hsa-triple-tax-advantage | basics | scheduled |
 | 2026-10-12 | year-end-tax-moves | basics | scheduled |
+| 2026-10-19 | como-declarar-impuestos-primera-vez | basics | scheduled |
+| 2026-10-26 | irs-online-account-setup | basics | scheduled |
+| *(pause)* | Nov–Dec deliberate gap — year-end post carries the period; season resumes Jan | — | — |
+| 2027-01-04 | when-can-you-file-2027 | deadlines | scheduled |
+| 2027-01-11 | q4-estimated-taxes-january-15 | deadlines | scheduled |
+| 2027-01-18 | your-w2-arrived-now-what | basics | scheduled |
 
 Both locales ship together — ES posts are authored translations with
-identical slugs/dates/status (pinned by tests).
+identical slugs/dates/status (pinned by tests). **Exception that proves the
+structure (batch 3): `como-declarar-impuestos-primera-vez` was authored in
+Spanish first and translated INTO English** — the cluster lead for the
+Spanish-first content strategy. Slug stays shared (Spanish slug, since it
+targets Spanish queries).
 
 ## Pre-publish fact verification (per batch)
 
@@ -49,15 +59,20 @@ July 2026 and rules move):
 - **09-28 Oct 15:** e-file shutdown window; disaster-relief postponements current; 3-year refund claim window.
 - **10-05 HSA:** current-year contribution limits + HDHP definition (change annually); CA/NJ state treatment unchanged.
 - **10-12 year-end:** wash-sale 30 days; capital-loss ordinary-income offset cap; withholding-treated-as-even rule.
+- **10-19 primera-vez (ES-first):** filing threshold current; W-7/ITIN process unchanged; Direct File Spanish availability; VITA locator live; ghost-preparer warning wording.
+- **10-26 IRS account:** ID-verification provider/process current; transcript types available online.
+- **01-04 opening day:** the actual announced opening date (insert once IRS announces); EITC/ACTC mid-February refund hold still law (PATH Act).
+- **01-11 Q4:** Jan 15 due date; the file-and-pay-by-Jan-31 exception; Direct Pay year-selection UI.
+- **01-18 W-2:** Jan 31 issuer deadline; W-2c process; box numbering unchanged.
 
-## Next-batch ideas (batch 3 — season ramp, November onward)
+## Next-batch ideas (batch 4 — season depth, February onward)
 
-1. "Spanish-first: cómo declarar impuestos por primera vez en EE. UU." — native ES cluster lead
-   (needs a structure decision: es-first authoring inverts the current en→es flow; slugs still shared).
-2. Glossary deep-links: expand the 30 terms with per-term anchors in posts.
-3. January IRS opening-day post ("when can you actually file") — timed for early January.
-4. "Your W-2 arrived — now what" — the season's highest-volume beginner query.
-5. Estimated Q4 deadline January 15 — the other quarterly summer amnesia claims (per the Q3 post).
+1. Glossary deep-links: per-term anchors from posts (needs renderer link support first —
+   the content renderer currently has no inline-link syntax).
+2. More Spanish-first cluster posts around `como-declarar-impuestos-primera-vez`
+   (ITIN application walkthrough, EITC en español) — the lead post's internal links.
+3. "Where's my refund?" explainer — February's highest-volume query.
+4. Amended returns (1040-X) — the season's cleanup query, March onward.
 
 ## Editorial rules
 

@@ -16,13 +16,14 @@
     "subheading": "Taxly guides you step by step through your federal and state return in plain English. No jargon. No surprise fees. Maximum refund.",
     "cta": "Start for free",
     "ctaSecondary": "See how it works",
-    "noCard": "No credit card required · Free federal return"
+    "noCard": "No credit card required · Free federal return",
+    "waitlistCta": "Join the waitlist"
   },
   "trust": {
     "item1": "256-bit encryption",
-    "item2": "IRS e-file ready",
+    "item2": "We never sell your data",
     "item3": "Maximum Refund Guarantee",
-    "item4": "4.8 ★ rated"
+    "item4": "In English & Spanish"
   },
   "howItWorks": {
     "heading": "Three steps. You stay in control.",
@@ -529,7 +530,8 @@
         "question": "Can I file jointly with my spouse?",
         "answer": "Yes. Choose 'Married Filing Jointly' when you start. Taxly will ask for your spouse's information and compare MFJ vs MFS to find the better outcome."
       }
-    }
+    },
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These answers describe the product we're building — anything operational (accounts, payments, refunds, 2FA) applies from launch."
   },
   "about": {
     "heading": "Built by people who believe taxes shouldn't be this hard",
@@ -1167,7 +1169,7 @@
       }
     ],
     "taxlyHeading": "Where Taxly fits",
-    "taxlyBody": "Taxly's case is one sentence: the price you see when you start is the price you pay when you file. Free for simple W-2 returns, $39 federal for Deluxe, $69 for self-employed, $29 per state — locked at the start, no mid-flow upgrade ambush. We're pre-launch (opening for the 2027 season), so today the honest offer is a waitlist spot, not a checkout.",
+    "taxlyBody": "Taxly's case is one sentence: the price you see when you start is the price you pay when you file. Simple W-2 returns free (federal plus one state), $39 federal for Deluxe, $69 for self-employed, $29 per state beyond the free tier — locked at the start, no mid-flow upgrade ambush. We're pre-launch (opening for the 2027 season), so today the honest offer is a waitlist spot, not a checkout.",
     "taxlyLink": "Read the full Taxly vs TurboTax comparison",
     "stayHeading": "When you should just stay with TurboTax",
     "stayItems": [
@@ -1225,7 +1227,7 @@
       {
         "name": "Taxly's free tier",
         "tag": "Free · simple W-2 returns",
-        "body": "When we launch for the 2027 season: simple W-2 federal returns free, and the price for everything else shown before you start and locked. We're pre-launch today — the waitlist is the only thing on sale.",
+        "body": "When we launch for the 2027 season: simple W-2 returns free — federal plus one state — and the price for everything else shown before you start and locked. We're pre-launch today — the waitlist is the only thing on sale.",
         "linkLabel": "See the full planned pricing",
         "href": "/pricing"
       }
@@ -1238,7 +1240,7 @@
       "'Free guidance' that turns into a paid review before you can file"
     ],
     "honestyHeading": "Our own fine print, stated plainly",
-    "honestyBody": "Taxly's free tier covers simple W-2 federal returns. Self-employment is $69, Deluxe is $39, and each state return is $29 — those aren't free, and we'd rather say so here than surprise you at checkout. Every price is locked when you start.",
+    "honestyBody": "Taxly's free tier covers simple W-2 returns — federal plus one state included. Deluxe is $39, self-employment is $69, and state returns beyond the free tier are $29 each — those aren't free, and we'd rather say so here than surprise you at checkout. Every price is locked when you start.",
     "ctaHeading": "Want filing without the fine print?",
     "ctaBody": "Join the waitlist — first access when Taxly opens for the season.",
     "faq": [
@@ -1256,7 +1258,7 @@
       },
       {
         "q": "What does Taxly charge?",
-        "a": "Planned pricing, locked at the start: free for simple W-2 federal returns, $39 Deluxe, $69 self-employed, $29 per state. Taxly is pre-launch and opens for the 2027 season — join the waitlist for first access."
+        "a": "Planned pricing, locked at the start: simple W-2 returns free (federal plus one state), $39 Deluxe, $69 self-employed, $29 per additional state. Taxly is pre-launch and opens for the 2027 season — join the waitlist for first access."
       }
     ]
   }

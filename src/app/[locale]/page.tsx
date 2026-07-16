@@ -99,7 +99,7 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
           <div id="waitlist" className="scroll-mt-24">
             <WaitlistForm
               placeholder="your@email.com"
-              ctaLabel={t("hero.cta")}
+              ctaLabel={t("hero.waitlistCta")}
               successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
               errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
  className="mx-auto max-w-lg justify-center"
@@ -391,7 +391,7 @@ function HomePageClient({ latestPosts }: { latestPosts: BlogPost[] }) {
           <p className="mb-8 text-lg text-sky-100">{t("hero.noCard")}</p>
           <WaitlistForm
             placeholder="your@email.com"
-            ctaLabel={t("hero.cta")}
+            ctaLabel={t("hero.waitlistCta")}
             successMessage={locale === "es" ? "¡Estás en la lista! Revisa tu bandeja de entrada." : "You're on the list! Check your inbox."}
             errorMessage={locale === "es" ? "Algo salió mal. Inténtalo de nuevo." : "Something went wrong. Please try again."}
  className="mx-auto max-w-lg justify-center"
