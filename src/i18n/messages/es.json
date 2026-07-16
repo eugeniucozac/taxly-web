@@ -1797,7 +1797,7 @@
       },
       {
         "q": "Si existen opciones gratis, ¿por qué pagar a Taxly?",
-        "a": "Si una puerta gratis cubre toda tu situación, úsala — para eso existe esta página. Pagas a Taxly cuando tu situación supera las puertas (ingresos 1099, una HSA, deducciones detalladas, un estado que no participa) y prefieres ver 9 o 9 fijados por adelantado a chocar con un muro de pago sorpresa a mitad del camino — con tu primer estado incluido y tres garantías por escrito respaldando la declaración."
+        "a": "Si una puerta gratis cubre toda tu situación, úsala — para eso existe esta página. Pagas a Taxly cuando tu situación supera las puertas (ingresos 1099, una HSA, deducciones detalladas, un estado que no participa) y prefieres ver $39 o $69 fijados por adelantado a chocar con un muro de pago sorpresa a mitad del camino — con tu primer estado incluido y tres garantías por escrito respaldando la declaración."
       }
     ],
     "faqHeading": "Preguntas frecuentes",
@@ -1807,11 +1807,11 @@
       "items": [
         {
           "title": "Tu situación superó las puertas gratis",
-          "text": "Un ingreso 1099, una HSA, deducciones detalladas o un estado que no participa te sacan de todas las puertas gratis de arriba. En el software de emboscada, ese es el momento en que aparece un muro de pago a mitad del camino. Con Taxly viste 9 o 9 en la primera pantalla — y quedó fijado."
+          "text": "Un ingreso 1099, una HSA, deducciones detalladas o un estado que no participa te sacan de todas las puertas gratis de arriba. En el software de emboscada, ese es el momento en que aparece un muro de pago a mitad del camino. Con Taxly viste $39 o $69 en la primera pantalla — y quedó fijado."
         },
         {
           "title": "Tu primera declaración estatal está incluida",
-          "text": "Cada plan de Taxly — incluido el Gratis — cubre la federal más tu primer estado. El clásico “federal gratis, estado a 0 al pagar” es exactamente el truco del que esta página te advierte, así que lo eliminamos por diseño."
+          "text": "Cada plan de Taxly — incluido el Gratis — cubre la federal más tu primer estado. El clásico “federal gratis, estado a $40 al pagar” es exactamente el truco del que esta página te advierte, así que lo eliminamos por diseño."
         },
         {
           "title": "Alguien respalda la declaración",

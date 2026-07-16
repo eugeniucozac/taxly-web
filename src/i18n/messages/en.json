@@ -717,7 +717,7 @@
           "label": "what the average American spends filing each year (IRS estimate) — the time we exist to give back"
         },
         {
-          "value": "/usr/bin/bash",
+          "value": "$0",
           "label": "a simple W-2 return with Taxly — federal plus your first state included"
         },
         {
@@ -1797,7 +1797,7 @@
       },
       {
         "q": "If free options exist, why pay Taxly at all?",
-        "a": "If a free gate fits your whole situation, use it — that’s what this page is for. You pay Taxly when your situation outgrows the gates (1099 income, an HSA, itemizing, a non-participating state) and you’d rather see a locked 9 or 9 up front than hit a surprise paywall mid-flow — with your first state included and three written guarantees standing behind the return."
+        "a": "If a free gate fits your whole situation, use it — that’s what this page is for. You pay Taxly when your situation outgrows the gates (1099 income, an HSA, itemizing, a non-participating state) and you’d rather see a locked $39 or $69 up front than hit a surprise paywall mid-flow — with your first state included and three written guarantees standing behind the return."
       }
     ],
     "faqHeading": "FAQ",
@@ -1807,11 +1807,11 @@
       "items": [
         {
           "title": "Your situation outgrew the free gates",
-          "text": "A 1099 side gig, an HSA, itemizing, or a state that doesn’t participate pushes you out of every free gate above. On ambush software that’s the moment a paywall appears mid-flow. With Taxly you saw 9 or 9 on the first screen — and it was locked."
+          "text": "A 1099 side gig, an HSA, itemizing, or a state that doesn’t participate pushes you out of every free gate above. On ambush software that’s the moment a paywall appears mid-flow. With Taxly you saw $39 or $69 on the first screen — and it was locked."
         },
         {
           "title": "Your first state return is included",
-          "text": "Every Taxly tier — including Free — covers federal plus your first state. The classic “free federal, 0 state at checkout” move is the exact trick this page exists to warn you about, so we designed it out."
+          "text": "Every Taxly tier — including Free — covers federal plus your first state. The classic “free federal, $40 state at checkout” move is the exact trick this page exists to warn you about, so we designed it out."
         },
         {
           "title": "Someone stands behind the return",
