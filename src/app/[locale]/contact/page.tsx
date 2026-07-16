@@ -1,97 +1,121 @@
-"use client";
-
-import { useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
-import { Loader2, CheckCircle2 } from "lucide-react";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { Mail, Clock, LifeBuoy, ArrowRight } from "lucide-react";
+import { makeMetadata, BASE_URL } from "@/lib/metadata";
+import { JsonLd } from "@/components/seo/json-ld";
+import { ContactForm } from "@/features/contact/components/contact-form";
 import { env } from "@/lib/env";
-import { trackEvent } from "@/lib/analytics";
+import type { LocalePageProps } from "@/types/page";
 
-type State = "idle" | "loading" | "success" | "error";
-
-export default function ContactPage() {
-  return <ContactClient />;
+export async function generateMetadata({ params }: LocalePageProps) {
+  const { locale } = await params;
+  return makeMetadata(locale, "metadata.contact", "contact");
 }
 
-function ContactClient() {
-  const t = useTranslations("contact");
-  const locale = useLocale();
-  const [state, setState] = useState<State>("idle");
-  const subjects: string[] = t.raw("form.subjects") as string[];
+export default async function ContactPage({ params }: LocalePageProps) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "contact" });
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setState("loading");
-    const form = new FormData(e.currentTarget);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.get("name"),
-          email: form.get("email"),
-          subject: form.get("subject"),
-          message: form.get("message"),
-          locale,
-        }),
-      });
-      setState(res.ok ? "success" : "error");
-      if (res.ok) trackEvent("contact_submitted", { locale });
-    } catch {
-      setState("error");
-    }
-  }
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    url: `${BASE_URL}/${locale}/contact`,
+    mainEntity: {
+      "@type": "Organization",
+      name: "Taxly",
+      url: BASE_URL,
+      email: env.CONTACT_EMAIL,
+    },
+  };
+
+  const quickLinks = [
+    { label: t("info.linkHelp"), href: "/help" },
+    { label: t("info.linkTools"), href: "/tools" },
+    { label: t("info.linkGuides"), href: "/blog" },
+  ];
 
   return (
-    <div className="py-20">
-      <div className="mx-auto max-w-2xl px-6">
-        <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
-        <p className="mb-12 text-lg text-muted-foreground">{t("subheading")}</p>
+    <>
+      <JsonLd data={contactSchema} />
+      <div className="py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          {/* Header */}
+          <span className="mb-6 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-xs font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+            <span className="flex items-center border-r-[1.5px] border-foreground px-2.5 py-1.5 font-bold uppercase tracking-wider">
+              {t("eyebrow")}
+            </span>
+            <span className="flex items-center px-2.5 py-1.5 text-muted-foreground">
+              {t("chip")}
+            </span>
+          </span>
+          <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
+          <p className="mb-12 max-w-2xl text-lg text-muted-foreground">{t("subheading")}</p>
 
-        {state === "success" ? (
-          <div className="flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 p-6 text-green-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-200">
-            <CheckCircle2 size={20} />
-            <p>{t("form.success")}</p>
+          <div className="grid gap-10 lg:grid-cols-[1fr_20rem]">
+            {/* Form */}
+            <div className="rounded-2xl border bg-card p-6 shadow-sm sm:p-8">
+              <ContactForm />
+            </div>
+
+            {/* Info panel */}
+            <aside className="space-y-6">
+              <div className="rounded-2xl border bg-card p-6 shadow-sm">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                  <Mail size={18} className="text-primary" aria-hidden />
+                </div>
+                <h2 className="text-sm font-semibold text-foreground">{t("info.emailHeading")}</h2>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  {t("info.emailText")}
+                </p>
+                <a
+                  href={`mailto:${env.CONTACT_EMAIL}`}
+                  className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+                >
+                  {env.CONTACT_EMAIL}
+                </a>
+              </div>
+
+              <div className="rounded-2xl border bg-card p-6 shadow-sm">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-sky-50 dark:bg-sky-500/10">
+                  <Clock size={18} className="text-primary" aria-hidden />
+                </div>
+                <h2 className="text-sm font-semibold text-foreground">{t("info.expectHeading")}</h2>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  {t("info.expectText")}
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-sky-50 p-6 dark:bg-sky-500/10">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-background">
+                  <LifeBuoy size={18} className="text-primary" aria-hidden />
+                </div>
+                <h2 className="text-sm font-semibold text-foreground">{t("info.beforeHeading")}</h2>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  {t("info.beforeText")}
+                </p>
+                <ul className="mt-3 space-y-1.5">
+                  {quickLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="group inline-flex items-center gap-1 text-sm font-medium text-primary"
+                      >
+                        {link.label}
+                        <ArrowRight
+                          size={13}
+                          className="transition group-hover:translate-x-0.5"
+                          aria-hidden
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-muted-foreground">{t("form.name")}</label>
-                <input name="name" required className="w-full rounded-xl border px-4 py-3 text-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20" />
-              </div>
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-muted-foreground">{t("form.email")}</label>
-                <input name="email" type="email" required className="w-full rounded-xl border px-4 py-3 text-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20" />
-              </div>
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-muted-foreground">{t("form.subject")}</label>
-              <select name="subject" className="w-full rounded-xl border px-4 py-3 text-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20">
-                {subjects.map((s) => <option key={s}>{s}</option>)}
-              </select>
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-muted-foreground">{t("form.message")}</label>
-              <textarea name="message" required rows={5} className="w-full rounded-xl border px-4 py-3 text-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/20" />
-            </div>
-            {state === "error" && <p className="text-sm text-red-500 dark:text-red-400">{t("form.error")}</p>}
-            <button
-              type="submit"
-              disabled={state === "loading"}
- className="inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white transition disabled:opacity-60 bg-sky-600 hover:bg-sky-500"
-            >
-              {state === "loading" ? <><Loader2 size={16} className="animate-spin" /> {t("form.sending")}</> : t("form.send")}
-            </button>
-          </form>
-        )}
-
-        <p className="mt-10 text-sm text-muted-foreground/80">
-          {t("directEmail")}{" "}
-          <a href={`mailto:${env.CONTACT_EMAIL}`} className="text-primary hover:underline">
-            {env.CONTACT_EMAIL}
-          </a>
-        </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

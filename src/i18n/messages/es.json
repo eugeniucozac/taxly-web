@@ -54,30 +54,83 @@
     "subheading": "Nosotros hacemos los cálculos. Tú tomas las decisiones.",
     "step1": {
       "title": "Importa tus documentos",
-      "description": "Sube tu W-2, 1099 o conéctate directamente con tu empleador. Taxly extrae tus cifras automáticamente."
+      "description": "Sube tu W-2, 1099 o conéctate directamente con tu empleador. Taxly extrae tus cifras automáticamente.",
+      "details": [
+        "Sube tus W-2 y 1099 en PDF, o conecta directamente con tu empleador",
+        "Trae la declaración del año pasado como PDF de TurboTax o H&R Block",
+        "¿Te falta un documento? Sáltalo y vuelve cuando quieras antes de presentar"
+      ]
     },
     "step2": {
       "title": "Responde preguntas simples",
-      "description": "Sin formularios fiscales, sin jerga. Te hacemos preguntas sencillas y ponemos tus respuestas en los campos correctos."
+      "description": "Sin formularios fiscales, sin jerga. Te hacemos preguntas sencillas y ponemos tus respuestas en los campos correctos.",
+      "details": [
+        "Preguntas en lenguaje claro — nunca un campo crudo de formulario del IRS",
+        "Tus respuestas llenan las casillas correctas del 1040 tras bambalinas",
+        "El precio que ves al empezar queda fijado — más preguntas nunca lo suben"
+      ]
     },
     "step3": {
       "title": "Revisa y presenta por e-file",
-      "description": "Ve tu reembolso o saldo adeudado antes de presentar. Envía por e-file con un clic — el IRS normalmente procesa en 21 días."
+      "description": "Ve tu reembolso o saldo adeudado antes de presentar. Envía por e-file con un clic — el IRS normalmente procesa en 21 días.",
+      "details": [
+        "Ve la declaración completa y tu reembolso o saldo antes de enviar nada",
+        "Presenta la federal y la estatal por e-file con un clic",
+        "El IRS confirma la recepción — los reembolsos suelen procesarse en 21 días"
+      ]
     },
     "whatYouNeed": {
       "heading": "Lo que necesitarás",
-      "items": [
-        "W-2 de tu empleador (o 1099 si eres independiente)",
-        "Números de Seguro Social para ti, tu cónyuge y dependientes",
-        "Declaración del año pasado (opcional — acelera el proceso)",
-        "Datos bancarios para depósito directo",
-        "1099-INT o 1099-DIV si tienes ingresos de inversiones",
-        "Recibos de las deducciones que planeas reclamar"
-      ]
+      "intro": "La mayoría termina solo con la primera columna. El resto aplica únicamente si es tu caso.",
+      "groups": [
+        {
+          "title": "Todos",
+          "items": [
+            "Números de Seguro Social para ti, tu cónyuge y dependientes",
+            "W-2 de cada empleador",
+            "Número de cuenta y de ruta bancaria para depósito directo",
+            "Declaración del año pasado (opcional — acelera el proceso)"
+          ]
+        },
+        {
+          "title": "Independiente o freelance",
+          "items": [
+            "Formularios de ingreso 1099-NEC o 1099-K",
+            "Un resumen de ingresos y gastos del negocio",
+            "Recibos de las deducciones que planeas reclamar"
+          ]
+        },
+        {
+          "title": "Inversiones y extras",
+          "items": [
+            "1099-INT y 1099-DIV por intereses y dividendos",
+            "1099-B por ventas en corredora",
+            "Formularios 1098 — intereses hipotecarios o de préstamos estudiantiles"
+          ]
+        }
+      ],
+      "tip": "No busques todo por adelantado — la entrevista pide cada documento solo cuando tus respuestas lo hacen relevante, y puedes guardar y volver."
     },
     "imports": {
       "heading": "Importa desde cualquier lugar",
-      "description": "Conecta tu empleador, corredora o banco. O sube un PDF de TurboTax, H&R Block o tu declaración anterior de Taxly."
+      "description": "Conecta tu empleador, corredora o banco. O sube un PDF de TurboTax, H&R Block o tu declaración anterior de Taxly.",
+      "sources": [
+        "Conexión con la nómina del empleador",
+        "Importación de corredora",
+        "Estados de cuenta bancarios",
+        "PDF de TurboTax",
+        "PDF de H&R Block",
+        "Tu declaración anterior de Taxly"
+      ]
+    },
+    "eyebrow": "Producto",
+    "chip": "Declaración guiada, de principio a fin",
+    "statusNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Esta página recorre el flujo que estamos construyendo — la lista de espera tiene acceso primero.",
+    "relatedHeading": "Sigue leyendo:",
+    "cta": {
+      "heading": "Sé el primero en la fila para el año fiscal 2026",
+      "note": "Las declaraciones simples son gratis — y el precio que ves al empezar es el precio que pagas al final.",
+      "button": "Únete a la lista de espera"
     }
   },
   "situations": {
@@ -233,7 +286,7 @@
       "statePrice": "1 estado incluido",
       "period": "federal + 1 estado",
       "description": "Declaraciones simples con W-2. Sin límite de ingresos.",
-      "cta": "Presentar gratis",
+      "cta": "Únete a la lista de espera",
       "features": [
         "Declaración federal — gratis",
         "1 declaración estatal — gratis",
@@ -249,7 +302,7 @@
       "statePrice": "1 estado incluido · estados extra $29",
       "period": "federal + 1 estado",
       "description": "Deducciones, propietarios de vivienda, HSA y más.",
-      "cta": "Comenzar Deluxe",
+      "cta": "Únete a la lista de espera",
       "badge": "Más popular",
       "features": [
         "Todo lo incluido en Gratis",
@@ -266,7 +319,7 @@
       "statePrice": "1 estado incluido · estados extra $29",
       "period": "federal + 1 estado",
       "description": "Inversiones, cripto, alquileres, trabajo independiente.",
-      "cta": "Comenzar Premium",
+      "cta": "Únete a la lista de espera",
       "features": [
         "Todo lo incluido en Deluxe",
         "Schedule C (trabajo independiente)",
@@ -393,7 +446,8 @@
           "deluxe": true,
           "premium": true
         }
-      }
+      },
+      "featureHeader": "Función"
     },
     "faq": {
       "heading": "Preguntas sobre precios",
@@ -442,6 +496,18 @@
         "href": "/how-it-works",
         "linkLabel": "Cómo funciona →"
       }
+    },
+    "eyebrow": "Precios",
+    "chip": "Fijo · declarado · bloqueado al empezar",
+    "federalSuffix": "federal",
+    "trust": [
+      "El precio que ves al empezar es el precio que pagas",
+      "Cada plan incluye tu primera declaración estatal",
+      "Sin ventas adicionales al pagar — nunca"
+    ],
+    "waitlist": {
+      "heading": "Taxly abre para el año fiscal 2026 en enero de 2027",
+      "note": "Únete a la lista de espera para tener acceso primero. Declaraciones simples gratis, Deluxe $39, Premium $69 — fijo, declarado por adelantado, bloqueado al empezar."
     }
   },
   "featuresPage": {
@@ -483,13 +549,12 @@
   "help": {
     "heading": "Centro de Ayuda",
     "subheading": "Respuestas rápidas a las preguntas más comunes.",
-    "contactPrompt": "¿No encuentras lo que necesitas?",
-    "contactLink": "Contáctanos",
     "sections": {
       "gettingStarted": "Primeros pasos",
       "pricing": "Precios",
       "security": "Seguridad",
-      "filing": "Declaración y reembolsos"
+      "filing": "Declaración y reembolsos",
+      "beforeLaunch": "Antes del lanzamiento"
     },
     "gettingStarted": {
       "q1": {
@@ -555,7 +620,34 @@
         "answer": "Sí. Elige 'Casado presentando conjuntamente' al comenzar. Taxly pedirá la información de tu cónyuge y comparará MFJ vs MFS para encontrar la mejor opción."
       }
     },
-    "preLaunchNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Estas respuestas describen el producto que estamos construyendo — lo operativo (cuentas, pagos, reembolsos, 2FA) aplica desde el lanzamiento."
+    "preLaunchNote": "Estado honesto: Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Estas respuestas describen el producto que estamos construyendo — lo operativo (cuentas, pagos, reembolsos, 2FA) aplica desde el lanzamiento.",
+    "eyebrow": "Ayuda",
+    "chip": "Respuestas directas, sin rodeos",
+    "browse": "Explora por tema",
+    "answerCount": "{count, plural, one {# respuesta} other {# respuestas}}",
+    "beforeLaunch": {
+      "q1": {
+        "question": "¿Puedo declarar mis impuestos con Taxly hoy?",
+        "answer": "Todavía no. Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027. Hasta entonces, este sitio es la vista previa honesta: qué hace el producto, qué cuesta y cómo trata tus datos — más calculadoras y guías gratis que funcionan hoy."
+      },
+      "q2": {
+        "question": "¿Qué puedo usar ahora mismo?",
+        "answer": "Tres calculadoras gratis (reembolso, multas del IRS, pagos trimestrales), las guías en lenguaje claro y el glosario fiscal. Ninguna pide registro, y los números que escribes nunca salen de tu navegador."
+      },
+      "q3": {
+        "question": "¿A qué me compromete unirme a la lista de espera?",
+        "answer": "A nada. Es permiso para escribirte sobre el lanzamiento — sin tarjeta, sin costo, y darse de baja es un clic en cada correo. Un lugar en la lista solo significa que te enteras primero cuando abramos."
+      }
+    },
+    "toolsBand": {
+      "heading": "¿Necesitas una respuesta con un número?",
+      "text": "Las herramientas gratis funcionan hoy, con o sin lista de espera — y responden las tres preguntas que la gente más trae a una página de ayuda: cuál es mi reembolso, cuánto cuesta llegar tarde y cuánto debería pagar cada trimestre."
+    },
+    "contact": {
+      "heading": "¿Sigues atascado?",
+      "text": "Envíanos un mensaje y lo lee una persona. Antes del lanzamiento somos un equipo pequeño, así que la promesa honesta es una respuesta pensada, no una instantánea.",
+      "button": "Contáctanos"
+    }
   },
   "about": {
     "heading": "Construido por personas que creen que los impuestos no deberían ser tan difíciles",
@@ -586,10 +678,23 @@
       "message": "Mensaje",
       "send": "Enviar mensaje",
       "sending": "Enviando…",
-      "success": "Mensaje enviado. Te responderemos en un día hábil.",
-      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente."
+      "success": "Mensaje enviado — lo leerá una persona. Antes del lanzamiento somos un equipo pequeño, así que espera una respuesta pensada, no una instantánea.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbenos directamente.",
+      "noPii": "Por favor no incluyas tu SSN u otros números sensibles — no los necesitamos para responderte."
     },
-    "directEmail": "O escríbenos directamente a"
+    "eyebrow": "Contacto",
+    "chip": "Una persona lee cada mensaje",
+    "info": {
+      "emailHeading": "¿Prefieres correo?",
+      "emailText": "Sáltate el formulario — la misma bandeja, las mismas personas.",
+      "expectHeading": "Qué esperar",
+      "expectText": "Leemos todo. Antes del lanzamiento somos un equipo pequeño, así que la promesa honesta es una respuesta pensada, no una instantánea — y sin autorespuestas que finjan lo contrario.",
+      "beforeHeading": "Antes de escribir",
+      "beforeText": "Todavía no podemos preparar ni revisar tu declaración — Taxly abre en enero de 2027. Para preguntas fiscales hoy, estos son los caminos más rápidos:",
+      "linkHelp": "Centro de ayuda",
+      "linkTools": "Calculadoras gratis",
+      "linkGuides": "Guías en lenguaje claro"
+    }
   },
   "privacy": {
     "heading": "Política de privacidad",
@@ -892,11 +997,14 @@
     "ctaNote": "Únete a la lista de espera para el año fiscal 2026. Las declaraciones simples son gratis — y el precio que ves al inicio es el que pagas al final.",
     "ctaButton": "Unirme a la lista",
     "badge": "Garantía de precio fijo — sin sorpresas al pagar",
-    "copyright": "© {year} Taxly Inc. Todos los derechos reservados.",
+    "copyright": "© {year} Taxly. Todos los derechos reservados.",
     "tagline": "Impuestos en EE. UU., simples y claros.",
     "disclaimer": "Taxly no es un bufete de abogados ni una firma de CPA. Esto no es asesoramiento fiscal.",
     "turbotaxAlternative": "Alternativas a TurboTax",
-    "freeTaxFiling": "Declarar gratis de verdad"
+    "freeTaxFiling": "Declarar gratis de verdad",
+    "status": "Taxly abre para las declaraciones del año fiscal 2026 en enero de 2027 — actualmente en lista de espera.",
+    "rss": "Feed RSS",
+    "navLabel": "Pie de página"
   },
   "metadata": {
     "home": {
@@ -909,7 +1017,7 @@
     },
     "howItWorks": {
       "title": "Cómo funciona declarar impuestos en línea — Taxly",
-      "description": "Presenta tus impuestos federales y estatales en tres pasos simples. Importa documentos, responde preguntas y envía por e-file en minutos."
+      "description": "Cómo funciona la declaración guiada de Taxly: importa tus W-2 y 1099, responde preguntas claras y presenta por e-file. Abre en enero de 2027."
     },
     "features": {
       "title": "Funciones para declarar impuestos sin sorpresas — Taxly",
@@ -1091,7 +1199,10 @@
       "heading": "Mira los números de tu propia situación",
       "text": "Las herramientas gratuitas aplican estas ideas a tu ingreso real — estimación de reembolso, cálculo de multas y pagos trimestrales. Sin registrarte.",
       "button": "Probar las herramientas gratis"
-    }
+    },
+    "termCount": "{count} términos, dos frases honestas cada uno",
+    "indexLabel": "Salta a una letra",
+    "backToTop": "Volver arriba"
   },
   "vsHub": {
     "eyebrow": "Comparaciones honestas",
@@ -1236,17 +1347,127 @@
       "open": "Abrir la herramienta",
       "refund": {
         "title": "Calculadora de reembolso",
-        "text": "Una estimación aproximada de tu reembolso federal o saldo a pagar del año fiscal 2026 según tu ingreso, retenciones y hogar."
+        "text": "Una estimación aproximada de tu reembolso federal o saldo a pagar del año fiscal 2026 según tu ingreso, retenciones y hogar.",
+        "needs": [
+          "Tu último talón de pago o W-2",
+          "Impuesto federal retenido hasta ahora",
+          "Tu estado civil tributario"
+        ]
       },
       "penalty": {
         "title": "Calculadora de multas",
-        "text": "¿Se te pasó la fecha límite de abril? Estima las multas por no presentar y no pagar más intereses — y qué hacer ahora mismo."
+        "text": "¿Se te pasó la fecha límite de abril? Estima las multas por no presentar y no pagar más intereses — y qué hacer ahora mismo.",
+        "needs": [
+          "El impuesto que aún debes",
+          "Cuántos meses llevas de retraso"
+        ]
       },
       "quarterly": {
         "title": "Calculadora de pagos trimestrales",
-        "text": "¿Ingresos freelance o gig? Calcula tus pagos trimestrales de puerto seguro y ve el impuesto de trabajo por cuenta propia antes de que te sorprenda."
+        "text": "¿Ingresos freelance o gig? Calcula tus pagos trimestrales de puerto seguro y ve el impuesto de trabajo por cuenta propia antes de que te sorprenda.",
+        "needs": [
+          "La línea “total tax” de tu Formulario 1040 del año pasado",
+          "Retención W-2 esperada, si la hay"
+        ]
       },
-      "note": "Estas herramientas nunca piden tu nombre, correo o SSN. Corren en tu navegador y existen porque las buenas respuestas a preguntas que asustan son el marketing más honesto que conocemos."
+      "note": "Estas herramientas existen porque las buenas respuestas a preguntas que asustan son el marketing más honesto que conocemos.",
+      "needsLabel": "Ten a mano",
+      "which": {
+        "heading": "¿No sabes cuál? Parte de tu situación",
+        "rows": [
+          {
+            "situation": "Solo quieres saber si abril trae un reembolso o una factura.",
+            "tool": "refund",
+            "answer": "Calculadora de reembolso"
+          },
+          {
+            "situation": "La fecha límite pasó, debes impuestos y aún no has presentado.",
+            "tool": "penalty",
+            "answer": "Calculadora de multas"
+          },
+          {
+            "situation": "Presentaste a tiempo pero no pudiste pagar el saldo completo.",
+            "tool": "penalty",
+            "answer": "Calculadora de multas"
+          },
+          {
+            "situation": "Empezaste a trabajar freelance y ya ningún empleador retiene impuestos por ti.",
+            "tool": "quarterly",
+            "answer": "Calculadora de pagos trimestrales"
+          },
+          {
+            "situation": "Tienes un empleo W-2 más ingresos 1099 y quieres ver el panorama completo.",
+            "tool": "refund",
+            "answer": "Calculadora de reembolso"
+          }
+        ]
+      },
+      "examples": {
+        "eyebrow": "Práctica",
+        "chip": "Tres ejemplos resueltos",
+        "heading": "Pruébala con números de ejemplo",
+        "intro": "¿No quieres buscar tus papeles todavía? Recorre primero uno de estos contribuyentes inventados: escribe sus números, comprueba que obtienes la misma respuesta y mira cómo piensa la herramienta antes de confiarle los tuyos.",
+        "enterLabel": "Escribe esto",
+        "tryIt": "Pruébalo tú mismo",
+        "items": [
+          {
+            "tool": "refund",
+            "title": "Calculadora de reembolso",
+            "persona": "Alex es soltero, tiene un empleo W-2 que le pagó $65,000 este año y le retuvieron $9,200 de impuesto federal. Sin ingresos extra, sin hijos.",
+            "steps": [
+              "Estado civil: Soltero",
+              "Salario W-2: 65,000",
+              "Impuesto federal retenido: 9,200"
+            ],
+            "resultLabel": "Reembolso estimado",
+            "result": "$3,286",
+            "note": "El desglose muestra por qué: el impuesto real de Alex es $5,914, así que la retención de más se devuelve. Un reembolso de este tamaño es un préstamo sin intereses al IRS — la solución es ajustar el W-4, no celebrar."
+          },
+          {
+            "tool": "penalty",
+            "title": "Calculadora de multas",
+            "persona": "Sam debe $3,000, lleva dos meses de retraso desde la fecha límite de abril y — la parte cara — nunca presentó la declaración.",
+            "steps": [
+              "Impuesto que aún debes: 3,000",
+              "Meses de retraso: 2",
+              "Deja sin marcar “Presenté mi declaración a tiempo”"
+            ],
+            "resultLabel": "Total estimado encima del impuesto",
+            "result": "$335.00",
+            "note": "Ahora marca la casilla “Presenté a tiempo”: la estimación baja a $65.00. Esos $270 de diferencia son toda la lección — presentar no cuesta nada y elimina la multa más grande, aunque todavía no puedas pagar ni un dólar."
+          },
+          {
+            "tool": "quarterly",
+            "title": "Calculadora de pagos trimestrales",
+            "persona": "Riley se hizo freelance este año. Su Formulario 1040 del año pasado muestra $12,000 de impuesto total, y un empleo W-2 de medio tiempo le retendrá unos $4,000 este año.",
+            "steps": [
+              "Impuesto total del año pasado: 12,000",
+              "Retención W-2 esperada: 4,000",
+              "Opcional: ganancia por cuenta propia 40,000"
+            ],
+            "resultLabel": "Pago de puerto seguro, cada trimestre",
+            "result": "$2,000.00",
+            "note": "Cuatro pagos de $2,000 alcanzan el 100% del impuesto del año pasado, así que no aplica multa por pago insuficiente sea cual sea la factura de este año. El campo opcional de ganancia también revela los $5,651.82 de impuesto de trabajo por cuenta propia que la mayoría de freelancers primerizos no ve venir."
+          }
+        ]
+      },
+      "how": {
+        "heading": "Cómo funcionan estas estimaciones",
+        "items": [
+          {
+            "title": "Todo corre en tu navegador",
+            "text": "Sin registro, sin nombre, sin correo, sin SSN. Los números que escribes nunca salen de tu dispositivo — no hay servidor haciendo el cálculo y no se guarda nada."
+          },
+          {
+            "title": "Cifras preliminares del año fiscal 2026, con enlaces al IRS",
+            "text": "Los tramos, tasas y umbrales se basan en la ley vigente; el IRS finaliza las cifras de 2026 más adelante. Cada herramienta enlaza su fuente del IRS para que verifiques las tasas tú mismo."
+          },
+          {
+            "title": "Ilustrativo, no asesoría",
+            "text": "Cada resultado declara sus supuestos junto al número. Son estimaciones de planificación — tu declaración puede diferir, y casos como otros créditos, ganancias de capital o impuestos estatales no están modelados."
+          }
+        ]
+      }
     },
     "penalty": {
       "eyebrow": "Herramienta gratis",

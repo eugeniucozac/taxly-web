@@ -54,30 +54,83 @@
     "subheading": "We do the math. You make the decisions.",
     "step1": {
       "title": "Import your docs",
-      "description": "Upload your W-2, 1099s, or connect directly to your employer. Taxly pulls in your numbers automatically."
+      "description": "Upload your W-2, 1099s, or connect directly to your employer. Taxly pulls in your numbers automatically.",
+      "details": [
+        "Upload W-2 and 1099 PDFs, or connect your employer directly",
+        "Bring last year’s return as a PDF from TurboTax or H&R Block",
+        "Missing a document? Skip it and come back any time before you file"
+      ]
     },
     "step2": {
       "title": "Answer plain questions",
-      "description": "No tax forms, no jargon. We ask simple questions and put your answers in the right boxes behind the scenes."
+      "description": "No tax forms, no jargon. We ask simple questions and put your answers in the right boxes behind the scenes.",
+      "details": [
+        "Plain-English questions — never a raw IRS form field",
+        "Your answers fill the right boxes on the 1040 behind the scenes",
+        "The price you see at the start is locked — more questions never raise it"
+      ]
     },
     "step3": {
       "title": "Review & e-file",
-      "description": "See your refund or balance due before you file. E-file in one click — the IRS typically processes in 21 days."
+      "description": "See your refund or balance due before you file. E-file in one click — the IRS typically processes in 21 days.",
+      "details": [
+        "See the full return and your refund or balance due before anything is sent",
+        "E-file federal and state in one click",
+        "The IRS confirms receipt — refunds typically process within 21 days"
+      ]
     },
     "whatYouNeed": {
-      "heading": "What you'll need",
-      "items": [
-        "W-2 from your employer (or 1099 if self-employed)",
-        "Social Security numbers for you, your spouse, and dependents",
-        "Last year's tax return (optional — speeds things up)",
-        "Bank account details for direct deposit",
-        "1099-INT or 1099-DIV if you have investment income",
-        "Receipts for deductions you plan to claim"
-      ]
+      "heading": "What you’ll need",
+      "intro": "Most filers finish with just the first column. The rest only applies if it applies to you.",
+      "groups": [
+        {
+          "title": "Everyone",
+          "items": [
+            "Social Security numbers for you, your spouse, and dependents",
+            "W-2 from each employer",
+            "Bank account and routing numbers for direct deposit",
+            "Last year’s tax return (optional — it speeds things up)"
+          ]
+        },
+        {
+          "title": "Self-employed or freelance",
+          "items": [
+            "1099-NEC or 1099-K income forms",
+            "A summary of business income and expenses",
+            "Receipts for deductions you plan to claim"
+          ]
+        },
+        {
+          "title": "Investments and extras",
+          "items": [
+            "1099-INT and 1099-DIV for interest and dividends",
+            "1099-B for brokerage sales",
+            "1098 forms — mortgage or student-loan interest"
+          ]
+        }
+      ],
+      "tip": "Don’t hunt everything down up front — the interview asks for each document only when your answers make it relevant, and you can save and come back."
     },
     "imports": {
       "heading": "Import from anywhere",
-      "description": "Connect your employer, brokerage, or bank. Or upload a PDF from TurboTax, H&R Block, or last year's Taxly return."
+      "description": "Connect your employer, brokerage, or bank. Or upload a PDF from TurboTax, H&R Block, or last year's Taxly return.",
+      "sources": [
+        "Employer payroll connection",
+        "Brokerage import",
+        "Bank statements",
+        "TurboTax PDF",
+        "H&R Block PDF",
+        "Last year’s Taxly return"
+      ]
+    },
+    "eyebrow": "Product",
+    "chip": "Guided filing, start to finish",
+    "statusNote": "Honest status: Taxly opens for TY2026 returns in January 2027. This page walks through the flow we’re building — waitlist members get first access.",
+    "relatedHeading": "Keep reading:",
+    "cta": {
+      "heading": "Be first in line for TY2026",
+      "note": "Simple returns are free — and the price you see at the start is the price you pay at the end.",
+      "button": "Join the TY2026 waitlist"
     }
   },
   "situations": {
@@ -233,7 +286,7 @@
       "statePrice": "1 state included",
       "period": "federal + 1 state",
       "description": "Simple W-2 returns. No income limits.",
-      "cta": "File free",
+      "cta": "Join the waitlist",
       "features": [
         "Federal return — free",
         "1 state return — free",
@@ -249,7 +302,7 @@
       "statePrice": "1 state included · extra states $29",
       "period": "federal + 1 state",
       "description": "Deductions, homeowners, HSA, and more.",
-      "cta": "Start Deluxe",
+      "cta": "Join the waitlist",
       "badge": "Most popular",
       "features": [
         "Everything in Free",
@@ -266,7 +319,7 @@
       "statePrice": "1 state included · extra states $29",
       "period": "federal + 1 state",
       "description": "Investments, crypto, rentals, self-employment.",
-      "cta": "Start Premium",
+      "cta": "Join the waitlist",
       "features": [
         "Everything in Deluxe",
         "Schedule C (self-employed)",
@@ -393,7 +446,8 @@
           "deluxe": true,
           "premium": true
         }
-      }
+      },
+      "featureHeader": "Feature"
     },
     "faq": {
       "heading": "Pricing questions",
@@ -442,6 +496,18 @@
         "href": "/how-it-works",
         "linkLabel": "How it works →"
       }
+    },
+    "eyebrow": "Pricing",
+    "chip": "Flat · disclosed · locked when you start",
+    "federalSuffix": "federal",
+    "trust": [
+      "The price you see when you start is the price you pay",
+      "Every plan includes your first state return",
+      "No upsells at checkout — ever"
+    ],
+    "waitlist": {
+      "heading": "Taxly opens for TY2026 in January 2027",
+      "note": "Join the waitlist for first access. Simple returns free, Deluxe $39, Premium $69 — flat, disclosed up front, locked when you start."
     }
   },
   "featuresPage": {
@@ -483,13 +549,12 @@
   "help": {
     "heading": "Help Center",
     "subheading": "Quick answers to the most common questions.",
-    "contactPrompt": "Can't find what you need?",
-    "contactLink": "Contact us",
     "sections": {
       "gettingStarted": "Getting started",
       "pricing": "Pricing",
       "security": "Security",
-      "filing": "Filing & refunds"
+      "filing": "Filing & refunds",
+      "beforeLaunch": "Before launch"
     },
     "gettingStarted": {
       "q1": {
@@ -555,7 +620,34 @@
         "answer": "Yes. Choose 'Married Filing Jointly' when you start. Taxly will ask for your spouse's information and compare MFJ vs MFS to find the better outcome."
       }
     },
-    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These answers describe the product we're building — anything operational (accounts, payments, refunds, 2FA) applies from launch."
+    "preLaunchNote": "Honest status: Taxly opens for TY2026 returns in January 2027. These answers describe the product we're building — anything operational (accounts, payments, refunds, 2FA) applies from launch.",
+    "eyebrow": "Help",
+    "chip": "Straight answers, no runaround",
+    "browse": "Browse by topic",
+    "answerCount": "{count, plural, one {# answer} other {# answers}}",
+    "beforeLaunch": {
+      "q1": {
+        "question": "Can I file my taxes with Taxly today?",
+        "answer": "Not yet. Taxly opens for TY2026 returns in January 2027. Until then, this site is the honest preview: what the product does, what it costs, and how it treats your data — plus free calculators and guides that work today."
+      },
+      "q2": {
+        "question": "What can I actually use right now?",
+        "answer": "Three free calculators (refund, IRS penalties, quarterly estimated tax), the plain-English guides, and the tax glossary. None of them ask for a signup, and the numbers you type never leave your browser."
+      },
+      "q3": {
+        "question": "What does joining the waitlist commit me to?",
+        "answer": "Nothing. It's permission to email you about the launch — no card, no fee, and unsubscribe is one click in every email. A spot on the list simply means you hear first when doors open."
+      }
+    },
+    "toolsBand": {
+      "heading": "Need an answer with a number in it?",
+      "text": "The free tools work today, waitlist or not — and they answer the three questions people bring to a help page most often: what's my refund, what does being late cost, and what should I be paying each quarter."
+    },
+    "contact": {
+      "heading": "Still stuck?",
+      "text": "Send us a message and a human reads it. Pre-launch we're a small team, so the honest promise is a thoughtful reply, not an instant one.",
+      "button": "Contact us"
+    }
   },
   "about": {
     "heading": "Built by people who believe taxes shouldn't be this hard",
@@ -586,10 +678,23 @@
       "message": "Message",
       "send": "Send message",
       "sending": "Sending…",
-      "success": "Message sent. We'll get back to you within one business day.",
-      "error": "Something went wrong. Please try again or email us directly."
+      "success": "Message sent — a human will read it. Pre-launch we are a small team, so expect a thoughtful reply rather than an instant one.",
+      "error": "Something went wrong. Please try again or email us directly.",
+      "noPii": "Please don’t include your SSN or other sensitive numbers — we don’t need them to answer you."
     },
-    "directEmail": "Or email us directly at"
+    "eyebrow": "Contact",
+    "chip": "A human reads every message",
+    "info": {
+      "emailHeading": "Prefer email?",
+      "emailText": "Skip the form entirely — the same inbox, the same humans.",
+      "expectHeading": "What to expect",
+      "expectText": "We read everything. Pre-launch we are a small team, so the honest promise is a thoughtful reply, not an instant one — and no autoresponder pretending otherwise.",
+      "beforeHeading": "Before you write",
+      "beforeText": "We can’t prepare or review your return yet — Taxly opens in January 2027. For tax questions today, these are the fastest paths:",
+      "linkHelp": "Help center",
+      "linkTools": "Free calculators",
+      "linkGuides": "Plain-English guides"
+    }
   },
   "privacy": {
     "heading": "Privacy Policy",
@@ -892,11 +997,14 @@
     "ctaNote": "Join the waitlist for TY2026. Simple returns are free — and the price you see at the start is the price you pay at the end.",
     "ctaButton": "Join the waitlist",
     "badge": "Price-lock guarantee — no checkout surprises",
-    "copyright": "© {year} Taxly Inc. All rights reserved.",
+    "copyright": "© {year} Taxly. All rights reserved.",
     "tagline": "US taxes, plain and simple.",
     "disclaimer": "Taxly is not a law firm or CPA firm. This is not tax advice.",
     "turbotaxAlternative": "TurboTax alternatives",
-    "freeTaxFiling": "Actually free filing"
+    "freeTaxFiling": "Actually free filing",
+    "status": "Taxly opens for TY2026 returns in January 2027 — currently in waitlist.",
+    "rss": "RSS feed",
+    "navLabel": "Footer"
   },
   "metadata": {
     "home": {
@@ -909,7 +1017,7 @@
     },
     "howItWorks": {
       "title": "How Online Tax Filing Works, Step by Step — Taxly",
-      "description": "File your federal and state taxes in three simple steps. Import your documents, answer plain questions, and e-file in minutes."
+      "description": "How Taxly’s guided filing works: import your W-2 and 1099s, answer plain-English questions, review, and e-file. Opens for TY2026 returns in January 2027."
     },
     "features": {
       "title": "Tax Filing Features — Plain English, No Upsells — Taxly",
@@ -1091,7 +1199,10 @@
       "heading": "See the numbers for your own situation",
       "text": "The free tools apply these ideas to your actual income — refund estimate, penalty maths, and quarterly payments. No signup.",
       "button": "Try the free tools"
-    }
+    },
+    "termCount": "{count} terms, two honest sentences each",
+    "indexLabel": "Jump to a letter",
+    "backToTop": "Back to top"
   },
   "vsHub": {
     "eyebrow": "Honest comparisons",
@@ -1236,17 +1347,127 @@
       "open": "Open the tool",
       "refund": {
         "title": "Refund estimator",
-        "text": "A rough TY2026 federal refund or balance-due estimate from your income, withholding, and household."
+        "text": "A rough TY2026 federal refund or balance-due estimate from your income, withholding, and household.",
+        "needs": [
+          "Your last pay stub or W-2",
+          "Federal tax withheld so far",
+          "Your filing status"
+        ]
       },
       "penalty": {
         "title": "Penalty estimator",
-        "text": "Missed the April deadline? Estimate failure-to-file and failure-to-pay penalties plus interest — and what to do right now."
+        "text": "Missed the April deadline? Estimate failure-to-file and failure-to-pay penalties plus interest — and what to do right now.",
+        "needs": [
+          "The tax you still owe",
+          "How many months past the deadline you are"
+        ]
       },
       "quarterly": {
         "title": "Quarterly tax calculator",
-        "text": "Freelance or gig income? Work out your safe-harbor quarterly payments and see the self-employment tax before it surprises you."
+        "text": "Freelance or gig income? Work out your safe-harbor quarterly payments and see the self-employment tax before it surprises you.",
+        "needs": [
+          "Last year’s Form 1040 “total tax” line",
+          "Expected W-2 withholding, if any"
+        ]
       },
-      "note": "These tools never ask for your name, email, or SSN. They run in your browser and exist because good answers to scary questions are the most honest marketing we know."
+      "note": "These tools exist because good answers to scary questions are the most honest marketing we know.",
+      "needsLabel": "Have on hand",
+      "which": {
+        "heading": "Not sure which one? Start from your situation",
+        "rows": [
+          {
+            "situation": "You just want to know whether April brings a refund or a bill.",
+            "tool": "refund",
+            "answer": "Refund estimator"
+          },
+          {
+            "situation": "The deadline passed, you owe tax, and you haven’t filed yet.",
+            "tool": "penalty",
+            "answer": "Penalty estimator"
+          },
+          {
+            "situation": "You filed on time but couldn’t pay the full balance.",
+            "tool": "penalty",
+            "answer": "Penalty estimator"
+          },
+          {
+            "situation": "You started freelancing and no employer withholds tax for you anymore.",
+            "tool": "quarterly",
+            "answer": "Quarterly tax calculator"
+          },
+          {
+            "situation": "You have a W-2 day job plus 1099 side income and want the whole picture.",
+            "tool": "refund",
+            "answer": "Refund estimator"
+          }
+        ]
+      },
+      "examples": {
+        "eyebrow": "Practice",
+        "chip": "Three worked examples",
+        "heading": "Try one with example numbers",
+        "intro": "Not ready to dig out your own paperwork? Walk through one of these made-up filers first — type their numbers in, check you get the same answer, and see how the tool thinks before you trust it with your real ones.",
+        "enterLabel": "Type these in",
+        "tryIt": "Try it yourself",
+        "items": [
+          {
+            "tool": "refund",
+            "title": "Refund estimator",
+            "persona": "Alex is single, works one W-2 job that paid $65,000 this year, and had $9,200 of federal tax withheld. No side income, no kids.",
+            "steps": [
+              "Filing status: Single",
+              "W-2 wages: 65,000",
+              "Federal tax withheld: 9,200"
+            ],
+            "resultLabel": "Estimated refund",
+            "result": "$3,286",
+            "note": "The breakdown shows why: Alex’s actual tax comes to $5,914, so the extra withholding comes back. A refund this size is an interest-free loan to the IRS — the fix is a W-4 adjustment, not a celebration."
+          },
+          {
+            "tool": "penalty",
+            "title": "Penalty estimator",
+            "persona": "Sam owes $3,000, is two months past the April deadline, and — the expensive part — never filed the return.",
+            "steps": [
+              "Tax you still owe: 3,000",
+              "Months past the deadline: 2",
+              "Leave “I filed my return on time” unchecked"
+            ],
+            "resultLabel": "Estimated total on top of the tax",
+            "result": "$335.00",
+            "note": "Now tick the “I filed on time” box: the estimate drops to $65.00. That $270 gap is the whole lesson — filing costs nothing and removes the biggest penalty, even when you can’t pay a dollar yet."
+          },
+          {
+            "tool": "quarterly",
+            "title": "Quarterly tax calculator",
+            "persona": "Riley went freelance this year. Last year’s Form 1040 shows $12,000 of total tax, and a part-time W-2 job will withhold about $4,000 this year.",
+            "steps": [
+              "Last year’s total tax: 12,000",
+              "Expected W-2 withholding: 4,000",
+              "Optional: self-employment profit 40,000"
+            ],
+            "resultLabel": "Safe-harbor payment, each quarter",
+            "result": "$2,000.00",
+            "note": "Four payments of $2,000 reach 100% of last year’s tax, so no underpayment penalty applies whatever this year’s bill turns out to be. The optional profit field also surfaces $5,651.82 of self-employment tax most first-year freelancers don’t see coming."
+          }
+        ]
+      },
+      "how": {
+        "heading": "How these estimates work",
+        "items": [
+          {
+            "title": "Everything runs in your browser",
+            "text": "No signup, no name, no email, no SSN. The numbers you type never leave your device — there’s no server doing the math and nothing is stored."
+          },
+          {
+            "title": "Draft TY2026 figures, IRS-linked",
+            "text": "Brackets, rates, and thresholds are based on current law; the IRS finalizes 2026 figures later. Every tool links its IRS source so you can verify the rates yourself."
+          },
+          {
+            "title": "Illustrative, not advice",
+            "text": "Each result states its assumptions right next to the number. These are planning estimates — your return can differ, and edge cases like other credits, capital gains, or state tax aren’t modeled."
+          }
+        ]
+      }
     },
     "penalty": {
       "eyebrow": "Free tool",

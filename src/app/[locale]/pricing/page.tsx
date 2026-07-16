@@ -126,6 +126,14 @@ function PricingClient() {
     <div className="py-20">
       {/* Header */}
       <div className="mx-auto max-w-3xl px-6 text-center">
+        <span className="mb-6 inline-flex items-stretch overflow-hidden rounded-md border-[1.5px] border-foreground bg-background text-xs font-medium shadow-[3px_3px_0_0] shadow-sky-200 dark:shadow-sky-500/20">
+          <span className="flex items-center border-r-[1.5px] border-foreground px-2.5 py-1.5 font-bold uppercase tracking-wider">
+            {t("eyebrow")}
+          </span>
+          <span className="flex items-center px-2.5 py-1.5 text-muted-foreground">
+            {t("chip")}
+          </span>
+        </span>
         <h1 className="mb-4 text-4xl font-bold text-foreground md:text-5xl">{t("heading")}</h1>
         <p className="text-lg text-muted-foreground">{t("subheading")}</p>
       </div>
@@ -151,7 +159,7 @@ function PricingClient() {
                 </p>
                 <div className="mb-1 flex items-end gap-1">
                   <span className="text-4xl font-bold">{t(`${plan}.federalPrice`)}</span>
-                  <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}> federal</span>
+                  <span className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground/80"}`}>{t("federalSuffix")}</span>
                 </div>
                 <p className={`mb-1 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.statePrice`)}</p>
                 <p className={`mb-6 text-sm ${isDeluxe ? "text-sky-100" : "text-muted-foreground"}`}>{t(`${plan}.description`)}</p>
@@ -173,16 +181,29 @@ function PricingClient() {
             );
           })}
         </div>
+
+        {/* Trust chips — the three claims the whole page hangs on */}
+        <ul className="mt-10 flex flex-wrap items-center justify-center gap-2.5">
+          {(t.raw("trust") as string[]).map((claim) => (
+            <li
+              key={claim}
+              className="inline-flex items-center gap-2 rounded-lg border bg-card px-3.5 py-2 text-xs font-medium text-muted-foreground"
+            >
+              <CheckCircle2 size={14} className="shrink-0 text-primary" aria-hidden />
+              {claim}
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* Comparison table */}
       <div className="mx-auto mt-24 max-w-6xl px-6">
         <h2 className="mb-10 text-center text-2xl font-bold text-foreground">{t("comparison.heading")}</h2>
         <div className="overflow-x-auto rounded-2xl border bg-card shadow-sm">
-          <table className="w-full text-sm">
+          <table className="w-full min-w-160 text-sm">
             <thead>
               <tr className="border-b border-border">
-                <th className="px-6 py-4 text-left font-medium text-muted-foreground/80">Feature</th>
+                <th className="px-6 py-4 text-left font-medium text-muted-foreground/80">{t("comparison.featureHeader")}</th>
                 {plans.map((plan) => (
                   <th key={plan} className={`px-6 py-4 text-center font-semibold ${plan === "deluxe" ? "text-primary" : "text-muted-foreground"}`}>
                     {t(`${plan}.name`)}
@@ -258,6 +279,8 @@ function PricingClient() {
 
       {/* CTA — waitlist (pre-launch) */}
       <div id="waitlist" className="mx-auto mt-20 max-w-xl scroll-mt-24 px-6 text-center">
+        <h2 className="mb-3 text-2xl font-bold text-foreground">{t("waitlist.heading")}</h2>
+        <p className="mb-6 text-sm leading-relaxed text-muted-foreground">{t("waitlist.note")}</p>
         <WaitlistForm
           placeholder="your@email.com"
           ctaLabel={locale === "es" ? "Unirme a la lista" : "Join the waitlist"}

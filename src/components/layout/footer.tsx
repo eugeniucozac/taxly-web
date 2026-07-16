@@ -81,6 +81,7 @@ export function Footer() {
         { label: t("help"), href: `/${locale}/help` },
         { label: t("about"), href: `/${locale}/about` },
         { label: t("contact"), href: `/${locale}/contact` },
+        { label: t("rss"), href: "/feed.xml" },
       ],
     },
     {
@@ -126,8 +127,10 @@ export function Footer() {
               <BadgeCheck size={14} className="text-primary" aria-hidden />
               {t("badge")}
             </p>
+            <p className="mt-3 max-w-xs text-xs text-muted-foreground/70">{t("status")}</p>
           </div>
 
+          <nav aria-label={t("navLabel")} className="contents">
           {columns.map((col) => (
             <div key={col.heading}>
               <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground/80">
@@ -152,6 +155,7 @@ export function Footer() {
               </ul>
             </div>
           ))}
+          </nav>
         </div>
 
         <div className="mt-12 border-t pt-8">
