@@ -592,78 +592,233 @@
     "directEmail": "O escríbenos directamente a"
   },
   "privacy": {
-    "heading": "Política de Privacidad",
-    "lastUpdated": "Última actualización: 1 de enero de 2025",
-    "intro": "Taxly Inc. (\"Taxly\", \"nosotros\", \"nuestro\") se compromete a proteger tu privacidad. Esta política explica qué información recopilamos, cómo la usamos y tus derechos.",
-    "sections": {
-      "collect": {
-        "heading": "Información que recopilamos",
-        "text": "Recopilamos información que proporcionas directamente: tu nombre, correo electrónico, Número de Seguro Social, información de ingresos y otros datos fiscales necesarios para preparar tu declaración. También recopilamos datos de uso para mejorar el producto."
+    "heading": "Política de privacidad",
+    "lastUpdated": "Última actualización: 16 de julio de 2026",
+    "intro": "La versión corta: hoy este sitio recopila casi nada — un correo de lista de espera si nos lo das, un mensaje si lo envías, y analíticas solo si dices que sí. Aquí está el panorama completo, en lenguaje claro.",
+    "sections": [
+      {
+        "id": "scope",
+        "heading": "Quiénes somos y qué cubre esta política",
+        "intro": [
+          "Taxly («nosotros») opera gettaxly.com. Hoy el sitio es una página previa al lanzamiento: explica el producto que estamos construyendo, ofrece calculadoras gratuitas y gestiona una lista de espera. Esta política describe lo que el sitio web recopila realmente hoy — que es deliberadamente poco.",
+          "El producto de declaración de Taxly aún no está disponible. Antes de que recopile un solo dato fiscal, publicaremos una política actualizada que lo cubra (ver «Cuando se lance el producto» más abajo) — y esas prácticas serán compromisos legales, no marketing."
+        ]
       },
-      "use": {
-        "heading": "Cómo usamos tu información",
-        "text": "Usamos tu información únicamente para preparar, revisar y enviar tu declaración fiscal; para enviarte notificaciones de cuenta y estado de presentación; y para mejorar la precisión y experiencia de Taxly. No usamos tus datos fiscales para publicidad."
+      {
+        "id": "collect",
+        "heading": "Qué recopilamos hoy",
+        "intro": [
+          "El sitio no tiene cuentas de usuario ni base de datos de visitantes. Lo que procesamos:"
+        ],
+        "bullets": [
+          "Lista de espera: el correo electrónico que nos das — nada más.",
+          "Formulario de contacto: tu nombre, correo y mensaje, que nos llegan como un email.",
+          "Elección de cookies: si aceptaste o rechazaste las analíticas, guardada en tu navegador.",
+          "Analíticas (solo si aceptas): páginas visitadas, ubicación aproximada derivada de la IP, y tipo de dispositivo/navegador — mediante Google Analytics 4 y Microsoft Clarity.",
+          "Registros del alojamiento: metadatos estándar de las solicitudes (dirección IP, agente de usuario) que nuestro proveedor procesa para servir y proteger el sitio."
+        ],
+        "outro": [
+          "No recopilamos números de Seguro Social, detalles de ingresos ni ninguna información fiscal a través de este sitio. Las calculadoras gratuitas funcionan en tu navegador — los números que escribes no se envían ni se guardan en nuestros servidores."
+        ]
       },
-      "share": {
-        "heading": "Compartir información",
-        "text": "Compartimos tu información fiscal con el IRS y las autoridades fiscales estatales correspondientes únicamente con el propósito de presentar tu declaración, según tu autorización. No vendemos tu información a terceros."
+      {
+        "id": "use",
+        "heading": "Cómo la usamos",
+        "bullets": [
+          "Tu correo de la lista de espera — para enviarte las novedades del lanzamiento que pediste.",
+          "Tus datos de contacto — para responderte.",
+          "Analíticas con consentimiento — para entender, en conjunto, qué contenido ayuda.",
+          "Registros del alojamiento — para mantener el sitio en línea y sin abusos."
+        ],
+        "outro": [
+          "No usamos nada de esto para publicidad, no construimos perfiles y nunca vendemos información personal."
+        ]
       },
-      "security": {
-        "heading": "Seguridad",
-        "text": "Protegemos tus datos con cifrado AES-256 en reposo, TLS 1.3 en tránsito y controles de acceso estrictos. Consulta nuestra página de Seguridad para más detalles."
+      {
+        "id": "share",
+        "heading": "Con quién se comparte",
+        "intro": [
+          "La información personal va únicamente a los proveedores de servicio que operan el sitio por nosotros — nombrados en la página de Subencargados — y a nadie más. No vendemos información personal ni la compartimos para publicidad conductual entre contextos.",
+          "Divulgaríamos información si una ley lo exigiera; si eso ocurre, lo diremos aquí salvo que la ley nos lo impida."
+        ]
       },
-      "retention": {
-        "heading": "Retención de datos",
-        "text": "Conservamos tus declaraciones presentadas y datos asociados durante 7 años. Puedes solicitar la eliminación de tu cuenta en cualquier momento; eliminaremos tus datos en 30 días, salvo cuando la ley requiera conservación."
+      {
+        "id": "cookies",
+        "heading": "Cookies y analíticas",
+        "intro": [
+          "Las analíticas se cargan solo después de que aceptes explícitamente — rechazar es una opción de primera clase y el sitio funciona igual. La lista completa de cookies, sus duraciones y un control para cambiar tu elección están en la Política de cookies."
+        ]
       },
-      "rights": {
-        "heading": "Tus derechos",
-        "text": "Puedes acceder, corregir o eliminar tu información personal en cualquier momento desde Configuración de cuenta. Para solicitar eliminación completa de datos, escribe a privacy@gettaxly.com."
+      {
+        "id": "retention",
+        "heading": "Conservación",
+        "bullets": [
+          "Correo de la lista de espera: hasta el lanzamiento o hasta que canceles la suscripción — un clic, en cada correo.",
+          "Mensajes de contacto: mientras la conversación lo necesite; después se eliminan.",
+          "Datos de analíticas: durante los plazos indicados en la Política de cookies.",
+          "Registros del alojamiento: durante las ventanas operativas cortas de nuestro proveedor."
+        ]
       },
-      "contact": {
+      {
+        "id": "rights",
+        "heading": "Tus derechos y opciones",
+        "intro": [
+          "Puedes pedirnos qué tenemos sobre ti, corregirlo o que lo eliminemos. Atendemos estas solicitudes de cualquier persona — no solo donde una ley como la CCPA lo exige — y no te tratamos diferente por ejercerlas.",
+          "Para ejercerlas, usa la página de contacto. Eliminar un correo de la lista de espera también es un clic con el enlace de baja."
+        ]
+      },
+      {
+        "id": "children",
+        "heading": "Menores",
+        "intro": [
+          "El sitio no está dirigido a menores de 16 años y no recopilamos su información a sabiendas."
+        ]
+      },
+      {
+        "id": "launch",
+        "heading": "Cuando se lance el producto",
+        "intro": [
+          "El producto manejará la categoría más sensible de datos de consumo — números de Seguro Social, ingresos, dependientes, datos bancarios. Esa fase está regida por leyes específicas, y estos son los compromisos con los que se está construyendo:"
+        ],
+        "bullets": [
+          "Un programa escrito de seguridad de la información conforme a la Regla de Salvaguardas GLBA de la FTC y la Publicación 4557 del IRS.",
+          "Cifrado a nivel de columna para los campos de SSN y banco, autenticación multifactor obligatoria y registro de auditoría de solo escritura.",
+          "Tu declaración se comparte solo con el IRS y el estado donde declaras, solo para presentarla y solo con tu autorización — con consentimientos según la Publicación 1345 del IRS.",
+          "Ningún uso publicitario de datos fiscales. Nunca."
+        ],
+        "outro": [
+          "Nada de esto está vigente hoy, porque hoy no se recopila ninguno de esos datos. Esta política será reeditada, refechada y presentada ante ti antes de que algo de eso comience."
+        ]
+      },
+      {
+        "id": "changes",
+        "heading": "Cambios en esta política",
+        "intro": [
+          "Cuando esta política cambie, actualizaremos la fecha de arriba. Si un cambio es sustancial, avisaremos a la lista de espera por correo antes de que entre en vigor."
+        ]
+      },
+      {
+        "id": "contact",
         "heading": "Contacto",
-        "text": "Para preguntas de privacidad, contacta a privacy@gettaxly.com."
+        "intro": [
+          "Preguntas de privacidad: usa la página de contacto y responderemos por correo."
+        ]
       }
-    }
+    ]
   },
   "terms": {
-    "heading": "Términos de Servicio",
-    "lastUpdated": "Última actualización: 1 de enero de 2025",
-    "intro": "Estos Términos de Servicio rigen tu uso de Taxly. Al usar Taxly aceptas estos términos.",
-    "sections": {
-      "service": {
-        "heading": "El servicio",
-        "text": "Taxly proporciona software de preparación de impuestos que te ayuda a preparar y enviar declaraciones de impuestos federales y estatales de EE. UU. Taxly no es una firma de CPA, bufete de abogados ni preparador de impuestos con licencia. Ofrecemos herramientas de software, no asesoramiento fiscal profesional."
+    "heading": "Términos del servicio",
+    "lastUpdated": "Última actualización: 16 de julio de 2026",
+    "intro": "La versión corta: el sitio es gratuito, informativo y todavía no vende nada. Estas son las reglas para usarlo, en lenguaje claro.",
+    "sections": [
+      {
+        "id": "scope",
+        "heading": "Qué cubren estos términos",
+        "intro": [
+          "Estos términos rigen tu uso de gettaxly.com. Hoy eso significa las guías y artículos, las calculadoras gratuitas y la lista de espera. Al usar el sitio, los aceptas.",
+          "El producto de declaración de Taxly aún no está disponible. Los términos del producto — consentimientos de e-file, tarifas, garantías — entran en vigor solo con el lanzamiento; hay un adelanto en «En el lanzamiento» más abajo, y aceptarás la versión final antes de que el producto maneje tu declaración."
+        ]
       },
-      "accuracy": {
-        "heading": "Tu responsabilidad por la exactitud",
-        "text": "Eres responsable de la exactitud e integridad de toda la información que ingresas en Taxly. Taxly calcula tu declaración en base a la información que proporcionas. Los errores u omisiones en tu entrada no están cubiertos por nuestra Garantía de Exactitud."
+      {
+        "id": "notAdvice",
+        "heading": "Software y contenido, no asesoría",
+        "intro": [
+          "Taxly es software y contenido — no una firma de CPA, un bufete de abogados ni un preparador de impuestos licenciado. Las guías, comparativas y herramientas son información general para contribuyentes de EE. UU.; no son asesoría fiscal, legal ni financiera para tu situación específica. Para asesoría sobre tus hechos, consulta a un profesional calificado."
+        ]
       },
-      "efile": {
-        "heading": "Consentimiento de presentación electrónica",
-        "text": "Al enviar tu declaración por e-file, autorizas a Taxly a transmitirla al IRS y a las autoridades fiscales estatales aplicables en tu nombre, conforme a la Publicación 1345 del IRS."
+      {
+        "id": "tools",
+        "heading": "Las calculadoras gratuitas",
+        "bullets": [
+          "Producen estimaciones a partir de exactamente lo que escribes, con modelos simplificados de las reglas federales.",
+          "Funcionan en tu navegador — tus datos no se guardan en nuestros servidores.",
+          "Las cifras pueden desactualizarse entre las actualizaciones anuales del IRS; cada herramienta enlaza la fuente primaria para verificar.",
+          "Son gratuitas y no requieren registro."
+        ],
+        "outro": [
+          "No tomes decisiones finales de declaración basándote solo en una calculadora — verifica contra la fuente primaria, o contra el producto cuando exista."
+        ]
       },
-      "payment": {
-        "heading": "Tarifas y pago",
-        "text": "Las tarifas se cobran al momento del e-file. Los precios se muestran antes de pagar. No cobramos tarifas ocultas. Los reembolsos están disponibles si pagaste pero aún no has enviado, dentro de 30 días del pago."
+      {
+        "id": "waitlist",
+        "heading": "La lista de espera",
+        "intro": [
+          "Unirte no cuesta nada y no te compromete a nada — es permiso para escribirte sobre el lanzamiento, y darte de baja es un clic. Un lugar en la lista no garantiza disponibilidad, cobertura de tu estado, ni ningún precio distinto de los que publicamos."
+        ]
       },
-      "prohibited": {
-        "heading": "Usos prohibidos",
-        "text": "No puedes usar Taxly para presentar declaraciones en nombre de otros sin su autorización explícita, para presentar declaraciones fraudulentas o incorrectas a sabiendas, ni para intentar acceder a las cuentas o datos de otros usuarios."
+      {
+        "id": "acceptable",
+        "heading": "Uso aceptable",
+        "bullets": [
+          "No sondees, deshabilites ni interfieras con la seguridad del sitio ni con el uso de otras personas.",
+          "No hagas scraping a volumen abusivo.",
+          "No te presentes falsamente como afiliado a Taxly.",
+          "No uses el sitio para nada ilegal."
+        ]
       },
-      "liability": {
+      {
+        "id": "ip",
+        "heading": "Propiedad intelectual",
+        "intro": [
+          "El sitio — sus textos, diseño, herramientas y el nombre y la marca Taxly — nos pertenece. Úsalo de forma personal y no comercial; no lo republiques como propio."
+        ]
+      },
+      {
+        "id": "thirdParty",
+        "heading": "Enlaces de terceros",
+        "intro": [
+          "Enlazamos fuentes primarias (irs.gov, departamentos estatales de ingresos) y a competidores cuando la honestidad lo exige. No controlamos esos sitios ni respondemos por su contenido o prácticas."
+        ]
+      },
+      {
+        "id": "launch",
+        "heading": "En el lanzamiento (un adelanto — aún sin vigor)",
+        "bullets": [
+          "Pago al declarar: pagas solo cuando presentas, y el precio que ves al empezar es el precio al pagar — la promesa de precio fijo.",
+          "Consentimientos de e-file según la Publicación 1345 del IRS, recogidos dentro del producto.",
+          "Las garantías (precisión, reembolso máximo) existirán solo como pólizas escritas y financiadas, publicadas en la página de garantías.",
+          "Términos actualizados presentados ante ti antes de que el producto reciba un dólar o una declaración."
+        ],
+        "outro": [
+          "Hasta entonces, nada en este sitio te vende nada — hoy no existen tarifas."
+        ]
+      },
+      {
+        "id": "disclaimer",
+        "heading": "Descargos de responsabilidad",
+        "intro": [
+          "El sitio se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo, expresas o implícitas — incluida la exactitud de los resultados de las calculadoras y la disponibilidad ininterrumpida."
+        ]
+      },
+      {
+        "id": "liability",
         "heading": "Limitación de responsabilidad",
-        "text": "En la máxima medida permitida por la ley, la responsabilidad de Taxly por cualquier reclamo derivado de tu uso del servicio se limita al monto que pagaste por la presentación en cuestión."
+        "intro": [
+          "En la máxima medida que permita la ley, no somos responsables de daños indirectos, incidentales o consecuentes derivados del uso de este sitio gratuito, y nuestra responsabilidad total se limita a lo que sea mayor entre $50 y lo que nos hayas pagado (hoy: nada). Algunas jurisdicciones no permiten estos límites, así que partes de esto podrían no aplicarte."
+        ]
       },
-      "changes": {
-        "heading": "Cambios a estos términos",
-        "text": "Podemos actualizar estos términos. Te notificaremos por correo y publicaremos los términos actualizados en gettaxly.com/terms al menos 14 días antes de que los cambios entren en vigor."
+      {
+        "id": "law",
+        "heading": "Ley aplicable",
+        "intro": [
+          "Estos términos se rigen por las leyes de los Estados Unidos. El estado aplicable y la jurisdicción se fijarán con asesoría legal antes del lanzamiento — este borrador señala el punto abierto en lugar de inventarlo."
+        ]
       },
-      "contact": {
+      {
+        "id": "changes",
+        "heading": "Cambios en estos términos",
+        "intro": [
+          "Podemos actualizar estos términos; la fecha de arriba cambia cuando lo hacemos. Los cambios sustanciales se anuncian a la lista de espera por correo al menos 14 días antes de entrar en vigor."
+        ]
+      },
+      {
+        "id": "contact",
         "heading": "Contacto",
-        "text": "Preguntas sobre estos términos: legal@gettaxly.com."
+        "intro": [
+          "Preguntas sobre estos términos: usa la página de contacto."
+        ]
       }
-    }
+    ]
   },
   "faq": {
     "heading": "Preguntas frecuentes",
@@ -782,11 +937,11 @@
     },
     "privacy": {
       "title": "Política de Privacidad — Taxly",
-      "description": "Cómo Taxly recopila, usa y protege tu información personal y fiscal."
+      "description": "Qué recopila gettaxly.com hoy (deliberadamente poco), cómo se usa, y los compromisos con los que se construye el producto."
     },
     "terms": {
       "title": "Términos de Servicio — Taxly",
-      "description": "Términos que rigen el uso del software de preparación de impuestos de Taxly."
+      "description": "Las reglas para usar gettaxly.com hoy — herramientas gratuitas y lista de espera — y un adelanto de los términos del producto."
     },
     "blog": {
       "title": "Guías y fechas límite de impuestos — el blog de Taxly",
@@ -917,7 +1072,16 @@
     }
   },
   "legal": {
-    "draftBanner": "Borrador — este documento aún no ha sido revisado por un abogado. Describe nuestras prácticas reales, pero la redacción puede cambiar antes del lanzamiento."
+    "draftBanner": "Borrador — este documento aún no ha sido revisado por un abogado. Describe nuestras prácticas reales, pero la redacción puede cambiar antes del lanzamiento.",
+    "eyebrow": "Legal",
+    "onThisPage": "En esta página",
+    "related": "Otros documentos legales",
+    "links": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos del servicio",
+      "cookies": "Política de cookies",
+      "subProcessors": "Subencargados"
+    }
   },
   "glossary": {
     "eyebrow": "Glosario en lenguaje claro",
@@ -989,7 +1153,13 @@
         "category": "Analítica (sin cookies)"
       }
     ],
-    "managing": "Puedes retirar tu consentimiento en cualquier momento borrando los datos de este sitio en tu navegador — el banner volverá a preguntar en tu próxima visita. Bloquear todas las cookies en tu navegador también funciona; nada en este sitio se rompe sin ellas."
+    "managing": "Puedes retirar tu consentimiento en cualquier momento borrando los datos de este sitio en tu navegador — el banner volverá a preguntar en tu próxima visita. Bloquear todas las cookies en tu navegador también funciona; nada en este sitio se rompe sin ellas.",
+    "choiceHeading": "Tu elección actual",
+    "choiceAccepted": "Analíticas aceptadas",
+    "choiceRejected": "Analíticas rechazadas",
+    "choicePending": "Sin elección guardada — el aviso de consentimiento está visible",
+    "changeChoice": "Cambiar mi elección",
+    "changeNote": "Borra tu elección guardada y vuelve a mostrar el aviso de consentimiento."
   },
   "subProcessorsPage": {
     "lastUpdated": "Última actualización: 9 de julio de 2026",

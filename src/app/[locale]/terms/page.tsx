@@ -1,7 +1,7 @@
-import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { makeMetadata } from "@/lib/metadata";
-import { LegalDraftBanner } from "@/components/shared/legal-draft-banner";
+import { LegalShell } from "@/components/shared/legal-shell";
+import { LegalSections, type LegalSection } from "@/components/shared/legal-sections";
 import type { LocalePageProps } from "@/types/page";
 
 export async function generateMetadata({ params }: LocalePageProps) {
@@ -12,37 +12,19 @@ export async function generateMetadata({ params }: LocalePageProps) {
 export default async function TermsPage({ params }: LocalePageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return (
-    <>
-      <div className="mx-auto max-w-3xl px-6 pt-12">
-        <LegalDraftBanner locale={locale} />
-      </div>
-      <TermsClient />
-    </>
-  );
-}
-
-function TermsClient() {
-  const t = useTranslations("terms");
-
-  const sectionKeys = ["service", "accuracy", "efile", "payment", "prohibited", "liability", "changes", "contact"] as const;
+  const t = await getTranslations({ locale, namespace: "terms" });
+  const sections = t.raw("sections") as LegalSection[];
 
   return (
-    <div className="py-20">
-      <div className="mx-auto max-w-3xl px-6">
-        <p className="mb-2 text-sm text-muted-foreground/80">{t("lastUpdated")}</p>
-        <h1 className="mb-6 text-4xl font-bold text-foreground">{t("heading")}</h1>
-        <p className="mb-12 text-muted-foreground">{t("intro")}</p>
-
-        <div className="space-y-10">
-          {sectionKeys.map((key) => (
-            <section key={key}>
-              <h2 className="mb-3 text-xl font-semibold text-foreground">{t(`sections.${key}.heading`)}</h2>
-              <p className="text-muted-foreground">{t(`sections.${key}.text`)}</p>
-            </section>
-          ))}
-        </div>
-      </div>
-    </div>
+    <LegalShell
+      locale={locale}
+      doc="terms"
+      title={t("heading")}
+      updated={t("lastUpdated")}
+      intro={t("intro")}
+      toc={sections.map((s) => ({ id: s.id, label: s.heading }))}
+    >
+      <LegalSections sections={sections} />
+    </LegalShell>
   );
 }

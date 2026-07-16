@@ -24,6 +24,14 @@ export function setConsent(value: Exclude<ConsentState, "pending">) {
   listeners.forEach((l) => l());
 }
 
+/** Clear the saved choice — the consent banner reappears (used by the Cookie
+ * Policy page's "change my choice" control). */
+export function resetConsent() {
+  if (typeof window === "undefined") return;
+  window.localStorage.removeItem(KEY);
+  listeners.forEach((l) => l());
+}
+
 // useSyncExternalStore plumbing
 export function subscribeConsent(cb: () => void) {
   listeners.add(cb);

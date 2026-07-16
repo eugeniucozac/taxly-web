@@ -593,77 +593,232 @@
   },
   "privacy": {
     "heading": "Privacy Policy",
-    "lastUpdated": "Last updated: January 1, 2025",
-    "intro": "Taxly Inc. (\"Taxly\", \"we\", \"us\", \"our\") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights.",
-    "sections": {
-      "collect": {
-        "heading": "Information we collect",
-        "text": "We collect information you provide directly: your name, email address, Social Security number, income information, and other tax-related data necessary to prepare your return. We also collect usage data (pages visited, features used) to improve the product."
+    "lastUpdated": "Last updated: July 16, 2026",
+    "intro": "The short version: today this site collects almost nothing — a waitlist email if you give it, a message if you send one, and analytics only if you say yes. Here is the whole picture, in plain English.",
+    "sections": [
+      {
+        "id": "scope",
+        "heading": "Who we are and what this covers",
+        "intro": [
+          "Taxly (“we”, “us”) operates gettaxly.com. Today the site is a pre-launch marketing site: it explains the product we are building, offers free calculators, and runs a waitlist. This policy describes what the website actually collects today — which is deliberately little.",
+          "The Taxly filing product is not yet live. Before it collects a single piece of taxpayer data, we will publish an updated policy covering it (see “When the filing product launches” below) — and those practices will be legal commitments, not marketing."
+        ]
       },
-      "use": {
-        "heading": "How we use your information",
-        "text": "We use your information solely to prepare, review, and e-file your tax return; to send you account and filing status notifications; and to improve Taxly's accuracy and user experience. We do not use your tax data for advertising."
+      {
+        "id": "collect",
+        "heading": "What we collect today",
+        "intro": [
+          "The site has no user accounts and no database of visitors. What we process:"
+        ],
+        "bullets": [
+          "Waitlist: the email address you give us — nothing else.",
+          "Contact form: your name, email address, and message, delivered to us as an email.",
+          "Cookie choice: whether you accepted or declined analytics, stored in your browser.",
+          "Analytics (only if you accept): pages visited, approximate location derived from IP, and device/browser type — via Google Analytics 4 and Microsoft Clarity.",
+          "Hosting logs: standard request metadata (IP address, user agent) processed by our host to serve and secure the site."
+        ],
+        "outro": [
+          "We do not collect Social Security numbers, income details, or any tax information through this website. The free calculators run in your browser — the numbers you type are not sent to or stored on our servers."
+        ]
       },
-      "share": {
-        "heading": "Information sharing",
-        "text": "We share your tax information with the IRS and relevant state tax authorities solely for the purpose of filing your return, as authorized by you. We do not sell your information to third parties. We may share aggregate, non-identifiable usage data with service providers who help us operate Taxly."
+      {
+        "id": "use",
+        "heading": "How we use it",
+        "bullets": [
+          "Your waitlist email — to send the launch updates you asked for.",
+          "Your contact details — to reply to you.",
+          "Consent-gated analytics — to understand, in aggregate, which content helps.",
+          "Hosting logs — to keep the site up and abuse out."
+        ],
+        "outro": [
+          "We do not use any of it for advertising, we do not build profiles, and we never sell personal information."
+        ]
       },
-      "security": {
-        "heading": "Security",
-        "text": "We protect your data with AES-256 encryption at rest, TLS 1.3 in transit, and strict access controls. See our Security page for full details."
+      {
+        "id": "share",
+        "heading": "Sharing",
+        "intro": [
+          "Personal information goes only to the service providers that run the site for us — listed by name on our Sub-processors page — and to no one else. We do not sell personal information, and we do not share it for cross-context behavioral advertising.",
+          "We would disclose information if a law required it; if that ever happens we will say so here unless we are legally barred from doing so."
+        ]
       },
-      "retention": {
-        "heading": "Data retention",
-        "text": "We retain your filed returns and associated data for 7 years to comply with IRS record-keeping guidance and to allow you to access prior returns. You can request deletion of your account at any time; we will delete your data within 30 days, except where retention is required by law."
+      {
+        "id": "cookies",
+        "heading": "Cookies and analytics",
+        "intro": [
+          "Analytics load only after you explicitly accept — declining is a first-class choice and the site works identically either way. The full list of cookies, their durations, and a control to change your choice live on the Cookie Policy page."
+        ]
       },
-      "rights": {
-        "heading": "Your rights",
-        "text": "You may access, correct, or delete your personal information at any time through Account Settings. To request full data deletion, email privacy@gettaxly.com. We do not discriminate against users who exercise these rights."
+      {
+        "id": "retention",
+        "heading": "Retention",
+        "bullets": [
+          "Waitlist email: until launch or until you unsubscribe — one click, in every email.",
+          "Contact messages: for as long as the conversation needs, then deleted.",
+          "Analytics data: for the durations listed in the Cookie Policy.",
+          "Hosting logs: for the short operational windows our host keeps them."
+        ]
       },
-      "contact": {
+      {
+        "id": "rights",
+        "heading": "Your rights and choices",
+        "intro": [
+          "You can ask what we hold about you, have it corrected, or have it deleted. We honor these requests from everyone — not only where a statute such as the CCPA requires it — and we do not treat you differently for asking.",
+          "To exercise any of them, use the contact page. Removing a waitlist email is also one click via the unsubscribe link."
+        ]
+      },
+      {
+        "id": "children",
+        "heading": "Children",
+        "intro": [
+          "The site is not directed at children under 16 and we do not knowingly collect their information."
+        ]
+      },
+      {
+        "id": "launch",
+        "heading": "When the filing product launches",
+        "intro": [
+          "The product will handle the most sensitive category of consumer data — Social Security numbers, income, dependents, bank details. That phase is governed by specific law, and these are the commitments the product is being built to:"
+        ],
+        "bullets": [
+          "A written information security program per the FTC GLBA Safeguards Rule and IRS Publication 4557.",
+          "Column-level encryption for SSN and bank fields, mandatory multi-factor authentication, and append-only audit logging.",
+          "Your return shared only with the IRS and the state you file in, only to file it, and only as you authorize — with consent flows per IRS Publication 1345.",
+          "No advertising use of tax data. Ever."
+        ],
+        "outro": [
+          "None of this is in effect today, because none of that data is collected today. This policy will be re-issued, re-dated, and put in front of you before any of it begins."
+        ]
+      },
+      {
+        "id": "changes",
+        "heading": "Changes to this policy",
+        "intro": [
+          "When this policy changes we update the date at the top. If a change is material, we tell the waitlist by email before it takes effect."
+        ]
+      },
+      {
+        "id": "contact",
         "heading": "Contact",
-        "text": "For privacy questions, contact privacy@gettaxly.com."
+        "intro": [
+          "Privacy questions: use the contact page and we will answer by email."
+        ]
       }
-    }
+    ]
   },
   "terms": {
     "heading": "Terms of Service",
-    "lastUpdated": "Last updated: January 1, 2025",
-    "intro": "These Terms of Service govern your use of Taxly. By using Taxly you agree to these terms.",
-    "sections": {
-      "service": {
-        "heading": "The service",
-        "text": "Taxly provides tax preparation software that helps you prepare and e-file US federal and state income tax returns. Taxly is not a CPA firm, law firm, or licensed tax preparer. We provide software tools, not professional tax advice."
+    "lastUpdated": "Last updated: July 16, 2026",
+    "intro": "The short version: the site is free, informational, and sells nothing yet. Here are the rules for using it, in plain English.",
+    "sections": [
+      {
+        "id": "scope",
+        "heading": "What these terms cover",
+        "intro": [
+          "These terms govern your use of gettaxly.com. Today that means the guides and articles, the free calculators, and the waitlist. By using the site you agree to them.",
+          "The Taxly filing product is not yet available. Product terms — e-file consents, fees, guarantees — take effect only at launch; a preview is in “At launch” below, and you will accept the final version before the product ever handles your return."
+        ]
       },
-      "accuracy": {
-        "heading": "Your responsibility for accuracy",
-        "text": "You are responsible for the accuracy and completeness of all information you enter into Taxly. Taxly calculates your return based on the information you provide. Errors or omissions in your input are not covered by our Accuracy Guarantee."
+      {
+        "id": "notAdvice",
+        "heading": "Software and content, not advice",
+        "intro": [
+          "Taxly is software and publishing — not a CPA firm, a law firm, or a licensed tax preparer. Guides, comparisons, and tools are general information for US filers; they are not tax, legal, or financial advice for your specific situation. For advice on your facts, talk to a qualified professional."
+        ]
       },
-      "efile": {
-        "heading": "Electronic filing consent",
-        "text": "By submitting your return for e-filing, you authorize Taxly to transmit your return to the IRS and applicable state tax authorities on your behalf. You confirm that the return is true, correct, and complete to the best of your knowledge, as required by IRS Publication 1345."
+      {
+        "id": "tools",
+        "heading": "The free calculators",
+        "bullets": [
+          "They produce estimates from exactly what you type, using simplified models of federal rules.",
+          "They run in your browser — your inputs are not stored on our servers.",
+          "Figures can drift between annual IRS updates; each tool links the primary source to verify against.",
+          "They are free and require no signup."
+        ],
+        "outro": [
+          "Do not make final filing decisions on a calculator result alone — verify against the primary source, or against the product once it exists."
+        ]
       },
-      "payment": {
-        "heading": "Fees and payment",
-        "text": "Fees are charged at the time of e-filing. Prices are displayed before you pay. We do not charge hidden fees. Refunds are available if you have paid but not yet e-filed, within 30 days of payment."
+      {
+        "id": "waitlist",
+        "heading": "The waitlist",
+        "intro": [
+          "Joining costs nothing and commits you to nothing — it is permission to email you about the launch, and unsubscribe is one click. A place on the waitlist is not a guarantee of availability, of coverage for your state, or of any price other than the ones we publish."
+        ]
       },
-      "prohibited": {
-        "heading": "Prohibited uses",
-        "text": "You may not use Taxly to file returns on behalf of others without their explicit authorization, to file fraudulent or knowingly inaccurate returns, or to attempt to access other users' accounts or data."
+      {
+        "id": "acceptable",
+        "heading": "Acceptable use",
+        "bullets": [
+          "Don’t probe, disable, or interfere with the site’s security or other people’s use of it.",
+          "Don’t scrape at abusive volume.",
+          "Don’t misrepresent an affiliation with Taxly.",
+          "Don’t use the site for anything unlawful."
+        ]
       },
-      "liability": {
+      {
+        "id": "ip",
+        "heading": "Intellectual property",
+        "intro": [
+          "The site — its copy, design, tools, and the Taxly name and mark — belongs to us. Use it personally and non-commercially; don’t republish it as your own."
+        ]
+      },
+      {
+        "id": "thirdParty",
+        "heading": "Third-party links",
+        "intro": [
+          "We link to primary sources (irs.gov, state revenue departments) and to competitors where honesty requires it. We don’t control those sites and aren’t responsible for their content or practices."
+        ]
+      },
+      {
+        "id": "launch",
+        "heading": "At launch (a preview — not yet in force)",
+        "bullets": [
+          "Pay-at-file: you pay only when you file, and the price shown when you start is the price at checkout — the price-lock promise.",
+          "E-file consents per IRS Publication 1345, collected in the product.",
+          "Guarantees (accuracy, maximum refund) will exist only as written, funded policies published on the guarantees page.",
+          "Updated Terms presented to you before the product takes a dollar or a return."
+        ],
+        "outro": [
+          "Until then, nothing on this site sells you anything — there are no fees today."
+        ]
+      },
+      {
+        "id": "disclaimer",
+        "heading": "Disclaimers",
+        "intro": [
+          "The site is provided “as is” and “as available”, without warranties of any kind, express or implied — including the accuracy of calculator outputs and uninterrupted availability."
+        ]
+      },
+      {
+        "id": "liability",
         "heading": "Limitation of liability",
-        "text": "To the maximum extent permitted by law, Taxly's liability for any claim arising from your use of the service is limited to the amount you paid for the filing in question. We are not liable for IRS decisions, state tax authority decisions, or penalties arising from information you entered incorrectly."
+        "intro": [
+          "To the maximum extent the law allows, we are not liable for indirect, incidental, or consequential damages arising from your use of this free site, and our total liability is limited to the greater of $50 or the amount you have paid us (today: nothing). Some jurisdictions don’t allow these limits, so parts of this may not apply to you."
+        ]
       },
-      "changes": {
+      {
+        "id": "law",
+        "heading": "Governing law",
+        "intro": [
+          "These terms are governed by the laws of the United States. The governing state and venue will be fixed with counsel before launch — this draft flags the open item rather than inventing one."
+        ]
+      },
+      {
+        "id": "changes",
         "heading": "Changes to these terms",
-        "text": "We may update these terms. We'll notify you by email and post the updated terms at gettaxly.com/terms at least 14 days before changes take effect."
+        "intro": [
+          "We may update these terms; the date above moves when we do. Material changes are announced to the waitlist by email at least 14 days before they take effect."
+        ]
       },
-      "contact": {
+      {
+        "id": "contact",
         "heading": "Contact",
-        "text": "Questions about these terms: legal@gettaxly.com."
+        "intro": [
+          "Questions about these terms: use the contact page."
+        ]
       }
-    }
+    ]
   },
   "faq": {
     "heading": "Common questions",
@@ -782,11 +937,11 @@
     },
     "privacy": {
       "title": "Privacy Policy — Taxly",
-      "description": "How Taxly collects, uses, and protects your personal and tax information."
+      "description": "What gettaxly.com collects today (deliberately little), how it is used, and the commitments the filing product is being built to."
     },
     "terms": {
       "title": "Terms of Service — Taxly",
-      "description": "Terms governing your use of Taxly's tax preparation software."
+      "description": "The rules for using gettaxly.com today — the free tools and the waitlist — plus a preview of the product terms that apply at launch."
     },
     "blog": {
       "title": "US Tax Guides & Deadlines — the Taxly Blog",
@@ -917,7 +1072,16 @@
     }
   },
   "legal": {
-    "draftBanner": "Draft — this document has not yet been reviewed by counsel. It describes our real practices, but wording may change before launch."
+    "draftBanner": "Draft — this document has not yet been reviewed by counsel. It describes our real practices, but wording may change before launch.",
+    "eyebrow": "Legal",
+    "onThisPage": "On this page",
+    "related": "Other legal documents",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "subProcessors": "Sub-processors"
+    }
   },
   "glossary": {
     "eyebrow": "Plain-English glossary",
@@ -989,7 +1153,13 @@
         "category": "Analytics (cookieless)"
       }
     ],
-    "managing": "You can withdraw consent at any time by clearing your browser data for this site — the banner will ask again on your next visit. Blocking all cookies in your browser also works; nothing on this site breaks without them."
+    "managing": "You can withdraw consent at any time by clearing your browser data for this site — the banner will ask again on your next visit. Blocking all cookies in your browser also works; nothing on this site breaks without them.",
+    "choiceHeading": "Your current choice",
+    "choiceAccepted": "Analytics accepted",
+    "choiceRejected": "Analytics declined",
+    "choicePending": "No choice saved — the consent banner is showing",
+    "changeChoice": "Change my choice",
+    "changeNote": "Clears your saved choice and shows the consent banner again."
   },
   "subProcessorsPage": {
     "lastUpdated": "Last updated: July 9, 2026",
